@@ -1,5 +1,12 @@
 
 
+###Release 1.0.4
+>*March 11, 2017*
+
+ * fix build command [37ca747](https://bitbucket.org/planettraining/ed/commits/37ca747408cacb0c7f1b5e3409c3f78eef6a707d)
+
+
+
 ###Release 1.0.3
 >*March 11, 2017*
 

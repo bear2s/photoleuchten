@@ -1,6 +1,6 @@
 {
   "name": "photoleuchten",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": ".",
   "author": "Steffen Baer <stbaer.mail@gmail.com>",
   "private": true,
@@ -67,7 +67,7 @@
     "not ie <= 8"
   ],
   "releaseConfig": {
-    "buildCommand": "npm run build && cp -R dist docs && git add -A && git commit -am 'updated docs folder'",
+    "buildCommand": "npm run build && rm -rf docs && cp -R dist docs && git add -A && git commit -am 'updated docs folder'",
     "versionFiles": [
       "package.json"
     ],

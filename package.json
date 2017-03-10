@@ -65,5 +65,20 @@
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
-  ]
+  ],
+  "releaseConfig": {
+    "buildCommand": "npm run build && cp -R dist docs && git add -A && git commit -am 'updated docs folder'",
+    "versionFiles": [
+      "package.json"
+    ],
+    "commitMessagesExclude": [
+      "Merge tag",
+      "Merge branch 'release",
+      "Merge branch 'develop' into",
+      "bumped",
+      "(--)"
+    ],
+    "commitBaseUrl": "https://bitbucket.org/planettraining/ed/commits",
+    "historyFile": "History.md"
+  },
 }

@@ -1,5 +1,13 @@
 
 
+###Release 1.0.5
+>*March 11, 2017*
+
+ * removed deploy script [53f01b2](https://bitbucket.org/planettraining/ed/commits/53f01b27ee8af8d3901d2c6c3335c54873975af5)
+ * some styles [5220822](https://bitbucket.org/planettraining/ed/commits/5220822d0182a5c30455feb5252cce6fe49ec553)
+
+
+
 ###Release 1.0.4
 >*March 11, 2017*
 

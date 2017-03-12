@@ -1,5 +1,12 @@
 
 
+###Release 1.1.0
+>*March 12, 2017*
+
+ * create CNAME in docs (release config) [45fdd80](https://bitbucket.org/planettraining/ed/commits/45fdd80fe9464833cea833cd1c85a42fc8a3c292)
+
+
+
 ###Release 1.0.5
 >*March 11, 2017*
 

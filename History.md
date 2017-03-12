@@ -1,5 +1,13 @@
 
 
+###Release 1.1.1
+>*March 12, 2017*
+
+ * updated assets public path [05400c6](https://bitbucket.org/planettraining/ed/commits/05400c6d7afda5bd5d254255bc72d34a1feba57c)
+ * updated release build command [298c27c](https://bitbucket.org/planettraining/ed/commits/298c27cb9c2b2937966be9220f486aa090862032)
+
+
+
 ###Release 1.1.0
 >*March 12, 2017*
 

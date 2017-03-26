@@ -1,9 +1,15 @@
 <template>
   <div class="pl-app">
-    <header class="top-toolbar toolbar row middle-xs">
-      <a href="/" class="logo col-xs-6">
-        <h1><span>pl</span> <span>PHOTOLEUCHTEN</span></h1>
-      </a>
+    <header class="top-toolbar toolbar">
+      <div class="container">
+        <div class="row middle-xs">
+          <div class="col-xs-6">
+            <a href="/" class="logo">
+              <h1><span>pl</span> <span>PHOTOLEUCHTEN</span></h1>
+            </a>
+          </div>
+        </div>
+      </div>
     </header>
     <main>
       <div class="content">
@@ -28,7 +34,13 @@
       </div>
     </main>
     <footer class="footer toolbar">
-      <span class="">© 2017 photoleuchten</span>
+      <div class="container">
+        <div class="row middle-xs">
+          <div class="col-xs-6">
+            <span class="copyright">© 2017 photoleuchten</span>
+          </div>
+        </div>
+      </div>
     </footer>
   </div>
 </template>
@@ -36,13 +48,12 @@
 <script>
 
   import 'flexboxgrid/dist/flexboxgrid.min.css'
-  import VueMasonry from 'vue-masonry'
   import PlImg from './components/PlImg'
 
   export default {
     name: 'app',
     components: {
-      PlImg, VueMasonry
+      PlImg
     },
     data () {
       return {
@@ -54,6 +65,8 @@
 </script>
 
 <style lang="less">
+
+  @import (css) "../node_modules/normalize.css";
 
   @font-face {
     font-family: TimeBurner;
@@ -94,20 +107,18 @@
     .toolbar {
       background: #202020;
     }
-    .toolbar, .content {
-      padding: 1rem;
-    }
+
     main {
       min-height: calc(~'100vh - 128px');
       .content {
         padding: 1rem;
       }
     }
-    .top-toolbar {
-      height: 64px;
-    }
-    footer {
+    .toolbar {
       min-height: 64px;
+      .middle-xs{
+        height: 100%;
+      }
     }
   }
 </style>

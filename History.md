@@ -1,5 +1,12 @@
 
 
+###Release 1.1.4
+>*March 26, 2017*
+
+ * layout adjustment [07a04c0](https://github.com/bear2s/photoleuchten/commits/07a04c0e4046dce919600ef8410928e4a90476e4)
+
+
+
 ###Release 1.1.3
 >*March 26, 2017*
 

@@ -19,18 +19,21 @@
               <h2>Wandleuchten - Lichtobjekte - Photo + Licht</h2>
             </div>
           </div>
-        </div>
-        <img v-lazy="'../static/img/leuchten/q2-1920.jpg'"
-             width="100%" height="auto"
-             alt="photoleuchte">
-        <div class="row">
-          <template v-for="(item, index) in blocks">
-            <div class="col-xs-4">
-              <pl-img :fileName="item" sizes="32vw" :lazy="false"></pl-img>
+          <div class="row">
+            <div class="col-xs-12">
+              <img v-lazy="'../static/img/leuchten/q2-1920.jpg'"
+                   width="100%" height="auto"
+                   alt="photoleuchte">
             </div>
-          </template>
+          </div>
+          <div class="row">
+            <template v-for="(item, index) in blocks">
+              <div class="col-xs-4">
+                <pl-img :fileName="item" sizes="32vw" :lazy="false"></pl-img>
+              </div>
+            </template>
+          </div>
         </div>
-        <div style="height: 800px;"></div>
       </div>
     </main>
     <footer class="footer toolbar">
@@ -91,6 +94,9 @@
     font-family: TimeBurner, sans-serif;
   }
 
+  img{
+    max-width: 100%;
+  }
   .logo {
     text-decoration: none;
     color: inherit;
@@ -110,13 +116,10 @@
 
     main {
       min-height: calc(~'100vh - 128px');
-      .content {
-        padding: 1rem;
-      }
     }
     .toolbar {
-      min-height: 64px;
-      .middle-xs{
+      height: 64px;
+      .container, .middle-xs {
         height: 100%;
       }
     }

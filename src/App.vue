@@ -1,70 +1,113 @@
 <template>
-  <v-app class="pl-app" top-toolbar>
-    <v-toolbar>
-      <!--<v-toolbar-side-icon @click.native.stop="nav2 = !nav2"/>-->
-      <v-toolbar-logo>
-        pl PHOTOLEUCHTEN
-        <!--<img src="./assets/logo.png">-->
-      </v-toolbar-logo>
-    </v-toolbar>
+  <div class="pl-app">
+    <header class="top-toolbar toolbar row middle-xs">
+      <a href="/" class="logo col-xs-6">
+        <h1><span>pl</span> <span>PHOTOLEUCHTEN</span></h1>
+      </a>
+    </header>
     <main>
-      <!--<v-sidebar left fixed drawer v-model="nav2">-->
-      <!--<v-list>-->
-      <!--<v-list-item v-for="i in 3" :key="i">-->
-      <!--<v-list-tile>-->
-      <!--<v-list-tile-title>Item {{ i }}</v-list-tile-title>-->
-      <!--</v-list-tile>-->
-      <!--</v-list-item>-->
-      <!--</v-list>-->
-      <!--</v-sidebar>-->
-      <v-content>
-        <v-container>
-          <v-row>
-            <v-col xs12="xs12">
-              <h5 class="text-xs-right">Wandleuchten - Lichtobjekte - Photo + Licht</h5>
-            </v-col>
-          </v-row>
-
-        </v-container>
-        <v-container fluid>
-          <img width="100%" height="auto" src="../static/img/wall.jpg" alt="">
-        </v-container>
-      </v-content>
+      <div class="content">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12 end-xs">
+              <h2>Wandleuchten - Lichtobjekte - Photo + Licht</h2>
+            </div>
+          </div>
+        </div>
+        <img v-lazy="'../static/img/leuchten/q2-1920.jpg'"
+             width="100%" height="auto"
+             alt="photoleuchte">
+        <div class="row">
+          <template v-for="(item, index) in blocks">
+            <div class="col-xs-4">
+              <pl-img :fileName="item" sizes="32vw" :lazy="false"></pl-img>
+            </div>
+          </template>
+        </div>
+        <div style="height: 800px;"></div>
+      </div>
     </main>
-    <v-footer>
-      <span class="text-xs-left">© 2017 photoleuchten</span>
-    </v-footer>
-  </v-app>
+    <footer class="footer toolbar">
+      <span class="">© 2017 photoleuchten</span>
+    </footer>
+  </div>
 </template>
 
 <script>
 
-  import 'vuetify/dist/vuetify.min.css'
-  import Hello from './components/Hello'
+  import 'flexboxgrid/dist/flexboxgrid.min.css'
+  import VueMasonry from 'vue-masonry'
+  import PlImg from './components/PlImg'
 
   export default {
     name: 'app',
     components: {
-      Hello
+      PlImg, VueMasonry
     },
     data () {
       return {
-        nav2: false
+        nav2: false,
+        blocks: ['q1', 'r2', 'r3']
       }
     }
   }
 </script>
 
 <style lang="less">
-  .pl-app{
-    .toolbar, .footer {
+
+  @font-face {
+    font-family: TimeBurner;
+    src: url('../static/fonts/timeburnernormal.ttf');
+  }
+
+  @font-face {
+    font-family: TimeBurnerBold;
+    src: url('../static/fonts/timeburnerbold.ttf');
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: TimeBurner, sans-serif;
+  }
+
+  .logo {
+    text-decoration: none;
+    color: inherit;
+    h1 span:first-of-type {
+      border: 1px solid;
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+  }
+
+  .pl-app {
+    background: #424242;
+    color: #fff;
+    .toolbar {
       background: #202020;
     }
-    .content{
-      background: inherit;
+    .toolbar, .content {
+      padding: 1rem;
     }
-    h1, h2, h3, h4, h5, h6 {
-      color: #fff;
+    main {
+      min-height: calc(~'100vh - 128px');
+      .content {
+        padding: 1rem;
+      }
+    }
+    .top-toolbar {
+      height: 64px;
+    }
+    footer {
+      min-height: 64px;
     }
   }
 </style>

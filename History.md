@@ -1,5 +1,13 @@
 
 
+###Release 1.1.6
+>*March 26, 2017*
+
+ * some cleanup; updated pl-images [8ae016a](https://github.com/bear2s/photoleuchten/commits/8ae016a5c35a9036e194b78ade81cce7c854c987)
+ * small fix and enabled lazy loading [d866f30](https://github.com/bear2s/photoleuchten/commits/d866f30ba277c0e186d5ec45333740cf6c07c726)
+
+
+
 ###Release 1.1.5
 >*March 26, 2017*
 

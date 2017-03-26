@@ -26,14 +26,14 @@
           </div>
           <div class="row">
             <h3 class="col-xs-12">Runde Leuchten</h3>
-            <div v-for="(item, index) in roundImgs" :key="i" class="col-xs-4">
-              <pl-img :fileName="item" sizes="32vw" :lazy="false"></pl-img>
+            <div v-for="(item, i) in roundImgs" :key="i" class="col-xs-4">
+              <pl-img :fileName="item" sizes="32vw" :lazy="true"></pl-img>
             </div>
           </div>
           <div class="row">
             <h3 class="col-xs-12">Quadratische Leuchten</h3>
-            <div v-for="(item, index) in quadImgs" :key="i" class="col-xs-4">
-              <pl-img :fileName="item" sizes="32vw" :lazy="false"></pl-img>
+            <div v-for="(item, i) in quadImgs" :key="i" class="col-xs-4">
+              <pl-img :fileName="item" sizes="32vw" :lazy="true"></pl-img>
             </div>
           </div>
         </div>

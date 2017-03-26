@@ -21,17 +21,20 @@
           </div>
           <div class="row">
             <div class="col-xs-12">
-              <img v-lazy="'../static/img/leuchten/q2-1920.jpg'"
-                   width="100%" height="auto"
-                   alt="photoleuchte">
+              <pl-img fileName="q1" sizes="100vw" :lazy="false"></pl-img>
             </div>
           </div>
           <div class="row">
-            <template v-for="(item, index) in blocks">
-              <div class="col-xs-4">
-                <pl-img :fileName="item" sizes="32vw" :lazy="false"></pl-img>
-              </div>
-            </template>
+            <h3 class="col-xs-12">Runde Leuchten</h3>
+            <div v-for="(item, index) in roundImgs" :key="i" class="col-xs-4">
+              <pl-img :fileName="item" sizes="32vw" :lazy="false"></pl-img>
+            </div>
+          </div>
+          <div class="row">
+            <h3 class="col-xs-12">Quadratische Leuchten</h3>
+            <div v-for="(item, index) in quadImgs" :key="i" class="col-xs-4">
+              <pl-img :fileName="item" sizes="32vw" :lazy="false"></pl-img>
+            </div>
           </div>
         </div>
       </div>
@@ -61,7 +64,8 @@
     data () {
       return {
         nav2: false,
-        blocks: ['q1', 'r2', 'r3']
+        quadImgs: ['q2', 'q4', 'q5'],
+        roundImgs: ['r1', 'r5', 'r6', 'r4', 'r3', 'r7']
       }
     }
   }
@@ -94,9 +98,10 @@
     font-family: TimeBurner, sans-serif;
   }
 
-  img{
+  img {
     max-width: 100%;
   }
+
   .logo {
     text-decoration: none;
     color: inherit;

@@ -1,5 +1,12 @@
 
 
+###Release 1.1.7
+>*March 26, 2017*
+
+ * favicon, small changes [0fb6e36](https://github.com/bear2s/photoleuchten/commits/0fb6e369bd16cc3d0e9747da78b2718b56ed67e3)
+
+
+
 ###Release 1.1.6
 >*March 26, 2017*
 

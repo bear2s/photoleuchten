@@ -3,9 +3,9 @@
     <div class="container">
       <div class="row middle-xs">
         <div class="col-xs-12">
-          <a href="/" class="logo">
+          <nuxt-link to="/" class="logo">
             <h1><span>pl</span><span>PHOTOLEUCHTEN</span></h1>
-          </a>
+          </nuxt-link>
         </div>
       </div>
     </div>

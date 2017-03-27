@@ -30,18 +30,21 @@
       sizes: {
         type: String,
         default: '100vw'
-      }
-    },
-    data () {
-      return {
-        imgSizes: ['1920', '1280', '960', '640', '320']
+      },
+      imgSizes: {
+        type: Array,
+        default: function () {
+          return ['1920', '1280', '960', '640', '320']
+        }
       }
     },
     computed: {
       srcsetComputed () {
         let val = ''
         this.imgSizes.forEach((str, i) => {
-          val += `${i > 0 ? ' ' : ''}../static/img/${this.folder}/${this.fileName}-${str}.${this.imgType} ${str}w,`
+          const start = (i > 0 ? ' ' : '')
+          const end = (i !== this.imgSizes.length - 1 ? ',' : '')
+          val += `${start}/img/${this.folder}/${this.fileName}-${str}.${this.imgType} ${str}w${end}`
         })
         return val
       }

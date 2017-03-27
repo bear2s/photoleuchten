@@ -1,13 +1,14 @@
-@import (css) "../../node_modules/normalize.css";
+@import "~normalize.css";
+@import "~flexboxgrid";
 
 @font-face {
   font-family: TimeBurner;
-  src: url('../../static/fonts/timeburnernormal.ttf');
+  src: url('/fonts/timeburnernormal.ttf');
 }
 
 @font-face {
   font-family: TimeBurnerBold;
-  src: url('../../static/fonts/timeburnerbold.ttf');
+  src: url('/fonts/timeburnerbold.ttf');
 }
 
 * {
@@ -29,4 +30,9 @@ h1, h2, h3, h4, h5, h6 {
 
 img, .row, .container {
   max-width: 100%;
+  margin: auto;
+}
+
+a {
+  color: inherit;
 }

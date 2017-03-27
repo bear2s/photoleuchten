@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer toolbar">
+  <footer class="footer toolbar" v-once>
     <div class="container">
       <div class="row middle-xs">
         <div class="col-xs-6">

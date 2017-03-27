@@ -1,5 +1,5 @@
 <template>
-  <header class="top-toolbar toolbar">
+  <header class="top-toolbar toolbar" v-once>
     <div class="container">
       <div class="row middle-xs">
         <div class="col-xs-12">

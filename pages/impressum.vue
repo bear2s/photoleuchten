@@ -11,7 +11,7 @@
         E-Mail:<br/>
         photoleuchten@yahoo.com<br/>
         <h2>Umsatzsteuer-ID:</h2>
-        Umsatzsteuer-Identifikationsnummer gemäß; §27 a Umsatzsteuergesetz:<br/>
+        Umsatzsteuer-Identifikationsnummer gemäß §27 a Umsatzsteuergesetz:<br/>
         DE304325864
       </div>
     </div>

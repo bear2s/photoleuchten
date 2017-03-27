@@ -1,5 +1,12 @@
 
 
+###Release 2.0.3
+>*March 28, 2017*
+
+ * fixed typo; made header and footer static components (v-once) [891bc8b](https://github.com/bear2s/photoleuchten/commits/891bc8b278d03395660bfca9807332ebe38036f7)
+
+
+
 ###Release 2.0.2
 >*March 28, 2017*
 

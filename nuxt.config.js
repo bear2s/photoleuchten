@@ -29,6 +29,10 @@ module.exports = {
       {rel: 'manifest', href: '/manifest.json'}
     ]
   },
+  cache: {
+    max: 1000,
+    maxAge: 90000000
+  },
   /*
    ** Global CSS
    */

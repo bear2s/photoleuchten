@@ -1,5 +1,12 @@
 
 
+###Release 2.0.1
+>*March 27, 2017*
+
+ * enabled caching [3624cea](https://github.com/bear2s/photoleuchten/commits/3624cea9751eef27d38c9d3cc0c6ba08c35434e8)
+
+
+
 ###Release 2.0.0
 >*March 27, 2017*
 

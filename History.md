@@ -1,5 +1,13 @@
 
 
+###Release 2.0.2
+>*March 28, 2017*
+
+ * added impressum [5edd5df](https://github.com/bear2s/photoleuchten/commits/5edd5df158bbaeaf6a38e3e1486004ea3b9d8b43)
+ * load spinner from assets [5b2f68e](https://github.com/bear2s/photoleuchten/commits/5b2f68e9c1ad5d4f9d2aeb052ed2e537d81d513a)
+
+
+
 ###Release 2.0.1
 >*March 27, 2017*
 

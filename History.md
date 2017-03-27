@@ -1,5 +1,16 @@
 
 
+###Release 2.0.0
+>*March 27, 2017*
+
+ * optimised favicon .png files [45d2f41](https://github.com/bear2s/photoleuchten/commits/45d2f4141602cc3e250b1cba5f71e6da720f2466)
+ * Merge branch 'feature/refactor-nuxt' into develop [70c2049](https://github.com/bear2s/photoleuchten/commits/70c2049b1f860ee591398de3f59ccb9031c6e1e3)
+ * nuxt works [474293a](https://github.com/bear2s/photoleuchten/commits/474293a0ba25fda75c112702a3e395b9305e0637)
+ * adjusted deps to nuxt [466d5fd](https://github.com/bear2s/photoleuchten/commits/466d5fdedc98e3d62897668574a5407587fbad15)
+ * updated favicons [4bd51d5](https://github.com/bear2s/photoleuchten/commits/4bd51d58e31db0e97e207129d651912b5f95155c)
+
+
+
 ###Release 1.1.7
 >*March 26, 2017*
 

@@ -1,5 +1,13 @@
 
 
+###Release 2.0.4
+>*April 8, 2017*
+
+ * removed lazyload; updated deps; added new images [48230ab](https://github.com/bear2s/photoleuchten/commits/48230ab46a32a279e91399a22092d1225ca8213c)
+ * updated dev deps [40df611](https://github.com/bear2s/photoleuchten/commits/40df611941b7e0e448bb9904f7fa266f62e89d28)
+
+
+
 ###Release 2.0.3
 >*March 28, 2017*
 

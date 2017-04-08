@@ -1,20 +1,19 @@
 {
   "name": "photoleuchten",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "description": "generator for photoleuchten.com",
   "author": "Steffen Baer <stbaer.mail@gmail.com>",
   "private": true,
   "license": "UNLICENCE",
   "scripts": {
-    "clean:static": "rm -rf static/img",
-    "cp:pl-imgs": "npm run clean:static && cp -R node_modules/pl-images/dist static/img",
+    "cp:pl-imgs": "node scripts/mvImages",
     "predev": "npm run cp:pl-imgs",
     "prebuild": "npm run cp:pl-imgs",
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "lint": "eslint  --ext .js,.vue pages layout scripts components --ignore-path .gitignore ",
     "precommit": "npm run lint"
   },
   "dependencies": {
@@ -22,18 +21,21 @@
   },
   "devDependencies": {
     "babel-eslint": "^7.1.1",
-    "eslint": "^3.15.0",
-    "eslint-config-standard": "^7.1.0",
-    "eslint-loader": "^1.6.1",
+    "babel-plugin-component": "0.9.1",
+    "eslint": "3.19.0",
+    "eslint-config-standard": "10.2.0",
+    "eslint-loader": "1.7.1",
     "eslint-plugin-html": "^2.0.0",
+    "eslint-plugin-import": "2.2.0",
+    "eslint-plugin-node": "4.2.2",
     "eslint-plugin-promise": "^3.4.1",
-    "eslint-plugin-standard": "^2.0.1",
+    "eslint-plugin-standard": "3.0.1",
     "flexboxgrid": "^6.3.1",
     "less": "^2.7.2",
-    "less-loader": "^4.0.2",
+    "less-loader": "4.0.3",
     "normalize.css": "^6.0.0",
-    "pl-images": "file:../pl-images#1.0.3",
-    "vue-lazyload": "^1.0.1"
+    "pl-images": "file:../pl-images#1.1.1",
+    "shelljs": "latest"
   },
   "engines": {
     "node": ">= 4.0.0",

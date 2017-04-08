@@ -41,7 +41,6 @@ module.exports = {
    ** Plugins
    */
   plugins: [
-    '~plugins/vue-lazyload'
   ],
   /*
    ** Customize the progress-bar color

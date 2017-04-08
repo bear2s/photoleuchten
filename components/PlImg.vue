@@ -1,10 +1,6 @@
 <template>
-  <img v-if="lazy"
-       v-lazy="fileName+'.' + imgType"
-       :data-srcset="srcsetComputed" :sizes="sizes"/>
-  <img v-else
-       :src="fileName+'.' + imgType"
-       :srcset="srcsetComputed" :sizes="sizes"/>
+  <!--<img v-if="lazy" v-lazy="srcComputed" :data-srcset="srcsetComputed" :sizes="sizes"/>-->
+  <img :src="srcComputed" :srcset="srcsetComputed" :sizes="sizes"/>
 </template>
 
 <script>
@@ -21,7 +17,7 @@
       },
       folder: {
         type: String,
-        default: 'leuchten'
+        default: '1920+'
       },
       lazy: {
         type: Boolean,
@@ -39,11 +35,21 @@
       }
     },
     computed: {
+      sizesComputed () {
+        if (this.folder === 960) {
+          return ['960', '640', '320']
+        } else {
+          return this.imgSizes
+        }
+      },
+      srcComputed () {
+        return `/img/${this.folder}/${this.fileName}-${this.sizesComputed[this.sizesComputed.length - 1]}.${this.imgType}`
+      },
       srcsetComputed () {
         let val = ''
-        this.imgSizes.forEach((str, i) => {
+        this.sizesComputed.forEach((str, i) => {
           const start = (i > 0 ? ' ' : '')
-          const end = (i !== this.imgSizes.length - 1 ? ',' : '')
+          const end = (i !== this.sizesComputed.length - 1 ? ',' : '')
           val += `${start}/img/${this.folder}/${this.fileName}-${str}.${this.imgType} ${str}w${end}`
         })
         return val

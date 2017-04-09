@@ -20,13 +20,13 @@
             :folder="'960'"
             :fileName="`${item.file}a`"
             v-show="selectedMotive !== item.file"
-            sizes="30vw"></pl-img>
+            sizes="(min-width: 64em) 16vw, (min-width: 48em) 25vw, (max-width: 48em) 33vw"></pl-img>
           <pl-img
             class="list-item button"
             :folder="'960'"
             v-show="selectedMotive === item.file"
             :fileName="`${item.file}b`"
-            sizes="30vw" :lazy="false"></pl-img>
+            sizes="(min-width: 64em) 16vw, (min-width: 48em) 25vw, (max-width: 48em) 33vw"></pl-img>
 
         <div class="motive-label">{{item.label}}</div>
       </div>

@@ -1,5 +1,12 @@
 
 
+###Release 2.0.8
+>*April 9, 2017*
+
+ * pl-images updated; quad image sizes; [3b3cabc](https://github.com/bear2s/photoleuchten/commits/3b3cabcc4b67641a9a7d87d0900f814f926091da)
+
+
+
 ###Release 2.0.7
 >*April 9, 2017*
 

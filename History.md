@@ -1,5 +1,12 @@
 
 
+###Release 2.0.11
+>*April 10, 2017*
+
+ * added logo; changed main color; [07f0ad0](https://github.com/bear2s/photoleuchten/commits/07f0ad023af2703c56dbdba099a11ec2cb64d9c6)
+
+
+
 ###Release 2.0.10
 >*April 9, 2017*
 

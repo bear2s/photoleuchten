@@ -13,6 +13,7 @@
 </template>
 <script>
 export default {
+  transition: 'slide-left',
   asyncData ({ req }) {
     return {
       name: req ? 'server' : 'client'

@@ -2,9 +2,17 @@
   <header class="top-toolbar toolbar" v-once>
     <div class="container">
       <div class="row middle-xs">
-        <div class="col-xs-12">
+        <div class="col-xs-6 start-xs">
           <nuxt-link to="/" class="logo">
             <h1><span>pl</span><span>PHOTOLEUCHTEN</span></h1>
+          </nuxt-link>
+        </div>
+        <div class="col-xs-6 end-xs nav">
+          <nuxt-link to="/">
+            Home
+          </nuxt-link>
+          <nuxt-link to="/products">
+            Produkte
           </nuxt-link>
         </div>
       </div>
@@ -23,6 +31,11 @@
     padding-left: 5px;
     padding-right: 5px;
     margin-right: 1rem;
+  }
+
+  .nav a {
+    text-decoration: none;
+    padding: 0 0.25rem;
   }
 
 </style>

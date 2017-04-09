@@ -18,6 +18,12 @@
   </div>
 </template>
 
+<script>
+  export default {
+    transition: 'slide-left'
+  }
+</script>
+
 <style>
   h1, h2 {
     font-family: sans-serif;

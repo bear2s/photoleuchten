@@ -1,5 +1,12 @@
 
 
+###Release 2.0.6
+>*April 9, 2017*
+
+ * img compression [9192338](https://github.com/bear2s/photoleuchten/commits/9192338df49f754e002dd6fb4308a77bbdc4cc6d)
+
+
+
 ###Release 2.0.5
 >*April 8, 2017*
 

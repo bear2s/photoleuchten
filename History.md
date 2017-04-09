@@ -1,5 +1,13 @@
 
 
+###Release 2.0.9
+>*April 9, 2017*
+
+ * updated img component [60a0583](https://github.com/bear2s/photoleuchten/commits/60a0583a0a79be02cb87d837bd00c8b89aa576c4)
+ * pl-images 1.1.5 - adds 160px images [9d10686](https://github.com/bear2s/photoleuchten/commits/9d10686c4137f0bc64de4ed9d49eb8e4e88932f3)
+
+
+
 ###Release 2.0.8
 >*April 9, 2017*
 

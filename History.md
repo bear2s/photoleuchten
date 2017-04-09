@@ -1,5 +1,12 @@
 
 
+###Release 2.0.10
+>*April 9, 2017*
+
+ * image pkg updated [03fa6e7](https://github.com/bear2s/photoleuchten/commits/03fa6e79793aba4410c252702ba6216a49c983c7)
+
+
+
 ###Release 2.0.9
 >*April 9, 2017*
 

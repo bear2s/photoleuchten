@@ -41,6 +41,7 @@ module.exports = {
    ** Plugins
    */
   plugins: [
+    '~plugins/vueSetup.js'
   ],
   /*
    ** Customize the progress-bar color

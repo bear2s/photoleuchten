@@ -24,7 +24,7 @@
 <style lang="less">
   .pl-app {
     background: #424242;
-    color: #fff;
+    color: rgb(247, 147, 30);
     .toolbar {
       background: #202020;
       height: 64px;

@@ -1,5 +1,12 @@
 
 
+###Release 2.0.12
+>*April 10, 2017*
+
+ * downsized logo [f053f5f](https://github.com/bear2s/photoleuchten/commits/f053f5f92f847c142149b754fe4e038a2a74df72)
+
+
+
 ###Release 2.0.11
 >*April 10, 2017*
 

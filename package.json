@@ -50,7 +50,7 @@
     "not ie <= 9"
   ],
   "releaseConfig": {
-    "buildCommand": "npm run generate && rm -rf docs && cp -R dist docs && echo 'photoleuchten.com' > docs/CNAME && git add -A && git commit -am 'updated docs folder'",
+    "buildCommand": "node scripts/build.js",
     "versionFiles": [
       "package.json"
     ],

@@ -1,3 +1,5 @@
+import 'raf/polyfill'
+
 import Vue from 'vue'
 import PlImg from '~components/PlImg.vue'
 

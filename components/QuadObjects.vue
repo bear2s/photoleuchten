@@ -35,7 +35,7 @@
 </template>
 <script>
   const motiveLabels = {
-    21: 'Salt & pepper',
+    21: 'Salt & Pepper',
     22: 'Macarons',
     23: 'Tea',
     24: 'Beach I',
@@ -46,7 +46,7 @@
     29: 'Rice',
     30: 'Tree I',
     31: 'Tree II',
-    32: 'Tree II'
+    32: 'Tree III'
   }
 
   export default {

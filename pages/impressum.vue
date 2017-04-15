@@ -24,8 +24,8 @@
   }
 </script>
 
-<style>
-  h1, h2 {
+<style scoped>
+  .impressum {
     font-family: sans-serif;
   }
 </style>

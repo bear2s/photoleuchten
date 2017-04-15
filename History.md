@@ -1,5 +1,16 @@
 
 
+###Release 2.0.13
+>*April 15, 2017*
+
+ * added gf-release [df11502](https://github.com/bear2s/photoleuchten/commits/df115029994cc8b781e76d151731479fecfafd6d)
+ * build script [03c2089](https://github.com/bear2s/photoleuchten/commits/03c208986988b1de49ef86db412679eec8012c5f)
+ * updated docs folder [6018d89](https://github.com/bear2s/photoleuchten/commits/6018d89bf831db64cfc1b5dc481d7f1a2fe0d675)
+ * build script [943f07c](https://github.com/bear2s/photoleuchten/commits/943f07cefcc7f0099d473e8f9d3881100c9b45b4)
+ * updated docs folder [059409c](https://github.com/bear2s/photoleuchten/commits/059409cc313caa1a999da375e73e1f1ee1590ee8)
+
+
+
 ###Release 2.0.12
 >*April 10, 2017*
 

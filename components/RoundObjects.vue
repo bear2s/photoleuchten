@@ -1,6 +1,9 @@
 <template>
-  <div class="transitionable">
+  <div class="transitionable round-objects">
     <div class="row middle-xs">
+      <div class="col-xs-12">
+        <pl-img fileName="r1" sizes="100v"></pl-img>
+      </div>
       <div class="col-xs-offset-3 col-xs-3 center-xs">
         <pl-img fileName="r2" sizes="20vw"></pl-img>
       </div>
@@ -8,9 +11,7 @@
         <pl-img fileName="r0" imgType="png" sizes="20vw"></pl-img>
       </div>
       <div class="col-xs-3"></div>
-      <div class="col-xs-12">
-        <pl-img fileName="r1" sizes="100v"></pl-img>
-      </div>
+
     </div>
     <div class="row middle-xs">
       <h3 class="col-xs-12 center-xs">Leuchte rund<br/>
@@ -43,10 +44,17 @@
 
 </template>
 <script>
-  export default {}
+  export default {
+    components: {
+    }
+  }
 </script>
 
 <style lang="less" scoped>
+  .round-objects {
+    margin-bottom: 30vh;
+  }
+
   h3 {
     padding-top: 1rem;
     padding-bottom: 1rem;

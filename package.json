@@ -1,6 +1,6 @@
 {
   "name": "photoleuchten",
-  "version": "2.0.12",
+  "version": "2.0.13",
   "description": "generator for photoleuchten.com",
   "author": "Steffen Baer <stbaer.mail@gmail.com>",
   "private": true,
@@ -13,17 +13,19 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "lint": "eslint  --ext .js,.vue pages layout scripts components --ignore-path .gitignore ",
-    "precommit": "npm run lint"
+    "lint": "eslint  --ext .js,.vue pages layout scripts components ./*.js --ignore-path .gitignore ",
+    "precommit": "npm run lint",
+    "deploy": "gf-release"
   },
   "dependencies": {
     "nuxt": "latest"
   },
   "devDependencies": {
-    "babel-eslint": "^7.1.1",
+    "@nextindex/next-scss": "1.1.0",
+    "babel-eslint": "7.2.2",
     "babel-plugin-component": "0.9.1",
     "eslint": "3.19.0",
-    "eslint-config-standard": "10.2.0",
+    "eslint-config-standard": "10.2.1",
     "eslint-loader": "1.7.1",
     "eslint-plugin-html": "^2.0.0",
     "eslint-plugin-import": "2.2.0",
@@ -31,9 +33,12 @@
     "eslint-plugin-promise": "^3.4.1",
     "eslint-plugin-standard": "3.0.1",
     "flexboxgrid": "^6.3.1",
+    "gf-release": "1.4.5",
     "less": "^2.7.2",
     "less-loader": "4.0.3",
+    "node-sass": "4.5.2",
     "normalize.css": "^6.0.0",
+    "npm": "4.5.0",
     "pl-images": "file:../pl-images#1.1.6",
     "shelljs": "latest"
   },
@@ -47,7 +52,7 @@
     "not ie <= 9"
   ],
   "releaseConfig": {
-    "buildCommand": "npm run generate && rm -rf docs && cp -R dist docs && echo 'photoleuchten.com' > docs/CNAME && git add -A && git commit -am 'updated docs folder'",
+    "buildCommand": "node scripts/build.js && git add -A && git commit -am \"updated docs folder\"",
     "versionFiles": [
       "package.json"
     ],

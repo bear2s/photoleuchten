@@ -50,7 +50,7 @@
     "not ie <= 9"
   ],
   "releaseConfig": {
-    "buildCommand": "node scripts/build.js",
+    "buildCommand": "node scripts/build.js && git add -A && git commit -am \"updated docs folder\"",
     "versionFiles": [
       "package.json"
     ],

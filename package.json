@@ -13,7 +13,7 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "lint": "eslint  --ext .js,.vue pages layout scripts components ./*.js --ignore-path .gitignore ",
+    "lint": "eslint -c ./.eslintrc.js --ext .js,.vue ./",
     "precommit": "npm run lint",
     "deploy": "gf-release"
   },

@@ -4,10 +4,10 @@
     <div class="row middle-xs center-xs">
       <h3 class="col-xs-6 button"
           :class="{'active': selectedProduct === 'quad'}"
-          @click="selectProduct('quad')">Quadratische Leuchtkästen</h3>
+          @click="selectProduct('quad')">{{$t('products.quad.headline')}}</h3>
       <h3 class="col-xs-6 button"
           :class="{'active': selectedProduct === 'round'}"
-          @click="selectProduct('round')">Runde Lichtobjekte</h3>
+          @click="selectProduct('round')">{{$t('products.round.headline')}}</h3>
     </div>
 
     <transition name="component-fade" mode="out-in">
@@ -47,6 +47,7 @@
   h3.button {
     padding-top: 1rem;
     padding-bottom: 1rem;
+    text-transform: uppercase;
     &.active {
       border: 1px solid;
     }

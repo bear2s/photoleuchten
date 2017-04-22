@@ -1,3 +1,5 @@
+/* eslint-disable no-console */
+
 const shell = require('shelljs')
 const path = require('path')
 

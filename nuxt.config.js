@@ -41,7 +41,8 @@ module.exports = {
    ** Plugins
    */
   plugins: [
-    '~plugins/vueSetup.js'
+    '~plugins/vueSetup.js',
+    {src: '~plugins/i18n.js', injectAs: 'i18n'}
   ],
   /*
    ** Customize the progress-bar color
@@ -53,8 +54,9 @@ module.exports = {
    ** Build configuration
    */
   build: {
+    vendor: ['vue-i18n'],
     /*
-     ** Run ESLINT on save
+     ** Run eslint on save
      */
     extend (config, ctx) {
       if (ctx.isClient) {

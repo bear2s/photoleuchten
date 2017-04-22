@@ -1,0 +1,20 @@
+{
+  "links": {
+    "products": "Products",
+    "contact": "Contact",
+    "legal": "legal notice"
+  },
+  "home": {
+    "headline": "lightboxes - illuminated photos and papers - handmade individual frames"
+  },
+  "products": {
+    "quad": {
+      "headline": "Square Lightboxes"
+    },
+    "round": {
+      "headline": "Round Light Objects"
+    },
+    "selection": "Product selection",
+    "specs": "Specifications"
+  }
+}

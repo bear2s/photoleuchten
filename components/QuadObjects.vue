@@ -9,7 +9,7 @@
     </div>
     <div class="row middle-xs">
       <div class="col-xs-8">
-        <h4>Technische Daten</h4>
+        <h4>{{$t('products.specs')}}</h4>
         <p>Rahmen: handgefertigtes Einzelstueck, weiss lackiertes Holz<br/>
            Bild: Fotodruck auf Plexisglas<br/>
            Beleuchtung: batteriebetriebene LEDs<br/>
@@ -21,7 +21,7 @@
       </div>
     </div>
     <div class="row middle-xs transitionable">
-      <h4 class="col-xs-12">Motivauswahl</h4>
+      <h4 class="col-xs-12">{{$t('products.selection')}}</h4>
     </div>
     <div class="row middle-xs">
       <div v-for="(item, i) in quadMotives" :key="i"

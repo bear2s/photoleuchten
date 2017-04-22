@@ -1,6 +1,6 @@
 {
   "name": "photoleuchten",
-  "version": "2.0.13",
+  "version": "2.0.14",
   "description": "generator for photoleuchten.com",
   "author": "Steffen Baer <stbaer.mail@gmail.com>",
   "private": true,
@@ -22,7 +22,7 @@
   },
   "devDependencies": {
     "@nextindex/next-scss": "1.1.0",
-    "babel-eslint": "7.2.2",
+    "babel-eslint": "7.2.3",
     "babel-plugin-component": "0.9.1",
     "eslint": "3.19.0",
     "eslint-config-standard": "10.2.1",
@@ -39,7 +39,7 @@
     "node-sass": "4.5.2",
     "normalize.css": "^6.0.0",
     "npm": "4.5.0",
-    "pl-images": "file:../pl-images#1.1.6",
+    "pl-images": "file:../pl-images#1.1.7",
     "shelljs": "latest"
   },
   "engines": {

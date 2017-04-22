@@ -1,5 +1,13 @@
 
 
+###Release 2.0.15
+>*April 22, 2017*
+
+ * added i18n and some translations [9fa6bea](https://github.com/bear2s/photoleuchten/commits/9fa6bea8c50975507f46aaec1f8093425584393a)
+ * updated lint conf [42e4cc2](https://github.com/bear2s/photoleuchten/commits/42e4cc2026b26712ef65b8b367ca9b199b8a6db9)
+
+
+
 ###Release 2.0.14
 >*April 22, 2017*
 

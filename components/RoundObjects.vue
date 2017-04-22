@@ -1,17 +1,22 @@
 <template>
   <div class="transitionable round-objects">
+
     <div class="row middle-xs">
       <div class="col-xs-12">
         <pl-img fileName="r1" sizes="100v"></pl-img>
       </div>
-      <div class="col-xs-offset-3 col-xs-3 center-xs">
-        <pl-img fileName="r2" sizes="20vw"></pl-img>
-      </div>
-      <div class="col-xs-3 center-xs">
-        <pl-img fileName="r0" imgType="png" sizes="20vw"></pl-img>
-      </div>
-      <div class="col-xs-3"></div>
+    </div>
 
+    <div class="row middle-xs">
+      <div class="col-xs-4 center-xs">
+        <pl-img fileName="r0" imgType="png" sizes="33vw"></pl-img>
+      </div>
+      <div class="col-xs-4 center-xs">
+        <pl-img fileName="r7" imgType="png" sizes="33vw"></pl-img>
+      </div>
+      <div class="col-xs-4">
+        <pl-img fileName="r9" imgType="png" sizes="33vw"></pl-img>
+      </div>
     </div>
     <div class="row middle-xs">
       <h3 class="col-xs-12 center-xs">Leuchte rund<br/>

@@ -2,9 +2,22 @@
   <div>
     <div class="row middle-xs transitionable">
 
-      <div v-for="(item, i) in ['q5', 'q4', 'q2', 'q3']" :key="i"
-           class="col-xs-3">
-        <pl-img :fileName="item" sizes="20vw"></pl-img>
+      <div v-for="(item, i) in ['q5', 'q4', 'q2']" :key="i"
+           class="col-xs-4">
+        <pl-img :fileName="item" sizes="33vw"></pl-img>
+      </div>
+    </div>
+    <div class="row middle-xs">
+      <div class="col-xs-8">
+        <h4>Technische Daten</h4>
+        <p>Rahmen: handgefertigtes Einzelstueck, weiss lackiertes Holz<br/>
+           Bild: Fotodruck auf Plexisglas<br/>
+           Beleuchtung: batteriebetriebene LEDs<br/>
+           Abmessungen: 42 x 42 x 8 (cm)<br/>
+           Motiv kann gewechselt werden</p>
+      </div>
+      <div class="col-xs-4">
+        <pl-img fileName="q3" sizes="33vw"></pl-img>
       </div>
     </div>
     <div class="row middle-xs transitionable">

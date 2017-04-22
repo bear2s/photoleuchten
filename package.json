@@ -18,6 +18,7 @@
     "deploy": "gf-release"
   },
   "dependencies": {
+    "accept-language-parser": "1.4.0",
     "nuxt": "latest"
   },
   "devDependencies": {
@@ -40,7 +41,8 @@
     "normalize.css": "^6.0.0",
     "npm": "4.5.0",
     "pl-images": "file:../pl-images#1.1.7",
-    "shelljs": "latest"
+    "shelljs": "latest",
+    "vue-i18n": "^6"
   },
   "engines": {
     "node": ">= 4.0.0",

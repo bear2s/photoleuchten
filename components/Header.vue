@@ -1,25 +1,26 @@
 <template>
-  <header class="top-toolbar toolbar" v-once>
+  <header class="top-toolbar toolbar">
     <div class="container">
       <div class="row middle-xs">
         <div class="col-xs-8 start-xs">
           <nuxt-link to="/" class="logo">
-            <h1 v-show="false"><span>pl</span><span>PHOTOLEUCHTEN</span></h1>
             <img src="~assets/img/logo.png" height="45px" width="auto"/>
           </nuxt-link>
         </div>
         <div class="col-xs-4 end-xs nav">
-          <nuxt-link to="/">
-            Home
-          </nuxt-link>
-          <nuxt-link to="/products">
-            Produkte
-          </nuxt-link>
+          <nuxt-link to="/products">{{$t('links.products')}}</nuxt-link>
         </div>
       </div>
     </div>
   </header>
 </template>
+<script>
+  export default {
+    mounted () {
+
+    }
+  }
+</script>
 
 <style scoped>
   .logo {

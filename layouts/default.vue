@@ -1,6 +1,11 @@
 <template>
   <div class="pl-app">
     <pl-header/>
+    <div class="row end-xs">
+      <div class="col-xs-12">
+        <lang-select></lang-select>
+      </div>
+    </div>
     <main>
       <div class="content">
         <nuxt/>
@@ -13,10 +18,11 @@
 <script>
   import PlFooter from '~components/Footer.vue'
   import PlHeader from '~components/Header.vue'
+  import LangSelect from '~components/LangSelect.vue'
 
   export default {
     components: {
-      PlFooter, PlHeader
+      PlFooter, PlHeader, LangSelect
     }
   }
 </script>

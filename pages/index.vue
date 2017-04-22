@@ -3,7 +3,7 @@
 
     <div class="row middle-xs">
       <div class="col-xs-12 end-xs">
-        <h2>Wandleuchten - Lichtobjekte - Photo + Licht</h2>
+        <h2>{{$t('home.headline')}}</h2>
       </div>
     </div>
 
@@ -13,13 +13,15 @@
       </div>
     </div>
 
-
   </div>
 </template>
 
 <script>
   export default {
     transition: 'slide-left',
-    name: 'app'
+    name: 'app',
+    mounted () {
+      console.log(this.$i18n) // eslint-disable-line
+    }
   }
 </script>

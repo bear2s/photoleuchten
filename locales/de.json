@@ -1,0 +1,20 @@
+{
+  "links": {
+    "products": "Produkte",
+    "contact": "Kontakt",
+    "legal": "Impressum"
+  },
+  "home": {
+    "headline": "Wandleuchten - Lichtobjekte - Photo + Licht"
+  },
+  "products": {
+    "quad": {
+      "headline": "Quadratische Leuchtkästen"
+    },
+    "round":{
+      "headline": "Runde Lichtobjekte"
+    },
+    "selection": "Motivauswahl",
+    "specs": "Technische Daten"
+  }
+}

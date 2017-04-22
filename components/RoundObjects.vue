@@ -7,12 +7,13 @@
       </div>
     </div>
 
-    <div class="row middle-xs">
+    <div class="row middle-xs" style="margin-top: 3rem">
       <div class="col-xs-4 center-xs">
         <pl-img fileName="r0" imgType="png" sizes="33vw"></pl-img>
       </div>
-      <div class="col-xs-4 center-xs">
-        <pl-img fileName="r7" imgType="png" sizes="33vw"></pl-img>
+      <div class="col-xs-4 center-xs toggle-active" @click.stop="r7active = !r7active">
+        <pl-img v-show="!r7active" fileName="r7" imgType="png" sizes="33vw"></pl-img>
+        <pl-img v-show="r7active" fileName="r8" imgType="png" sizes="33vw"></pl-img>
       </div>
       <div class="col-xs-4">
         <pl-img fileName="r9" imgType="png" sizes="33vw"></pl-img>
@@ -50,6 +51,11 @@
 </template>
 <script>
   export default {
+    data () {
+      return {
+        r7active: false
+      }
+    },
     components: {
     }
   }
@@ -63,5 +69,11 @@
   h3 {
     padding-top: 1rem;
     padding-bottom: 1rem;
+  }
+
+  .toggle-active{
+    &:hover{
+      cursor: pointer
+    }
   }
 </style>

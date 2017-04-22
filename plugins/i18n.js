@@ -4,7 +4,6 @@ import store from '~store'
 
 Vue.use(VueI18n)
 
-console.log('here') // eslint-disable-line
 export default new VueI18n({
   locale: store.state.locale,
   fallbackLocale: 'en',

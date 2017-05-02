@@ -1,3 +1,5 @@
+const webpack = require('webpack');
+
 module.exports = {
   /*
    ** Headers of the page
@@ -59,6 +61,17 @@ module.exports = {
      ** Run eslint on save
      */
     extend (config, ctx) {
+      if (!ctx.dev) {
+        config.plugins.push(
+          new webpack.optimize.LimitChunkCountPlugin({
+            maxChunks: 15
+          }),
+          new webpack.optimize.MinChunkSizePlugin({
+            minChunkSize: 10000
+          })
+        )
+      }
+
       if (ctx.isClient) {
         config.module.rules.push({
           enforce: 'pre',

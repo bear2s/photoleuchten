@@ -13,6 +13,7 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
+    "prelint": "echo 'Running eslint...' && exit 0",
     "lint": "eslint -c ./.eslintrc.js --ext .js,.vue ./",
     "deploy": "gf-release"
   },

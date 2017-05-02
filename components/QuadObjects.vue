@@ -6,6 +6,10 @@
            class="col-xs-4">
         <pl-img :fileName="item" sizes="33vw"></pl-img>
       </div>
+      <div v-for="(item, i) in ['q6', 'q7', 'q8']" :key="i"
+           class="col-xs-4">
+        <pl-img :fileName="item" sizes="33vw"></pl-img>
+      </div>
     </div>
     <div class="row middle-xs">
       <div class="col-xs-8">

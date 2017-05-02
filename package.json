@@ -14,9 +14,11 @@
     "start": "nuxt start",
     "generate": "nuxt generate",
     "lint": "eslint -c ./.eslintrc.js --ext .js,.vue ./",
-    "precommit": "npm run lint",
     "deploy": "gf-release"
   },
+  "pre-commit": [
+    "lint"
+  ],
   "dependencies": {
     "accept-language-parser": "1.4.0",
     "nuxt": "0.10.7"
@@ -41,6 +43,7 @@
     "normalize.css": "^6.0.0",
     "npm": "4.5.0",
     "pl-images": "file:../pl-images#1.1.7",
+    "pre-commit": "1.2.2",
     "shelljs": "latest",
     "vue-i18n": "^6"
   },

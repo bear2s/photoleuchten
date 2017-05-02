@@ -17,9 +17,6 @@
     "lint": "eslint -c ./.eslintrc.js --ext .js,.vue ./",
     "deploy": "gf-release"
   },
-  "pre-commit": [
-    "lint"
-  ],
   "dependencies": {
     "accept-language-parser": "1.4.0",
     "nuxt": "0.10.7"

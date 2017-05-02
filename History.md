@@ -1,5 +1,13 @@
 
 
+###Release 2.0.17
+>*May 3, 2017*
+
+ * lint [4adc930](https://github.com/bear2s/photoleuchten/commits/4adc93065956943cfd3a67d79c34d47db9d79ada)
+ * limited chunk size; updated nuxt; [6369068](https://github.com/bear2s/photoleuchten/commits/636906834321e5e2fff8af8a3a7f4d466340ac86)
+
+
+
 ###Release 2.0.16
 >*April 22, 2017*
 

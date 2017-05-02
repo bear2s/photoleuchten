@@ -1,6 +1,6 @@
 {
   "name": "photoleuchten",
-  "version": "2.0.16",
+  "version": "2.0.17",
   "description": "generator for photoleuchten.com",
   "author": "Steffen Baer <stbaer.mail@gmail.com>",
   "private": true,
@@ -19,7 +19,7 @@
   },
   "dependencies": {
     "accept-language-parser": "1.4.0",
-    "nuxt": "latest"
+    "nuxt": "0.10.7"
   },
   "devDependencies": {
     "@nextindex/next-scss": "1.1.0",

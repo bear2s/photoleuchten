@@ -41,7 +41,6 @@
     "normalize.css": "^6.0.0",
     "npm": "4.5.0",
     "pl-images": "file:../pl-images#1.1.7",
-    "pre-commit": "1.2.2",
     "shelljs": "latest",
     "vue-i18n": "^6"
   },

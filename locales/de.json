@@ -8,13 +8,18 @@
     "headline": "Wandleuchten - Lichtobjekte - Photo + Licht"
   },
   "products": {
+    "selection": "Motivauswahl",
+    "specs": "Technische Daten",
+    "lighting": "Beleuchtung",
     "quad": {
-      "headline": "Quadratische Leuchtkästen"
+      "headline": "Quadratische Leuchtkästen",
+      "specs_description": "Rahmen: handgefertigtes Einzelstueck, weiss lackiertes Holz<br/>Motiv: Fotodruck auf Plexisglas, leicht wechselbar<br/>@:products.lighting: batteriebetriebene LEDs<br/>Abmessungen: 42 x 42 x 8 (cm)"
     },
     "round":{
-      "headline": "Runde Lichtobjekte"
-    },
-    "selection": "Motivauswahl",
-    "specs": "Technische Daten"
+      "headline": "Runde Lichtobjekte",
+      "round_lamp": "Runde Leuchten",
+      "japan_paper_description": "@:products.round.round_lamp<br/>Bespannt mit Japanpapier<br>@:products.lighting: RGB LED's mit Farbwechsel, dimmbar<br/>Rahmen Holz, Schlagmetall Kupfer",
+      "acryl_description": "@:products.round.round_lamp<br/>Fotodruck auf Acrylglas<br>@:products.lighting: Weiße LED's, dimmbar<br/>Rahmen Holz, Schlagmetall Kupfer<br/>oxidiert"
+    }
   }
 }

@@ -10,11 +10,7 @@
     <div class="row middle-xs">
       <div class="col-xs-8">
         <h4>{{$t('products.specs')}}</h4>
-        <p>Rahmen: handgefertigtes Einzelstueck, weiss lackiertes Holz<br/>
-           Bild: Fotodruck auf Plexisglas<br/>
-           Beleuchtung: batteriebetriebene LEDs<br/>
-           Abmessungen: 42 x 42 x 8 (cm)<br/>
-           Motiv kann gewechselt werden</p>
+        <p v-html="$t('products.quad.specs_description')"></p>
       </div>
       <div class="col-xs-4">
         <pl-img fileName="q3" sizes="33vw"></pl-img>

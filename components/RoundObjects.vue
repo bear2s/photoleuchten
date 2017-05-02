@@ -20,22 +20,14 @@
       </div>
     </div>
     <div class="row middle-xs">
-      <h3 class="col-xs-12 center-xs">Leuchte rund<br/>
-        bespannt mit Japanpapier<br>
-        Beleuchtung: RGB LED's mit Farbwechsel, dimmbar<br/>
-        Rahmen Holz, Schlagmetall Kuper</h3>
+      <h3 class="col-xs-12 center-xs" v-html="$t('products.round.japan_paper_description')"></h3>
       <div class="col-xs-12">
         <pl-img file-name="r3" sizes="100v"></pl-img>
       </div>
     </div>
 
     <div class="row middle-xs">
-      <h3 class="col-xs-12 center-xs">Leuchte rund<br/>
-        Fotodruck auf Acrylglas<br>
-        Beleuchtung: LED's weiß dimmbar<br/>
-        Rahmen Holz, Schlagmetall Kuper<br/>
-        oxidiert
-      </h3>
+      <h3 class="col-xs-12 center-xs" v-html="$t('products.round.acryl_description')"></h3>
       <div class="col-xs-12">
         <pl-img file-name="r5" sizes="100v"></pl-img>
       </div>
@@ -55,8 +47,6 @@
       return {
         r7active: false
       }
-    },
-    components: {
     }
   }
 </script>

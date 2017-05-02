@@ -1,5 +1,16 @@
 
 
+###Release 2.1.0
+>*May 3, 2017*
+
+ * removed pre-commit pkg [fc8797e](https://github.com/bear2s/photoleuchten/commits/fc8797e07708c61149ce1acde47d83b25611e5fa)
+ * disable pr-commit for now [c69159e](https://github.com/bear2s/photoleuchten/commits/c69159e11b4c2128d9a10bc5dec9ad96ddecde72)
+ * added some locales [7bbaa93](https://github.com/bear2s/photoleuchten/commits/7bbaa932d8b64da226c03f1cebf4ad9684f1feb7)
+ * added prelint script [a64da03](https://github.com/bear2s/photoleuchten/commits/a64da03071c5e115f2d014b145ba5f472a860c77)
+ * added pre-commit hook [b64e57d](https://github.com/bear2s/photoleuchten/commits/b64e57dea6ff4536c3a94543e97a23fa2ab58a92)
+
+
+
 ###Release 2.0.17
 >*May 3, 2017*
 

@@ -1,6 +1,6 @@
 {
   "name": "photoleuchten",
-  "version": "2.0.17",
+  "version": "2.1.0",
   "description": "generator for photoleuchten.com",
   "author": "Steffen Baer <stbaer.mail@gmail.com>",
   "private": true,
@@ -13,8 +13,8 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
+    "prelint": "echo 'Running eslint...' && exit 0",
     "lint": "eslint -c ./.eslintrc.js --ext .js,.vue ./",
-    "precommit": "npm run lint",
     "deploy": "gf-release"
   },
   "dependencies": {
@@ -45,7 +45,7 @@
     "vue-i18n": "^6"
   },
   "engines": {
-    "node": ">= 4.0.0",
+    "node": ">= 6.0.0",
     "npm": ">= 3.0.0"
   },
   "browserslist": [

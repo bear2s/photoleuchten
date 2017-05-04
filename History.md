@@ -1,5 +1,12 @@
 
 
+###Release 2.1.2
+>*May 4, 2017*
+
+ * added ga [287d287](https://github.com/bear2s/photoleuchten/commits/287d2870822221e1167abc615e7087be9d9bd844)
+
+
+
 ###Release 2.1.1
 >*May 3, 2017*
 

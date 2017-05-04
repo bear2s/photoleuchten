@@ -19,9 +19,6 @@
 <script>
   export default {
     transition: 'slide-left',
-    name: 'app',
-    mounted () {
-      console.log(this.$i18n) // eslint-disable-line
-    }
+    name: 'app'
   }
 </script>

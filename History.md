@@ -1,5 +1,12 @@
 
 
+###Release 2.1.3
+>*May 4, 2017*
+
+ * removed console.log [6c7dc41](https://github.com/bear2s/photoleuchten/commits/6c7dc41f020527390fd830f3bfc297fac585b477)
+
+
+
 ###Release 2.1.2
 >*May 4, 2017*
 

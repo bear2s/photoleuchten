@@ -1,5 +1,12 @@
 
 
+###Release 2.1.4
+>*May 4, 2017*
+
+ * external ga [0046765](https://github.com/bear2s/photoleuchten/commits/0046765b69ccef70f63e71eebac767ed07f3c3be)
+
+
+
 ###Release 2.1.3
 >*May 4, 2017*
 

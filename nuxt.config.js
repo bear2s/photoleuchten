@@ -44,8 +44,9 @@ module.exports = {
    */
   plugins: [
     '~plugins/vueSetup.js',
-    {src: '~plugins/i18n.js', injectAs: 'i18n'},
-    {src: '~plugins/ga.js', ssr: false}
+    {src: '~plugins/i18n.js', injectAs: 'i18n'}
+    // ,
+    // {src: '~plugins/ga.js', ssr: false}
   ],
   /*
    ** Customize the progress-bar color

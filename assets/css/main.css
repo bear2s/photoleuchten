@@ -38,6 +38,10 @@ a {
   color: inherit;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  text-transform: uppercase;
+}
+
 .container{
   z-index: 0;
 }
@@ -65,4 +69,8 @@ a {
 
 .z0{
   z-index: 0;
+}
+
+.no-transform{
+  text-transform: none;
 }

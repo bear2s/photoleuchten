@@ -9,6 +9,7 @@
         </div>
         <div class="col-xs-4 end-xs nav">
           <nuxt-link to="/products">{{$t('links.products')}}</nuxt-link>
+          <nuxt-link to="/about">{{$t('links.about')}}</nuxt-link>
         </div>
       </div>
     </div>
@@ -36,8 +37,13 @@
   }
 
   .nav a {
+    text-transform: uppercase;
     text-decoration: none;
     padding: 0 0.25rem;
+  }
+
+  .nav a.nuxt-link-active {
+    text-decoration: underline;
   }
 
 </style>

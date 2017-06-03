@@ -1,8 +1,12 @@
 {
+  "coming_soon": "in Arbeit ...",
+  "lighton": "Licht an",
+  "lightoff": "Licht aus",
   "links": {
     "products": "Produkte",
     "contact": "Kontakt",
-    "legal": "Impressum"
+    "legal": "Impressum",
+    "about": "About"
   },
   "home": {
     "headline": "Wandleuchten - Lichtobjekte - Photo + Licht"
@@ -13,13 +17,18 @@
     "lighting": "Beleuchtung",
     "quad": {
       "headline": "Quadratische Leuchtkästen",
-      "specs_description": "Rahmen: handgefertigtes Einzelstueck, weiss lackiertes Holz<br/>Motiv: Fotodruck auf Plexisglas, leicht wechselbar<br/>@:products.lighting: batteriebetriebene LEDs<br/>Abmessungen: 42 x 42 x 8 (cm)"
+      "battery_powered": "batteriebetrieben",
+      "line_powered": "netzbetrieben",
+      "specs_description": "Rahmen: handgefertigtes Einzelstück, Holzrahmen weiss lackiert<br/>Abmessungen: 42 cm x 42 cm x 8 cm<br/>Bild: Fotodruck auf Acrylglas 30 cm x 30 cm<br/>@:products.lighting: batteriebetriebene weisse LEDs (Monobatterien 3 St.)<br/>Motiv kann gewechselt werden<br/><br/>Preis: 240 €"
     },
-    "round":{
+    "round": {
       "headline": "Runde Lichtobjekte",
       "round_lamp": "Runde Leuchten",
       "japan_paper_description": "@:products.round.round_lamp<br/>Bespannt mit Japanpapier<br>@:products.lighting: RGB LED's mit Farbwechsel, dimmbar<br/>Rahmen Holz, Schlagmetall Kupfer",
       "acryl_description": "@:products.round.round_lamp<br/>Fotodruck auf Acrylglas<br>@:products.lighting: Weiße LED's, dimmbar<br/>Rahmen Holz, Schlagmetall Kupfer<br/>oxidiert"
+    },
+    "framed": {
+      "headline": "Bespannte Rahmen"
     }
   }
 }

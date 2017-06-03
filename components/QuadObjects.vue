@@ -1,52 +1,89 @@
 <template>
   <div>
+    <div class="row middle-xs">
+      <h4 class="col-xs-12">{{$t('products.quad.battery_powered')}}</h4>
+    </div>
     <div class="row middle-xs transitionable">
 
-      <div v-for="(item, i) in ['q5', 'q4', 'q2']" :key="i"
+      <div v-for="(item, i) in ['q1', 'q2', 'q3']" :key="i"
            class="col-xs-4">
         <pl-img :fileName="item" sizes="33vw"></pl-img>
       </div>
-      <div v-for="(item, i) in ['q6', 'q7', 'q8']" :key="i"
+      <div v-for="(item, i) in ['q4', 'q5', 'q6']" :key="i"
            class="col-xs-4">
         <pl-img :fileName="item" sizes="33vw"></pl-img>
       </div>
     </div>
+    <br>
     <div class="row middle-xs">
       <div class="col-xs-8">
         <h4>{{$t('products.specs')}}</h4>
         <p v-html="$t('products.quad.specs_description')"></p>
       </div>
       <div class="col-xs-4">
-        <pl-img fileName="q3" sizes="33vw"></pl-img>
+        <pl-img fileName="q7" sizes="33vw"></pl-img>
       </div>
     </div>
     <div class="row middle-xs transitionable">
-      <h4 class="col-xs-12">{{$t('products.selection')}}</h4>
+      <h4 class="col-xs-8">{{$t('products.selection')}}</h4>
+      <div class="col-xs-4 end-xs">
+        <toggle-button :value="quadMotivesLightOn"
+                       @change="onQuadMotivesLightOnChanged"
+                       :color="{checked: 'rgb(251, 176, 59)', unchecked: '#bfcbd9'}"
+                       :labels="{checked: $t('lightoff'), unchecked: $t('lighton')}"/>
+      </div>
     </div>
     <div class="row middle-xs">
       <div v-for="(item, i) in quadMotives" :key="i"
-           @click="toggleActiveMotive(item.file)"
-           :class="{active: selectedMotive === item.file}"
+           @click="motifClicked(item.file)"
            class="col-xs-4 col-sm-3 col-md-2 center-xs motive-item">
-          <pl-img
-            class="list-item button"
-            :folder="'960'"
-            :fileName="`${item.file}a`"
-            v-show="selectedMotive !== item.file"
-            sizes="(min-width: 64em) 16vw, (min-width: 48em) 25vw, (max-width: 48em) 33vw"></pl-img>
-          <pl-img
-            class="list-item button"
-            :folder="'960'"
-            v-show="selectedMotive === item.file"
-            :fileName="`${item.file}b`"
-            sizes="(min-width: 64em) 16vw, (min-width: 48em) 25vw, (max-width: 48em) 33vw"></pl-img>
-
+        <pl-img
+          class="list-item button"
+          :folder="'960'"
+          :fileName="`${item.file}a`"
+          v-show="quadMotivesLightOn === false"
+          sizes="(min-width: 64em) 16vw, (min-width: 48em) 25vw, (max-width: 48em) 33vw"></pl-img>
+        <pl-img
+          class="list-item button"
+          :folder="'960'"
+          v-show="quadMotivesLightOn === true"
+          :fileName="`${item.file}b`"
+          sizes="(min-width: 64em) 16vw, (min-width: 48em) 25vw, (max-width: 48em) 33vw"></pl-img>
         <div class="motive-label">{{item.label}}</div>
+      </div>
+      <modal v-if="selectedMotif" @close="selectedMotif = null">
+        <h3 slot="header">custom header</h3>
+        <div slot="body" class="row middle-xs">
+          <div class="col-xs-12">
+            <pl-img
+              slot="body"
+              :folder="'960'"
+              :fileName="`${selectedMotif}a`"
+              v-show="quadMotivesLightOn === false"
+              sizes="80vw"></pl-img>
+            <pl-img
+              slot="body"
+              :folder="'960'"
+              :fileName="`${selectedMotif}b`"
+              v-show="quadMotivesLightOn === true"
+              sizes="80vw"></pl-img>
+          </div>
+        </div>
+      </modal>
+    </div>
+
+    <div class="row middle-xs">
+      <div class="col-xs-12">
+        <h4 class="">{{ $t('products.quad.line_powered') }}</h4>
+        <p>{{ $t('coming_soon') }}</p>
       </div>
     </div>
   </div>
 </template>
 <script>
+  import ToggleButton from '~components/ToggleButton.vue'
+  import Modal from '~components/Modal.vue'
+
   const motiveLabels = {
     21: 'Salt & Pepper',
     22: 'Macarons',
@@ -63,9 +100,14 @@
   }
 
   export default {
+    components: {
+      ToggleButton, Modal
+    },
     data () {
       return {
-        selectedMotive: null
+        selectedMotif: null,
+        quadMotivesLightOn: false,
+        showModal: false
       }
     },
     computed: {
@@ -81,8 +123,22 @@
       }
     },
     methods: {
-      toggleActiveMotive (name) {
-        this.selectedMotive = this.selectedMotive === name ? null : name
+      onQuadMotivesLightOnChanged (ev) {
+        this.quadMotivesLightOn = ev.value
+      },
+      motifClicked (name) {
+        console.log(name) // eslint-disable-line
+        this.selectedMotif = this.selectedMotif === name ? null : name
+      }
+    },
+    i18n: {
+      messages: {
+        en: {
+
+        },
+        de: {
+
+        }
       }
     }
   }
@@ -91,9 +147,15 @@
 <style lang="less" scoped>
   .motive-item {
     padding-bottom: 1rem;
-    .list-item{
+    .list-item {
       height: auto;
       width: 100%;
+    }
+  }
+  .modal-body {
+    img{
+      max-width: 90vw;
+      max-height: 90vh;
     }
   }
 </style>

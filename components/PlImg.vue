@@ -4,7 +4,7 @@
 
 <script>
   import pkg from '../package.json'
-  const bust = pkg.devDependencies['pl-images']
+  const bust = pkg.version
 
   export default {
     name: 'PlImg',
@@ -34,7 +34,7 @@
     },
     computed: {
       sizesComputed () {
-        if (this.folder === 960) {
+        if (this.folder === '960') {
           return ['960', '640', '320']
         } else {
           return this.imgSizes

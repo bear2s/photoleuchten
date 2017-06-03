@@ -1,5 +1,12 @@
 
 
+###Release 2.3.0
+>*June 3, 2017*
+
+ * colpick [8633711](https://github.com/bear2s/photoleuchten/commits/8633711f3ce08fc68fb13d37f98f22b2aae2447b)
+
+
+
 ###Release 2.2.0
 >*June 3, 2017*
 

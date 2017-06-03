@@ -10,19 +10,31 @@
 
     <div class="row middle-xs" style="margin-top: 3rem">
       <div class="col-xs-4 center-xs">
-        <pl-img fileName="r1" imgType="png" folder="960" sizes="33vw"></pl-img>
+        <pl-img fileName="r1" imgType="png" folder="960" sizes="30vw"></pl-img>
       </div>
       <div class="col-xs-4 center-xs toggle-active" @click.stop="r2active = !r2active">
-        <pl-img v-show="!r2active" folder="960" fileName="r2" imgType="png" sizes="33vw"></pl-img>
-        <pl-img v-show="r2active" folder="960" fileName="r3" imgType="png" sizes="33vw"></pl-img>
-        <toggle-button :value="r2active"
-                       :sync="true"
-                       @change="r2active = !r2active"
-                       :color="{checked: 'rgb(251, 176, 59)', unchecked: '#bfcbd9'}"
-                       :labels="{checked: $t('lightoff'), unchecked: $t('lighton')}"/>
+        <pl-img v-show="!r2active" folder="960" fileName="r2" imgType="png" sizes="25vw"></pl-img>
+        <pl-img
+          v-for="(val, i) in 6" :key="i"
+          v-show="r2active && (r2selectedIndex === (i+3))"
+          folder="960"
+          :fileName="'r'+ (i+3)" imgType="png" sizes="25vw"></pl-img>
+        <div class="color-select">
+          <div
+            v-for="(val, i) in ['#8BD5F9', '#6F9EFD', '#FE3747', '#C18FFE', '#FAB297', '#3AF4A2']" :key="i"
+            :style="'background-color: ' + val + '; visibility: '+ (r2active ? 'visible' : 'hidden') + ';' "
+            @click.stop="r2selectedIndex = (i+3);"
+          ></div>
+        </div>
+        <toggle-button
+          :value="r2active"
+          :sync="true"
+          @change="r2active = !r2active"
+          :color="{checked: 'rgb(251, 176, 59)', unchecked: '#bfcbd9'}"
+          :labels="{checked: $t('lightoff'), unchecked: $t('lighton')}"/>
       </div>
       <div class="col-xs-4">
-        <pl-img fileName="r9" folder="960" imgType="png" sizes="33vw"></pl-img>
+        <pl-img fileName="r9" folder="960" imgType="png" sizes="30vw"></pl-img>
       </div>
       <div v-html="$t('japanpaper_desc')"></div>
     </div>
@@ -32,7 +44,7 @@
         <p v-html="$t('japanpaper_spec_desc')"></p>
       </div>
       <div class="col-xs-4">
-        <pl-img fileName="r10" folder="960" imgType="jpg" sizes="33vw"></pl-img>
+        <pl-img fileName="r10" folder="960" imgType="jpg" sizes="30vw"></pl-img>
       </div>
     </div>
 
@@ -45,19 +57,19 @@
 
     <div class="row middle-xs" style="margin-top: 3rem">
       <div class="col-xs-4 center-xs">
-        <pl-img fileName="r21" imgType="png" folder="960" sizes="33vw"></pl-img>
+        <pl-img fileName="r21" imgType="png" folder="960" sizes="30vw"></pl-img>
       </div>
       <div class="col-xs-4 center-xs toggle-active" @click.stop="r22active = !r22active">
-        <pl-img v-show="!r22active" folder="960" fileName="r22" imgType="png" sizes="33vw"></pl-img>
-        <pl-img v-show="r22active" folder="960" fileName="r23" imgType="png" sizes="33vw"></pl-img>
+        <pl-img v-show="!r22active" folder="960" fileName="r22" imgType="png" sizes="30vw"></pl-img>
+        <pl-img v-show="r22active" folder="960" fileName="r23" imgType="png" sizes="30vw"></pl-img>
         <toggle-button :value="r22active"
                        @change="r22active = !r22active"
-                       sync="true"
+                       :sync="true"
                        :color="{checked: 'rgb(251, 176, 59)', unchecked: '#bfcbd9'}"
                        :labels="{checked: $t('lightoff'), unchecked: $t('lighton')}"/>
       </div>
       <div class="col-xs-4">
-        <pl-img fileName="r24" folder="960" imgType="jpg" sizes="33vw"></pl-img>
+        <pl-img fileName="r24" folder="960" imgType="jpg" sizes="30vw"></pl-img>
       </div>
       <div v-html="$t('water_desc')"></div>
     </div>
@@ -81,7 +93,8 @@
     data () {
       return {
         r2active: false,
-        r22active: false
+        r22active: false,
+        r2selectedIndex: 0
       }
     },
     i18n: {
@@ -104,7 +117,7 @@ Handmade single piece<br>
 Frame: Wood frame with multilayer sheet metal refinement in copper, clear lacquer seal, oxidized<br/>
 Cover: Photoprint on acrylic glass<br/>
 Diameter: 90 cm, height: 7 cm<br/>
-Lighting: network powered white LEDs (dimmable), incl. Remote control, power supply 12V, white cable
+Lighting: network powered white LEDs (dimmable), incl. Remote control, power supply 12V, white cable<br/>
 <br/>
 Price: 580 €
           `,
@@ -151,13 +164,13 @@ Beleuchtung: netzbetriebene weiße LEDs (dimmbar), inkl. Fernbedienung, Netzteil
 Preis: 580,00 €
           `,
           japanpaper_spec_desc: `
-          Handgefertigtes Einzelstück<br/>
-          Rahmen: Holzrahmen mit Mehrschicht-Blattmetalveredelung in Kupfer, Klarlackversiegelung<br/>
-          Durchmesser: 90 cm, Höhe: 7 cm<br/>
-          Bespannung: Japanpapier - Shojipapier mit PVC-Beschichtung, naturweiß mit Hanffaser-Wassertropfen-Struktur<br/>
-          Beleuchtung: netzbetriebene RGB LEDs (16 Farben, Farbwechselfunktion, dimmbar), incl. Fernbedienung, Netzteil 12 V, weißes Kabel<br/>
-          <br/>
-          Preis: 480 €
+Handgefertigtes Einzelstück<br/>
+Rahmen: Holzrahmen mit Mehrschicht-Blattmetalveredelung in Kupfer, Klarlackversiegelung<br/>
+Durchmesser: 90 cm, Höhe: 7 cm<br/>
+Bespannung: Japanpapier - Shojipapier mit PVC-Beschichtung, naturweiß mit Hanffaser-Wassertropfen-Struktur<br/>
+Beleuchtung: netzbetriebene RGB LEDs (16 Farben, Farbwechselfunktion, dimmbar), incl. Fernbedienung, Netzteil 12 V, weißes Kabel<br/>
+<br/>
+Preis: 480 €
           `
         }
       }
@@ -178,6 +191,16 @@ Preis: 580,00 €
   .toggle-active {
     &:hover {
       cursor: pointer
+    }
+  }
+
+  .color-select {
+    > div {
+      width: 2rem;
+      height: 2rem;
+      display: inline-block;
+      border-radius: 50%;
+      margin: 0.1rem;
     }
   }
 </style>

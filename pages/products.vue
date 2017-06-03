@@ -2,12 +2,15 @@
   <div class="container">
 
     <div class="row middle-xs center-xs">
-      <h3 class="col-xs-6 button"
+      <h3 class="col-xs-4 button"
           :class="{'active': selectedProduct === 'quad'}"
           @click="selectProduct('quad')">{{$t('products.quad.headline')}}</h3>
-      <h3 class="col-xs-6 button"
+      <h3 class="col-xs-4 button"
           :class="{'active': selectedProduct === 'round'}"
           @click="selectProduct('round')">{{$t('products.round.headline')}}</h3>
+      <h3 class="col-xs-4 button"
+          :class="{'active': selectedProduct === 'framed'}"
+          @click="selectProduct('framed')">{{$t('products.framed.headline')}}</h3>
     </div>
 
     <transition name="component-fade" mode="out-in">
@@ -19,11 +22,12 @@
 <script>
   import QuadObjects from '~components/QuadObjects.vue'
   import RoundObjects from '~components/RoundObjects.vue'
+  import FramedObjects from '~components/FramedObjects.vue'
 
   export default {
     transition: 'slide-left',
     components: {
-      QuadObjects, RoundObjects
+      QuadObjects, RoundObjects, FramedObjects
     },
     data () {
       return {

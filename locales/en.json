@@ -1,11 +1,15 @@
 {
+  "coming_soon": "coming soon ...",
+  "lighton": "Light on",
+  "lightoff": "Light off",
   "links": {
     "products": "Products",
     "contact": "Contact",
-    "legal": "legal notice"
+    "legal": "legal notice",
+    "about": "About"
   },
   "home": {
-    "headline": "lightboxes - illuminated photos and papers - handmade individual frames"
+    "headline": "wall lamps - light objects - light boxes - illuminated photos & papers in handmade individual frames"
   },
   "products": {
     "lighting": "Lighting",
@@ -13,13 +17,17 @@
     "specs": "Specifications",
     "quad": {
       "headline": "Square Lightboxes",
-      "specs_description": "Frame: handmade individual item, white painted wood<br/>Motif: photo print on perspex, easy changeable<br/>@:products.lighting: battery powerd LED array<br/>Dimensions: 42 x 42 x 8 (cm)"
+      "battery_powered": "battery-powered",
+      "line_powered": "line-powered",
+      "specs_description": "Frame: handmade individual item, white painted wood<br/>Dimensions: 42 cm x 42 cm x 8 cm<br/>Image: photo print on perspex 30 cm x 30 cm<br/>@:products.lighting: battery powerd LED array<br/>Motif can be easily changed<br/><br/>Price: 240 €"
     },
     "round": {
       "headline": "Round Light Objects",
       "round_lamp": "Round lamps",
-      "japan_paper_description": "@:products.round.round_lamp<br/>Covered with japan paper<br>@:products.lighting: RGB LED array, color change, dimmable<br/>Frame: wood, beaten metal and copper",
       "acryl_description": "@:products.round.round_lamp<br/>Photo print on acrylic glass<br>@:products.lighting: LED array, white, dimmable<br/>Frame: wood, beaten metal and copper<br/>oxidized"
+    },
+    "framed": {
+      "headline": "Covered frames"
     }
   }
 }

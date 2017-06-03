@@ -9,7 +9,7 @@
 
     <div class="row middle-xs">
       <div class="col-xs-12">
-        <pl-img fileName="q1" sizes="100vw" :lazy="false"></pl-img>
+        <pl-img fileName="q0" sizes="100vw" :lazy="false"></pl-img>
       </div>
     </div>
 

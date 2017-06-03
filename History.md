@@ -1,5 +1,12 @@
 
 
+###Release 2.2.0
+>*June 3, 2017*
+
+ * modal for quads; light toggle; updated images; about page; framed images section; [d19caf1](https://github.com/bear2s/photoleuchten/commits/d19caf14a350501dbfaa2b0e5c1d963c4780d461)
+
+
+
 ###Release 2.1.4
 >*May 4, 2017*
 

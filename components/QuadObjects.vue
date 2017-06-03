@@ -7,7 +7,7 @@
 
       <div v-for="(item, i) in ['q1', 'q2', 'q3']" :key="i"
            class="col-xs-4">
-        <pl-img :fileName="item" sizes="33vw"></pl-img>
+        <pl-img :fileName="item" sizes="30vw"></pl-img>
       </div>
       <div v-for="(item, i) in ['q4', 'q5', 'q6']" :key="i"
            class="col-xs-4">
@@ -21,16 +21,19 @@
         <p v-html="$t('products.quad.specs_description')"></p>
       </div>
       <div class="col-xs-4">
-        <pl-img fileName="q7" sizes="33vw"></pl-img>
+        <pl-img fileName="q7" sizes="30vw"></pl-img>
       </div>
     </div>
     <div class="row middle-xs transitionable">
-      <h4 class="col-xs-8">{{$t('products.selection')}}</h4>
-      <div class="col-xs-4 end-xs">
+      <h4 class="col-xs-8">
+        {{$t('products.selection')}}&nbsp;
         <toggle-button :value="quadMotivesLightOn"
                        @change="onQuadMotivesLightOnChanged"
                        :color="{checked: 'rgb(251, 176, 59)', unchecked: '#bfcbd9'}"
                        :labels="{checked: $t('lightoff'), unchecked: $t('lighton')}"/>
+      </h4>
+      <div class="col-xs-4 end-xs">
+
       </div>
     </div>
     <div class="row middle-xs">
@@ -42,13 +45,13 @@
           :folder="'960'"
           :fileName="`${item.file}a`"
           v-show="quadMotivesLightOn === false"
-          sizes="(min-width: 64em) 16vw, (min-width: 48em) 25vw, (max-width: 48em) 33vw"></pl-img>
+          sizes="(min-width: 64em) 14vw, (min-width: 48em) 20vw, (max-width: 48em) 30vw"></pl-img>
         <pl-img
           class="list-item button"
           :folder="'960'"
           v-show="quadMotivesLightOn === true"
           :fileName="`${item.file}b`"
-          sizes="(min-width: 64em) 16vw, (min-width: 48em) 25vw, (max-width: 48em) 33vw"></pl-img>
+          sizes="(min-width: 64em) 14vw, (min-width: 48em) 20vw, (max-width: 48em) 30vw"></pl-img>
         <div class="motive-label">{{item.label}}</div>
       </div>
       <modal v-if="selectedMotif" @close="selectedMotif = null">

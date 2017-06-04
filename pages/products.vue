@@ -4,7 +4,7 @@
     <div class="row middle-xs center-xs">
       <h3 class="col-xs-4 button"
           :class="{'active': selectedProduct === 'quad'}"
-          @click="selectProduct('quad')">{{$t('products.quad.headline')}}</h3>
+          @click="selectProduct('quad')">{{$t('quad_headline')}}</h3>
       <h3 class="col-xs-4 button"
           :class="{'active': selectedProduct === 'round'}"
           @click="selectProduct('round')">{{$t('products.round.headline')}}</h3>
@@ -42,6 +42,16 @@
     methods: {
       selectProduct (name = 'quad') {
         this.selectedProduct = name
+      }
+    },
+    i18n: {
+      messages: {
+        en: {
+          quad_headline: 'Square Lightboxes'
+        },
+        de: {
+          quad_headline: 'Quadratische Leuchtkästen'
+        }
       }
     }
   }

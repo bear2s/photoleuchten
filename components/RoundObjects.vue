@@ -9,23 +9,27 @@
     </div>
 
     <div class="row middle-xs" style="margin-top: 3rem">
-      <div class="col-xs-4 center-xs">
-        <pl-img fileName="r1" imgType="png" folder="960" sizes="30vw"></pl-img>
+      <div class="color-select col-xs-12 center-xs bottom-xs">
+        <div
+          v-for="(val, i) in ['#8BD5F9', '#6F9EFD', '#FE3747', '#C18FFE', '#FAB297', '#3AF4A2']" :key="i"
+          :style="'background-color: ' + val + '; visibility: '+ (r2active ? 'visible' : 'hidden') + ';' "
+          @click.stop="r2selectedIndex = (i+3);"></div>
       </div>
-      <div class="col-xs-4 center-xs toggle-active" @click.stop="r2active = !r2active">
-        <pl-img v-show="!r2active" folder="960" fileName="r2" imgType="png" sizes="25vw"></pl-img>
+      <div class="col-xs-4 center-xs">
+        <pl-img fileName="r1" imgType="png" folder="960" sizes="33vw"></pl-img>
+      </div>
+      <div class="col-xs-4 center-xs">
+        <pl-img v-show="!r2active" folder="960" fileName="r2" imgType="png" sizes="32vw"></pl-img>
         <pl-img
           v-for="(val, i) in 6" :key="i"
           v-show="r2active && (r2selectedIndex === (i+3))"
           folder="960"
-          :fileName="'r'+ (i+3)" imgType="png" sizes="25vw"></pl-img>
-        <div class="color-select">
-          <div
-            v-for="(val, i) in ['#8BD5F9', '#6F9EFD', '#FE3747', '#C18FFE', '#FAB297', '#3AF4A2']" :key="i"
-            :style="'background-color: ' + val + '; visibility: '+ (r2active ? 'visible' : 'hidden') + ';' "
-            @click.stop="r2selectedIndex = (i+3);"
-          ></div>
-        </div>
+          :fileName="'r'+ (i+3)" imgType="png" sizes="32vw"></pl-img>
+      </div>
+      <div class="col-xs-4">
+        <pl-img fileName="r9" folder="960" imgType="png" sizes="33vw"></pl-img>
+      </div>
+      <div class="col-xs-12 center-xs top-xs">
         <toggle-button
           :value="r2active"
           :sync="true"
@@ -33,18 +37,31 @@
           :color="{checked: 'rgb(251, 176, 59)', unchecked: '#bfcbd9'}"
           :labels="{checked: $t('lightoff'), unchecked: $t('lighton')}"/>
       </div>
-      <div class="col-xs-4">
-        <pl-img fileName="r9" folder="960" imgType="png" sizes="30vw"></pl-img>
-      </div>
       <div v-html="$t('japanpaper_desc')"></div>
     </div>
+    <br/>
     <div class="row middle-xs">
-      <div class="col-xs-8">
-        <h4>{{$t('products.specs')}}</h4>
-        <p v-html="$t('japanpaper_spec_desc')"></p>
+      <h4 class="col-xs-4 col-sm-12">{{$t('products.specs')}}</h4>
+      <div class="col-xs-8 col-sm-4 last-sm">
+        <div style="position: relative;">
+          <pl-img fileName="r10" folder="960" imgType="jpg" sizes="(max-width: 48em) 66vw (min-width: 48em) 33vw"
+                  style="width: 100%;"></pl-img>
+          <div class="row" style="width: 100%; position: absolute; top: 0; left: 0;">
+            <div class="col-xs-12 end-xs box">
+              <p style="padding: 0.25rem; margin: 0;">{{$t('japan_paper_img')}}</p>
+            </div>
+          </div>
+          <div class="row" style="width: 100%; position: absolute; bottom: 0; left: 0;">
+            <div class="col-xs-12 middle-xs center-xs">
+              <p style="background: rgba(0,0,0,0.4); margin: 0 0 5px 0; padding: 0.25rem;">
+                {{$t('japan_paper_img_desc')}}
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="col-xs-4">
-        <pl-img fileName="r10" folder="960" imgType="jpg" sizes="30vw"></pl-img>
+      <div class="col-xs-12 col-sm-8">
+        <p v-html="$t('japanpaper_spec_desc')"></p>
       </div>
     </div>
 
@@ -57,11 +74,11 @@
 
     <div class="row middle-xs" style="margin-top: 3rem">
       <div class="col-xs-4 center-xs">
-        <pl-img fileName="r21" imgType="png" folder="960" sizes="30vw"></pl-img>
+        <pl-img fileName="r21" imgType="png" folder="960" sizes="33vw"></pl-img>
       </div>
       <div class="col-xs-4 center-xs toggle-active" @click.stop="r22active = !r22active">
-        <pl-img v-show="!r22active" folder="960" fileName="r22" imgType="png" sizes="30vw"></pl-img>
-        <pl-img v-show="r22active" folder="960" fileName="r23" imgType="png" sizes="30vw"></pl-img>
+        <pl-img v-show="!r22active" folder="960" fileName="r22" imgType="png" sizes="33vw"></pl-img>
+        <pl-img v-show="r22active" folder="960" fileName="r23" imgType="png" sizes="33vw"></pl-img>
         <toggle-button :value="r22active"
                        @change="r22active = !r22active"
                        :sync="true"
@@ -69,7 +86,7 @@
                        :labels="{checked: $t('lightoff'), unchecked: $t('lighton')}"/>
       </div>
       <div class="col-xs-4">
-        <pl-img fileName="r24" folder="960" imgType="jpg" sizes="30vw"></pl-img>
+        <pl-img fileName="r24" folder="960" imgType="jpg" sizes="33vw"></pl-img>
       </div>
       <div v-html="$t('water_desc')"></div>
     </div>
@@ -94,12 +111,14 @@
       return {
         r2active: false,
         r22active: false,
-        r2selectedIndex: 0
+        r2selectedIndex: 3
       }
     },
     i18n: {
       messages: {
         en: {
+          japan_paper_img: 'japanese paper',
+          japan_paper_img_desc: 'Shoji paper with PVC coating, natural white with hemp water droplet structure',
           water_headline: 'Round Light Object "Water"',
           japanpaper_headline: 'Round Light Object "Japanese Paper"',
           // @TODO
@@ -114,24 +133,26 @@
 `,
           water_spec_desc: `
 Handmade single piece<br>
-Frame: Wood frame with multilayer sheet metal refinement in copper, clear lacquer seal, oxidized<br/>
-Cover: Photoprint on acrylic glass<br/>
-Diameter: 90 cm, height: 7 cm<br/>
-Lighting: network powered white LEDs (dimmable), incl. Remote control, power supply 12V, white cable<br/>
+<span class="desc_point">Frame:</span> Wood frame with multilayer sheet metal refinement in copper, clear lacquer seal, oxidized<br/>
+<span class="desc_point">Diameter:</span> 90 cm, height: 7 cm<br/>
+<span class="desc_point">Cover:</span> Photoprint on acrylic glass<br/>
+<span class="desc_point">Lighting:</span> network powered white LEDs (dimmable), incl. Remote control, power supply 12V, white cable<br/>
 <br/>
-Price: 580 €
+<span class="desc_point">Price:</span> 580 €
           `,
           japanpaper_spec_desc: `
 Handmade single piece<br>
-Frame: Wood frame with multilayer sheet metal refinement in copper, clear lacquer seal<br/>
-Diameter: 90 cm, height: 7 cm<br/>
-Cover: Japanese paper - shoji paper with PVC coating, natural white with hemp fiber water droplet structure<br/>
-Lighting: network powered RGB LEDs (16 colors, color changing function, dimmable), incl. remote control, power supply 12V, white cable<br/>
+<span class="desc_point">Frame:</span> Wood frame with multilayer sheet metal refinement in copper, clear lacquer seal<br/>
+<span class="desc_point">Diameter:</span> 90 cm, height: 7 cm<br/>
+<span class="desc_point">Cover:</span> Japanese paper - shoji paper with PVC coating, natural white with hemp fiber water droplet structure<br/>
+<span class="desc_point">Lighting:</span> network powered RGB LEDs (16 colors, color changing function, dimmable), incl. remote control, power supply 12V, white cable<br/>
 <br/>
-Price: 480 €
+<span class="desc_point">Price:</span> 480 €
 `
         },
         de: {
+          japan_paper_img: 'Japanpapier',
+          japan_paper_img_desc: 'Shojipapier mit PVC-Beschichtung, naturweiss mit Hanffaser-Wassertropfen Struktur',
           water_headline: 'Leuchte Rund "Wasser"',
           japanpaper_headline: 'Leuchte Rund "Japanpapier"',
           japanpaper_desc: `
@@ -156,21 +177,21 @@ so dass eine sehr schöner Türkiston auf dem Kupfer entstanden ist, der sich mi
           `,
           water_spec_desc: `
 Handgefertigtes Einzelstück<br/>
-Rahmen: Holzrahmen mit Mehrschicht-Blattmetalveredelung in Kupfer, oxidiert, Klarlackversiegelung<br/>
-Bild: Fotodruck auf Acrylglas<br/>
-Durchmesser: 90 cm, Höhe: 7 cm<br/>
-Beleuchtung: netzbetriebene weiße LEDs (dimmbar), inkl. Fernbedienung, Netzteil 12V, weißes Kabel<br/>
+<span class="desc_point">Rahmen:</span> Holzrahmen mit Mehrschicht-Blattmetalveredelung in Kupfer, oxidiert, Klarlackversiegelung<br/>
+<span class="desc_point">Durchmesser:</span> 90 cm, Höhe: 7 cm<br/>
+<span class="desc_point">Bild:</span> Fotodruck auf Acrylglas<br/>
+<span class="desc_point">Beleuchtung:</span> netzbetriebene weiße LEDs (dimmbar), inkl. Fernbedienung, Netzteil 12V, weißes Kabel<br/>
 <br/>
-Preis: 580,00 €
+<span class="desc_point">Preis:</span> 580,00 €
           `,
           japanpaper_spec_desc: `
 Handgefertigtes Einzelstück<br/>
-Rahmen: Holzrahmen mit Mehrschicht-Blattmetalveredelung in Kupfer, Klarlackversiegelung<br/>
-Durchmesser: 90 cm, Höhe: 7 cm<br/>
-Bespannung: Japanpapier - Shojipapier mit PVC-Beschichtung, naturweiß mit Hanffaser-Wassertropfen-Struktur<br/>
-Beleuchtung: netzbetriebene RGB LEDs (16 Farben, Farbwechselfunktion, dimmbar), incl. Fernbedienung, Netzteil 12 V, weißes Kabel<br/>
+<span class="desc_point">Rahmen:</span> Holzrahmen mit Mehrschicht-Blattmetalveredelung in Kupfer, Klarlackversiegelung<br/>
+<span class="desc_point">Durchmesser:</span> 90 cm, Höhe: 7 cm<br/>
+<span class="desc_point">Bespannung:</span> Japanpapier - Shojipapier mit PVC-Beschichtung, naturweiß mit Hanffaser-Wassertropfen-Struktur<br/>
+<span class="desc_point">Beleuchtung:</span> netzbetriebene RGB LEDs (16 Farben, Farbwechselfunktion, dimmbar), incl. Fernbedienung, Netzteil 12 V, weißes Kabel<br/>
 <br/>
-Preis: 480 €
+<span class="desc_point">Preis:</span> 480 €
           `
         }
       }

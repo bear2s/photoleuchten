@@ -1,13 +1,13 @@
 <template>
   <div>
     <div class="row middle-xs">
-      <h4 class="col-xs-12">{{$t('products.quad.battery_powered')}}</h4>
+      <h4 class="col-xs-12">{{$t('battery_powered')}}</h4>
     </div>
     <div class="row middle-xs transitionable">
 
       <div v-for="(item, i) in ['q1', 'q2', 'q3']" :key="i"
            class="col-xs-4">
-        <pl-img :fileName="item" sizes="30vw"></pl-img>
+        <pl-img :fileName="item" sizes="33vw"></pl-img>
       </div>
       <div v-for="(item, i) in ['q4', 'q5', 'q6']" :key="i"
            class="col-xs-4">
@@ -18,10 +18,10 @@
     <div class="row middle-xs">
       <div class="col-xs-8">
         <h4>{{$t('products.specs')}}</h4>
-        <p v-html="$t('products.quad.specs_description')"></p>
+        <p v-html="$t('specs_description')"></p>
       </div>
       <div class="col-xs-4">
-        <pl-img fileName="q7" sizes="30vw"></pl-img>
+        <pl-img fileName="q7" sizes="33vw"></pl-img>
       </div>
     </div>
     <div class="row middle-xs transitionable">
@@ -45,13 +45,13 @@
           :folder="'960'"
           :fileName="`${item.file}a`"
           v-show="quadMotivesLightOn === false"
-          sizes="(min-width: 64em) 14vw, (min-width: 48em) 20vw, (max-width: 48em) 30vw"></pl-img>
+          sizes="(min-width: 64em) 16vw, (min-width: 48em) 25vw, (max-width: 48em) 33vw"></pl-img>
         <pl-img
           class="list-item button"
           :folder="'960'"
           v-show="quadMotivesLightOn === true"
           :fileName="`${item.file}b`"
-          sizes="(min-width: 64em) 14vw, (min-width: 48em) 20vw, (max-width: 48em) 30vw"></pl-img>
+          sizes="(min-width: 64em) 16vw, (min-width: 48em) 25vw, (max-width: 48em) 33vw"></pl-img>
         <div class="motive-label">{{item.label}}</div>
       </div>
       <modal v-if="selectedMotif" @close="selectedMotif = null">
@@ -77,7 +77,7 @@
 
     <div class="row middle-xs">
       <div class="col-xs-12">
-        <h4 class="">{{ $t('products.quad.line_powered') }}</h4>
+        <h4 class="">{{ $t('line_powered') }}</h4>
         <p>{{ $t('coming_soon') }}</p>
       </div>
     </div>
@@ -137,10 +137,30 @@
     i18n: {
       messages: {
         en: {
-
+          'battery_powered': 'battery-powered',
+          'line_powered': 'line-powered',
+          'specs_description': `
+Handmade individual item<br/>
+<span class="desc_point">Frame:</span> white painted wood<br/>
+<span class="desc_point">Dimensions:</span> 42 cm x 42 cm x 8 cm<br/>
+<span class="desc_point">Image:</span> photo print on perspex 30 cm x 30 cm<br/>
+<span class="desc_point">Lighting:</span> battery powerd LED array<br/>
+Motif can be easily changed<br/>
+<br/>
+<span class="desc_point">Price:</span> 240 €`
         },
         de: {
-
+          battery_powered: 'batteriebetrieben',
+          line_powered: 'netzbetrieben',
+          specs_description: `
+Handgefertigtes Einzelstück<br/>
+<span class="desc_point">Rahmen:</span> Holzrahmen weiss lackiert<br/>
+<span class="desc_point">Abmessungen:</span> 42 cm x 42 cm x 8 cm<br/>
+<span class="desc_point">Bild:</span> Fotodruck auf Acrylglas 30 cm x 30 cm<br/>
+<span class="desc_point">Beleuchtung:</span> batteriebetriebene weisse LEDs (Monobatterien 3 St.)<br/>
+Motiv kann gewechselt werden<br/>
+<br/>
+<span class="desc_point">Preis:</span> 240 €`
         }
       }
     }

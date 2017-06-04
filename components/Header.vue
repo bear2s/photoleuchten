@@ -2,12 +2,12 @@
   <header class="top-toolbar toolbar">
     <div class="container">
       <div class="row middle-xs">
-        <div class="col-xs-8 start-xs">
+        <div class="col-xs-7 start-xs middle-xs">
           <nuxt-link to="/" class="logo">
             <img src="~assets/img/logo.png" height="45px" width="auto"/>
           </nuxt-link>
         </div>
-        <div class="col-xs-4 end-xs nav">
+        <div class="col-xs-5 end-xs nav">
           <nuxt-link to="/products">{{$t('links.products')}}</nuxt-link>
           <nuxt-link to="/about">{{$t('links.about')}}</nuxt-link>
         </div>

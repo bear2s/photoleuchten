@@ -2,7 +2,7 @@
   <header class="top-toolbar toolbar">
     <div class="container">
       <div class="row middle-xs">
-        <div class="col-xs-7 start-xs middle-xs">
+        <div class="col-xs-7 start-xs">
           <nuxt-link to="/" class="logo">
             <img src="~assets/img/logo.png" height="45px" width="auto"/>
           </nuxt-link>

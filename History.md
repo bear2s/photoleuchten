@@ -1,5 +1,12 @@
 
 
+###Release 2.3.2
+>*June 4, 2017*
+
+ * minor [0c53619](https://github.com/bear2s/photoleuchten/commits/0c53619b13899f2ee39229adbb23f9ac028bb994)
+
+
+
 ###Release 2.3.1
 >*June 4, 2017*
 

@@ -1,5 +1,13 @@
 
 
+###Release 2.3.3
+>*June 12, 2017*
+
+ * minor fix for small devices [3788eea](https://github.com/bear2s/photoleuchten/commits/3788eeadfe9c44931edabf7b566b2c5be3010706)
+ * pkg updates [770643b](https://github.com/bear2s/photoleuchten/commits/770643bacf9f5f9e9b1d4fbba8a371dd0409b747)
+
+
+
 ###Release 2.3.2
 >*June 4, 2017*
 

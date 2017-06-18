@@ -1,5 +1,12 @@
 
 
+###Release 2.3.4
+>*June 18, 2017*
+
+ * added text; minor style change; updated vue-i18n pkg; [66f3e76](https://github.com/bear2s/photoleuchten/commits/66f3e767324ee8f10500b16530a7e456d004d150)
+
+
+
 ###Release 2.3.3
 >*June 12, 2017*
 

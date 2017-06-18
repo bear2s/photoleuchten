@@ -1,6 +1,6 @@
 {
   "name": "photoleuchten",
-  "version": "2.3.3",
+  "version": "2.3.4",
   "description": "generator for photoleuchten.com",
   "author": "Steffen Baer <stbaer.mail@gmail.com>",
   "private": true,
@@ -42,7 +42,7 @@
     "normalize.css": "7.0.0",
     "pl-images": "file:../pl-images",
     "shelljs": "latest",
-    "vue-i18n": "7.0.2"
+    "vue-i18n": "7.0.3"
   },
   "engines": {
     "node": ">= 6.0.0",

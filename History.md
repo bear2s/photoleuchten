@@ -1,5 +1,12 @@
 
 
+###Release 2.4.1
+>*October 7, 2017*
+
+ * contact page update [38ee1bd](https://github.com/bear2s/photoleuchten/commits/38ee1bd7addc228cd6b53795c766d18033fb6fcb)
+
+
+
 ###Release 2.4.0
 >*October 7, 2017*
 

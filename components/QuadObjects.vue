@@ -133,7 +133,6 @@
         this.quadMotivesLightOn = ev.value
       },
       motifClicked (name) {
-        console.log(name) // eslint-disable-line
         this.selectedMotif = this.selectedMotif === name ? null : name
       }
     },

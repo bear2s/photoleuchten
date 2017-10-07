@@ -6,9 +6,6 @@
   "private": true,
   "license": "UNLICENCE",
   "scripts": {
-    "cp:pl-imgs": "node scripts/mvImages",
-    "predev": "npm run cp:pl-imgs",
-    "prebuild": "npm run cp:pl-imgs",
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
@@ -23,6 +20,7 @@
   "devDependencies": {
     "@nextindex/next-scss": "1.2.0",
     "accept-language-parser": "1.4.1",
+    "axios": "0.16.2",
     "babel-core": "6.26.0",
     "babel-eslint": "8.0.1",
     "babel-plugin-component": "0.10.1",
@@ -39,9 +37,9 @@
     "less": "^2.7.2",
     "less-loader": "4.0.5",
     "loader-utils": "1.1.0",
+    "material-components-web": "0.22.0",
     "node-sass": "4.5.3",
     "normalize.css": "7.0.0",
-    "pl-images": "file:../pl-images",
     "shelljs": "latest",
     "vue-i18n": "7.3.1"
   },

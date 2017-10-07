@@ -16,18 +16,18 @@
           @click.stop="r2selectedIndex = (i+3);"></div>
       </div>
       <div class="col-xs-4 center-xs">
-        <pl-img fileName="r1" imgType="png" folder="960" sizes="33vw"></pl-img>
+        <pl-img fileName="r1" imgType="png" :maxImgSize="960" sizes="33vw"></pl-img>
       </div>
       <div class="col-xs-4 center-xs">
-        <pl-img v-show="!r2active" folder="960" fileName="r2" imgType="png" sizes="32vw"></pl-img>
+        <pl-img v-show="!r2active" :maxImgSize="960" fileName="r2" imgType="png" sizes="32vw"></pl-img>
         <pl-img
           v-for="(val, i) in 6" :key="i"
           v-show="r2active && (r2selectedIndex === (i+3))"
-          folder="960"
+          :maxImgSize="960"
           :fileName="'r'+ (i+3)" imgType="png" sizes="32vw"></pl-img>
       </div>
       <div class="col-xs-4">
-        <pl-img fileName="r9" folder="960" imgType="png" sizes="33vw"></pl-img>
+        <pl-img fileName="r9" :maxImgSize="960" imgType="png" sizes="33vw"></pl-img>
       </div>
       <div class="col-xs-12 center-xs top-xs">
         <toggle-button
@@ -44,7 +44,7 @@
       <h4 class="col-xs-4 col-sm-12">{{$t('products.specs')}}</h4>
       <div class="col-xs-8 col-sm-4 last-sm">
         <div style="position: relative;">
-          <pl-img fileName="r10" folder="960" imgType="jpg" sizes="(max-width: 48em) 66vw (min-width: 48em) 33vw"
+          <pl-img fileName="r10" :maxImgSize="960" imgType="jpg" sizes="(max-width: 48em) 66vw (min-width: 48em) 33vw"
                   style="width: 100%;"></pl-img>
           <div class="row" style="width: 100%; position: absolute; top: 0; left: 0;">
             <div class="col-xs-12 end-xs box">
@@ -74,11 +74,11 @@
 
     <div class="row middle-xs" style="margin-top: 3rem">
       <div class="col-xs-4 center-xs">
-        <pl-img fileName="r21" imgType="png" folder="960" sizes="33vw"></pl-img>
+        <pl-img fileName="r21" imgType="png" :maxImgSize="960" sizes="33vw"></pl-img>
       </div>
       <div class="col-xs-4 center-xs toggle-active" @click.stop="r22active = !r22active">
-        <pl-img v-show="!r22active" folder="960" fileName="r22" imgType="png" sizes="33vw"></pl-img>
-        <pl-img v-show="r22active" folder="960" fileName="r23" imgType="png" sizes="33vw"></pl-img>
+        <pl-img v-show="!r22active" :maxImgSize="960" fileName="r22" imgType="png" sizes="33vw"></pl-img>
+        <pl-img v-show="r22active" :maxImgSize="960" fileName="r23" imgType="png" sizes="33vw"></pl-img>
         <toggle-button :value="r22active"
                        @change="r22active = !r22active"
                        :sync="true"
@@ -86,7 +86,7 @@
                        :labels="{checked: $t('lightoff'), unchecked: $t('lighton')}"/>
       </div>
       <div class="col-xs-4">
-        <pl-img fileName="r24" folder="960" imgType="jpg" sizes="33vw"></pl-img>
+        <pl-img fileName="r24" :maxImgSize="960" imgType="jpg" sizes="33vw"></pl-img>
       </div>
       <div v-html="$t('water_desc')"></div>
     </div>

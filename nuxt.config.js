@@ -29,6 +29,8 @@ module.exports = {
       {rel: 'icon', type: 'image/png', sizes: '96x96', href: '/favicon-96x96.png'},
       {rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png'},
       {rel: 'manifest', href: '/manifest.json'}
+      // ,
+      // {rel: 'stylesheet', type: 'text/css', href: 'https://fonts.googleapis.com/css?family=Material+Icons'}
     ]
   },
   cache: {
@@ -38,15 +40,15 @@ module.exports = {
   /*
    ** Global CSS
    */
-  css: ['~assets/css/main.css'],
+  css: ['~/assets/css/main.css'],
   /*
    ** Plugins
    */
   plugins: [
-    '~plugins/vueSetup.js',
-    {src: '~plugins/i18n.js', injectAs: 'i18n'}
+    '~/plugins/vueSetup.js',
+    {src: '~/plugins/i18n.js'}
     // ,
-    // {src: '~plugins/ga.js', ssr: false}
+    // {src: '~/plugins/ga.js'}
   ],
   /*
    ** Customize the progress-bar color
@@ -58,7 +60,8 @@ module.exports = {
    ** Build configuration
    */
   build: {
-    vendor: ['vue-i18n'],
+    extractCSS: true,
+    vendor: ['vue-i18n', 'axios'],
     /*
      ** Run eslint on save
      */

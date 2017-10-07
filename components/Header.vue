@@ -2,26 +2,20 @@
   <header class="top-toolbar toolbar">
     <div class="container">
       <div class="row middle-xs">
-        <div class="col-xs-7 start-xs">
+        <div class="col-xs-6 start-xs">
           <nuxt-link to="/" class="logo">
             <img src="~assets/img/logo.png" height="45px" width="auto"/>
           </nuxt-link>
         </div>
-        <div class="col-xs-5 end-xs nav">
+        <div class="col-xs-6 end-xs nav">
           <nuxt-link to="/products">{{$t('links.products')}}</nuxt-link>
           <nuxt-link to="/about">{{$t('links.about')}}</nuxt-link>
+          <nuxt-link to="/contact">{{$t('links.contact')}}</nuxt-link>
         </div>
       </div>
     </div>
   </header>
 </template>
-<script>
-  export default {
-    mounted () {
-
-    }
-  }
-</script>
 
 <style scoped>
   .logo {

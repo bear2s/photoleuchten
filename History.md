@@ -1,5 +1,12 @@
 
 
+###Release 2.4.2
+>*October 7, 2017*
+
+ * build - don't extract css [d9b596b](https://github.com/bear2s/photoleuchten/commits/d9b596bd699e311f6ac5e446ab87555a2ddc41bb)
+
+
+
 ###Release 2.4.1
 >*October 7, 2017*
 

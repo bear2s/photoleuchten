@@ -3,7 +3,7 @@
     <pl-header/>
     <div class="row end-xs">
       <div class="col-xs-12">
-        <lang-select></lang-select>
+        <lang-select/>
       </div>
     </div>
     <main>
@@ -16,9 +16,9 @@
 </template>
 
 <script>
-  import PlFooter from '~components/Footer.vue'
-  import PlHeader from '~components/Header.vue'
-  import LangSelect from '~components/LangSelect.vue'
+  import PlFooter from '~/components/Footer.vue'
+  import PlHeader from '~/components/Header.vue'
+  import LangSelect from '~/components/LangSelect.vue'
 
   export default {
     components: {
@@ -42,6 +42,9 @@
 
     main {
       min-height: calc(~'100vh - 128px');
+      .content {
+        margin-top: 2rem;
+      }
     }
   }
 </style>

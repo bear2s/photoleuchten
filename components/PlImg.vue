@@ -1,13 +1,16 @@
 <template>
-  <img :src="srcComputed" :srcset="srcsetComputed" :sizes="sizes"/>
+  <img :sizes="sizes"
+       :srcset="srcsetComputed"
+       :src="srcComputed"/>
 </template>
 
 <script>
   import pkg from '../package.json'
+
   const bust = pkg.version
 
   export default {
-    name: 'PlImg',
+    name: 'pl-img-cloudinary',
     props: {
       fileName: {
         type: String,
@@ -15,41 +18,40 @@
       },
       imgType: {
         type: String,
-        default: 'jpg'
-      },
-      folder: {
-        type: String,
-        default: '1920+'
+        'default': 'jpg'
       },
       sizes: {
         type: String,
-        default: '100vw'
+        'default': '100vw'
       },
       imgSizes: {
         type: Array,
-        default: function () {
-          return ['1920', '1280', '960', '640', '320', '160']
+        'default' () {
+          return ['1920', '1280', '1024', '960', '768', '512', '256']
         }
+      },
+      maxImgSize: {
+        type: Number,
+        'default': 1920
+      },
+      quality: {
+        type: Number | String,
+        'default': 'auto:eco'
       }
     },
     computed: {
-      sizesComputed () {
-        if (this.folder === '960') {
-          return ['960', '640', '320']
-        } else {
-          return this.imgSizes
-        }
-      },
       srcComputed () {
-        return `/img/${this.folder}/${this.fileName}-${this.sizesComputed[this.sizesComputed.length - 1]}.${this.imgType}?${bust}`
+        return `${this.imgBase}/f_auto,q_${this.quality},dpr_auto/${this.fileName}.${this.imgType}?${bust}`
       },
       srcsetComputed () {
         let val = ''
-        this.sizesComputed.forEach((str, i) => {
-          const start = (i > 0 ? ' ' : '')
-          const end = (i !== this.sizesComputed.length - 1 ? ',' : '')
-          val += `${start}/img/${this.folder}/${this.fileName}-${str}.${this.imgType}?${bust} ${str}w${end}`
-        })
+        this.imgSizes
+          .filter(strSize => (parseInt(strSize) <= this.maxImgSize ? strSize : false))
+          .forEach((strSize, i) => {
+            const end = (i !== this.imgSizes.length - 1 ? ',' : '')
+            const file = `${this.fileName}.${this.imgType}?${bust}`
+            val += `${this.imgBase}/f_auto,q_${this.quality},dpr_auto,w_${strSize}/${file} ${strSize}w${end}`
+          })
         return val
       }
     }

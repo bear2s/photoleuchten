@@ -60,7 +60,7 @@ module.exports = {
    ** Build configuration
    */
   build: {
-    extractCSS: true,
+    extractCSS: false,
     vendor: ['vue-i18n', 'axios'],
     /*
      ** Run eslint on save

@@ -1,5 +1,12 @@
 
 
+###Release 2.4.3
+>*October 7, 2017*
+
+ * small logo for small screens [0f84d13](https://github.com/bear2s/photoleuchten/commits/0f84d13db086b518a1fe10ed5e164dccae354f9c)
+
+
+
 ###Release 2.4.2
 >*October 7, 2017*
 

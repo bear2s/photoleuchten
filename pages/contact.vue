@@ -2,7 +2,7 @@
   <div class="container">
     <div class=" row middle-xs center-xs contact mdc-theme--dark">
       <form
-        action="https://formspree.io/stbaer.mail@gmail.com"
+        action="https://formspree.io/photoleuchten@yahoo.com"
         method="POST">
         <div class="col-xs-12">
           <div class="mdc-textfield mdc-textfield--fullwidth">

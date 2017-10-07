@@ -1,8 +1,7 @@
 <template>
   <div class="lang-select">
-    <span @click="setLang('en')">english</span>
-    |
-    <span @click="setLang('de')">deutsch</span>
+    <span @click="setLang('en')" :class="{active: $store.state.locale === 'en'}">en</span> |
+    <span @click="setLang('de')" :class="{active: $store.state.locale === 'de'}">de</span>
   </div>
 </template>
 
@@ -10,10 +9,8 @@
   export default {
     methods: {
       setLang (val) {
-        if (['en', 'de'].indexOf(val) !== -1) {
-          this.$store.commit('SET_LANG', val)
-          this.$i18n.locale = this.$store.state.locale
-        }
+        this.$store.commit('SET_LANG', val)
+        this.$i18n.locale = val
       }
     }
   }
@@ -23,6 +20,9 @@
     > span {
       &:hover {
         cursor: pointer;
+      }
+      &.active {
+        text-decoration: underline;
       }
     }
   }

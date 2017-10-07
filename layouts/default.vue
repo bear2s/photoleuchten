@@ -1,9 +1,11 @@
 <template>
   <div class="pl-app">
     <pl-header/>
-    <div class="row end-xs">
-      <div class="col-xs-12">
-        <lang-select/>
+    <div class="container">
+      <div class="row end-xs">
+        <div class="col-xs-12">
+          <lang-select/>
+        </div>
       </div>
     </div>
     <main>

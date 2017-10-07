@@ -1,5 +1,16 @@
 
 
+###Release 2.4.0
+>*October 7, 2017*
+
+ * updated to nuxt v1; added contact page; updated image rendering; [3995930](https://github.com/bear2s/photoleuchten/commits/39959309e7185ae45b5be6ca406704c4afc1c514)
+ * changes for nuxt v1 [1c35577](https://github.com/bear2s/photoleuchten/commits/1c355771d995b19980b8d5ea316eadd0db8532c1)
+ * added loader utils, updated nuxt to v1 rc11; [c24f480](https://github.com/bear2s/photoleuchten/commits/c24f480dd5db35234dcdd8efdebdc623155ea8da)
+ * added loader-utils [0a17f80](https://github.com/bear2s/photoleuchten/commits/0a17f8045b69f30b47d5a1d894b69270a8f6d17c)
+ * updated dev dependencies [46a60c6](https://github.com/bear2s/photoleuchten/commits/46a60c6f6d840d6813660cbb1861f788ffb76fe2)
+
+
+
 ###Release 2.3.4
 >*June 18, 2017*
 

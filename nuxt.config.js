@@ -38,15 +38,15 @@ module.exports = {
   /*
    ** Global CSS
    */
-  css: ['~assets/css/main.css'],
+  css: ['~/assets/css/main.css'],
   /*
    ** Plugins
    */
   plugins: [
-    '~plugins/vueSetup.js',
-    {src: '~plugins/i18n.js', injectAs: 'i18n'}
+    '~/plugins/vueSetup.js',
+    {src: '~/plugins/i18n.js'}
     // ,
-    // {src: '~plugins/ga.js', ssr: false}
+    // {src: '~/plugins/ga.js', ssr: false}
   ],
   /*
    ** Customize the progress-bar color

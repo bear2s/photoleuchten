@@ -20,9 +20,9 @@
 </template>
 
 <script>
-  import QuadObjects from '~components/QuadObjects.vue'
-  import RoundObjects from '~components/RoundObjects.vue'
-  import FramedObjects from '~components/FramedObjects.vue'
+  import QuadObjects from '~/components/QuadObjects.vue'
+  import RoundObjects from '~/components/RoundObjects.vue'
+  import FramedObjects from '~/components/FramedObjects.vue'
 
   export default {
     transition: 'slide-left',

@@ -87,8 +87,8 @@
   </div>
 </template>
 <script>
-  import ToggleButton from '~components/ToggleButton.vue'
-  import Modal from '~components/Modal.vue'
+  import ToggleButton from '~/components/ToggleButton.vue'
+  import Modal from '~/components/Modal.vue'
 
   const motiveLabels = {
     21: 'Salt & Pepper',

@@ -16,9 +16,9 @@
 </template>
 
 <script>
-  import PlFooter from '~components/Footer.vue'
-  import PlHeader from '~components/Header.vue'
-  import LangSelect from '~components/LangSelect.vue'
+  import PlFooter from '~/components/Footer.vue'
+  import PlHeader from '~/components/Header.vue'
+  import LangSelect from '~/components/LangSelect.vue'
 
   export default {
     components: {

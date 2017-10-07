@@ -38,6 +38,7 @@
     "gf-release": "1.4.5",
     "less": "^2.7.2",
     "less-loader": "4.0.5",
+    "loader-utils": "1.1.0",
     "node-sass": "4.5.3",
     "normalize.css": "7.0.0",
     "pl-images": "file:../pl-images",

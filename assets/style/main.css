@@ -1,0 +1,45 @@
+.container, .transitionable {
+  transition: all .5s cubic-bezier(.55, 0, .1, 1);
+}
+
+.slide-left-enter,
+.slide-right-leave-active {
+  opacity: 0;
+  transform: translate(30px, 0);
+}
+.slide-left-leave-active,
+.slide-right-enter {
+  opacity: 0;
+  transform: translate(-30px, 0);
+}
+
+.fade-enter-active, .fade-leave-active {
+  opacity: 0;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active in <2.1.8 */ {
+  opacity: 0
+}
+
+nav .btn--active, nav .nuxt-link-exact-active {
+  color: #FBB03B!important;
+}
+
+.z0{
+  z-index: 0;
+}
+
+.no-transform{
+  text-transform: none;
+}
+
+.desc_point{
+  min-width: 95px;
+  display: inline-block;
+  padding-top: 0.5rem;
+}
+
+@media screen and (max-width: 600px){
+  .desc_point{
+    min-width: 0.5rem;
+  }
+}

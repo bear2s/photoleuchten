@@ -1,19 +1,26 @@
 <template>
-  <section class="container">
-    <div class="row">
-      <div class="col-xs-12">
-        <h1 class="title">
-          {{ error.statusCode }}
-        </h1>
-        <h2 class="info">
-          {{ error.message }}
-        </h2>
-        <nuxt-link class="button" to="/" v-if="error.statusCode === 404">
-          Homepage
-        </nuxt-link>
-      </div>
-    </div>
-  </section>
+  <v-app dark>
+    <main>
+      <v-content>
+        <v-container>
+          <v-layout>
+            <v-flex xs12>
+              <h2>
+                Ops, something went wrong... <br>
+              </h2>
+              <h3>
+                Error {{ error.statusCode }} -  {{ error.message }}
+              </h3>
+              <v-btn to="/"
+                     v-if="error.statusCode === 404">
+                Back to the homepage
+              </v-btn>
+            </v-flex>
+          </v-layout>
+        </v-container>
+      </v-content>
+    </main>
+  </v-app>
 </template>
 <script>
   export default {

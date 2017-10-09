@@ -1,7 +1,12 @@
 <template>
-  <img :sizes="sizes"
+  <img v-if="!parallax && !jumbotron"
+       :sizes="sizes"
        :srcset="srcsetComputed"
        :src="srcComputed"/>
+  <v-parallax v-else
+              :sizes="sizes"
+              :srcset="srcsetComputed"
+              :src="srcComputed"/>
 </template>
 
 <script>
@@ -37,6 +42,14 @@
       quality: {
         type: Number | String,
         'default': 'auto:eco'
+      },
+      parallax: {
+        type: Boolean,
+        'default': false
+      },
+      jumbotron: {
+        type: Boolean,
+        'default': false
       }
     },
     computed: {
@@ -57,3 +70,9 @@
     }
   }
 </script>
+
+<style scoped>
+  img {
+    max-width: 100%;
+  }
+</style>

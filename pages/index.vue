@@ -1,19 +1,15 @@
 <template>
-  <div class="container">
-
-    <div class="row middle-xs">
-      <div class="col-xs-12 end-xs">
-        <h2>{{$t('home.headline')}}</h2>
-      </div>
-    </div>
-
-    <div class="row middle-xs">
-      <div class="col-xs-12">
-        <pl-img fileName="q0" imgType="png" sizes="99vw" :quality="85"></pl-img>
-      </div>
-    </div>
-
-  </div>
+  <v-layout row wrap>
+    <v-flex class="xs12 text-xs-right">
+      <h5>{{$t('home.headline')}}</h5>
+    </v-flex>
+    <v-flex class="xs12 text-xs-right">
+      <pl-img fileName="q0"
+              imgType="png"
+              sizes="99vw"
+              :quality="85"></pl-img>
+    </v-flex>
+  </v-layout>
 </template>
 
 <script>

@@ -1,108 +1,81 @@
 <template>
-  <div class="container">
-    <div class=" row middle-xs center-xs contact mdc-theme--dark">
-      <form
-        action="https://formspree.io/photoleuchten@yahoo.com"
-        method="POST">
-        <div class="col-xs-12">
-          <div class="mdc-textfield mdc-textfield--fullwidth">
-            <input type="text"
-                   id="firstname_field"
-                   name="firstname"
-                   :placeholder="$t('first_name')"
-                   class="mdc-textfield__input">
-            <div class="mdc-textfield__bottom-line"></div>
-          </div>
-        </div>
-        <div class="col-xs-12">
-          <div class="mdc-textfield mdc-textfield--fullwidth">
-            <input type="text"
-                   id="lastname_field"
-                   name="lastname"
-                   :placeholder="$t('last_name')"
-                   class="mdc-textfield__input">
-            <div class="mdc-textfield__bottom-line"></div>
-          </div>
-        </div>
-        <div class="col-xs-12">
-          <div class="mdc-textfield mdc-textfield--fullwidth">
-            <input type="email"
-                   required
-                   id="email_field"
-                   name="email"
-                   :placeholder="$t('email_address')"
-                   class="mdc-textfield__input">
-            <div class="mdc-textfield__bottom-line"></div>
-          </div>
-        </div>
-        <br/>
-        <div class="col-xs-12">
-          <div class="mdc-textfield mdc-textfield--fullwidth mdc-textfield--textarea">
-            <textarea id="message_field"
-                      name="body"
-                      required
-                      :placeholder="$t('message')"
-                      class="mdc-textfield__input"></textarea>
-            <div class="mdc-textfield__bottom-line"></div>
-          </div>
-        </div>
-        <div class="col-xs-12">
-          <button class="mdc-button mdc-button--raised secondary-filled-button"
-                  type="submit">{{$t('send')}}
-          </button>
-        </div>
+    <v-form
+      action="https://formspree.io/photoleuchten@yahoo.com"
+      method="POST"
+      style="max-width: 800px; margin: auto"
+      v-model="valid">
+      <v-layout row>
+        <v-flex xs12>
+          <v-text-field
+            :label="$t('first_name')"
+            name="firstname"
+          ></v-text-field>
+        </v-flex>
+      </v-layout>
 
-      </form>
-    </div>
-  </div>
+      <v-layout row>
+        <v-flex xs12>
+          <v-text-field
+            :label="$t('last_name')"
+            name="lastname"
+          ></v-text-field>
+        </v-flex>
+      </v-layout>
+
+      <v-layout row>
+        <v-flex xs12>
+          <v-text-field
+            :label="$t('email_address')"
+            required
+            v-model="email"
+            :rules="emailRules"
+            name="email"
+          ></v-text-field>
+        </v-flex>
+      </v-layout>
+
+      <v-layout row>
+        <v-flex xs12>
+          <v-text-field
+            :label="$t('message')"
+            name="body"
+            required
+            v-model="message"
+            :rules="messageRules"
+            multi-line
+          ></v-text-field>
+        </v-flex>
+      </v-layout>
+
+      <v-layout row>
+        <v-flex xs12>
+          <v-spacer></v-spacer>
+          <v-btn
+            :disabled="!valid"
+            type="submit">{{$t('send')}}
+          </v-btn>
+        </v-flex>
+      </v-layout>
+    </v-form>
 </template>
 
 <script>
   export default {
     name: 'contact',
     transition: 'slide-left',
-    i18n: {
-      messages: {
-        en: {
-          first_name: 'First name',
-          last_name: 'Last name',
-          email_address: 'Email',
-          message: 'Message'
-        },
-        de: {
-          first_name: 'Vorname',
-          last_name: 'Nachname',
-          email_address: 'E-Mail',
-          message: 'Nachricht/Anfrage'
-        }
+    data () {
+      return {
+        valid: false,
+        message: '',
+        messageRules: [
+          (v) => !!v || this.$t('required_field')
+        ],
+        email: '',
+        emailRules: [
+          (v) => !!v || this.$t('required_field'),
+          (v) => /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(v) || this.$t('enter_valid_email')
+        ]
       }
     }
   }
 </script>
-
-<style scoped>
-  @import '~@material/textfield/dist/mdc.textfield.css';
-
-  .mdc-textfield__input {
-    font-family: inherit;
-  }
-
-  form {
-    width: 100%;
-    max-width: 800px;
-  }
-
-  form input, form textarea {
-    width: 100%;
-  }
-
-  form textarea {
-    height: 25vh;
-    max-height: 400px;
-    min-height: 150px;
-  }
-
-  form > div {
-    margin-bottom: 1rem;
-  }
-</style>

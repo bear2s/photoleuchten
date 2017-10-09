@@ -1,4 +1,6 @@
 const webpack = require('webpack')
+const nodeExternals = require('webpack-node-externals')
+const resolve = (dir) => require('path').join(__dirname, dir)
 
 module.exports = {
   /*
@@ -15,6 +17,11 @@ module.exports = {
       {name: 'theme-color', content: '#ffffff'}
     ],
     link: [
+      {
+        rel: 'stylesheet',
+        type: 'text/css',
+        href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons'
+      },
       {rel: 'apple-touch-icon', sizes: '57x57', href: '/apple-icon-57x57.png'},
       {rel: 'apple-touch-icon', sizes: '60x60', href: '/apple-icon-60x60.png'},
       {rel: 'apple-touch-icon', sizes: '72x72', href: '/apple-icon-72x72.png'},
@@ -28,24 +35,37 @@ module.exports = {
       {rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png'},
       {rel: 'icon', type: 'image/png', sizes: '96x96', href: '/favicon-96x96.png'},
       {rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png'},
-      {rel: 'manifest', href: '/manifest.json'},
-      {rel: 'stylesheet', type: 'text/css', href: 'https://fonts.googleapis.com/css?family=Material+Icons'}
+      {rel: 'manifest', href: '/manifest.json'}
     ]
   },
-  cache: {
-    max: 1000,
-    maxAge: 90000000
+  modules: [
+    '@nuxtjs/sitemap'
+  ],
+  sitemap: {
+    path: '/sitemap.xml',
+    hostname: 'https://photoleuchten.com',
+    cacheTime: 1000 * 60 * 15,
+    generate: true // Enable me when using nuxt generate
+    // exclude: [
+    //   '/secret',
+    //   '/admin/**'
+    // ],
+    // routes: []
   },
   /*
    ** Global CSS
    */
-  css: ['~/assets/css/main.css'],
+  css: [
+    '~/assets/style/main.css',
+    '~/assets/style/app.styl'
+  ],
   /*
    ** Plugins
    */
   plugins: [
+    '~/plugins/vuetify',
     '~/plugins/vueSetup.js',
-    {src: '~/plugins/i18n.js'}
+    '~/plugins/i18n.js'
     // ,
     // {src: '~/plugins/ga.js'}
   ],
@@ -59,8 +79,18 @@ module.exports = {
    ** Build configuration
    */
   build: {
-    extractCSS: false,
-    vendor: ['vue-i18n', 'axios'],
+    extractCSS: true,
+    vendor: ['vue-i18n', 'axios', '~/plugins/vuetify.js'],
+    babel: {
+      plugins: [
+        ['transform-imports', {
+          'vuetify': {
+            'transform': 'vuetify/es5/components/${member}', // eslint-disable-line
+            'preventFullImport': true
+          }
+        }]
+      ]
+    },
     /*
      ** Run eslint on save
      */
@@ -84,6 +114,24 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
+      if (ctx.isServer) {
+        config.externals = [
+          nodeExternals({
+            whitelist: [/^vuetify/]
+          })
+        ]
+      }
+
+      config.module.rules.forEach(rule => {
+        if (rule.test.toString() === '/\\.styl(us)?$/') {
+          rule.use.push({
+            loader: 'vuetify-loader',
+            options: {
+              theme: resolve('./assets/style/theme.styl')
+            }
+          })
+        }
+      })
     }
   }
 }

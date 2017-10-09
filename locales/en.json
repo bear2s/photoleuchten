@@ -1,4 +1,5 @@
 {
+  "language": "Language",
   "coming_soon": "coming soon ...",
   "lighton": "Light on",
   "lightoff": "Light off",
@@ -15,12 +16,24 @@
     "lighting": "Lighting",
     "selection": "Product selection",
     "specs": "Specifications",
+    "quad": {
+      "headline": "Square Lightboxes",
+      "link": "square-objects"
+    },
     "round": {
       "headline": "Round Light Objects",
-      "round_lamp": "Round lamps"
+      "round_lamp": "Round lamps",
+      "link": "round-objects"
     },
     "framed": {
-      "headline": "Covered frames"
+      "headline": "Covered Frames",
+      "link": "framed-objects"
     }
-  }
+  },
+  "first_name": "First name",
+  "last_name": "Last name",
+  "email_address": "Email",
+  "message": "Message",
+  "required_field": "Required field",
+  "enter_valid_email": "Please enter a valid email address"
 }

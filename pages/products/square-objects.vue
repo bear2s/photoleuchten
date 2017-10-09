@@ -40,9 +40,9 @@
 
     <v-layout row wrap class="justify-center">
       <v-flex xs4 sm3 md2
-              class="center-xs motive-item pr-1"
+              class="center-xs motive-item pr-1 pb-1"
               v-for="(item, i) in quadMotives" :key="i"
-              @click="motifClicked(item.file)">
+              @click.native="motifClicked(item.file)">
         <pl-img
           v-for="(subItem,s) in [{lightOnShow: false, fileNameEnd: 'a'}, {lightOnShow: true, fileNameEnd: 'b'}]"
           :key="s"
@@ -184,19 +184,14 @@ Motiv kann gewechselt werden<br/>
   }
 </script>
 
-<style lang="less" scoped>
-  .motive-item {
-    padding-bottom: 1rem;
-    .list-item {
-      height: auto;
-      width: 100%;
-    }
+<style scoped>
+  .motive-item .list-item {
+    height: auto;
+    width: 100%;
   }
 
-  .modal-body {
-    img {
-      max-width: 90vw;
-      max-height: 90vh;
-    }
+  .modal-body img {
+    max-width: 90vw;
+    max-height: 90vh;
   }
 </style>

@@ -118,7 +118,7 @@
   }
 </script>
 
-<style lang="less" scoped>
+<style lang="stylus" scoped>
   .vue-js-switch {
     display: inline-block;
     position: relative;

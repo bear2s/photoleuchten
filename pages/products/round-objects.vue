@@ -1,82 +1,115 @@
 <template>
-  <div class="transitionable round-objects">
+  <div>
 
-    <div class="row middle-xs center-xs">
-      <div class="col-xs-12">
-        <h3 class="no-transform">{{$t('japanpaper_headline')}}</h3>
-        <pl-img fileName="r0" imgType="jpg" sizes="100vw"></pl-img>
-      </div>
-    </div>
+    <v-layout row>
+      <v-flex xs12 class="text-xs-center">
+        <h5 class="no-transform">{{$t('japanpaper_headline')}}</h5>
+        <pl-img fileName="r0"
+                imgType="jpg"
+                sizes="100vw"></pl-img>
+      </v-flex>
+    </v-layout>
 
-    <div class="row middle-xs" style="margin-top: 3rem">
-      <div class="color-select col-xs-12 center-xs bottom-xs">
-        <div
-          v-for="(val, i) in ['#8BD5F9', '#6F9EFD', '#FE3747', '#C18FFE', '#FAB297', '#3AF4A2']" :key="i"
-          :style="'background-color: ' + val + '; visibility: '+ (r2active ? 'visible' : 'hidden') + ';' "
-          @click.stop="r2selectedIndex = (i+3);"></div>
-      </div>
-      <div class="col-xs-4 center-xs">
-        <pl-img fileName="r1" imgType="png" :maxImgSize="960" sizes="33vw"></pl-img>
-      </div>
-      <div class="col-xs-4 center-xs">
-        <pl-img v-show="!r2active" :maxImgSize="960" fileName="r2" imgType="png" sizes="32vw"></pl-img>
-        <pl-img
-          v-for="(val, i) in 6" :key="i"
-          v-show="r2active && (r2selectedIndex === (i+3))"
-          :maxImgSize="960"
-          :fileName="'r'+ (i+3)" imgType="png" sizes="32vw"></pl-img>
-      </div>
-      <div class="col-xs-4">
-        <pl-img fileName="r9" :maxImgSize="960" imgType="png" sizes="33vw"></pl-img>
-      </div>
-      <div class="col-xs-12 center-xs top-xs">
+    <v-layout row wrap
+              class="mt-3">
+      <v-flex xs12 class="text-xs-center color-select">
+        <div v-for="(val, i) in ['#8BD5F9', '#6F9EFD', '#FE3747', '#C18FFE', '#FAB297', '#3AF4A2']" :key="i"
+             :style="'background-color: ' + val + '; visibility: '+ (r2active ? 'visible' : 'hidden') + ';' "
+             @click.stop="r2selectedIndex = (i+3);"></div>
+      </v-flex>
+    </v-layout>
+
+    <v-container fill-height>
+    <v-layout row>
+      <v-flex xs4 class="text-xs-center">
+        <pl-img fileName="r1"
+                imgType="png"
+                :maxImgSize="960"
+                sizes="33vw"></pl-img>
+      </v-flex>
+      <v-flex xs4 class="text-xs-center">
+        <pl-img v-show="!r2active"
+                :maxImgSize="960"
+                fileName="r2"
+                imgType="png"
+                sizes="32vw"></pl-img>
+        <pl-img v-for="(val, i) in 6" :key="i"
+                v-show="r2active && (r2selectedIndex === (i+3))"
+                :maxImgSize="960"
+                :fileName="'r'+ (i+3)"
+                imgType="png"
+                sizes="32vw"></pl-img>
+
+      </v-flex>
+      <v-flex xs4 class="align-center" style="display: flex">
+        <pl-img fileName="r9"
+                :maxImgSize="960"
+                imgType="png"
+                sizes="33vw"></pl-img>
+      </v-flex>
+    </v-layout>
+    </v-container>
+    <v-layout row>
+      <v-flex xs12 class="text-xs-center">
         <toggle-button
           :value="r2active"
           :sync="true"
           @change="r2active = !r2active"
           :color="{checked: 'rgb(251, 176, 59)', unchecked: '#bfcbd9'}"
           :labels="{checked: $t('lightoff'), unchecked: $t('lighton')}"/>
-      </div>
-      <div v-html="$t('japanpaper_desc')"></div>
-    </div>
-    <br/>
-    <div class="row middle-xs">
-      <h4 class="col-xs-4 col-sm-12">{{$t('products.specs')}}</h4>
-      <div class="col-xs-8 col-sm-4 last-sm">
+      </v-flex>
+    </v-layout>
+
+    <v-layout row>
+      <v-flex xs12>
+        <div v-html="$t('japanpaper_desc')"></div>
+      </v-flex>
+    </v-layout>
+    <v-layout row wrap>
+
+      <v-flex xs4 sm12>
+        <h4>{{$t('products.specs')}}</h4>
+      </v-flex>
+
+      <v-flex xs12 md8>
+        <p v-html="$t('japanpaper_spec_desc')"></p>
+      </v-flex>
+
+      <v-flex md4 class="hidden-sm-and-down">
         <div style="position: relative;">
           <pl-img fileName="r10" :maxImgSize="960" imgType="jpg" sizes="(max-width: 48em) 66vw (min-width: 48em) 33vw"
                   style="width: 100%;"></pl-img>
-          <div class="row" style="width: 100%; position: absolute; top: 0; left: 0;">
-            <div class="col-xs-12 end-xs box">
+          <v-layout row style="width: 100%; position: absolute; top: 0; left: 0;">
+            <v-flex xs12 class="box">
               <p style="padding: 0.25rem; margin: 0;">{{$t('japan_paper_img')}}</p>
-            </div>
-          </div>
-          <div class="row" style="width: 100%; position: absolute; bottom: 0; left: 0;">
-            <div class="col-xs-12 middle-xs center-xs">
+            </v-flex>
+          </v-layout>
+          <v-layout row style="position: absolute; bottom: 0; left: 0;">
+            <v-flex xs12>
               <p style="background: rgba(0,0,0,0.4); margin: 0 0 5px 0; padding: 0.25rem;">
                 {{$t('japan_paper_img_desc')}}
               </p>
-            </div>
-          </div>
+            </v-flex>
+          </v-layout>
         </div>
-      </div>
-      <div class="col-xs-12 col-sm-8">
-        <p v-html="$t('japanpaper_spec_desc')"></p>
-      </div>
-    </div>
+      </v-flex>
 
-    <div class="row middle-xs center-xs">
-      <div class="col-xs-12">
+    </v-layout>
+
+
+    <v-layout row>
+      <v-flex xs12>
         <h3 class="no-transform">{{$t('water_headline')}}</h3>
-        <pl-img fileName="r20" imgType="jpg" sizes="100vw"></pl-img>
-      </div>
-    </div>
-
-    <div class="row middle-xs" style="margin-top: 3rem">
-      <div class="col-xs-4 center-xs">
+        <pl-img fileName="r20"
+                imgType="jpg"
+                sizes="100vw"></pl-img>
+      </v-flex>
+    </v-layout>
+    <v-layout row class="mt-3">
+      <v-flex xs4 class="text-xs-center">
         <pl-img fileName="r21" imgType="png" :maxImgSize="960" sizes="33vw"></pl-img>
-      </div>
-      <div class="col-xs-4 center-xs toggle-active" @click.stop="r22active = !r22active">
+      </v-flex>
+      <v-flex xs4 class="text-xs-center toggle-active" @click.stop="r22active = !r22active">
         <pl-img v-show="!r22active" :maxImgSize="960" fileName="r22" imgType="png" sizes="33vw"></pl-img>
         <pl-img v-show="r22active" :maxImgSize="960" fileName="r23" imgType="png" sizes="33vw"></pl-img>
         <toggle-button :value="r22active"
@@ -84,19 +117,19 @@
                        :sync="true"
                        :color="{checked: 'rgb(251, 176, 59)', unchecked: '#bfcbd9'}"
                        :labels="{checked: $t('lightoff'), unchecked: $t('lighton')}"/>
-      </div>
-      <div class="col-xs-4">
+      </v-flex>
+      <v-flex xs4 class="align-center" style="display: flex">
         <pl-img fileName="r24" :maxImgSize="960" imgType="jpg" sizes="33vw"></pl-img>
-      </div>
-      <div v-html="$t('water_desc')"></div>
-    </div>
-    <div class="row middle-xs">
-      <div class="col-xs-12">
+      </v-flex>
+    </v-layout>
+
+    <div v-html="$t('water_desc')"></div>
+    <v-layout row class="text-xs-justify">
+      <v-flex xs12>
         <h4>{{$t('products.specs')}}</h4>
         <p v-html="$t('water_spec_desc')"></p>
-      </div>
-    </div>
-
+      </v-flex>
+    </v-layout>
   </div>
 
 </template>
@@ -104,6 +137,7 @@
   import ToggleButton from '~/components/ToggleButton.vue'
 
   export default {
+    transition: 'slide-left',
     components: {
       ToggleButton
     },
@@ -129,7 +163,7 @@
 `,
           water_desc: `
 <p>The "water" light object has a water close-up motif with different shades of blue and single yellow tones. The motif is is applied with a foil to a round acrylic glass plate. The luminaire is internally lined with white LEDs on ribbons and is thereby illuminated very evenly so that the individual water drops and hemp fibers are very effective. The light can be controlled and dimmed via a remote control.</p>
-<p>The outer frame was treated with several layers of copper (impact metal) ("gilded"). The copper was oxidized in several steps and worked with varnish varnish so that a very beautiful turquoise on the copper was created, which connects nicely with the picture.</p>
+<p>The outer frame was treated with several layers of copper (impact metal) ("gilded"). The copper was oxidized in several steps and worked with varnish so that a very beautiful turquoise on the copper was created, which connects nicely with the picture.</p>
 `,
           water_spec_desc: `
 Handmade single piece<br>

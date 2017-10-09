@@ -1,52 +1,71 @@
 <template>
-  <div class="pl-app">
-    <pl-header/>
-    <div class="container">
-      <div class="row end-xs">
-        <div class="col-xs-12">
-          <lang-select/>
-        </div>
-      </div>
-    </div>
+  <v-app dark>
+
+    <v-navigation-drawer :persistent="true"
+                         :permanent="false"
+                         :temporary="true"
+                         absolute
+                         v-model="drawer"
+                         app>
+      <v-toolbar flat>
+        <v-toolbar-title>
+          <nuxt-link to="/" class="logo-link">
+            <img src="~/assets/img/logo.png" class="pt-2" height="40px" width="auto"/>
+          </nuxt-link>
+        </v-toolbar-title>
+      </v-toolbar>
+      <sidebar-content
+        ref="sidebar"
+        :items="items"
+        :products="products"/>
+
+    </v-navigation-drawer>
+
+    <toolbar-top
+      :products="products"
+      @toggleSidebar="drawer = !drawer"/>
+
     <main>
-      <div class="content">
-        <nuxt/>
-      </div>
+      <v-content>
+        <v-container>
+          <nuxt/>
+        </v-container>
+      </v-content>
     </main>
+
     <pl-footer/>
-  </div>
+
+  </v-app>
 </template>
 
 <script>
-  import PlFooter from '~/components/Footer.vue'
-  import PlHeader from '~/components/Header.vue'
-  import LangSelect from '~/components/LangSelect.vue'
+  import PlFooter from '../components/PlFooter.vue'
+  import ToolbarTop from '../components/ToolbarTop.vue'
+  import SidebarContent from '../components/SidebarContent.vue'
 
   export default {
     components: {
-      PlFooter, PlHeader, LangSelect
+      PlFooter, ToolbarTop, SidebarContent
+    },
+    data () {
+      return {
+        drawer: false
+      }
+    },
+    computed: {
+      items () {
+        return [
+          {icon: 'info', title: this.$t('links.about'), to: '/about'},
+          {icon: 'mail', title: this.$t('links.contact'), to: '/contact'}
+        ]
+      },
+      products () {
+        return [
+          {title: this.$t('products.round.headline'), to: '/products/round-objects'},
+          {title: this.$t('products.quad.headline'), to: '/products/square-objects'},
+          {title: this.$t('products.framed.headline'), to: '/products/framed-objects'}
+        ]
+      }
     }
   }
 </script>
-
-<style lang="less">
-  .pl-app {
-    background: #424242;
-    color: rgb(251, 176, 59);
-    .toolbar {
-      background: #202020;
-      height: 64px;
-
-      .container, .middle-xs {
-        height: 100%;
-      }
-    }
-
-    main {
-      min-height: calc(~'100vh - 128px');
-      .content {
-        margin-top: 2rem;
-      }
-    }
-  }
-</style>

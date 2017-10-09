@@ -1,5 +1,12 @@
 
 
+###Release 2.5.1
+>*October 9, 2017*
+
+ * use webfontloader; cleaned up deps; [c507832](https://github.com/bear2s/photoleuchten/commits/c5078324dfd28b0f4493b47a51e309cf467046ae)
+
+
+
 ###Release 2.5.0
 >*October 9, 2017*
 

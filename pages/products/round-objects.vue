@@ -99,7 +99,7 @@
 
     <v-layout row>
       <v-flex xs12>
-        <h3 class="no-transform">{{$t('water_headline')}}</h3>
+        <h3 class="no-transform pt-1 pb-1">{{$t('water_headline')}}</h3>
         <pl-img fileName="r20"
                 imgType="jpg"
                 sizes="100vw"></pl-img>
@@ -233,14 +233,9 @@ Handgefertigtes Einzelstück<br/>
   }
 </script>
 
-<style lang="less" scoped>
+<style lang="stylus" scoped>
   .round-objects {
     margin-bottom: 30vh;
-  }
-
-  h3 {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
   }
 
   .toggle-active {

@@ -1,5 +1,13 @@
 
 
+###Release 2.5.0
+>*October 9, 2017*
+
+ * updated deps [b2b4ba0](https://github.com/bear2s/photoleuchten/commits/b2b4ba0fd7852b5537276229d4505ca4dbe16b78)
+ * rewrote to vuetify; more; [2533e07](https://github.com/bear2s/photoleuchten/commits/2533e079c4462d8d40441ccf23e068517567a238)
+
+
+
 ###Release 2.4.3
 >*October 7, 2017*
 

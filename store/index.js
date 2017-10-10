@@ -14,6 +14,10 @@ export default () => {
         }
       }
     },
-    actions: {}
+    actions: {
+      setLanguageKey ({commit}, payload) {
+        commit('SET_LANG', payload)
+      }
+    }
   })
 }

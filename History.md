@@ -1,5 +1,12 @@
 
 
+###Release 2.5.2
+>*October 10, 2017*
+
+ * updated postcss config, added babel-polyfill, updated deps; [632e2a6](https://github.com/bear2s/photoleuchten/commits/632e2a68b6dd3f5bb473a05ce0c2aab13eaa84e4)
+
+
+
 ###Release 2.5.1
 >*October 9, 2017*
 

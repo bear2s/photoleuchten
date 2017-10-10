@@ -16,12 +16,12 @@
   },
   "dependencies": {
     "@nuxtjs/sitemap": "0.0.3",
+    "accept-language-parser": "1.4.1",
+    "axios": "0.16.2",
     "nuxt": "1.0.0-rc11",
     "vue-i18n": "7.3.1",
-    "vuetify": "0.16.4",
-    "webfontloader": "1.6.28",
-    "accept-language-parser": "1.4.1",
-    "axios": "0.16.2"
+    "vuetify": "0.16.5",
+    "webfontloader": "1.6.28"
   },
   "devDependencies": {
     "babel-eslint": "8.0.1",
@@ -46,9 +46,9 @@
     "npm": ">= 3.0.0"
   },
   "browserslist": [
-    "> 2%",
-    "last 2 versions",
-    "not ie <= 9"
+    "> 1%",
+    "last 3 versions",
+    "not ie <= 10"
   ],
   "releaseConfig": {
     "buildCommand": "node scripts/build.js && git add -A && git commit -am \"updated docs folder\"",

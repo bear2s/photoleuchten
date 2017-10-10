@@ -56,7 +56,6 @@ module.exports = {
    ** Global CSS
    */
   css: [
-    '~/assets/style/main.css',
     '~/assets/style/app.styl'
   ],
   /*
@@ -81,7 +80,7 @@ module.exports = {
    */
   build: {
     extractCSS: true,
-    vendor: ['vue-i18n', 'axios', '~/plugins/vuetify.js'],
+    vendor: ['babel-polyfill', 'vue-i18n', 'axios', '~/plugins/vuetify.js'],
     babel: {
       plugins: [
         ['transform-imports', {

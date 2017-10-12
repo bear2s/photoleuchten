@@ -1,9 +1,9 @@
 <template>
   <v-layout row wrap>
-    <v-flex class="xs12 text-xs-right">
+    <v-flex xs12 class=" text-xs-right">
       <h5>{{$t('home.headline')}}</h5>
     </v-flex>
-    <v-flex class="xs12 text-xs-right">
+    <v-flex xs12 class="text-xs-right">
       <pl-img fileName="q0"
               imgType="png"
               sizes="99vw"

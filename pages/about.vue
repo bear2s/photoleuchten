@@ -1,7 +1,6 @@
 <template>
-  <section class="container">
-    <div class="row">
-      <div class="col-xs-12">
+  <v-layout row>
+      <v-flex xs12>
         <p>
           Einzigartige, großformatige Fotografien zu hinterleuchten, diese in einem jeweils dafür geschaffenem Rahmen an die Wand zu bringen und zu präsentieren, war die Idee und Geburt von Photoleuchten.
         </p>
@@ -23,9 +22,8 @@
         <p>
           Designerin und Inhaberin von photoleuchten.
         </p>
-      </div>
-    </div>
-  </section>
+      </v-flex>
+  </v-layout>
 </template>
 <script>
   export default {

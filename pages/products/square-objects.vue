@@ -1,8 +1,8 @@
 <template>
   <div>
     <v-layout row>
-      <v-flex xs12 class="text-xs-left">
-        <h4 class="subheading">{{$t('battery_powered')}}</h4>
+      <v-flex xs12>
+        <h5 class="text-xs-center">{{$t('battery_powered')}}</h5>
       </v-flex>
     </v-layout>
     <v-layout row wrap>
@@ -14,7 +14,6 @@
         <div v-html="$t('quad_desc')"></div>
       </v-flex>
     </v-layout>
-
 
     <h4>{{$t('products.specs')}}</h4>
     <v-layout row wrap>

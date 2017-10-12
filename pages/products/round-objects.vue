@@ -1,6 +1,5 @@
 <template>
   <div>
-
     <v-layout row>
       <v-flex xs12 class="text-xs-center">
         <h5 class="no-transform">{{$t('japanpaper_headline')}}</h5>

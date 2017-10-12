@@ -7,7 +7,7 @@
                          absolute
                          v-model="drawer"
                          app>
-      <v-toolbar flat>
+      <v-toolbar flat app>
         <v-toolbar-title>
           <nuxt-link to="/" class="logo-link">
             <img src="~/assets/img/logo.png" class="pt-2" height="40px" width="auto"/>
@@ -69,3 +69,9 @@
     }
   }
 </script>
+
+<style>
+  .container {
+    max-width: 1280px;
+  }
+</style>

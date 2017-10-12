@@ -38,6 +38,9 @@ module.exports = {
       {rel: 'manifest', href: '/manifest.json'}
     ]
   },
+  router: {
+    middleware: ['lang']
+  },
   modules: [
     '@nuxtjs/sitemap'
   ],

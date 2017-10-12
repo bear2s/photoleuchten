@@ -1,6 +1,6 @@
 {
   "name": "photoleuchten",
-  "version": "2.5.2",
+  "version": "2.5.3",
   "description": "generator for photoleuchten.com",
   "author": "Steffen Baer <stbaer.mail@gmail.com>",
   "private": true,
@@ -20,7 +20,7 @@
     "axios": "0.16.2",
     "nuxt": "1.0.0-rc11",
     "vue-i18n": "7.3.1",
-    "vuetify": "0.16.5",
+    "vuetify": "0.16.6",
     "webfontloader": "1.6.28"
   },
   "devDependencies": {

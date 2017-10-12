@@ -1,5 +1,13 @@
 
 
+###Release 2.5.3
+>*October 12, 2017*
+
+ * pkg update, minor changes [69bc83e](https://github.com/bear2s/photoleuchten/commits/69bc83ee4db66404b702f9d9722d9abb882404da)
+ * router middleware fix [d23398d](https://github.com/bear2s/photoleuchten/commits/d23398d9375e9700c6cdd81e819dccc0024bda10)
+
+
+
 ###Release 2.5.2
 >*October 10, 2017*
 

@@ -5,7 +5,6 @@ const baseDir = path.resolve(__dirname, '../')
 
 shell.echo('\n -- Starting build -- \n')
 
-shell.rm('-rf', `${baseDir}/dist`)
 shell.rm('-rf', `${baseDir}/docs`)
 shell.exec('npm run generate')
 shell.cp('-R', `${baseDir}/dist`, `${baseDir}/docs`)

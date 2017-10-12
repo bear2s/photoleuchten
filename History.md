@@ -1,5 +1,12 @@
 
 
+###Release 2.5.6
+>*October 13, 2017*
+
+ * nav drawer updated [e36d67d](https://github.com/bear2s/photoleuchten/commits/e36d67d8971ce5433ab684126f8999e5a45f2538)
+
+
+
 ###Release 2.5.5
 >*October 13, 2017*
 

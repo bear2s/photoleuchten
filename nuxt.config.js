@@ -17,11 +17,11 @@ module.exports = {
       {name: 'theme-color', content: '#ffffff'}
     ],
     link: [
-      // {
-      //   rel: 'stylesheet',
-      //   type: 'text/css',
-      //   href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons'
-      // },
+      {
+        rel: 'stylesheet',
+        type: 'text/css',
+        href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons'
+      },
       {rel: 'apple-touch-icon', sizes: '57x57', href: '/apple-icon-57x57.png'},
       {rel: 'apple-touch-icon', sizes: '60x60', href: '/apple-icon-60x60.png'},
       {rel: 'apple-touch-icon', sizes: '72x72', href: '/apple-icon-72x72.png'},
@@ -39,7 +39,8 @@ module.exports = {
     ]
   },
   router: {
-    middleware: ['lang']
+    // not working with generate / static site
+    // middleware: ['lang']
   },
   modules: [
     '@nuxtjs/sitemap'
@@ -67,8 +68,8 @@ module.exports = {
   plugins: [
     '~/plugins/vuetify',
     '~/plugins/vueSetup.js',
-    '~/plugins/i18n.js',
-    '~/plugins/webfont.js'
+    '~/plugins/i18n.js'
+    // '~/plugins/webfont.js'
     // ,
     // {src: '~/plugins/ga.js'}
   ],

@@ -1,6 +1,6 @@
 <template>
   <v-layout row wrap>
-    <v-flex xs12 class=" text-xs-right">
+    <v-flex xs12 class="text-xs-right">
       <h5>{{$t('home.headline')}}</h5>
     </v-flex>
     <v-flex xs12 class="text-xs-right">

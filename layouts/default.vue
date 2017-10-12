@@ -4,7 +4,6 @@
     <v-navigation-drawer :persistent="true"
                          :permanent="false"
                          :temporary="true"
-                         absolute
                          v-model="drawer"
                          app>
       <v-toolbar flat app>

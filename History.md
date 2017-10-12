@@ -1,5 +1,12 @@
 
 
+###Release 2.5.5
+>*October 13, 2017*
+
+ * fix generate [6ba8617](https://github.com/bear2s/photoleuchten/commits/6ba8617b83d54837dae9500cb4ba994ad4bea5e1)
+
+
+
 ###Release 2.5.4
 >*October 13, 2017*
 

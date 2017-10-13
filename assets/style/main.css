@@ -24,10 +24,6 @@ nav .btn--active, nav .nuxt-link-exact-active {
   color: #FBB03B!important;
 }
 
-.z0{
-  z-index: 0;
-}
-
 .no-transform{
   text-transform: none;
 }

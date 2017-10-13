@@ -2,7 +2,7 @@
   <div>
     <v-layout row>
       <v-flex xs12 class="text-xs-center">
-        <h5 class="no-transform">{{$t('japanpaper_headline')}}</h5>
+        <h1 class="no-transform">{{$t('japanpaper_headline')}}</h1>
         <pl-img fileName="r0"
                 imgType="jpg"
                 sizes="100vw"></pl-img>
@@ -18,35 +18,35 @@
       </v-flex>
     </v-layout>
 
-    <v-container fill-height>
-    <v-layout row>
-      <v-flex xs4 class="text-xs-center">
-        <pl-img fileName="r1"
-                imgType="png"
-                :maxImgSize="960"
-                sizes="33vw"></pl-img>
-      </v-flex>
-      <v-flex xs4 class="text-xs-center">
-        <pl-img v-show="!r2active"
-                :maxImgSize="960"
-                fileName="r2"
-                imgType="png"
-                sizes="32vw"></pl-img>
-        <pl-img v-for="(val, i) in 6" :key="i"
-                v-show="r2active && (r2selectedIndex === (i+3))"
-                :maxImgSize="960"
-                :fileName="'r'+ (i+3)"
-                imgType="png"
-                sizes="32vw"></pl-img>
+    <v-container fill-height class="pa-0">
+      <v-layout row>
+        <v-flex xs4 class="text-xs-center">
+          <pl-img fileName="r1"
+                  imgType="png"
+                  :maxImgSize="960"
+                  sizes="33vw"></pl-img>
+        </v-flex>
+        <v-flex xs4 class="text-xs-center">
+          <pl-img v-show="!r2active"
+                  :maxImgSize="960"
+                  fileName="r2"
+                  imgType="png"
+                  sizes="32vw"></pl-img>
+          <pl-img v-for="(val, i) in 6" :key="i"
+                  v-show="r2active && (r2selectedIndex === (i+3))"
+                  :maxImgSize="960"
+                  :fileName="'r'+ (i+3)"
+                  imgType="png"
+                  sizes="32vw"></pl-img>
 
-      </v-flex>
-      <v-flex xs4 class="align-center" style="display: flex">
-        <pl-img fileName="r9"
-                :maxImgSize="960"
-                imgType="png"
-                sizes="33vw"></pl-img>
-      </v-flex>
-    </v-layout>
+        </v-flex>
+        <v-flex xs4 class="align-center" style="display: flex">
+          <pl-img fileName="r9"
+                  :maxImgSize="960"
+                  imgType="png"
+                  sizes="33vw"></pl-img>
+        </v-flex>
+      </v-layout>
     </v-container>
     <v-layout row>
       <v-flex xs12 class="text-xs-center">
@@ -60,14 +60,14 @@
     </v-layout>
 
     <v-layout row>
-      <v-flex xs12>
-        <div v-html="$t('japanpaper_desc')"></div>
+      <v-flex xs12 class="mt-3">
+        <div  v-html="$t('japanpaper_desc')"></div>
       </v-flex>
     </v-layout>
     <v-layout row wrap>
 
       <v-flex xs4 sm12>
-        <h4>{{$t('products.specs')}}</h4>
+        <div class="title">{{$t('products.specs')}}</div>
       </v-flex>
 
       <v-flex xs12 md8>
@@ -98,7 +98,7 @@
 
     <v-layout row>
       <v-flex xs12>
-        <h3 class="no-transform pt-1 pb-1">{{$t('water_headline')}}</h3>
+        <h2 class="no-transform pt-1 pb-1">{{$t('water_headline')}}</h2>
         <pl-img fileName="r20"
                 imgType="jpg"
                 sizes="100vw"></pl-img>
@@ -125,7 +125,7 @@
     <div v-html="$t('water_desc')"></div>
     <v-layout row class="text-xs-justify">
       <v-flex xs12>
-        <h4>{{$t('products.specs')}}</h4>
+        <div class="title">{{$t('products.specs')}}</div>
         <p v-html="$t('water_spec_desc')"></p>
       </v-flex>
     </v-layout>

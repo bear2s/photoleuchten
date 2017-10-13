@@ -6,6 +6,7 @@
                          :temporary="true"
                          v-model="drawer"
                          app>
+
       <v-toolbar flat app>
         <v-toolbar-title>
           <nuxt-link to="/" class="logo-link">
@@ -13,6 +14,7 @@
           </nuxt-link>
         </v-toolbar-title>
       </v-toolbar>
+
       <sidebar-content
         ref="sidebar"
         :items="items"
@@ -26,7 +28,7 @@
 
     <main>
       <v-content>
-        <v-container>
+        <v-container fluid>
           <nuxt/>
         </v-container>
       </v-content>
@@ -69,8 +71,3 @@
   }
 </script>
 
-<style>
-  .container {
-    max-width: 1280px;
-  }
-</style>

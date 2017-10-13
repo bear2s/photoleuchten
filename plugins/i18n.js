@@ -12,7 +12,8 @@ export default ({app, store}) => {
     messages: {
       'en': require('~/locales/en.json'),
       'de': require('~/locales/de.json')
-    }
+    },
+    silentTranslationWarn: true
   })
 
   return app.i18n

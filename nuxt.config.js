@@ -38,6 +38,9 @@ module.exports = {
       {rel: 'manifest', href: '/manifest.json'}
     ]
   },
+  generate: {
+    dir: 'docs'
+  },
   router: {
     // not working with generate / static site
     // middleware: ['lang']

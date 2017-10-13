@@ -1,62 +1,66 @@
 <template>
-    <v-form
-      action="https://formspree.io/photoleuchten@yahoo.com"
-      method="POST"
-      style="max-width: 800px; margin: auto"
-      v-model="valid">
-      <v-layout row>
-        <v-flex xs12>
-          <v-text-field
-            :label="$t('first_name')"
-            name="firstname"
-          ></v-text-field>
-        </v-flex>
-      </v-layout>
+  <v-layout row>
+    <v-flex xs-12>
+      <v-form
+        action="https://formspree.io/photoleuchten@yahoo.com"
+        method="POST"
+        style="max-width: 800px; margin: auto"
+        v-model="valid">
+        <v-layout row>
+          <v-flex xs12>
+            <v-text-field
+              :label="$t('first_name')"
+              name="firstname"
+            ></v-text-field>
+          </v-flex>
+        </v-layout>
 
-      <v-layout row>
-        <v-flex xs12>
-          <v-text-field
-            :label="$t('last_name')"
-            name="lastname"
-          ></v-text-field>
-        </v-flex>
-      </v-layout>
+        <v-layout row>
+          <v-flex xs12>
+            <v-text-field
+              :label="$t('last_name')"
+              name="lastname"
+            ></v-text-field>
+          </v-flex>
+        </v-layout>
 
-      <v-layout row>
-        <v-flex xs12>
-          <v-text-field
-            :label="$t('email_address')"
-            required
-            v-model="email"
-            :rules="emailRules"
-            name="email"
-          ></v-text-field>
-        </v-flex>
-      </v-layout>
+        <v-layout row>
+          <v-flex xs12>
+            <v-text-field
+              :label="$t('email_address')"
+              required
+              v-model="email"
+              :rules="emailRules"
+              name="email"
+            ></v-text-field>
+          </v-flex>
+        </v-layout>
 
-      <v-layout row>
-        <v-flex xs12>
-          <v-text-field
-            :label="$t('message')"
-            name="body"
-            required
-            v-model="message"
-            :rules="messageRules"
-            multi-line
-          ></v-text-field>
-        </v-flex>
-      </v-layout>
+        <v-layout row>
+          <v-flex xs12>
+            <v-text-field
+              :label="$t('message')"
+              name="body"
+              required
+              v-model="message"
+              :rules="messageRules"
+              multi-line
+            ></v-text-field>
+          </v-flex>
+        </v-layout>
 
-      <v-layout row>
-        <v-flex xs12>
-          <v-spacer></v-spacer>
-          <v-btn
-            :disabled="!valid"
-            type="submit">{{$t('send')}}
-          </v-btn>
-        </v-flex>
-      </v-layout>
-    </v-form>
+        <v-layout row>
+          <v-flex xs12>
+            <v-spacer></v-spacer>
+            <v-btn
+              :disabled="!valid"
+              type="submit">{{$t('send')}}
+            </v-btn>
+          </v-flex>
+        </v-layout>
+      </v-form>
+    </v-flex>
+  </v-layout>
 </template>
 
 <script>

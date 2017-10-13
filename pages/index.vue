@@ -1,7 +1,7 @@
 <template>
   <v-layout row wrap>
     <v-flex xs12 class="text-xs-right">
-      <h5>{{$t('home.headline')}}</h5>
+      <h1>{{$t('home.headline')}}</h1>
     </v-flex>
     <v-flex xs12 class="text-xs-right">
       <pl-img fileName="q0"

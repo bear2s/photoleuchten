@@ -1,19 +1,19 @@
 <template>
   <v-layout row v-once>
     <v-flex xs12>
-      <h1 class="title">Impressum</h1>
-      <h2 class="subheading">Angaben gemäß § 5 TMG:</h2>
+      <h4>Impressum</h4>
+      <h5>Angaben gemäß § 5 TMG:</h5>
       <p>
         Sylvia Bär<br/>
         Photoleuchten<br/>
         76137 Karlsruhe
       </p>
-      <h2 class="subheading">Kontakt:</h2>
+      <h5>Kontakt:</h5>
       <p>
         E-Mail:<br/>
         photoleuchten@yahoo.com
       </p>
-      <h2 class="subheading">Umsatzsteuer-ID:</h2>
+      <h5>Umsatzsteuer-ID:</h5>
       <p>
         Umsatzsteuer-Identifikationsnummer gemäß §27 a Umsatzsteuergesetz:<br/>
         DE304325864

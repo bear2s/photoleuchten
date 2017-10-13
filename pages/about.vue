@@ -1,6 +1,7 @@
 <template>
   <v-layout row>
       <v-flex xs12>
+        <h2>Über photoleuchen.com</h2>
         <p>
           Einzigartige, großformatige Fotografien zu hinterleuchten, diese in einem jeweils dafür geschaffenem Rahmen an die Wand zu bringen und zu präsentieren, war die Idee und Geburt von Photoleuchten.
         </p>

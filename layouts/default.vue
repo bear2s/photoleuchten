@@ -22,9 +22,22 @@
 
     </v-navigation-drawer>
 
-    <toolbar-top
-      :products="products"
-      @toggleSidebar="drawer = !drawer"/>
+    <v-toolbar fixed app>
+      <v-toolbar-side-icon class="hidden-sm-and-up"
+                           @click="drawer = !drawer"></v-toolbar-side-icon>
+      <v-toolbar-title>
+        <nuxt-link to="/" class="logo-link">
+          <img src="~/assets/img/logo.png" class="pt-2 hidden-xs-only" height="40px" width="auto"/>
+          <img src="~/assets/img/logo_small.png" class="pt-2 hidden-sm-and-up" height="40px" width="auto"/>
+        </nuxt-link>
+      </v-toolbar-title>
+      <v-spacer></v-spacer>
+
+      <pl-top-toolbar-items :products="products"></pl-top-toolbar-items>
+
+      <language-select></language-select>
+
+    </v-toolbar>
 
     <main>
       <v-content>
@@ -41,12 +54,13 @@
 
 <script>
   import PlFooter from '../components/PlFooter.vue'
-  import ToolbarTop from '../components/ToolbarTop.vue'
+  import PlTopToolbarItems from '../components/PlTopToolbarItems.vue'
+  import LanguageSelect from '../components/LanguageSelect.vue'
   import SidebarContent from '../components/SidebarContent.vue'
 
   export default {
     components: {
-      PlFooter, ToolbarTop, SidebarContent
+      PlFooter, PlTopToolbarItems, SidebarContent, LanguageSelect
     },
     data () {
       return {

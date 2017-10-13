@@ -1,5 +1,12 @@
 
 
+###Release 2.5.7
+>*October 14, 2017*
+
+ * simplified build / deploy; some content updates; [619100b](https://github.com/bear2s/photoleuchten/commits/619100ba5042f549016bc5a6e80137b52f976f87)
+
+
+
 ###Release 2.5.6
 >*October 13, 2017*
 

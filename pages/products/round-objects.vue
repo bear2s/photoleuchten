@@ -1,15 +1,16 @@
 <template>
   <div>
+    <h1 class="text-xs-center">{{$t('products.round.headline')}}</h1>
     <v-layout row>
-      <v-flex xs12 class="text-xs-center">
-        <h1 class="no-transform">{{$t('japanpaper_headline')}}</h1>
+      <v-flex xs12 class="text-xs-center pb-3">
+        <h2 class="no-transform">{{$t('japanpaper_headline')}}</h2>
         <pl-img fileName="r0"
                 imgType="jpg"
                 sizes="100vw"></pl-img>
       </v-flex>
     </v-layout>
 
-    <v-container fill-height class="pa-0">
+    <v-container fill-height class="pa-0 mt-3">
       <v-layout row>
         <v-flex xs4 class="text-xs-center">
           <pl-img fileName="r1"
@@ -54,7 +55,7 @@
               class="pt-1">
       <v-flex xs12 class="text-xs-center color-select">
         <div class="mr-1"
-            v-for="(val, i) in ['#8BD5F9', '#6F9EFD', '#FE3747', '#C18FFE', '#FAB297', '#3AF4A2']" :key="i"
+             v-for="(val, i) in ['#8BD5F9', '#6F9EFD', '#FE3747', '#C18FFE', '#FAB297', '#3AF4A2']" :key="i"
              :style="`background-color: ${val}; visibility: ${r2active ? 'visible' : 'hidden'};` "
              @click.stop="r2selectedIndex = (i+3);"></div>
       </v-flex>
@@ -67,42 +68,43 @@
     </v-layout>
 
     <v-container fill-height class="pa-0">
-    <v-layout row wrap>
+      <v-layout row wrap>
 
-      <v-flex xs12 sm6 lg8>
-        <ul class="card mr-1" style="height: 100%;">
-          <p class="pt-3">{{$t('japanpaper_specs_headline')}}</p>
+        <v-flex xs12 sm6 lg8 v-if="false"></v-flex>
+        <v-flex xs12>
+          <ul class="card mr-1" style="height: 100%;">
+            <p class="pt-3">{{$t('japanpaper_specs_headline')}}</p>
 
-          <li v-for="(point, i) in $t('japanpaper_specs')" :key="i">
-            {{point}}
-          </li>
-        </ul>
-      </v-flex>
+            <li v-for="(point, i) in $t('japanpaper_specs')" :key="i">
+              {{point}}
+            </li>
+          </ul>
+        </v-flex>
 
-      <v-flex xs12 sm6 lg4>
-        <div style="position: relative;">
-          <pl-img fileName="r10" :maxImgSize="960" imgType="jpg" sizes="(max-width: 48em) 66vw (min-width: 48em) 33vw"
-                  style="width: 100%;"></pl-img>
-          <v-layout row style="width: 100%; position: absolute; top: 0; left: 0; height: auto;">
-            <v-flex xs12 class="box">
-              <div style="padding: 0.25rem; margin: 0;">{{$t('japan_paper_img')}}</div>
-            </v-flex>
-          </v-layout>
-          <v-layout row style="position: absolute; bottom: 0; left: 0; height: auto;">
-            <v-flex xs12>
-              <div style="background: rgba(0,0,0,0.4); margin: 0 0 5px 0; padding: 0.25rem;">
-                {{$t('japan_paper_img_desc')}}
-              </div>
-            </v-flex>
-          </v-layout>
-        </div>
-      </v-flex>
+        <v-flex xs12 sm6 lg4 v-if="false">
+          <div style="position: relative;">
+            <pl-img fileName="r10" :maxImgSize="960" imgType="jpg" sizes="(max-width: 48em) 66vw (min-width: 48em) 33vw"
+                    style="width: 100%;"></pl-img>
+            <v-layout row style="width: 100%; position: absolute; top: 0; left: 0; height: auto;">
+              <v-flex xs12 class="box">
+                <div style="padding: 0.25rem; margin: 0;">{{$t('japan_paper_img')}}</div>
+              </v-flex>
+            </v-layout>
+            <v-layout row style="position: absolute; bottom: 0; left: 0; height: auto;">
+              <v-flex xs12>
+                <div style="background: rgba(0,0,0,0.4); margin: 0 0 5px 0; padding: 0.25rem;">
+                  {{$t('japan_paper_img_desc')}}
+                </div>
+              </v-flex>
+            </v-layout>
+          </div>
+        </v-flex>
 
-    </v-layout>
+      </v-layout>
     </v-container>
 
     <v-layout row class="mt-3 mb-3">
-      <v-flex xs12>
+      <v-flex xs12 class="text-xs-center">
         <h2 class="no-transform pt-1 pb-1">{{$t('water_headline')}}</h2>
         <pl-img fileName="r20"
                 imgType="jpg"
@@ -168,7 +170,7 @@
     margin-bottom: 30vh;
   }
 
-  .toggle-active, .color-select >div {
+  .toggle-active, .color-select > div {
     &:hover {
       cursor: pointer
     }

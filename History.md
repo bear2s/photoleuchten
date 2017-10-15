@@ -1,5 +1,12 @@
 
 
+###Release 2.6.4
+>*October 15, 2017*
+
+ * small stuff [26f84fd](https://github.com/bear2s/photoleuchten/commits/26f84fd30531880c259d1f0a03727ca406af9e77)
+
+
+
 ###Release 2.6.3
 >*October 15, 2017*
 

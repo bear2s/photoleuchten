@@ -102,8 +102,6 @@
   </div>
 </template>
 <script>
-  import ToggleButton from '~/components/ToggleButton.vue'
-
   const motiveLabels = {
     21: 'Salt & Pepper',
     22: 'Macarons',
@@ -121,9 +119,6 @@
 
   export default {
     transition: 'slide-left',
-    components: {
-      ToggleButton
-    },
     data () {
       return {
         dialog: false,

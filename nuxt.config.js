@@ -80,7 +80,7 @@ module.exports = {
    */
   build: {
     extractCSS: false,
-    vendor: ['babel-polyfill', 'vue-i18n', 'axios', '~/plugins/vuetify.js'],
+    vendor: ['vue-i18n', '~/plugins/vuetify.js'],
     babel: {
       plugins: [
         ['transform-imports', {

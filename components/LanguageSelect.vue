@@ -1,7 +1,7 @@
 <template>
   <v-menu bottom left>
-    <v-btn icon slot="activator" dark>
-      <v-icon>language</v-icon>
+    <v-btn icon slot="activator" style="text-transform: lowercase; color: inherit" dark>
+      {{$store.state.locale}}
     </v-btn>
     <v-list>
       <v-list-tile v-for="(item, i) in items" :key="i" @click="setLang(item.lang)">

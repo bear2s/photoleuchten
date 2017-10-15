@@ -50,8 +50,7 @@
         </v-layout>
 
         <v-layout row>
-          <v-flex xs12>
-            <v-spacer></v-spacer>
+          <v-flex xs12 class="text-xs-right">
             <v-btn
               :disabled="!valid"
               type="submit">{{$t('send')}}

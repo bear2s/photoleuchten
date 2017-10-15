@@ -3,10 +3,23 @@
 @require '~vuetify/src/stylus/components/_lists.styl'
 @require './main.css'
 
+@font-face {
+  font-family: TimeBurner;
+  src: url('/fonts/timeburnernormal.ttf');
+}
+
+@font-face {
+  font-family: TimeBurnerBold;
+  src: url('/fonts/timeburnerbold.ttf');
+}
+
 #app
+  font-family: TimeBurner
+  color: $theme.primary
   h1
-    @extend .display-2
+    @extend .display-1
     @extend .mt-3
+    text-transform: uppercase
   h2
     @extend .headline
     @extend .mt-3
@@ -19,19 +32,27 @@
   h5, h6
     @extend .body-2
     @extend .mt-1
+  &.application--dark nav.toolbar .toolbar__items
+    a, .btn, .list__tile_title
+      color: $theme.primary
 
+  .menu__content .list__tile,
+  .navigation-drawer .list__tile__title
+    color: $theme.primary
+    text-transform: uppercase
+  .navigation-drawer .list__tile__action .icon
+    color: $theme.primary
   .container
     max-width: 1280px;
     ul
-      @extend .list
+      &.card
+        @extend .elevation-9
       li
-        line-height: 1.5rem
         padding: 5px
         margin: 0
         background: inherit
-        border-bottom: 1px solid #e0e0e0
-      li:last-child
-        border-bottom: none
+  .subheader
+    color: $theme.primary
 
   .vue-js-switch .v-switch-core[data-v-8e1836c0]:before
     z-index: 1

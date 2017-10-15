@@ -84,7 +84,7 @@ module.exports = {
    ** Build configuration
    */
   build: {
-    extractCSS: true,
+    extractCSS: false,
     vendor: ['babel-polyfill', 'vue-i18n', 'axios', '~/plugins/vuetify.js'],
     babel: {
       plugins: [

@@ -1,5 +1,12 @@
 
 
+###Release 2.6.1
+>*October 15, 2017*
+
+ * removed mat icons [0dd93fa](https://github.com/bear2s/photoleuchten/commits/0dd93fa5d8b4aec96e9e14f0ece28906d4b3798c)
+
+
+
 ###Release 2.6.0
 >*October 15, 2017*
 

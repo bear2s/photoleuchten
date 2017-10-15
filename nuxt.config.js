@@ -17,6 +17,11 @@ module.exports = {
       {name: 'theme-color', content: '#ffffff'}
     ],
     link: [
+      {
+        rel: 'stylesheet',
+        type: 'text/css',
+        href: 'https://fonts.googleapis.com/css?family=Material+Icons'
+      },
       {rel: 'apple-touch-icon', sizes: '57x57', href: '/apple-icon-57x57.png'},
       {rel: 'apple-touch-icon', sizes: '60x60', href: '/apple-icon-60x60.png'},
       {rel: 'apple-touch-icon', sizes: '72x72', href: '/apple-icon-72x72.png'},

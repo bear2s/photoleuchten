@@ -76,8 +76,8 @@
       },
       products () {
         return [
-          {title: this.$t('products.round.headline'), to: '/products/round-objects'},
           {title: this.$t('products.quad.headline'), to: '/products/square-objects'},
+          {title: this.$t('products.round.headline'), to: '/products/round-objects'},
           {title: this.$t('products.framed.headline'), to: '/products/framed-objects'}
         ]
       }

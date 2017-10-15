@@ -20,10 +20,6 @@
   opacity: 0
 }
 
-nav .btn--active, nav .nuxt-link-exact-active {
-  color: #FBB03B!important;
-}
-
 .no-transform{
   text-transform: none;
 }

@@ -1,14 +1,13 @@
 <template>
   <v-toolbar-items class="hidden-xs-only">
 
-    <v-btn flat to="/" exact>Home</v-btn>
+    <v-btn flat to="/" exact>HOME</v-btn>
     <v-menu bottom left
             v-if="products.length">
       <v-btn slot="activator"
              :class="{'btn--active': productsLinkActive}"
              flat dark>
-        {{$t('links.products')}}
-        <v-icon>arrow_drop_down</v-icon>
+        {{$t('links.products')}} &#x25BC;
       </v-btn>
 
       <v-list>

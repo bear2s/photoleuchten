@@ -11,20 +11,29 @@
         <pl-img :fileName="item" sizes="33vw"></pl-img>
       </v-flex>
       <v-flex xs12>
-        <div v-html="$t('quad_desc')"></div>
+        <div><p>{{$t('quad_desc')}}</p></div>
       </v-flex>
     </v-layout>
 
-    <h2>{{$t('products.specs')}}</h2>
-    <v-layout row wrap>
-      <v-flex xs12 sm6 md7 lg8>
-        <div v-html="$t('specs_description')"></div>
-      </v-flex>
-      <v-flex xs12 sm6 md5 lg4>
-        <pl-img fileName="q7" sizes="(max-width: 48em) 99vw (min-width: 48em) 33vw"></pl-img>
-      </v-flex>
-    </v-layout>
+    <v-container fill-height class="pa-0">
+      <v-layout row wrap class="mb-3">
+        <v-flex xs12 sm7 lg8>
+          <ul class="card mr-1"
+              style="height: 100%;">
+            <p class="pt-3">{{$t('battery_specs_headline')}}</p>
+            <li v-for="(point, i) in $t(['battery_specs'])" :key="i">
+              {{point}}
+            </li>
+          </ul>
+        </v-flex>
+        <v-flex xs12 sm5 lg4>
+          <pl-img fileName="q7" sizes="(max-width: 48em) 99vw (min-width: 48em) 33vw"></pl-img>
+        </v-flex>
+      </v-layout>
+    </v-container>
 
+    <v-layout row wrap class="justify-center mb-3">
+      <v-flex xs12>
         <h2>
           {{$t('products.selection')}}&nbsp;
           <toggle-button :value="quadMotivesLightOn"
@@ -32,8 +41,7 @@
                          :color="{checked: 'rgb(251, 176, 59)', unchecked: '#bfcbd9'}"
                          :labels="{checked: $t('lightoff'), unchecked: $t('lighton')}"/>
         </h2>
-
-    <v-layout row wrap class="justify-center">
+      </v-flex>
       <v-flex xs4 sm3 md2
               class="center-xs motive-item pr-1 pb-1"
               v-for="(item, i) in quadMotives" :key="i">
@@ -49,32 +57,29 @@
         <div class="motive-label">{{item.label}}</div>
       </v-flex>
     </v-layout>
-    <v-layout row>
-      <v-flex xs12>
-        <v-dialog v-model="dialog"
-                  max-height="50vh"
-                  max-width="50vw">
-          <div v-if="selectedMotif">
-            <pl-img
-              slot="body"
-              :folder="'960'"
-              :fileName="`${selectedMotif}a`"
-              v-show="quadMotivesLightOn === false"
-              sizes="70vw"></pl-img>
-            <pl-img
-              slot="body"
-              :folder="'960'"
-              :fileName="`${selectedMotif}b`"
-              v-show="quadMotivesLightOn === true"
-              sizes="70vw"></pl-img>
-          </div>
-        </v-dialog>
-      </v-flex>
-    </v-layout>
+
+    <v-dialog v-model="dialog"
+              max-height="50vh"
+              max-width="50vw">
+      <div v-if="selectedMotif">
+        <pl-img
+          slot="body"
+          :folder="'960'"
+          :fileName="`${selectedMotif}a`"
+          v-show="quadMotivesLightOn === false"
+          sizes="70vw"></pl-img>
+        <pl-img
+          slot="body"
+          :folder="'960'"
+          :fileName="`${selectedMotif}b`"
+          v-show="quadMotivesLightOn === true"
+          sizes="70vw"></pl-img>
+      </div>
+    </v-dialog>
 
     <div class="row middle-xs">
       <div class="col-xs-12">
-        <h2 class="">{{ $t('line_powered') }}</h2>
+        <h1 class="text-xs-center">{{ $t('line_powered') }}</h1>
         <p>{{ $t('coming_soon') }}</p>
       </div>
     </div>
@@ -137,49 +142,6 @@
       },
       motifClicked (name) {
         this.selectedMotif = this.selectedMotif === name ? null : name
-      }
-    },
-    i18n: {
-      messages: {
-        en: {
-          'battery_powered': 'battery-powered',
-          'line_powered': 'line-powered',
-          quad_desc: `
-<p>The square light boxes are battery powered and very flexible - they can be hung on the wall, placed on the floor or on a shelf.
-As motifs, there are detailed photographs, e.g. "Salt & Pepper" or different nature photographs.
-The motif is printed on an acrylic glass plate and fixed from the inside with picture clips. It can be replaced easily. Each frame is a single piece of carpentry.</p>
-`,
-          'specs_description':
-            `<ul class="mr-3">
-              <li class="subheader">Handmade individual item</li>
-              <li>Frame:      white painted wood</li>
-              <li>Dimensions: 42 cm x 42 cm x 8 cm</li>
-              <li>Image:      photo print on perspex 30 cm x 30 cm</li>
-              <li>Lighting:   battery powerd LED array</li>
-              <li>Motif:      can be easily changed</li>
-              <li>Price:      240 €</li>
-            </ul>`
-        },
-        de: {
-          battery_powered: 'batteriebetrieben',
-          line_powered: 'netzbetrieben',
-          quad_desc:
-            `
-<p>Die quadratischen Leuchtkästen sind batteriebetrieben und sehr flexibel - sie können an die Wand gehängt, auf den Boden oder auf ein Regal gestellt werden.
-Als Motive gibt es Detailfotografien, wie z.B. "Salt & Pepper" oder verschiedene Naturaufnahmen.
-Das Motiv ist auf einer Acrylglasplatte gedruckt und von innen mit Bilderklemmen befestigt. Es kann jederzeit ausgetauscht werden. Jeder Rahmen ist ein schreinergefertigtes Einzelstück.</p>
-`,
-          specs_description:
-            `<ul class="mr-3">
-              <li class="subheader">Handgefertigtes Einzelstück</li>
-              <li>Rahmen:      Holzrahmen weiss lackiert</li>
-              <li>Abmessungen: 42 cm x 42 cm x 8 cm</li>
-              <li>Bild:      Fotodruck auf Acrylglas 30 cm x 30 cm</li>
-              <li>Beleuchtung: batteriebetriebene weisse LEDs (Monobatterien 3 St.)</li>
-              <li>Motiv:      kann einfach gewechselt werden</li>
-              <li>Preis:      240 €</li>
-            </ul>`
-        }
       }
     }
   }

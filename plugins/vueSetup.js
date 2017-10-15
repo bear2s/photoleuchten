@@ -1,9 +1,10 @@
 import Vue from 'vue'
 import PlImg from '~/components/PlImg.vue'
+import ToggleButton from '~/components/ToggleButton.vue'
 
 Vue.mixin({
   components: {
-    PlImg
+    PlImg, ToggleButton
   },
   computed: {
     imgBase () {

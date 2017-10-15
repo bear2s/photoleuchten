@@ -148,13 +148,8 @@
 
 </template>
 <script>
-  import ToggleButton from '~/components/ToggleButton.vue'
-
   export default {
     transition: 'slide-left',
-    components: {
-      ToggleButton
-    },
     data () {
       return {
         r2active: false,

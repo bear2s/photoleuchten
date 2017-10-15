@@ -1,5 +1,12 @@
 
 
+###Release 2.6.2
+>*October 15, 2017*
+
+ * Revert removed mat icons [aa893cc](https://github.com/bear2s/photoleuchten/commits/aa893cce679086bbc4c7c3472c1ded6a3bff14dd)
+
+
+
 ###Release 2.6.1
 >*October 15, 2017*
 

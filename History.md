@@ -1,5 +1,12 @@
 
 
+###Release 2.6.6
+>*October 15, 2017*
+
+ * removed material icons (again) [782634c](https://github.com/bear2s/photoleuchten/commits/782634c727bbe814eb7861299ffb395347dd1f16)
+
+
+
 ###Release 2.6.5
 >*October 15, 2017*
 

@@ -23,8 +23,10 @@
     </v-navigation-drawer>
 
     <v-toolbar fixed app>
-      <v-toolbar-side-icon class="hidden-sm-and-up"
-                           @click="drawer = !drawer"></v-toolbar-side-icon>
+      <v-toolbar-side-icon>
+        <img src="/menu.png" class="hidden-sm-and-up" width="24px"
+             @click="drawer = !drawer"/>
+      </v-toolbar-side-icon>
       <v-toolbar-title>
         <nuxt-link to="/" class="logo-link">
           <img src="~/assets/img/logo.png" class="pt-2 hidden-xs-only" height="40px" width="auto"/>

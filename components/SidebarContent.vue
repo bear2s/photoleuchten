@@ -1,9 +1,6 @@
 <template>
   <v-list>
     <v-list-tile router exact to="/" :value="false">
-      <v-list-tile-action>
-        HOME
-      </v-list-tile-action>
       <v-list-tile-content>
         <v-list-tile-title>Home</v-list-tile-title>
       </v-list-tile-content>

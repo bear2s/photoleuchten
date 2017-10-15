@@ -15,7 +15,7 @@
   const bust = pkg.version
 
   export default {
-    name: 'pl-img-cloudinary',
+    name: 'pl-img',
     props: {
       fileName: {
         type: String,

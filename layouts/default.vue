@@ -10,7 +10,12 @@
       <v-toolbar flat app>
         <v-toolbar-title>
           <nuxt-link to="/" class="logo-link">
-            <img src="~/assets/img/logo.png" class="pt-2" height="40px" width="auto"/>
+            <pl-img fileName="logo"
+                    img-type="png"
+                    sizes="252px"
+                    height="40px"
+                    width="auto"
+                    class="pt-1"></pl-img>
           </nuxt-link>
         </v-toolbar-title>
       </v-toolbar>
@@ -23,13 +28,19 @@
     </v-navigation-drawer>
 
     <v-toolbar fixed app>
-      <v-toolbar-side-icon>
-        <img src="/menu.png" class="hidden-sm-and-up" width="24px"
-             @click="drawer = !drawer"/>
+      <v-toolbar-side-icon
+        @click="drawer = !drawer"
+        class="hidden-sm-and-up">
+        <img src="~/assets/img/menu.png" width="24px"/>
       </v-toolbar-side-icon>
       <v-toolbar-title>
         <nuxt-link to="/" class="logo-link">
-          <img src="~/assets/img/logo.png" class="pt-2 hidden-xs-only" height="40px" width="auto"/>
+          <pl-img fileName="logo"
+                  img-type="png"
+                  sizes="252px"
+                  height="40px"
+                  width="auto"
+                  class="hidden-xs-only pt-1"></pl-img>
           <img src="~/assets/img/logo_small.png" class="pt-2 hidden-sm-and-up" height="40px" width="auto"/>
         </nuxt-link>
       </v-toolbar-title>

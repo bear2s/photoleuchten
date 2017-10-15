@@ -37,6 +37,8 @@ export default {
   'required_field': 'Required field',
   'enter_valid_email': 'Please enter a valid email address',
   // square page --------------
+  square_headline: 'Square light boxes',
+
   'battery_powered': 'Square light boxes battery-powered',
   'line_powered': 'line-powered',
   quad_desc: `The square light boxes are battery powered and very flexible - they can be hung on the wall, placed on the floor or on a shelf.

@@ -1,8 +1,22 @@
 <template>
   <div>
+    <v-layout row wrap>
+      <v-flex xs12>
+        <h1 class="text-xs-center">{{$t('square_headline')}}</h1>
+      </v-flex>
+
+      <v-flex xs12>
+        <v-flex xs12 class="text-xs-right">
+          <pl-img fileName="q0"
+                  imgType="png"
+                  sizes="99vw"
+                  :quality="85"></pl-img>
+        </v-flex>
+      </v-flex>
+    </v-layout>
     <v-layout row>
       <v-flex xs12>
-        <h1 class="text-xs-center">{{$t('battery_powered')}}</h1>
+        <h2 class="text-xs-center">{{$t('battery_powered')}}</h2>
       </v-flex>
     </v-layout>
     <v-layout row wrap>
@@ -15,9 +29,14 @@
       </v-flex>
     </v-layout>
 
+    <v-layout>
+      <v-flex xs12 sm4 class="pa-1 pb-0">
+        <pl-img fileName="q7" sizes="(max-width: 48em) 99vw (min-width: 48em) 33vw"></pl-img>
+      </v-flex>
+    </v-layout>
     <v-container fill-height class="pa-0">
       <v-layout row wrap class="mb-3">
-        <v-flex xs12 sm7 lg8>
+        <v-flex xs12>
           <ul class="card mr-1"
               style="height: 100%;">
             <p class="pt-3">{{$t('battery_specs_headline')}}</p>
@@ -25,9 +44,6 @@
               {{point}}
             </li>
           </ul>
-        </v-flex>
-        <v-flex xs12 sm5 lg4>
-          <pl-img fileName="q7" sizes="(max-width: 48em) 99vw (min-width: 48em) 33vw"></pl-img>
         </v-flex>
       </v-layout>
     </v-container>

@@ -37,7 +37,8 @@ export default {
   'required_field': 'Pflichtfeld',
   'enter_valid_email': 'Bitte eine gültige E-Mail-Adresse eingeben',
   // square page
-  battery_powered: 'batteriebetrieben',
+  square_headline: 'Quadratische Leuchten',
+  battery_powered: 'Quadratische Leuchten batteriebetrieben',
   line_powered: 'netzbetrieben',
   quad_desc:
     `Die quadratischen Leuchtkästen sind batteriebetrieben und sehr flexibel - sie können an die Wand gehängt, auf den Boden oder auf ein Regal gestellt werden.

@@ -72,6 +72,31 @@
   import SidebarContent from '../components/SidebarContent.vue'
 
   export default {
+    head () {
+      const isDe = this.$store.state.locale === 'de'
+
+      return {
+        title: isDe
+          ? 'Lichtobjekte - Leuchtkästen - Beleuchtete Fotos und Papiere'
+          : 'Light Objects - Light Boxes - Illuminated Photos and Papers',
+        htmlAttrs: {
+          lang: this.$store.state.locale
+        },
+        meta: [{
+          hid: 'description',
+          name: 'description',
+          content: isDe
+            ? 'Handgefertigte illuminierte Lichtobjekte, Fotos mit Hintergrundbeleuchtung'
+            : 'Handcrafted illuminated light objects, photos with background lighting'
+        }, {
+          hid: 'keywords',
+          name: 'keywords',
+          content: isDe
+            ? 'Sylvia Bär, kunst, künstler, künstlerin, lichtobjekte, karlsruhe, handgefertigt, innenarchitektur, lichtsystem, design'
+            : 'Sylvia Bär, art, artist, light objects, karlsruhe, handcrafted, interior design, light system, design'
+        }]
+      }
+    },
     components: {
       PlFooter, PlTopToolbarItems, SidebarContent, LanguageSelect
     },
@@ -81,17 +106,35 @@
       }
     },
     computed: {
+      isDe () {
+        return this.$store.state.locale === 'de'
+      },
       items () {
         return [
-          {icon: 'info', title: this.$t('links.about'), to: '/about'},
-          {icon: 'mail', title: this.$t('links.contact'), to: '/contact'}
+          {icon: 'info', title: this.$t('links.about'), to: this.isDe ? '/about' : '/ueber'},
+          {icon: 'mail', title: this.$t('links.contact'), to: '/' + this.$t('links.contact')}
         ]
       },
       products () {
         return [
-          {title: this.$t('products.quad.headline'), to: '/products/square-objects'},
-          {title: this.$t('products.round.headline'), to: '/products/round-objects'},
-          {title: this.$t('products.framed.headline'), to: '/products/framed-objects'}
+          {
+            title: this.$t('products.quad.headline'),
+            to: this.isDe
+              ? '/produkte/quadratische-objekte'
+              : '/products/square-objects'
+          },
+          {
+            title: this.$t('products.round.headline'),
+            to: this.isDe
+              ? '/produkte/runde-objekte'
+              : '/products/round-objects'
+          },
+          {
+            title: this.$t('products.framed.headline'),
+            to: this.isDe
+              ? '/produkte/gerahmte-objekte'
+              : '/products/framed-objects'
+          }
         ]
       }
     }

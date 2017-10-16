@@ -5,21 +5,15 @@
         <h1 class="text-xs-center">{{$t('square_headline')}}</h1>
       </v-flex>
 
-      <v-flex xs12>
-        <v-flex xs12 class="text-xs-right">
-          <pl-img fileName="q0"
-                  imgType="png"
-                  sizes="99vw"
-                  :quality="85"></pl-img>
-        </v-flex>
+      <v-flex xs12 class="text-xs-right">
+        <pl-img fileName="q0"
+                imgType="png"
+                sizes="99vw"
+                :quality="85"></pl-img>
       </v-flex>
-    </v-layout>
-    <v-layout row>
       <v-flex xs12>
         <h2 class="text-xs-center">{{$t('battery_powered')}}</h2>
       </v-flex>
-    </v-layout>
-    <v-layout row wrap>
       <v-flex xs4 v-for="(item, i) in ['q1', 'q2', 'q3', 'q4', 'q5', 'q6']" :key="i"
               class="text-xs-justify pa-1">
         <pl-img :fileName="item" sizes="33vw"></pl-img>
@@ -27,26 +21,20 @@
       <v-flex xs12>
         <div><p>{{$t('quad_desc')}}</p></div>
       </v-flex>
-    </v-layout>
-
-    <v-layout>
       <v-flex xs12 sm4 class="pa-1 pb-0">
         <pl-img fileName="q7" sizes="(max-width: 48em) 99vw (min-width: 48em) 33vw"></pl-img>
       </v-flex>
+      <v-flex xs12 class="mb-3">
+        <ul class="card"
+            style="height: 100%;">
+          <p class="pt-3">{{$t('battery_specs_headline')}}</p>
+          <li v-for="(point, i) in $t(['battery_specs'])" :key="i">
+            {{point}}
+          </li>
+        </ul>
+      </v-flex>
+
     </v-layout>
-    <v-container fill-height class="pa-0">
-      <v-layout row wrap class="mb-3">
-        <v-flex xs12>
-          <ul class="card mr-1"
-              style="height: 100%;">
-            <p class="pt-3">{{$t('battery_specs_headline')}}</p>
-            <li v-for="(point, i) in $t(['battery_specs'])" :key="i">
-              {{point}}
-            </li>
-          </ul>
-        </v-flex>
-      </v-layout>
-    </v-container>
 
     <v-layout row wrap class="justify-center mb-3">
       <v-flex xs12>

@@ -19,7 +19,7 @@
         </v-list-tile>
       </v-list>
     </v-menu>
-    <v-btn flat to="/about">{{$t('links.about')}}</v-btn>
+    <v-btn flat :to="'/' + ($store.state.locale === 'de' ? 'ueber' : 'about')">{{$t('links.about')}}</v-btn>
     <v-btn flat :to="'/' + $t('links.contact').toLowerCase()">{{$t('links.contact')}}</v-btn>
   </v-toolbar-items>
 </template>

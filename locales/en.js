@@ -83,5 +83,14 @@ export default {
     'Cover: Japanese paper - shoji paper with PVC coating, natural white with hemp fiber water droplet structure',
     'Lighting: network powered RGB LEDs (16 colors, color changing function, dimmable), incl. remote control, power supply 12V, white cable',
     'Price: 480 €'
-  ]
+  ],
+  // About Page
+  about_headline: 'About PHOTOLEUCHTEN',
+  about_paragraphs: [
+    'Creating unique, large-format photographs with backlight and specially designed frames was the idea and birth of PHOTOLEUCHTEN.',
+    'The lamps are meant to give the viewer a sense of joy and to illuminate a room in a new light.',
+    'All of them are handmade single pieces and available in various sizes and finishes.'
+  ],
+  about_paragraph_contact: 'On <a href="mailto:photoleuchten@yahoo.com">request</a> I also design light objects according to individual wishes or your own motifs.',
+  about_under_signature: 'Designerin und Inhaberin von PHOTOLEUCHTEN.'
 }

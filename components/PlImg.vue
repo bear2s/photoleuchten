@@ -1,5 +1,7 @@
 <template>
   <img v-if="!parallax && !jumbotron"
+       width="100%"
+       height="auto"
        :sizes="sizes"
        :srcset="srcsetComputed"
        :src="srcComputed"/>

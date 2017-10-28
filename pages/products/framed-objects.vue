@@ -9,6 +9,9 @@
 
 <script>
   export default {
-    transition: 'slide-left'
+    transition: 'slide-left',
+    asyncData ({store, route}) {
+      return store.dispatch('setLanguageKey', route.name === 'products-framed-objects' ? 'en' : 'de')
+    }
   }
 </script>

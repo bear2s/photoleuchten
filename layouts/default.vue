@@ -77,8 +77,8 @@
 
       return {
         title: isDe
-          ? 'Lichtobjekte - Leuchtkästen - Beleuchtete Fotos und Papiere'
-          : 'Light Objects - Light Boxes - Illuminated Photos and Papers',
+          ? 'Lichtobjekte - Leuchtkästen - beleuchtete Fotos und Papiere'
+          : 'Light Objects - Light Boxes - illuminated Photos and Papers',
         htmlAttrs: {
           lang: this.$store.state.locale
         },
@@ -86,8 +86,12 @@
           hid: 'description',
           name: 'description',
           content: isDe
-            ? 'Handgefertigte illuminierte Lichtobjekte, Fotos mit Hintergrundbeleuchtung'
-            : 'Handcrafted illuminated light objects, photos with background lighting'
+            ? `handgefertigte Lichtobjekte, illuminierte Rahmen, Fotos mit Hintergrundbeleuchtung,
+            Papiere mit Hintergrundbeleuchtung, Rahmen in verschiedenen Formen und Größen erhältlich,
+            LED-Beleuchtung, individuelle Kundenanfertigung möglich`
+            : `handcrafted light objects, illuminated frames, photos with background lighting,
+            papers with background lighting, frames available in various shapes and sizes,
+            LED lighting, individual customer production possible`
         }, {
           hid: 'keywords',
           name: 'keywords',
@@ -98,7 +102,10 @@
       }
     },
     components: {
-      PlFooter, PlTopToolbarItems, SidebarContent, LanguageSelect
+      PlFooter,
+      PlTopToolbarItems,
+      SidebarContent,
+      LanguageSelect
     },
     data () {
       return {

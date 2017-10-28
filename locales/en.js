@@ -40,20 +40,46 @@ export default {
   square_headline: 'Square light boxes',
 
   'battery_powered': 'Square light boxes battery-powered',
-  'line_powered': 'line-powered',
+  'line_powered': 'Square light boxes  line-powered',
   quad_desc: `The square light boxes are battery powered and very flexible - they can be hung on the wall, placed on the floor or on a shelf.
               As motifs, there are detailed photographs, e.g. "Salt & Pepper" or different nature photographs.
               The motif is printed on an acrylic glass plate and fixed from the inside with picture clips. It can be replaced easily. Each frame is a single piece of carpentry.
               `,
+  quad_linepower_desc: `
+    The square line-powered light boxes are slightly larger than the battery-powered and are designed for wall mounting.
+    Each frame is unique, made of wood by a joiner and has a round or square cutout.
+    The motifs are printed on backlit foil and fixed on an acrylic glass plate as a carrier, so that the lighting gives a particularly beautiful plastic effect. The light boxes are equipped with warm or cold - white LEDs, which, in conjunction with the printed photo, allow them to emit a powerful light, which can be adjusted by the remote control depending on the mood. 
+    On request, customer-specific photos can also be printed in the appropriate format and installed in the luminaire, so that an individual piece can be produced. 
+    `,
   battery_specs_headline: 'Square light boxes battery-powered:',
+  battery_linepower_specs1_headline: 'Square light boxes line-powered with round cutout:',
+  battery_linepower_specs2_headline: 'Square light boxes line-powered with square cutout:',
   battery_specs: [
-    'Handmade individual item',
-    'Frame: white painted wood',
+    'Frame: Handmade individual item, white painted wood',
     'Dimensions: 42 cm x 42 cm x 8 cm',
     'Image: photo print on perspex 30 cm x 30 cm',
     'Lighting: battery powerd LED array',
     'Motif: can be easily changed',
     'Price: 190 €'
+  ],
+
+  battery_linepower_specs1: [
+    'Frame: Handmade individual item, white painted wood',
+    'Dimensions: 53 cm x 53 cm x 6 cm',
+    'round cutout in front: Durchmesser 45 cm',
+    'Image: photographic film behind Plexiglas',
+    'Lighting: line-powered white LEDs',
+    'Control via remote control (light is dimmable)',
+    'Price: 240 €'
+  ],
+  battery_linepower_specs2: [
+    'Frame: Handmade individual item, white painted wood',
+    'Dimensions: 53 cm x 53 cm x 6 cm',
+    'square cutout in front: 44 cm x 44 cm',
+    'Image: photographic film behind Plexiglas',
+    'Lighting: line-powered white LEDs',
+    'Control via remote control (light is dimmable)',
+    'Price: 240 €'
   ],
   // round page
   japan_paper_img: 'japanese paper',

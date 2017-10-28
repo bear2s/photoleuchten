@@ -39,20 +39,55 @@ export default {
   // square page
   square_headline: 'Quadratische Leuchten',
   battery_powered: 'Quadratische Leuchten batteriebetrieben',
-  line_powered: 'netzbetrieben',
+  line_powered: 'Quadratische Leuchten netzbetrieben',
   quad_desc:
-    `Die quadratischen Leuchtkästen sind batteriebetrieben und sehr flexibel - sie können an die Wand gehängt, auf den Boden oder auf ein Regal gestellt werden.
+    `Die quadratischen Leuchtkästen sehr flexibel - 
+    sie können an die Wand gehängt, auf den Boden oder auf ein Regal gestellt werden. Jeder Rahmen 
+    ist ein schreinergefertigtes Einzelstück.
     Als Motive gibt es Detailfotografien, wie z.B. "Salt & Pepper" oder verschiedene Naturaufnahmen.
-    Das Motiv ist auf einer Acrylglasplatte gedruckt und von innen mit Bilderklemmen befestigt. Es kann jederzeit ausgetauscht werden. Jeder Rahmen ist ein schreinergefertigtes Einzelstück.`,
+    Die Motive sind auf einer Acrylglasplatte gedruckt und von innen mit Bilderklemmen befestigt.
+    Sie können jederzeit ausgetauscht werden. Auf Wunsch können auch kundeneigene Fotos im entsprechenden 
+    Format gedruckt und in der Leuchte angebracht werden, so dass ein individuelles Einzelstück entsteht.`,
+  quad_linepower_desc: `
+   Die quadratischen netzbetriebenen Leuchtkästen sind etwas größer als die batteriebetriebenen und zur 
+   Wandaufhängung gedacht. 
+   Jeder Rahmen ist ein schreinergefertigtes Unikat aus Holz mit rundem oder quadratischem Bildausschnitt. 
+   Die Motive sind auf hinterleuchtbarer Folie gedruckt und auf einer Acrylglasplatte als Träger fixiert, 
+   so dass sich durch die Beleuchtung ein besonders schöner plastischer Effekt gibt. Die Leuchtkästen sind in 
+   Abstimmung mit dem jeweiligen Motiv mit warm - oder kaltweißen LEDs ausgestattet, die sie in Verbindung 
+   mit dem gedruckten Foto ein stimmungsvolles Licht ausstrahlen lässt, das nach Belieben heller oder dunkler 
+   per Fernbedienung eingestellt werden kann.
+   Auf Wunsch können auch hier kundeneigene Fotos im entsprechenden Format gedruckt und in der 
+   Leuchte angebracht werden, so dass ein individuelles Einzelstück entsteht.`,
   battery_specs_headline: 'Quadratische Leuchten batteriebetrieben:',
+  battery_linepower_specs1_headline: 'Quadratische Leuchten netzbetrieben mit rundem Ausschnitt:',
+  battery_linepower_specs2_headline: 'Quadratische Leuchten netzbetrieben mit quadratischem Ausschnitt:',
   battery_specs: [
-    'Handgefertigtes Einzelstück',
-    'Rahmen: Holzrahmen weiss lackiert',
+    'Rahmen: Handgefertigtes Einzelstück, Holzrahmen weiss lackiert',
     'Abmessungen: 42 cm x 42 cm x 8 cm',
     'Bild: Fotodruck auf Acrylglas 30 cm x 30 cm',
-    'Beleuchtung: batteriebetriebene weisse LEDs (Monobatterien 3 St.)',
-    'Motiv: kann einfach gewechselt werden',
+    'Beleuchtung: batteriebetriebene weiße LEDs (Monobatterien 3 St.)',
+    'Rückplatte mit magnetischem Verschluss für einfachen Batteriewechsel',
+    'Motiv: kann leicht gewechselt werden',
     'Preis: 190 €'
+  ],
+  battery_linepower_specs1: [
+    'Rahmen: Handgefertigtes Einzelstück, weiss lackiertes Holz',
+    'Abmessungen: 53 cm x 53 cm x 6 cm',
+    'runder Ausschnitt vorne: Durchmesser 45 cm',
+    'Bild: Fotodruck Folie hinter Plexiglas',
+    'Beleuchtung: netzbetriebene weiße LEDs, weißes Netzteil 12V',
+    'Steuerung per Fernbedienung (Licht ist dimmbar)',
+    'Preis: 240 €'
+  ],
+  battery_linepower_specs2: [
+    'Rahmen: Handgefertigtes Einzelstück, weiss lackiertes Holz',
+    'Abmessungen: 53 cm x 53 cm x 6 cm',
+    'quadratischer Ausschnitt vorne: 44 cm x 44 cm',
+    'Bild: Fotodruck Folie hinter Plexiglas',
+    'Beleuchtung: netzbetriebene weiße LEDs, weißes Netzteil 12V',
+    'Steuerung per Fernbedienung (Licht ist dimmbar)',
+    'Preis: 240 €'
   ],
   // round page
   japan_paper_img: 'Japanese Paper',
@@ -72,9 +107,9 @@ export default {
   water_desc: `
             Die Leuchte "Water" hat als Motiv eine Wasser-Nahaufnahme mit verschiedenen Blautönen und einzelnen Gelbtönen,
             das mit einer Folie auf eine runde Acrylglasplatte aufgebracht ist. Die Leuchte ist im Inneren mit weißen
-            LEDs auf Bändern besetzt und wird dadurch sehr gleichmäßig ausgeleuchtet, so dass die einzelnen Wassertropfen
-            und Hanffasern sehr gut zur Geltung kommen. Das Licht kann über eine Fernbedienung angesteuert und gedimmt werden.
-            Der Außenrahmen wurde mit mehreren Schichten Kupfer (Schlagmetal) bearbeitet ("vergoldet").
+            LEDs auf Bändern besetzt und wird dadurch sehr gleichmäßig ausgeleuchtet, so dass die verschiedenen Farben des
+            Wassers sehr gut zur Geltung kommen. Das Licht kann über eine Fernbedienung angesteuert und gedimmt werden.
+            Auf den Außenrahmen wurden mit mehreren Schichten Kupfer (Schlagmetal) aufgetragen ("vergoldet").
             Das Kupfer wurde in mehreren Schritten oxidiert und mit Fassettenlack bearbeitet,
             so dass eine sehr schöner Türkiston auf dem Kupfer entstanden ist, der sich mit dem Bildmotiv verbindet.`,
   water_specs_headline: 'Leuchte Rund "Water":',
@@ -84,7 +119,7 @@ export default {
     'Durchmesser: 90 cm, Höhe: 7 cm',
     'Bild: Fotodruck auf Acrylglas',
     'Beleuchtung: netzbetriebene weiße LEDs (dimmbar), inkl. Fernbedienung, Netzteil 12V, weißes Kabel',
-    'Preis: 580,00 €'
+    'Preis: 580 €'
   ],
   japanpaper_specs_headline: 'Leuchte Rund "Japanese Paper":',
   japanpaper_specs: [

@@ -16,7 +16,7 @@
       </v-flex>
       <v-flex xs4 v-for="(item, i) in ['q1', 'q2', 'q3', 'q4', 'q5', 'q6']" :key="i"
               class="text-xs-justify pa-1">
-        <pl-img :fileName="item" sizes="33vw"></pl-img>
+        <pl-img :fileName="item" sizes="32vw"></pl-img>
       </v-flex>
       <v-flex xs12>
         <p>{{$t('quad_desc')}}</p>
@@ -33,7 +33,7 @@
         </ul>
       </v-flex>
       <v-flex xs12 sm6 md4 class="pa-1 pb-0">
-        <pl-img fileName="q7" sizes="(max-width: 48em) 99vw (min-width: 48em) 33vw"></pl-img>
+        <pl-img fileName="q7" sizes="(max-width: 48em) 99vw (min-width: 48em) 32vw"></pl-img>
       </v-flex>
     </v-layout>
 
@@ -58,7 +58,7 @@
           :fileName="`${item.file}${subItem.fileNameEnd}`"
           v-show="quadMotivesLightOn === subItem.lightOnShow"
           style=":hover { cursor: pointer }"
-          sizes="(min-width: 64em) 16vw, (min-width: 48em) 25vw, (max-width: 48em) 33vw"></pl-img>
+          sizes="(min-width: 64em) 16vw, (min-width: 48em) 25vw, (max-width: 48em) 32vw"></pl-img>
         <div class="motive-label">{{item.label}}</div>
       </v-flex>
     </v-layout>
@@ -88,7 +88,9 @@
       </v-flex>
       <v-flex xs4 v-for="(item, i) in ['q8', 'q9', 'q10', 'q11', 'q12', 'q13']" :key="i"
               class="text-xs-justify pa-1">
-        <pl-img :fileName="item" sizes="33vw"></pl-img>
+        <pl-img :fileName="item"
+                :quality="85"
+                sizes="32vw"></pl-img>
       </v-flex>
     </v-layout>
     <v-layout row>
@@ -107,7 +109,7 @@
         </ul>
       </v-flex>
       <v-flex xs12 sm6 md4 class="pa-1 pb-0">
-        <pl-img fileName="q14" sizes="(max-width: 48em) 99vw (min-width: 48em) 33vw"></pl-img>
+        <pl-img fileName="q14" sizes="(max-width: 48em) 99vw (min-width: 48em) 32vw"></pl-img>
       </v-flex>
     </v-layout>
     <v-layout row wrap>
@@ -120,7 +122,7 @@
         </ul>
       </v-flex>
       <v-flex xs12 sm6 md4 class="pa-1 pb-0">
-        <pl-img fileName="q15" sizes="(max-width: 48em) 99vw (min-width: 48em) 33vw"></pl-img>
+        <pl-img fileName="q15" sizes="(max-width: 48em) 99vw (min-width: 48em) 32vw"></pl-img>
       </v-flex>
     </v-layout>
   </div>

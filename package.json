@@ -19,19 +19,17 @@
     "accept-language-parser": "1.4.1",
     "axios": "0.16.2",
     "nuxt": "1.0.0-rc11",
-    "vue-i18n": "7.3.1",
-    "vuetify": "0.16.7",
     "webfontloader": "1.6.28"
   },
   "devDependencies": {
     "babel-eslint": "8.0.1",
     "babel-plugin-transform-imports": "1.4.1",
-    "eslint": "4.9.0",
+    "eslint": "4.10.0",
     "eslint-config-standard": "10.2.1",
     "eslint-loader": "1.9.0",
     "eslint-plugin-html": "3.2.2",
-    "eslint-plugin-import": "2.7.0",
-    "eslint-plugin-node": "5.2.0",
+    "eslint-plugin-import": "2.8.0",
+    "eslint-plugin-node": "5.2.1",
     "eslint-plugin-promise": "3.6.0",
     "eslint-plugin-standard": "3.0.1",
     "gf-release": "1.4.5",
@@ -39,7 +37,9 @@
     "shelljs": "latest",
     "stylus": "0.54.5",
     "stylus-loader": "3.0.1",
-    "vuetify-loader": "0.1.0"
+    "vue-i18n": "7.3.2",
+    "vuetify": "0.16.9",
+    "vuetify-loader": "0.1.1"
   },
   "engines": {
     "node": ">= 6.0.0",

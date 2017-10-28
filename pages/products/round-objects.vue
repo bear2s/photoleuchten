@@ -150,6 +150,10 @@
 <script>
   export default {
     transition: 'slide-left',
+    asyncData ({store, route}) {
+      console.log(route.name)
+      return store.dispatch('setLanguageKey', route.name === 'products-round-objects' ? 'en' : 'de')
+    },
     data () {
       return {
         r2active: false,

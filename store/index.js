@@ -17,6 +17,7 @@ export default () => {
     actions: {
       setLanguageKey ({commit}, payload) {
         commit('SET_LANG', payload)
+        return Promise.resolve(true)
       }
     }
   })

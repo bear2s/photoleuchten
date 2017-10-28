@@ -19,21 +19,22 @@
         <pl-img :fileName="item" sizes="33vw"></pl-img>
       </v-flex>
       <v-flex xs12>
-        <div><p>{{$t('quad_desc')}}</p></div>
+        <p>{{$t('quad_desc')}}</p>
       </v-flex>
-      <v-flex xs12 sm4 class="pa-1 pb-0">
-        <pl-img fileName="q7" sizes="(max-width: 48em) 99vw (min-width: 48em) 33vw"></pl-img>
-      </v-flex>
-      <v-flex xs12 class="mb-3">
-        <ul class="card"
-            style="height: 100%;">
+    </v-layout>
+
+    <v-layout row wrap class="mb-3">
+      <v-flex xs12 md8>
+        <ul class="card" style="height: 100%;">
           <p class="pt-3">{{$t('battery_specs_headline')}}</p>
           <li v-for="(point, i) in $t(['battery_specs'])" :key="i">
             {{point}}
           </li>
         </ul>
       </v-flex>
-
+      <v-flex xs12 sm6 md4 class="pa-1 pb-0">
+        <pl-img fileName="q7" sizes="(max-width: 48em) 99vw (min-width: 48em) 33vw"></pl-img>
+      </v-flex>
     </v-layout>
 
     <v-layout row wrap class="justify-center mb-3">
@@ -81,12 +82,47 @@
       </div>
     </v-dialog>
 
-    <div class="row middle-xs">
-      <div class="col-xs-12">
-        <h1 class="text-xs-center">{{ $t('line_powered') }}</h1>
-        <p>{{ $t('coming_soon') }}</p>
-      </div>
-    </div>
+    <v-layout row wrap>
+      <v-flex xs12>
+        <h2 class="text-xs-center">{{ $t('line_powered') }}</h2>
+      </v-flex>
+      <v-flex xs4 v-for="(item, i) in ['q8', 'q9', 'q10', 'q11', 'q12', 'q13']" :key="i"
+              class="text-xs-justify pa-1">
+        <pl-img :fileName="item" sizes="33vw"></pl-img>
+      </v-flex>
+    </v-layout>
+    <v-layout row>
+      <v-flex xs12>
+        <div><p>{{$t('quad_linepower_desc')}}</p></div>
+      </v-flex>
+    </v-layout>
+    <v-layout row wrap>
+      <v-flex xs12 md8 class="mb-3">
+        <ul class="card"
+            style="height: 100%;">
+          <p class="pt-3">{{$t('battery_linepower_specs1_headline')}}</p>
+          <li v-for="(point, i) in $t(['battery_linepower_specs1'])" :key="i">
+            {{point}}
+          </li>
+        </ul>
+      </v-flex>
+      <v-flex xs12 sm6 md4 class="pa-1 pb-0">
+        <pl-img fileName="q14" sizes="(max-width: 48em) 99vw (min-width: 48em) 33vw"></pl-img>
+      </v-flex>
+    </v-layout>
+    <v-layout row wrap>
+      <v-flex xs12 md8 class="mb-3">
+        <ul class="card" style="height: 100%;">
+          <p class="pt-3">{{$t('battery_linepower_specs2_headline')}}</p>
+          <li v-for="(point, i) in $t(['battery_linepower_specs2'])" :key="i">
+            {{point}}
+          </li>
+        </ul>
+      </v-flex>
+      <v-flex xs12 sm6 md4 class="pa-1 pb-0">
+        <pl-img fileName="q15" sizes="(max-width: 48em) 99vw (min-width: 48em) 33vw"></pl-img>
+      </v-flex>
+    </v-layout>
   </div>
 </template>
 <script>
@@ -107,6 +143,9 @@
 
   export default {
     transition: 'slide-left',
+    asyncData ({store, route}) {
+      return store.dispatch('setLanguageKey', route.name === 'products-square-objects' ? 'en' : 'de')
+    },
     data () {
       return {
         dialog: false,

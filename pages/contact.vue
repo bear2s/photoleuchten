@@ -66,6 +66,9 @@
   export default {
     name: 'contact',
     transition: 'slide-left',
+    asyncData ({store, route}) {
+      return store.dispatch('setLanguageKey', route.name === 'contact' ? 'en' : 'de')
+    },
     data () {
       return {
         valid: false,

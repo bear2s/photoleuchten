@@ -86,12 +86,8 @@
           hid: 'description',
           name: 'description',
           content: isDe
-            ? `handgefertigte Lichtobjekte, illuminierte Rahmen, Fotos mit Hintergrundbeleuchtung,
-            Papiere mit Hintergrundbeleuchtung, Rahmen in verschiedenen Formen und Größen erhältlich,
-            LED-Beleuchtung, individuelle Kundenanfertigung möglich`
-            : `handcrafted light objects, illuminated frames, photos with background lighting,
-            papers with background lighting, frames available in various shapes and sizes,
-            LED lighting, individual customer production possible`
+            ? `Handgefertigte Lichtobjekte, illuminierte Rahmen, Fotos mit Hintergrundbeleuchtung, Papiere mit Hintergrundbeleuchtung, Rahmen in verschiedenen Formen und Größen erhältlich, LED-Beleuchtung, individuelle Kundenanfertigung möglich`
+            : `Handcrafted light objects, illuminated frames, photos with background lighting, papers with background lighting, frames available in various shapes and sizes, LED lighting, individual customer production possible`
         }, {
           hid: 'keywords',
           name: 'keywords',

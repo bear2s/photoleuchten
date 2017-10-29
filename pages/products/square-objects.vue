@@ -109,7 +109,9 @@
         </ul>
       </v-flex>
       <v-flex xs12 sm6 md4 class="pa-1 pb-0">
-        <pl-img fileName="q14" sizes="(max-width: 48em) 99vw (min-width: 48em) 32vw"></pl-img>
+        <pl-img fileName="q14"
+                imgType="png"
+                sizes="(max-width: 48em) 99vw (min-width: 48em) 32vw"></pl-img>
       </v-flex>
     </v-layout>
     <v-layout row wrap>
@@ -122,7 +124,9 @@
         </ul>
       </v-flex>
       <v-flex xs12 sm6 md4 class="pa-1 pb-0">
-        <pl-img fileName="q15" sizes="(max-width: 48em) 99vw (min-width: 48em) 32vw"></pl-img>
+        <pl-img fileName="q15"
+                imgType="png"
+                sizes="(max-width: 48em) 99vw (min-width: 48em) 32vw"></pl-img>
       </v-flex>
     </v-layout>
   </div>

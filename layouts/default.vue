@@ -1,9 +1,10 @@
 <template>
   <v-app dark>
 
-    <v-navigation-drawer :persistent="true"
+    <v-navigation-drawer persistent
+                         fixed
                          :permanent="false"
-                         :temporary="true"
+                         temporary
                          v-model="drawer"
                          app>
 
@@ -20,17 +21,15 @@
         </v-toolbar-title>
       </v-toolbar>
 
-      <sidebar-content
-        ref="sidebar"
-        :items="items"
-        :products="products"/>
+      <sidebar-content ref="sidebar"
+                       :items="items"
+                       :products="products"/>
 
     </v-navigation-drawer>
 
     <v-toolbar fixed app>
-      <v-toolbar-side-icon
-        @click="drawer = !drawer"
-        class="hidden-sm-and-up">
+      <v-toolbar-side-icon @click="drawer = !drawer"
+                           class="hidden-sm-and-up">
         <img src="~/assets/img/menu.png" width="24px"/>
       </v-toolbar-side-icon>
       <v-toolbar-title>
@@ -52,13 +51,11 @@
 
     </v-toolbar>
 
-    <main>
-      <v-content>
-        <v-container fluid>
-          <nuxt/>
-        </v-container>
-      </v-content>
-    </main>
+    <v-content>
+      <v-container fluid>
+        <nuxt/>
+      </v-container>
+    </v-content>
 
     <pl-footer/>
 

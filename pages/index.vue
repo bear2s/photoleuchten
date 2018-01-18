@@ -4,7 +4,7 @@
       <h1>{{$t('home.headline')}}</h1>
     </v-flex>
     <v-flex xs12 class="text-xs-right">
-      <pl-img fileName="t0"
+      <pl-img fileName="t1"
               imgType="png"
               sizes="99vw"
               :quality="85"></pl-img>

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="products">
     <h1 class="text-xs-center">{{$t('products.round.headline')}}</h1>
     <v-layout row>
       <v-flex xs12 class="text-xs-center pb-3">
@@ -72,7 +72,7 @@
 
         <v-flex xs12 sm6 lg8 v-if="false"></v-flex>
         <v-flex xs12>
-          <ul class="card mr-1" style="height: 100%;">
+          <ul class="card mr-1 pl-3" style="height: 100%;">
             <p class="pt-3">{{$t('japanpaper_specs_headline')}}</p>
 
             <li v-for="(point, i) in $t('japanpaper_specs')" :key="i">
@@ -135,7 +135,7 @@
         <p>{{$t('water_desc')}}</p>
       </v-flex>
       <v-flex xs12>
-        <ul class="card">
+        <ul class="card pl-3">
           <p class="pt-3">{{$t('water_specs_headline')}}</p>
 
           <li v-for="(point, i) in $t('water_specs')" :key="i">

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="products">
     <v-layout row wrap>
       <v-flex xs12>
         <h1 class="text-xs-center">{{$t('square_headline')}}</h1>

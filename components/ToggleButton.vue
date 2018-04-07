@@ -1,10 +1,21 @@
 <template>
-  <label class="vue-js-switch" :class="{toggled, disabled}">
-    <input type="checkbox" class="v-switch-input" @change.stop="toggle">
-    <span class="v-switch-core" :style="coreStyle"></span>
+  <label
+    class="vue-js-switch"
+    :class="{toggled, disabled}">
+    <input
+      type="checkbox"
+      class="v-switch-input"
+      @change.stop="toggle">
+    <span
+      class="v-switch-core"
+      :style="coreStyle"/>
     <div v-if="labels">
-      <span class="v-switch-label v-left" v-if="toggled">{{labelChecked}}</span>
-      <span class="v-switch-label v-right" v-else>{{labelUnchecked}}</span>
+      <span
+        class="v-switch-label v-left"
+        v-if="toggled">{{ labelChecked }}</span>
+      <span
+        class="v-switch-label v-right"
+        v-else>{{ labelUnchecked }}</span>
     </div>
   </label>
 </template>
@@ -61,6 +72,11 @@
         default: 75
       }
     },
+    data () {
+      return {
+        toggled: this.value
+      }
+    },
     computed: {
       colorChecked () {
         if (typeof this.color !== 'object') {
@@ -102,11 +118,6 @@
         if (this.sync) {
           this.toggled = value
         }
-      }
-    },
-    data () {
-      return {
-        toggled: this.value
       }
     },
     methods: {

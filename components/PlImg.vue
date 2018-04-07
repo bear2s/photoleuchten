@@ -1,14 +1,16 @@
 <template>
-  <img v-if="!parallax && !jumbotron"
-       width="100%"
-       height="auto"
-       :sizes="sizes"
-       :srcset="srcsetComputed"
-       :src="srcComputed"/>
-  <v-parallax v-else
-              :sizes="sizes"
-              :srcset="srcsetComputed"
-              :src="srcComputed"/>
+  <img
+    v-if="!parallax && !jumbotron"
+    width="100%"
+    height="auto"
+    :sizes="sizes"
+    :srcset="srcsetComputed"
+    :src="srcComputed">
+  <v-parallax
+    v-else
+    :sizes="sizes"
+    :srcset="srcsetComputed"
+    :src="srcComputed"/>
 </template>
 
 <script>
@@ -17,7 +19,7 @@
   const bust = pkg.version
 
   export default {
-    name: 'pl-img',
+    name: 'PlImg',
     props: {
       fileName: {
         type: String,

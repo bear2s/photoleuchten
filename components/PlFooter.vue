@@ -1,21 +1,35 @@
 <template>
-  <v-footer :fixed="false" class="pt-4 pb-1" app>
-    <v-layout row wrap>
-      <v-flex xs12 class="text-xs-right pb-1">
-        <nuxt-link to="/contact"
-                   v-text="$t('links.contact')"/>
+  <v-footer
+    :fixed="false"
+    class="pt-4 pb-1"
+    app>
+    <v-layout
+      row
+      wrap>
+      <v-flex
+        xs12
+        class="text-xs-right pb-1">
+        <nuxt-link
+          to="/contact"
+          v-text="$t('links.contact')"/>
       </v-flex>
-      <v-flex xs12 class="text-xs-right pb-1">
-        <nuxt-link to="/impressum" v-text="$t('links.legal')"/>
+      <v-flex
+        xs12
+        class="text-xs-right pb-1">
+        <nuxt-link
+          to="/impressum"
+          v-text="$t('links.legal')"/>
       </v-flex>
-      <v-flex xs12 class="text-xs-center"><span>&copy; {{copyright}}</span></v-flex>
+      <v-flex
+        xs12
+        class="text-xs-center"><span>&copy; {{ copyright }}</span></v-flex>
     </v-layout>
   </v-footer>
 </template>
 
 <script>
   export default {
-    name: 'pl-footer',
+    name: 'PlFooter',
     data () {
       const date = new Date()
 
@@ -32,4 +46,3 @@
     }
   }
 </script>
-

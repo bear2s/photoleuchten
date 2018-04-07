@@ -5,7 +5,7 @@
     </v-flex>
     <v-flex xs12 class="text-xs-right">
       <pl-img fileName="t1"
-              imgType="png"
+              imgType="jpg"
               sizes="99vw"
               :quality="85"></pl-img>
     </v-flex>

@@ -1,6 +1,5 @@
 <template>
   <v-toolbar-items class="hidden-xs-only">
-
     <v-btn
       flat
       to="/"

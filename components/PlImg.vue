@@ -3,9 +3,12 @@
     v-if="!parallax && !jumbotron"
     width="100%"
     height="auto"
-    :sizes="sizes"
-    :srcset="srcsetComputed"
-    :src="srcComputed">
+    class="lazyload"
+    :class="{'blur-up': blurUp}"
+    :data-sizes="sizes"
+    :data-srcset="srcsetComputed"
+    :data-src="srcComputed"
+    :src="blurUp ? srcComputedLowRes : null">
   <v-parallax
     v-else
     :sizes="sizes"
@@ -24,6 +27,10 @@
       fileName: {
         type: String,
         required: true
+      },
+      blurUp: {
+        type: Boolean,
+        default: false
       },
       imgType: {
         type: String,
@@ -60,6 +67,9 @@
       srcComputed () {
         return `${this.imgBase}/f_auto,q_${this.quality},dpr_auto/${this.fileName}.${this.imgType}?${bust}`
       },
+      srcComputedLowRes () {
+        return `${this.imgBase}/f_auto,q_1,dpr_auto/${this.fileName}.${this.imgType}?${bust}`
+      },
       srcsetComputed () {
         let val = ''
         this.imgSizes
@@ -78,5 +88,24 @@
 <style scoped>
   img {
     max-width: 100%;
+  }
+
+  .blur-up {
+    filter: blur(5px);
+    transition: filter 400ms, -webkit-filter 400ms;
+  }
+
+  .blur-up.lazyloaded {
+    filter: blur(0);
+  }
+
+  .fade-box .lazyload,
+  .fade-box .lazyloading {
+    opacity: 0;
+    transition: opacity 400ms;
+  }
+
+  .fade-box img.lazyloaded {
+    opacity: 1;
   }
 </style>

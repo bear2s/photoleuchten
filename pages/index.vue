@@ -11,6 +11,7 @@
       xs12
       class="text-xs-right">
       <pl-img
+        blur-up
         file-name="t1"
         img-type="jpg"
         sizes="99vw"

@@ -1,7 +1,8 @@
 <template>
   <v-footer
-    :fixed="false"
-    class="pt-4 pb-1"
+    absolute
+    height="auto"
+    class="pt-4 pb-1 px-2"
     app>
     <v-layout
       row
@@ -10,13 +11,14 @@
         xs12
         class="text-xs-right pb-1">
         <nuxt-link
-          to="/contact"
+          :to="`/${$t('links.contact')}`"
           v-text="$t('links.contact')"/>
       </v-flex>
       <v-flex
         xs12
         class="text-xs-right pb-1">
         <nuxt-link
+          v-if="$store.state.locale === 'de'"
           to="/impressum"
           v-text="$t('links.legal')"/>
       </v-flex>

@@ -54,10 +54,10 @@
             sizes="252px"
             height="40px"
             width="auto"
-            class="hidden-xs-only pt-1"/>
+            class="hidden-sm-and-down pt-1"/>
           <img
             src="~/assets/img/logo_small.png"
-            class="pt-2 hidden-sm-and-up"
+            class="pt-2 hidden-md-and-up"
             height="40px"
             width="auto">
         </nuxt-link>

@@ -11,31 +11,35 @@
         xs12
         class="text-xs-right">
         <pl-img
+          blur-up
           file-name="q0"
           img-type="png"
           sizes="99vw"
-          :quality="85"/>
+          :quality="90"/>
       </v-flex>
       <v-flex xs12>
         <h2 class="text-xs-center">{{ $t('battery_powered') }}</h2>
       </v-flex>
       <v-flex
-        xs4
+        xs12
+        sm4
         v-for="(item, i) in ['q1', 'q2', 'q3', 'q4', 'q5', 'q6']"
-        :key="i"
+        :key="item + i"
         style="position: relative"
         class="text-xs-justify pa-1">
         <pl-img
           :file-name="item"
-          sizes="32vw"/>
+          sizes="(max-width: 48em) 99vw (min-width: 48em) 32vw"/>
         <div
           class="text-xs-center"
           style="bottom: 10px; width: 100%; position: absolute;"
-          v-if="i === 1">Salt & Pepper</div>
+          v-if="i === 1">Salt & Pepper
+        </div>
         <div
           class="text-xs-center"
           style="bottom: 10px; width: 100%; position: absolute;"
-          v-if="i === 4">Beach I</div>
+          v-if="i === 4">Beach I
+        </div>
       </v-flex>
       <v-flex xs12>
         <p>{{ $t('quad_desc') }}</p>
@@ -49,16 +53,18 @@
       <v-flex
         xs12
         md8>
-        <ul
-          class="card pl-3"
-          style="height: 100%;">
-          <p class="pt-3">{{ $t('battery_specs_headline') }}</p>
-          <li
-            v-for="(point, i) in $t(['battery_specs'])"
-            :key="i">
-            {{ point }}
-          </li>
-        </ul>
+        <no-ssr>
+          <ul
+            class="card pl-3"
+            style="height: 100%;">
+            <li class="pt-3">{{ $t('battery_specs_headline') }}</li>
+            <li
+              v-for="(point, i) in $t(['battery_specs'])"
+              :key="'---' + i">
+              {{ point }}
+            </li>
+          </ul>
+        </no-ssr>
       </v-flex>
       <v-flex
         xs12
@@ -91,10 +97,10 @@
         md2
         class="center-xs motive-item pr-1 pb-1"
         v-for="(item, i) in quadMotives"
-        :key="i">
+        :key="'quad-motive-' + i">
         <pl-img
           v-for="(subItem,s) in [{lightOnShow: false, fileNameEnd: 'a'}, {lightOnShow: true, fileNameEnd: 'b'}]"
-          :key="s"
+          :key="item.label + '-' + s"
           @click.native="motifClicked(item.file)"
           class="list-item"
           :file-name="`${item.file}${subItem.fileNameEnd}`"
@@ -132,23 +138,26 @@
         <h2 class="text-xs-center">{{ $t('line_powered') }}</h2>
       </v-flex>
       <v-flex
-        xs4
+        xs12
+        sm4
         v-for="(item, i) in ['q8', 'q9', 'q10', 'q11', 'q12', 'q13']"
-        :key="i"
+        :key="item + '-' + i"
         class="text-xs-justify pa-1"
         style="position: relative;">
         <pl-img
           :file-name="item"
           :quality="85"
-          sizes="32vw"/>
+          sizes="(max-width: 48em) 99vw (min-width: 48em) 32vw"/>
         <div
           class="text-xs-center"
           style="bottom: 10px; width: 100%; position: absolute;"
-          v-if="i === 1">La Pedrera</div>
+          v-if="i === 1">La Pedrera
+        </div>
         <div
           class="text-xs-center"
           style="bottom: 10px; width: 100%; position: absolute;"
-          v-if="i === 4">Spirals of a temple</div>
+          v-if="i === 4">Spirals of a temple
+        </div>
       </v-flex>
     </v-layout>
     <v-layout row>
@@ -169,7 +178,7 @@
           <p class="pt-3">{{ $t('battery_linepower_specs1_headline') }}</p>
           <li
             v-for="(point, i) in $t(['battery_linepower_specs1'])"
-            :key="i">
+            :key="'battery-spec' + i">
             {{ point }}
           </li>
         </ul>
@@ -198,7 +207,7 @@
           <p class="pt-3">{{ $t('battery_linepower_specs2_headline') }}</p>
           <li
             v-for="(point, i) in $t(['battery_linepower_specs2'])"
-            :key="i">
+            :key="'battery-spec-second-' + i">
             {{ point }}
           </li>
         </ul>

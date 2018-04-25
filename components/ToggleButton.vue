@@ -184,7 +184,7 @@
         transition: transform .3s;
         width: 16px;
         height: 16px;
-        z-index: 20;
+        z-index: 1;
         background-color: #fff;
       }
     }

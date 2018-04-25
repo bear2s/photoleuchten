@@ -17,6 +17,7 @@
   "dependencies": {
     "@nuxtjs/sitemap": "0.1.1",
     "accept-language-parser": "1.5.0",
+    "lazysizes": "4.0.2",
     "webfontloader": "1.6.28"
   },
   "devDependencies": {
@@ -33,7 +34,7 @@
     "eslint-plugin-vue": "4.5.0",
     "gf-release": "1.4.5",
     "loader-utils": "1.1.0",
-    "nuxt": "1.4.0",
+    "nuxt-edge": "latest",
     "shelljs": "0.8.1",
     "stylus": "0.54.5",
     "stylus-loader": "3.0.2",
@@ -42,13 +43,13 @@
     "vuetify-loader": "0.1.1"
   },
   "engines": {
-    "node": ">= 6.0.0",
-    "npm": ">= 3.0.0"
+    "node": ">= 8.0.0",
+    "npm": ">= 4.0.0"
   },
   "browserslist": [
     "> 1%",
     "last 3 versions",
-    "not ie <= 10"
+    "not ie < 11"
   ],
   "releaseConfig": {
     "buildCommand": "npm run generate && git add -A && git commit -am \"updated docs folder\"",

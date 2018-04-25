@@ -36,6 +36,9 @@ module.exports = {
   generate: {
     dir: 'docs'
   },
+  render: {
+    resourceHints: false
+  },
   router: {
     // not working with generate / static site
     // middleware: ['lang']
@@ -66,11 +69,7 @@ module.exports = {
   plugins: [
     '~/plugins/vuetify.js',
     '~/plugins/vueSetup.js',
-    '~/plugins/i18n.js',
-    {
-      src: resolve('./plugins/lazy.js'),
-      ssr: false
-    }
+    '~/plugins/i18n.js'
   ],
   /*
    ** Customize the progress-bar color

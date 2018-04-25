@@ -1,12 +1,10 @@
 <template>
   <img
-    v-if="srcComputed && srcsetComputed"
     width="100%"
     height="auto"
-    class="lazyload"
-    :data-sizes="sizes"
-    :data-srcset="srcsetComputed"
-    :data-src="srcComputed">
+    :sizes="sizes"
+    :srcset="srcsetComputed"
+    :src="srcComputed">
 </template>
 
 <script>

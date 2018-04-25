@@ -17,7 +17,6 @@
   "dependencies": {
     "@nuxtjs/sitemap": "0.1.1",
     "accept-language-parser": "1.5.0",
-    "lazysizes": "4.0.2",
     "webfontloader": "1.6.28"
   },
   "devDependencies": {

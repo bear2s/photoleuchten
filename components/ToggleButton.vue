@@ -55,7 +55,8 @@
             return value.checked || value.unchecked
           }
           return typeof value === 'string'
-        }
+        },
+        default: DEF_CHECKED_COLOR
       },
       labels: {
         type: [Boolean, Object],

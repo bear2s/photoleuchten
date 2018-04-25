@@ -49,15 +49,11 @@
     props: {
       items: {
         type: Array,
-        'default' () {
-          return []
-        }
+        default: () => []
       },
       products: {
         type: Array,
-        'default' () {
-          return []
-        }
+        default: () => []
       }
     }
   }

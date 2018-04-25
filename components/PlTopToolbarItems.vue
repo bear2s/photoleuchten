@@ -44,9 +44,7 @@
     props: {
       products: {
         type: Array,
-        'default' () {
-          return []
-        }
+        default: () => []
       }
     },
     computed: {

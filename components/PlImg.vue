@@ -27,33 +27,33 @@
       },
       imgType: {
         type: String,
-        'default': 'jpg'
+        default: 'jpg'
       },
       sizes: {
         type: String,
-        'default': '100vw'
+        default: '100vw'
       },
       imgSizes: {
         type: Array,
-        'default' () {
+        default () {
           return ['1920', '1280', '1024', '960', '768', '512', '256']
         }
       },
       maxImgSize: {
         type: Number,
-        'default': 1920
+        default: 1920
       },
       quality: {
         type: Number | String,
-        'default': 'auto:eco'
+        default: 'auto:eco'
       },
       parallax: {
         type: Boolean,
-        'default': false
+        default: false
       },
       jumbotron: {
         type: Boolean,
-        'default': false
+        default: false
       }
     },
     computed: {

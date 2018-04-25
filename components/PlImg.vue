@@ -1,18 +1,11 @@
 <template>
   <img
-    v-if="!parallax && !jumbotron"
     width="100%"
     height="auto"
-    class="blur-up lazyload"
+    class="lazyload"
     :data-sizes="sizes"
     :data-srcset="srcsetComputed"
-    :data-src="srcComputed"
-    src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
-  <v-parallax
-    v-else
-    :sizes="sizes"
-    :srcset="srcsetComputed"
-    :src="srcComputed"/>
+    :data-src="srcComputed">
 </template>
 
 <script>
@@ -26,10 +19,6 @@
       fileName: {
         type: String,
         required: true
-      },
-      blurUp: {
-        type: Boolean,
-        default: false
       },
       imgType: {
         type: String,
@@ -52,22 +41,11 @@
       quality: {
         type: Number | String,
         default: 'auto:eco'
-      },
-      parallax: {
-        type: Boolean,
-        default: false
-      },
-      jumbotron: {
-        type: Boolean,
-        default: false
       }
     },
     computed: {
       srcComputed () {
         return `${this.imgBase}/f_auto,q_${this.quality},dpr_auto/${this.fileName}.${this.imgType}?${bust}`
-      },
-      srcComputedLowRes () {
-        return `${this.imgBase}/f_auto,q_1,dpr_auto/${this.fileName}.${this.imgType}?${bust}`
       },
       srcsetComputed () {
         let val = ''
@@ -80,11 +58,6 @@
           })
         return val
       }
-    },
-    mounted () {
-      if (!process.server) {
-        this.$forceUpdate()
-      }
     }
   }
 </script>
@@ -92,24 +65,5 @@
 <style scoped>
   img {
     max-width: 100%;
-  }
-
-  .blur-up {
-    filter: blur(5px);
-    transition: filter 400ms, -webkit-filter 400ms;
-  }
-
-  .blur-up.lazyloaded {
-    filter: blur(0);
-  }
-
-  .fade-box .lazyload,
-  .fade-box .lazyloading {
-    opacity: 0;
-    transition: opacity 400ms;
-  }
-
-  .fade-box img.lazyloaded {
-    opacity: 1;
   }
 </style>

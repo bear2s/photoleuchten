@@ -1,13 +1,14 @@
 <template>
-  <img
-    v-if="!parallax && !jumbotron"
-    width="100%"
-    height="auto"
-    class="lazyload blur-up"
-    :data-sizes="sizes"
-    :data-srcset="srcsetComputed"
-    :data-src="srcComputed"
-    :src="srcComputedLowRes">
+  <no-ssr v-if="!parallax && !jumbotron">
+    <img
+      width="100%"
+      height="auto"
+      class="lazyload blur-up"
+      :data-sizes="sizes"
+      :data-srcset="srcsetComputed"
+      :data-src="srcComputed"
+      :src="srcComputedLowRes">
+  </no-ssr>
   <v-parallax
     v-else
     :sizes="sizes"

@@ -1,53 +1,72 @@
 <template>
   <v-app dark>
 
-    <v-navigation-drawer persistent
-                         fixed
-                         :permanent="false"
-                         temporary
-                         v-model="drawer"
-                         app>
+    <v-navigation-drawer
+      persistent
+      fixed
+      :permanent="false"
+      temporary
+      v-model="drawer"
+      app>
 
-      <v-toolbar flat app>
+      <v-toolbar
+        flat
+        app>
         <v-toolbar-title>
-          <nuxt-link to="/" class="logo-link">
-            <pl-img fileName="logo"
-                    img-type="png"
-                    sizes="252px"
-                    height="40px"
-                    width="auto"
-                    class="pt-1"></pl-img>
+          <nuxt-link
+            to="/"
+            class="logo-link">
+            <pl-img
+              file-name="logo"
+              img-type="png"
+              sizes="252px"
+              height="40px"
+              width="auto"
+              class="pt-1"/>
           </nuxt-link>
         </v-toolbar-title>
       </v-toolbar>
 
-      <sidebar-content ref="sidebar"
-                       :items="items"
-                       :products="products"/>
+      <sidebar-content
+        ref="sidebar"
+        :items="items"
+        :products="products"/>
 
     </v-navigation-drawer>
 
-    <v-toolbar fixed app>
-      <v-toolbar-side-icon @click="drawer = !drawer"
-                           class="hidden-sm-and-up">
-        <img src="~/assets/img/menu.png" width="24px"/>
+    <v-toolbar
+      fixed
+      app>
+      <v-toolbar-side-icon
+        @click="drawer = !drawer"
+        class="hidden-sm-and-up">
+        <img
+          src="~/assets/img/menu.png"
+          width="24px">
       </v-toolbar-side-icon>
       <v-toolbar-title>
-        <nuxt-link to="/" class="logo-link">
-          <pl-img fileName="logo"
-                  img-type="png"
-                  sizes="252px"
-                  height="40px"
-                  width="auto"
-                  class="hidden-xs-only pt-1"></pl-img>
-          <img src="~/assets/img/logo_small.png" class="pt-2 hidden-sm-and-up" height="40px" width="auto"/>
+        <nuxt-link
+          to="/"
+          class="logo-link">
+          <pl-img
+            file-name="logo"
+            img-type="png"
+            sizes="252px"
+            height="40px"
+            width="auto"
+            class="hidden-sm-and-down pt-1"/>
+          <img
+            src="~/assets/img/logo_small.png"
+            class="pt-2 hidden-md-and-up"
+            height="40px"
+            width="auto">
         </nuxt-link>
       </v-toolbar-title>
-      <v-spacer></v-spacer>
+      <v-spacer/>
 
-      <pl-top-toolbar-items :products="products"></pl-top-toolbar-items>
+      <pl-top-toolbar-items :products="products"/>
 
-      <language-select></language-select>
+      <language-select/>
 
     </v-toolbar>
 
@@ -140,4 +159,3 @@
     }
   }
 </script>
-

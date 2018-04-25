@@ -11,8 +11,9 @@
               <h3>
                 Error {{ error.statusCode }} -  {{ error.message }}
               </h3>
-              <v-btn to="/"
-                     v-if="error.statusCode === 404">
+              <v-btn
+                to="/"
+                v-if="error.statusCode === 404">
                 Back to the homepage
               </v-btn>
             </v-flex>
@@ -24,6 +25,11 @@
 </template>
 <script>
   export default {
-    props: ['error']
+    props: {
+      error: {
+        type: Object,
+        default: null
+      }
+    }
   }
 </script>

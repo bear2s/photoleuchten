@@ -1,5 +1,7 @@
 <template>
-  <v-layout row v-once>
+  <v-layout
+    row
+    v-once>
     <v-flex xs12>
       <h2>ÜBER PHOTOLEUCHTEN</h2>
       <p>
@@ -31,7 +33,7 @@
         Bestellungen gerne an <a href="mailto:photoleuchten@yahoo.com">photoleuchten@yahoo.com</a>.
       </p>
       <p class="mt-3">
-        Sylvia Bär<br/>
+        Sylvia Bär<br>
         Designerin und Inhaberin von PHOTOLEUCHTEN.
       </p>
     </v-flex>

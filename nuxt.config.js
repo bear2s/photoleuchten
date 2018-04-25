@@ -64,10 +64,13 @@ module.exports = {
    ** Plugins
    */
   plugins: [
-    '~/plugins/vuetify',
+    '~/plugins/vuetify.js',
     '~/plugins/vueSetup.js',
-    '~/plugins/i18n.js'
-    // {src: '~/plugins/ga.js'}
+    '~/plugins/i18n.js',
+    {
+      src: resolve('./plugins/lazy.js'),
+      ssr: false
+    }
   ],
   /*
    ** Customize the progress-bar color
@@ -80,7 +83,6 @@ module.exports = {
    */
   build: {
     extractCSS: false,
-    vendor: ['vue-i18n', '~/plugins/vuetify.js'],
     babel: {
       plugins: [
         ['transform-imports', {
@@ -121,14 +123,15 @@ module.exports = {
           })
         ]
       }
-
       config.module.rules.forEach(rule => {
         if (rule.test.toString() === '/\\.styl(us)?$/') {
-          rule.use.push({
-            loader: 'vuetify-loader',
-            options: {
-              theme: resolve('./assets/style/theme.styl')
-            }
+          rule.oneOf.forEach(one => {
+            one.use && one.use.push({
+              loader: 'vuetify-loader',
+              options: {
+                theme: resolve('./assets/style/theme.styl')
+              }
+            })
           })
         }
       })

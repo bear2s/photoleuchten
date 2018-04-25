@@ -3,7 +3,7 @@
     v-if="!parallax && !jumbotron"
     width="100%"
     height="auto"
-    class="blur-up"
+    class="blur-up lazyload"
     :data-sizes="sizes"
     :data-srcset="srcsetComputed"
     :data-src="srcComputed"

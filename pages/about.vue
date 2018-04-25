@@ -1,5 +1,7 @@
 <template>
-  <v-layout row v-once>
+  <v-layout
+    row
+    v-once>
     <v-flex xs12>
       <h2>ABOUT PHOTOLEUCHTEN</h2>
       <p>
@@ -16,16 +18,15 @@
         The motif, the frame and the light (light intensity and color) are individually coordinated with each other and
         are designed and built with love and great attention to detail.
       </p>
-        The luminaires are meant to give the viewer a sense of joy and to illuminate a room in a new light.
-      <p>
-      </p>
-        All of them are handmade single pieces and available in various sizes and finishes.
+      The luminaires are meant to give the viewer a sense of joy and to illuminate a room in a new light.
+      <p/>
+      All of them are handmade single pieces and available in various sizes and finishes.
       <p>
         On request I also design light objects according to individual wishes or your own motifs. Inquiries and orders
         are welcome at <a href="mailto:photoleuchten@yahoo.com">photoleuchten@yahoo.com</a>.
       </p>
       <p class="mt-3">
-        Sylvia Bär<br/>
+        Sylvia Bär<br>
         Designer and owner of PHOTOLEUCHTEN.
       </p>
     </v-flex>

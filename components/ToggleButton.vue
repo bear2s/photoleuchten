@@ -1,10 +1,21 @@
 <template>
-  <label class="vue-js-switch" :class="{toggled, disabled}">
-    <input type="checkbox" class="v-switch-input" @change.stop="toggle">
-    <span class="v-switch-core" :style="coreStyle"></span>
+  <label
+    class="vue-js-switch"
+    :class="{toggled, disabled}">
+    <input
+      type="checkbox"
+      class="v-switch-input"
+      @change.stop="toggle">
+    <span
+      class="v-switch-core"
+      :style="coreStyle"/>
     <div v-if="labels">
-      <span class="v-switch-label v-left" v-if="toggled">{{labelChecked}}</span>
-      <span class="v-switch-label v-right" v-else>{{labelUnchecked}}</span>
+      <span
+        class="v-switch-label v-left"
+        v-if="toggled">{{ labelChecked }}</span>
+      <span
+        class="v-switch-label v-right"
+        v-else>{{ labelUnchecked }}</span>
     </div>
   </label>
 </template>
@@ -44,7 +55,8 @@
             return value.checked || value.unchecked
           }
           return typeof value === 'string'
-        }
+        },
+        default: DEF_CHECKED_COLOR
       },
       labels: {
         type: [Boolean, Object],
@@ -59,6 +71,11 @@
       width: {
         type: Number,
         default: 75
+      }
+    },
+    data () {
+      return {
+        toggled: this.value
       }
     },
     computed: {
@@ -102,11 +119,6 @@
         if (this.sync) {
           this.toggled = value
         }
-      }
-    },
-    data () {
-      return {
-        toggled: this.value
       }
     },
     methods: {
@@ -172,7 +184,7 @@
         transition: transform .3s;
         width: 16px;
         height: 16px;
-        z-index: 20;
+        z-index: 1;
         background-color: #fff;
       }
     }

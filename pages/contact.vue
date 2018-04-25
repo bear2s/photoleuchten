@@ -11,7 +11,7 @@
             <v-text-field
               :label="$t('first_name')"
               name="firstname"
-            ></v-text-field>
+            />
           </v-flex>
         </v-layout>
 
@@ -20,7 +20,7 @@
             <v-text-field
               :label="$t('last_name')"
               name="lastname"
-            ></v-text-field>
+            />
           </v-flex>
         </v-layout>
 
@@ -32,7 +32,7 @@
               v-model="email"
               :rules="emailRules"
               name="email"
-            ></v-text-field>
+            />
           </v-flex>
         </v-layout>
 
@@ -45,15 +45,17 @@
               v-model="message"
               :rules="messageRules"
               multi-line
-            ></v-text-field>
+            />
           </v-flex>
         </v-layout>
 
         <v-layout row>
-          <v-flex xs12 class="text-xs-right">
+          <v-flex
+            xs12
+            class="text-xs-right">
             <v-btn
               :disabled="!valid"
-              type="submit">{{$t('send')}}
+              type="submit">{{ $t('send') }}
             </v-btn>
           </v-flex>
         </v-layout>
@@ -64,7 +66,7 @@
 
 <script>
   export default {
-    name: 'contact',
+    name: 'Contact',
     transition: 'slide-left',
     asyncData ({store, route}) {
       return store.dispatch('setLanguageKey', route.name === 'contact' ? 'en' : 'de')

@@ -1,14 +1,19 @@
 <template>
-  <img v-if="!parallax && !jumbotron"
-       width="100%"
-       height="auto"
-       :sizes="sizes"
-       :srcset="srcsetComputed"
-       :src="srcComputed"/>
-  <v-parallax v-else
-              :sizes="sizes"
-              :srcset="srcsetComputed"
-              :src="srcComputed"/>
+  <img
+    v-if="!parallax && !jumbotron"
+    width="100%"
+    height="auto"
+    class="lazyload"
+    :class="{'blur-up': blurUp}"
+    :data-sizes="sizes"
+    :data-srcset="srcsetComputed"
+    :data-src="srcComputed"
+    :src="blurUp ? srcComputedLowRes : null">
+  <v-parallax
+    v-else
+    :sizes="sizes"
+    :srcset="srcsetComputed"
+    :src="srcComputed"/>
 </template>
 
 <script>
@@ -17,46 +22,53 @@
   const bust = pkg.version
 
   export default {
-    name: 'pl-img',
+    name: 'PlImg',
     props: {
       fileName: {
         type: String,
         required: true
       },
+      blurUp: {
+        type: Boolean,
+        default: false
+      },
       imgType: {
         type: String,
-        'default': 'jpg'
+        default: 'jpg'
       },
       sizes: {
         type: String,
-        'default': '100vw'
+        default: '100vw'
       },
       imgSizes: {
         type: Array,
-        'default' () {
+        default () {
           return ['1920', '1280', '1024', '960', '768', '512', '256']
         }
       },
       maxImgSize: {
         type: Number,
-        'default': 1920
+        default: 1920
       },
       quality: {
         type: Number | String,
-        'default': 'auto:eco'
+        default: 'auto:eco'
       },
       parallax: {
         type: Boolean,
-        'default': false
+        default: false
       },
       jumbotron: {
         type: Boolean,
-        'default': false
+        default: false
       }
     },
     computed: {
       srcComputed () {
         return `${this.imgBase}/f_auto,q_${this.quality},dpr_auto/${this.fileName}.${this.imgType}?${bust}`
+      },
+      srcComputedLowRes () {
+        return `${this.imgBase}/f_auto,q_1,dpr_auto/${this.fileName}.${this.imgType}?${bust}`
       },
       srcsetComputed () {
         let val = ''
@@ -76,5 +88,24 @@
 <style scoped>
   img {
     max-width: 100%;
+  }
+
+  .blur-up {
+    filter: blur(5px);
+    transition: filter 400ms, -webkit-filter 400ms;
+  }
+
+  .blur-up.lazyloaded {
+    filter: blur(0);
+  }
+
+  .fade-box .lazyload,
+  .fade-box .lazyloading {
+    opacity: 0;
+    transition: opacity 400ms;
+  }
+
+  .fade-box img.lazyloaded {
+    opacity: 1;
   }
 </style>

@@ -1,5 +1,6 @@
 <template>
   <img
+    v-if="srcComputed && srcsetComputed"
     width="100%"
     height="auto"
     class="lazyload"

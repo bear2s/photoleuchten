@@ -5,16 +5,16 @@
 
 @font-face {
   font-family: TimeBurner;
-  src: url('/fonts/timeburnernormal.ttf');
+  src: url('/fonts/timeburnernormal.ttf') format('truetype');
 }
 
 @font-face {
   font-family: TimeBurnerBold;
-  src: url('/fonts/timeburnerbold.ttf');
+  src: url('/fonts/timeburnerbold.ttf') format('truetype');
 }
 
 body {
-  font-size: 15px;
+  font-size: 16px;
 }
 
 #app
@@ -23,19 +23,24 @@ body {
   h1
     @extend .display-1
     @extend .mt-3
+    @extend .mb-2
     text-transform: uppercase
   h2
     @extend .headline
     @extend .mt-3
+    @extend .mb-2
   h3
     @extend .title
     @extend .mt-3
+    @extend .mb-1
   h4
     @extend .subheading
     @extend .mt-2
+    @extend .mb-1
   h5, h6
     @extend .body-2
     @extend .mt-1
+    @extend .mb-1
 
   &.application--dark nav.toolbar .toolbar__items
     a, .btn, .list__tile_title

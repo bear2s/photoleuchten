@@ -24,6 +24,13 @@
       </v-flex>
       <v-flex
         xs12
+        class="text-xs-right pb-1">
+        <nuxt-link
+          :to="$t('links.privacyPolicy.to')"
+          v-text="$t('links.privacyPolicy.txt')"/>
+      </v-flex>
+      <v-flex
+        xs12
         class="text-xs-center"><span>&copy; {{ copyright }}</span></v-flex>
     </v-layout>
   </v-footer>
@@ -45,6 +52,27 @@
         const span = this.year === this.startYear ? this.year : `${this.startYear} - ${this.year}`
         return `${span} PHOTOLEUCHTEN.COM ALL RIGHTS RESERVED`
       }
+    },
+    i18n: {
+      messages: {
+        en: {
+          links: {
+            privacyPolicy: {
+              to: '/privacy',
+              txt: 'Privacy Policy'
+            }
+          }
+        },
+        de: {
+          links: {
+            privacyPolicy: {
+              to: '/datenschutz',
+              txt: 'Datenschutzerklärung'
+            }
+          }
+        }
+      }
     }
+
   }
 </script>

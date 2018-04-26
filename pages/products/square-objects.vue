@@ -92,7 +92,7 @@
         </h2>
       </v-flex>
       <v-flex
-        xs4
+        xs6
         sm3
         md2
         class="center-xs motive-item pr-1 pb-1"
@@ -106,7 +106,7 @@
           :file-name="`${item.file}${subItem.fileNameEnd}`"
           v-show="quadMotivesLightOn === subItem.lightOnShow"
           style=":hover { cursor: pointer }"
-          sizes="(min-width: 64em) 16vw, (min-width: 48em) 25vw, (max-width: 48em) 32vw"/>
+          sizes="(max-width: 48em) 50vw, (min-width: 48em) 25vw, (min-width: 64em) 16vw, (max-width: 48em) 32vw"/>
         <div class="motive-label">{{ item.label }}</div>
       </v-flex>
     </v-layout>
@@ -279,13 +279,14 @@
         this.quadMotivesLightOn = ev.value
       },
       motifClicked (name) {
+        if (this.$vuetify.breakpoint.xsOnly) return
         this.selectedMotif = this.selectedMotif === name ? null : name
       }
     }
   }
 </script>
 
-<style scoped>
+<style scoped lang="stylus">
   .motive-item .list-item {
     height: auto;
     width: 100%;
@@ -298,5 +299,13 @@
   .modal-body img {
     max-width: 90vw;
     max-height: 90vh;
+  }
+
+  @media screen and (max-width: 48em) {
+    .motive-item .list-item {
+      &:hover {
+        cursor: default
+      }
+    }
   }
 </style>

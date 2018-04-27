@@ -9,9 +9,6 @@ export default {
     'legal': 'legal notice',
     'about': 'About'
   },
-  'home': {
-    'headline': 'light objects - light boxes - illuminated photos & papers'
-  },
   'products': {
     'lighting': 'Lighting',
     'selection': 'Product selection',

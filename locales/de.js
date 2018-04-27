@@ -9,9 +9,6 @@ export default {
     'legal': 'Impressum',
     'about': 'Über pl'
   },
-  'home': {
-    'headline': 'Lichtobjekte - Leuchtkästen - beleuchtete Fotos und Papiere'
-  },
   'products': {
     'selection': 'Motivauswahl',
     'specs': 'Technische Daten',

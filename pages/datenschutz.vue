@@ -106,5 +106,14 @@
 </template>
 
 <script>
-  export default {}
+  export default {
+    asyncData ({store, route}) {
+      if (store.state.locale === 'en') store.dispatch('setLanguageKey', 'de')
+    },
+    watch: {
+      '$store.state.locale' (val) {
+        if (val === 'en') this.$router.push('privacy')
+      }
+    }
+  }
 </script>

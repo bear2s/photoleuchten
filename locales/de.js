@@ -27,12 +27,6 @@ export default {
       'link': 'gerahmte-objekte'
     }
   },
-  'first_name': 'Vorname',
-  'last_name': 'Nachname',
-  'email_address': 'E-Mail',
-  'message': 'Nachricht/Anfrage',
-  'required_field': 'Pflichtfeld',
-  'enter_valid_email': 'Bitte eine gültige E-Mail-Adresse eingeben',
   // square page
   square_headline: 'Quadratische Leuchten',
   battery_powered: 'Quadratische Leuchten batteriebetrieben',

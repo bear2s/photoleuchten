@@ -27,12 +27,6 @@ export default {
       'link': 'framed-objects'
     }
   },
-  'first_name': 'First name',
-  'last_name': 'Last name',
-  'email_address': 'Email',
-  'message': 'Message',
-  'required_field': 'Required field',
-  'enter_valid_email': 'Please enter a valid email address',
   // square page --------------
   square_headline: 'Square light boxes',
 

@@ -33,7 +33,7 @@
     "eslint-plugin-vue": "4.5.0",
     "gf-release": "1.4.5",
     "loader-utils": "1.1.0",
-    "nuxt-edge": "latest",
+    "nuxt-edge": "2.0.0-25424165.bd97fae",
     "shelljs": "0.8.1",
     "stylus": "0.54.5",
     "stylus-loader": "3.0.2",

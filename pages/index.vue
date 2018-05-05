@@ -11,7 +11,6 @@
       xs12
       class="text-xs-right">
       <pl-img
-        blur-up
         file-name="t1"
         img-type="jpg"
         sizes="99vw"
@@ -55,7 +54,7 @@ Have fun watching!
           welcomeTitle: 'Willkommen bei Photoleuchten!',
           welcome: `
 <p>
-Hier findet Ihr mit Liebe hergestellte, handgemachte Leuchten: Wandleuchten, Leuchtkästen, Lichtobjekte mit Fotografien, die unbeleuchtet toll aussehen und beleuchtet noch mal einen völlig neuen Look bekommen.
+Hier findet Ihr mit Liebe hergestellte, handgemachte Leuchten: Wandleuchten, Leuchtkästen, Lichtobjekte mit Fotografien, die unbeleuchtet toll aussehen und beleuchtet einen völlig neuen Look bekommen.
 </p>
 <p>
 Die Leuchten passen durch ihre unterschiedlichen Motive, Lichtfarben - und Stärken in viele Wohnbereiche und bringen eine neue Atmosphäre in einen Raum.

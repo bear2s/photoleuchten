@@ -50,12 +50,8 @@ module.exports = {
     path: '/sitemap.xml',
     hostname: 'https://photoleuchten.com',
     cacheTime: 1000 * 60 * 15,
-    generate: true // Enable me when using nuxt generate
-    // exclude: [
-    //   '/secret',
-    //   '/admin/**'
-    // ],
-    // routes: []
+    generate: true, // Enable me when using nuxt generate
+    priority: 0.5
   },
   /*
    ** Global CSS

@@ -25,9 +25,3 @@
     transition: 'slide-left'
   }
 </script>
-
-<style scoped>
-  .impressum {
-    font-family: sans-serif;
-  }
-</style>

@@ -36,13 +36,12 @@
 
     <v-layout row>
       <v-flex xs12>
-        <v-text-field
+        <v-textarea
           :label="$t('message')"
           name="body"
           required
           v-model="message"
           :rules="messageRules"
-          multi-line
         />
       </v-flex>
     </v-layout>

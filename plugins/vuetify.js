@@ -12,6 +12,7 @@ import {
   VMenu,
   VTooltip,
   VTextField,
+  VTextarea,
   VForm,
   VGrid,
   VDialog,
@@ -33,6 +34,7 @@ Vue.use(Vuetify, {
     VForm,
     VGrid,
     VDialog,
-    VSubHeader
+    VSubHeader,
+    VTextarea
   }
 })

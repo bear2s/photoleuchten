@@ -1,10 +1,10 @@
 <template>
   <img
-    width="100%"
-    height="auto"
     :sizes="sizes"
     :srcset="srcsetComputed"
-    :src="srcComputed">
+    :src="srcComputed"
+    width="100%"
+    height="auto">
 </template>
 
 <script>

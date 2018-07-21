@@ -5,9 +5,9 @@
       to="/"
       exact>HOME</v-btn>
     <v-menu
+      v-if="products.length"
       bottom
-      left
-      v-if="products.length">
+      left>
       <v-btn
         slot="activator"
         :class="{'btn--active': productsLinkActive}"
@@ -20,8 +20,8 @@
         <v-list-tile
           v-for="(product, i) in products"
           :key="i"
-          router
-          :to="product.to">
+          :to="product.to"
+          router>
           <v-list-tile-content>
             <v-list-tile-title>{{ product.title }}</v-list-tile-title>
           </v-list-tile-content>
@@ -29,11 +29,11 @@
       </v-list>
     </v-menu>
     <v-btn
-      flat
-      :to="'/' + ($store.state.locale === 'de' ? 'ueber' : 'about')">{{ $t('links.about') }}</v-btn>
+      :to="'/' + ($store.state.locale === 'de' ? 'ueber' : 'about')"
+      flat>{{ $t('links.about') }}</v-btn>
     <v-btn
-      flat
-      :to="`/${$t('links.contact').toLowerCase()}`">{{ $t('links.contact') }}</v-btn>
+      :to="`/${$t('links.contact').toLowerCase()}`"
+      flat>{{ $t('links.contact') }}</v-btn>
   </v-toolbar-items>
 </template>
 

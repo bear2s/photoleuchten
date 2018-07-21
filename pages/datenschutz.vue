@@ -1,7 +1,7 @@
 <template>
   <v-layout
-    row
-    v-once>
+    v-once
+    row>
     <v-flex xs12>
       <h2>Datenschutzerklärung</h2>
       <p>

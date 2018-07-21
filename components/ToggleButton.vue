@@ -1,21 +1,21 @@
 <template>
   <label
-    class="vue-js-switch"
-    :class="{toggled, disabled}">
+    :class="{toggled, disabled}"
+    class="vue-js-switch">
     <input
       type="checkbox"
       class="v-switch-input"
       @change.stop="toggle">
     <span
-      class="v-switch-core"
-      :style="coreStyle"/>
+      :style="coreStyle"
+      class="v-switch-core"/>
     <div v-if="labels">
       <span
-        class="v-switch-label v-left"
-        v-if="toggled">{{ labelChecked }}</span>
+        v-if="toggled"
+        class="v-switch-label v-left">{{ labelChecked }}</span>
       <span
-        class="v-switch-label v-right"
-        v-else>{{ labelUnchecked }}</span>
+        v-else
+        class="v-switch-label v-right">{{ labelUnchecked }}</span>
     </div>
   </label>
 </template>

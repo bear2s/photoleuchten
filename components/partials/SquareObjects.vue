@@ -11,34 +11,34 @@
         xs12
         class="text-xs-right">
         <pl-img
+          :quality="90"
           blur-up
           file-name="q0"
           img-type="png"
-          sizes="99vw"
-          :quality="90"/>
+          sizes="99vw"/>
       </v-flex>
       <v-flex xs12>
         <h2 class="text-xs-center">{{ $t('battery_powered') }}</h2>
       </v-flex>
       <v-flex
-        xs12
-        sm4
         v-for="(item, i) in ['q1', 'q2', 'q3', 'q4', 'q5', 'q6']"
         :key="item + i"
+        xs12
+        sm4
         style="position: relative"
         class="text-xs-justify pa-1">
         <pl-img
           :file-name="item"
           sizes="(max-width: 48em) 99vw (min-width: 48em) 32vw"/>
         <div
+          v-if="i === 1"
           class="text-xs-center"
-          style="bottom: 10px; width: 100%; position: absolute;"
-          v-if="i === 1">Salt & Pepper
+          style="bottom: 10px; width: 100%; position: absolute;">Salt & Pepper
         </div>
         <div
+          v-if="i === 4"
           class="text-xs-center"
-          style="bottom: 10px; width: 100%; position: absolute;"
-          v-if="i === 4">Beach I
+          style="bottom: 10px; width: 100%; position: absolute;">Beach I
         </div>
       </v-flex>
       <v-flex xs12>
@@ -86,27 +86,27 @@
           {{ $t('products.selection') }}&nbsp;
           <toggle-button
             :value="quadMotivesLightOn"
-            @change="onQuadMotivesLightOnChanged"
             :color="{checked: 'rgb(251, 176, 59)', unchecked: '#bfcbd9'}"
-            :labels="{checked: $t('lightoff'), unchecked: $t('lighton')}"/>
+            :labels="{checked: $t('lightoff'), unchecked: $t('lighton')}"
+            @change="onQuadMotivesLightOnChanged"/>
         </h2>
       </v-flex>
       <v-flex
+        v-for="(item, i) in quadMotives"
+        :key="'quad-motive-' + i"
         xs6
         sm3
         md2
-        class="center-xs motive-item pr-1 pb-1"
-        v-for="(item, i) in quadMotives"
-        :key="'quad-motive-' + i">
+        class="center-xs motive-item pr-1 pb-1">
         <pl-img
           v-for="(subItem,s) in [{lightOnShow: false, fileNameEnd: 'a'}, {lightOnShow: true, fileNameEnd: 'b'}]"
-          :key="item.label + '-' + s"
-          @click.native="motifClicked(item.file)"
-          class="list-item"
-          :file-name="`${item.file}${subItem.fileNameEnd}`"
           v-show="quadMotivesLightOn === subItem.lightOnShow"
+          :key="item.label + '-' + s"
+          :file-name="`${item.file}${subItem.fileNameEnd}`"
+          class="list-item"
           style=":hover { cursor: pointer }"
-          sizes="(max-width: 48em) 50vw, (min-width: 48em) 25vw, (min-width: 64em) 16vw, (max-width: 48em) 32vw"/>
+          sizes="(max-width: 48em) 50vw, (min-width: 48em) 25vw, (min-width: 64em) 16vw, (max-width: 48em) 32vw"
+          @click.native="motifClicked(item.file)"/>
         <div class="motive-label">{{ item.label }}</div>
       </v-flex>
     </v-layout>
@@ -117,16 +117,16 @@
       max-width="50vw">
       <div v-if="selectedMotif">
         <pl-img
+          v-show="quadMotivesLightOn === false"
           slot="body"
           :folder="'960'"
           :file-name="`${selectedMotif}a`"
-          v-show="quadMotivesLightOn === false"
           sizes="70vw"/>
         <pl-img
+          v-show="quadMotivesLightOn === true"
           slot="body"
           :folder="'960'"
           :file-name="`${selectedMotif}b`"
-          v-show="quadMotivesLightOn === true"
           sizes="70vw"/>
       </div>
     </v-dialog>
@@ -138,10 +138,10 @@
         <h2 class="text-xs-center">{{ $t('line_powered') }}</h2>
       </v-flex>
       <v-flex
-        xs12
-        sm4
         v-for="(item, i) in ['q8', 'q9', 'q10', 'q11', 'q12', 'q13']"
         :key="item + '-' + i"
+        xs12
+        sm4
         class="text-xs-justify pa-1"
         style="position: relative;">
         <pl-img
@@ -149,14 +149,14 @@
           :quality="85"
           sizes="(max-width: 48em) 99vw (min-width: 48em) 32vw"/>
         <div
+          v-if="i === 1"
           class="text-xs-center"
-          style="bottom: 10px; width: 100%; position: absolute;"
-          v-if="i === 1">La Pedrera
+          style="bottom: 10px; width: 100%; position: absolute;">La Pedrera
         </div>
         <div
+          v-if="i === 4"
           class="text-xs-center"
-          style="bottom: 10px; width: 100%; position: absolute;"
-          v-if="i === 4">Spirals of a temple
+          style="bottom: 10px; width: 100%; position: absolute;">Spirals of a temple
         </div>
       </v-flex>
     </v-layout>

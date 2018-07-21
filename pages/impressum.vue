@@ -1,7 +1,7 @@
 <template>
   <v-layout
-    row
-    v-once>
+    v-once
+    row>
     <v-flex xs12>
       <h3>Impressum</h3>
       <h4>Angaben gemäß § 5 TMG:</h4>

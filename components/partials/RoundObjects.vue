@@ -24,9 +24,9 @@
           sm4
           class="text-xs-center">
           <pl-img
+            :max-img-size="960"
             file-name="r1"
             img-type="png"
-            :max-img-size="960"
             sizes="(max-width: 48em) 99vw (min-width: 48em) 32vw"/>
         </v-flex>
         <v-flex
@@ -41,8 +41,8 @@
             sizes="(max-width: 48em) 99vw (min-width: 48em) 32vw"/>
           <pl-img
             v-for="(val, i) in 6"
-            :key="'colored' + i"
             v-if="r2active && (r2selectedIndex === (i+3))"
+            :key="'colored' + i"
             :max-img-size="960"
             :file-name="'r'+ (i+3)"
             img-type="png"
@@ -52,16 +52,16 @@
             <toggle-button
               :value="r2active"
               :sync="true"
-              @change="r2active = !r2active"
               :color="{checked: 'rgb(251, 176, 59)', unchecked: '#bfcbd9'}"
-              :labels="{checked: $t('lightoff'), unchecked: $t('lighton')}"/>
+              :labels="{checked: $t('lightoff'), unchecked: $t('lighton')}"
+              @change="r2active = !r2active"/>
           </div>
           <div class="color-select d-inline-flex">
             <div
-              class="mr-1"
               v-for="(val, i) in ['#8BD5F9', '#6F9EFD', '#FE3747', '#C18FFE', '#FAB297', '#3AF4A2']"
               :key="'hex' + i"
               :style="`background-color: ${val}; visibility: ${r2active ? 'visible' : 'hidden'};` "
+              class="mr-1"
               @click.stop="r2selectedIndex = (i+3);"/>
           </div>
 
@@ -72,8 +72,8 @@
           class="align-center"
           style="display: flex">
           <pl-img
-            file-name="r9"
             :max-img-size="960"
+            file-name="r9"
             img-type="png"
             sizes="(max-width: 48em) 99vw (min-width: 48em) 32vw"/>
         </v-flex>
@@ -96,10 +96,10 @@
         wrap>
 
         <v-flex
+          v-if="false"
           xs12
           sm6
-          lg8
-          v-if="false"/>
+          lg8/>
         <v-flex xs12>
           <ul
             class="card mr-1 pl-3"
@@ -115,14 +115,14 @@
         </v-flex>
 
         <v-flex
+          v-if="false"
           xs12
           sm6
-          lg4
-          v-if="false">
+          lg4>
           <div style="position: relative;">
             <pl-img
-              file-name="r10"
               :max-img-size="960"
+              file-name="r10"
               img-type="jpg"
               sizes="(max-width: 48em) 66vw (min-width: 48em) 33vw"
               style="width: 100%;"/>
@@ -172,9 +172,9 @@
         sm4
         class="text-xs-center">
         <pl-img
+          :max-img-size="960"
           file-name="r21"
           img-type="png"
-          :max-img-size="960"
           sizes="(max-width: 48em) 99vw (min-width: 48em) 32vw"/>
       </v-flex>
       <v-flex
@@ -189,10 +189,10 @@
           sizes="(max-width: 48em) 99vw (min-width: 48em) 32vw"/>
         <toggle-button
           :value="r22active"
-          @change="r22active = !r22active"
           :sync="true"
           :color="{checked: 'rgb(251, 176, 59)', unchecked: '#bfcbd9'}"
-          :labels="{checked: $t('lightoff'), unchecked: $t('lighton')}"/>
+          :labels="{checked: $t('lightoff'), unchecked: $t('lighton')}"
+          @change="r22active = !r22active"/>
       </v-flex>
       <v-flex
         xs12
@@ -200,8 +200,8 @@
         class="align-center"
         style="display: flex">
         <pl-img
-          file-name="r24"
           :max-img-size="960"
+          file-name="r24"
           img-type="jpg"
           sizes="(max-width: 48em) 99vw (min-width: 48em) 32vw"/>
       </v-flex>

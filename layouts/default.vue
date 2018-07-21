@@ -2,11 +2,11 @@
   <v-app dark>
 
     <v-navigation-drawer
+      :permanent="false"
+      v-model="drawer"
       persistent
       fixed
-      :permanent="false"
       temporary
-      v-model="drawer"
       app>
 
       <v-toolbar
@@ -39,8 +39,8 @@
       fixed
       app>
       <v-toolbar-side-icon
-        @click="drawer = !drawer"
-        class="hidden-sm-and-up">
+        class="hidden-sm-and-up"
+        @click="drawer = !drawer">
         <img
           src="~/assets/img/menu.png"
           width="24px">

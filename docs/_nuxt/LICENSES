@@ -17,7 +17,7 @@
   */
 
 /**
- * vue-meta v1.5.0
+ * vue-meta v1.5.2
  * (c) 2018 Declan de Wet & Atinux
  * @license MIT
  */
@@ -37,7 +37,7 @@ object-assign
  */
 
 /*!
- * vue-i18n v7.6.0 
+ * vue-i18n v8.0.0 
  * (c) 2018 kazuya kawaguchi
  * Released under the MIT License.
  */

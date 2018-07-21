@@ -11,10 +11,10 @@
       xs12
       class="text-xs-right">
       <pl-img
+        :quality="85"
         file-name="t1"
         img-type="jpg"
-        sizes="99vw"
-        :quality="85"/>
+        sizes="99vw"/>
     </v-flex>
     <v-flex
       xs12

@@ -12,8 +12,8 @@
                 Error {{ error.statusCode }} -  {{ error.message }}
               </h3>
               <v-btn
-                to="/"
-                v-if="error.statusCode === 404">
+                v-if="error.statusCode === 404"
+                to="/">
                 Back to the homepage
               </v-btn>
             </v-flex>

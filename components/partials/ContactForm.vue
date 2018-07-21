@@ -1,9 +1,9 @@
 <template>
   <v-form
+    v-model="valid"
     action="https://formspree.io/photoleuchten@yahoo.com"
     method="POST"
-    style="max-width: 800px; margin: auto"
-    v-model="valid">
+    style="max-width: 800px; margin: auto">
     <v-layout row>
       <v-flex xs12>
         <v-text-field
@@ -26,9 +26,9 @@
       <v-flex xs12>
         <v-text-field
           :label="$t('email_address')"
-          required
           v-model="email"
           :rules="emailRules"
+          required
           name="email"
         />
       </v-flex>
@@ -36,13 +36,12 @@
 
     <v-layout row>
       <v-flex xs12>
-        <v-text-field
+        <v-textarea
           :label="$t('message')"
-          name="body"
-          required
           v-model="message"
           :rules="messageRules"
-          multi-line
+          name="body"
+          required
         />
       </v-flex>
     </v-layout>

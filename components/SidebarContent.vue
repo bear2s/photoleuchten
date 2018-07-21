@@ -1,10 +1,10 @@
 <template>
   <v-list>
     <v-list-tile
+      :value="false"
       router
       exact
-      to="/"
-      :value="false">
+      to="/">
       <v-list-tile-action/>
       <v-list-tile-content>
         <v-list-tile-title>Home</v-list-tile-title>
@@ -23,8 +23,8 @@
       <v-list-tile
         v-for="product in products"
         :key="product.title"
-        router
-        :to="product.to">
+        :to="product.to"
+        router>
         <v-list-tile-action/>
         <v-list-tile-content>
           <v-list-tile-title>{{ product.title }}</v-list-tile-title>
@@ -33,11 +33,11 @@
     </v-list-group>
 
     <v-list-tile
-      action="none"
-      router
       v-for="(item, i) in items"
       :to="item.to"
-      :key="i">
+      :key="i"
+      action="none"
+      router>
       <v-list-tile-content>
         <v-list-tile-title v-text="item.title"/>
       </v-list-tile-content>

@@ -4,29 +4,41 @@ module.exports = {
   root: true,
   parserOptions: {
     parser: 'babel-eslint',
-    sourceType: 'module'
+    sourceType: 'module',
+    ecmaVersion: 6
   },
   env: {
     es6: true,
     browser: true
   },
   // https://github.com/feross/standard/blob/master/RULES.md#javascript-standard-style
-  extends: ['plugin:vue/recommended', 'standard'],
-  // required to lint *.vue files
-  plugins: [
-    'vue'
+  extends: [
+    'plugin:vue/essential',
+    '@vue/standard'
   ],
   // add your custom rules here
-  'rules': {
-    // allow paren-less arrow functions
-    'arrow-parens': 0,
-    // allow async-await
-    'generator-star-spacing': 0,
-    // allow debugger during development
+  rules: {
+    'indent': ['error', 2],
     'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
     'no-console': process.env.NODE_ENV === 'production' ? 2 : 0,
-    'indent': ['error', 2],
-    'vue/attributes-order': 0
+    'vue/attribute-hyphenation': [
+      'error',
+      'always'
+    ],
+    'vue/html-end-tags': 'error',
+    'vue/html-indent': [
+      'error',
+      2
+    ],
+    'vue/html-self-closing': 'error',
+    'vue/require-default-prop': 'error',
+    'vue/require-prop-types': 'error',
+    'vue/attributes-order': 'error',
+    'vue/html-quotes': [
+      'error',
+      'double'
+    ],
+    'vue/order-in-components': 'error'
   },
   overrides: [
     {
@@ -36,5 +48,5 @@ module.exports = {
         'vue/script-indent': ['error', 2, {'baseIndent': 1}]
       }
     }
-  ],
+  ]
 }

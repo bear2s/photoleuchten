@@ -3,8 +3,8 @@
     bottom
     left>
     <v-btn
-      icon
       slot="activator"
+      icon
       style="text-transform: lowercase; color: inherit"
       dark>
       {{ $store.state.locale }}

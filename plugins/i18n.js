@@ -5,7 +5,7 @@ import deLocales from '../locales/de'
 
 Vue.use(VueI18n)
 
-export default ({app, store}) => {
+export default ({ app, store }) => {
   // Set i18n instance on app
   // This way we can use it in middleware and pages asyncData/fetch
   app.i18n = new VueI18n({

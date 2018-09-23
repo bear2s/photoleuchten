@@ -16,12 +16,12 @@
 <script>
   export default {
     transition: 'slide-left',
-    asyncData ({store, route}) {
+    asyncData ({ store, route }) {
       return store.dispatch('setLanguageKey', 'de')
     },
     watch: {
       '$store.state.locale' (val) {
-        if (val === 'en') this.$router.push({name: 'products-framed-objects'})
+        if (val === 'en') this.$router.push({ name: 'products-framed-objects' })
       }
     }
   }

@@ -131,8 +131,8 @@
       },
       items () {
         return [
-          {icon: 'info', title: this.$t('links.about'), to: this.isDe ? '/ueber' : '/about'},
-          {icon: 'mail', title: this.$t('links.contact'), to: this.isDe ? '/kontakt' : '/contact'}
+          { icon: 'info', title: this.$t('links.about'), to: this.isDe ? '/ueber' : '/about' },
+          { icon: 'mail', title: this.$t('links.contact'), to: this.isDe ? '/kontakt' : '/contact' }
         ]
       },
       products () {

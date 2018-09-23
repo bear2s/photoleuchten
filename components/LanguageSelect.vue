@@ -27,7 +27,7 @@
     name: 'LanguageSelect',
     data () {
       return {
-        items: [{lang: 'en', title: 'english'}, {lang: 'de', title: 'deutsch'}]
+        items: [{ lang: 'en', title: 'english' }, { lang: 'de', title: 'deutsch' }]
       }
     },
     methods: {

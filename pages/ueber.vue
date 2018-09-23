@@ -11,7 +11,7 @@
   export default {
     name: 'Ueber',
     transition: 'slide-left',
-    asyncData ({store}) {
+    asyncData ({ store }) {
       return store.dispatch('setLanguageKey', 'de')
     },
     components: {

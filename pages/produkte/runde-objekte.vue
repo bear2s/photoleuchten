@@ -5,14 +5,14 @@
   import RoundObjects from '../../components/partials/RoundObjects'
 
   export default {
-    components: {RoundObjects},
+    components: { RoundObjects },
     transition: 'slide-left',
-    asyncData ({store}) {
+    asyncData ({ store }) {
       return store.dispatch('setLanguageKey', 'de')
     },
     watch: {
       '$store.state.locale' (val) {
-        if (val === 'en') this.$router.push({name: 'products-round-objects'})
+        if (val === 'en') this.$router.push({ name: 'products-round-objects' })
       }
     }
   }

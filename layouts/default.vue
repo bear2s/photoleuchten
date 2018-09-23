@@ -35,7 +35,7 @@
     </v-navigation-drawer>
 
     <v-toolbar
-      scroll-toolbar-off-screen
+      scroll-off-screen
       fixed
       app>
       <v-toolbar-side-icon
@@ -131,8 +131,8 @@
       },
       items () {
         return [
-          {icon: 'info', title: this.$t('links.about'), to: this.isDe ? '/ueber' : '/about'},
-          {icon: 'mail', title: this.$t('links.contact'), to: this.isDe ? '/kontakt' : '/contact'}
+          { icon: 'info', title: this.$t('links.about'), to: this.isDe ? '/ueber' : '/about' },
+          { icon: 'mail', title: this.$t('links.contact'), to: this.isDe ? '/kontakt' : '/contact' }
         ]
       },
       products () {

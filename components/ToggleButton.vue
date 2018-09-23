@@ -124,7 +124,7 @@
     methods: {
       toggle (event) {
         this.toggled = !this.toggled
-        this.$emit('change', {value: this.toggled, srcEvent: event})
+        this.$emit('change', { value: this.toggled, srcEvent: event })
       }
     }
   }

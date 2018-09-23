@@ -14,7 +14,7 @@
     components: {
       AboutContent
     },
-    asyncData ({store}) {
+    asyncData ({ store }) {
       return store.dispatch('setLanguageKey', 'en')
     },
     watch: {

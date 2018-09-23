@@ -11,9 +11,9 @@
 
   export default {
     name: 'Contact',
-    components: {ContactForm},
+    components: { ContactForm },
     transition: 'slide-left',
-    asyncData ({store, route}) {
+    asyncData ({ store, route }) {
       return store.dispatch('setLanguageKey', 'en')
     },
     watch: {

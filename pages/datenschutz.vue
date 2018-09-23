@@ -107,7 +107,7 @@
 
 <script>
   export default {
-    asyncData ({store, route}) {
+    asyncData ({ store, route }) {
       if (store.state.locale === 'en') store.dispatch('setLanguageKey', 'de')
     },
     watch: {

@@ -1,7 +1,6 @@
-@require './theme.styl'
-@require '~vuetify/src/stylus/app.styl'
-@require '~vuetify/src/stylus/components/_lists.styl'
-@require './main.css'
+@import './theme.styl'
+@import  '~vuetify/src/stylus/main.styl'
+@import './main.css'
 
 @font-face {
   font-family: TimeBurner;
@@ -18,10 +17,12 @@ body {
 }
 
 #app
+  a
+    color: white
   font-family: TimeBurner
   color: $theme.primary
   h1
-    @extend .display-1
+    //@extend .display-1
     @extend .mt-3
     @extend .mb-2
     text-transform: uppercase

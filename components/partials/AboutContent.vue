@@ -1,9 +1,18 @@
 <template>
   <div>
-    <h2>{{ $t('title') }}</h2>
-    <div v-html="$t('text')" />
-    <p class="mt-4">
+    <h2 class="text-xs-center">{{ $t('title') }}</h2>
+    <div
+      class="text-xs-center"
+      v-html="$t('text')"/>
+    <p class="mt-4 text-xs-center">
       <pl-img
+        file-name="a2"
+        img-type="png"
+        sizes="120px"
+        height="auto"
+        width="90"/>
+      <pl-img
+        class="mb-2 ml-2"
         file-name="signature"
         img-type="png"
         sizes="120px"
@@ -12,6 +21,7 @@
       <br>
       Sylvia Bär <br>
       {{ $t('belowSignature') }}
+
     </p>
   </div>
 </template>
@@ -31,8 +41,13 @@ and birth of PHOTOLEUCHTEN.
 The beginning was made up of various motifs printed on canvas, which were stretched on a wooden frame and
 illuminated from the inside. In the meantime, square-shaped light boxes with illuminated photographs and large
 round light objects, e.g. with a textured Japanese paper or on the front side a photo print on acrylic glass.
+</p>
+<p>
 The frames are all manufactured by a local carpenter. They are also varnished there or further processed by me,
-e.g. plated with leaf metal. The basis for the motifs are my own photographs, from which the choice of the
+e.g. plated with leaf metal.
+</p>
+<p>
+The basis for the motifs are my own photographs, from which the choice of the
 cut-out, the colors, the contrasts, etc. creates a picture, which has a special effect through the illumination.
 The motif, the frame and the light (light intensity and color) are individually coordinated with each other and
 are designed and built with love and great attention to detail.
@@ -59,8 +74,12 @@ Den Anfang bildeten verschiedene auf Planen gedruckte Motive, die auf einen Holz
 beleuchtet wurden.
 Inzwischen sind zu den bespannten Rahmen quadratische Lichtkästen mit illuminierten Fotografien und große runde
 Lichtobjekte, die z.B. mit einem strukturiertem Japanpapier bespannt sind oder als Frontseite einen Fotodruck
-auf Acrylglas haben, hinzu gekommen. Die Rahmen werden von einer lokalen Schreinerei gefertigt. Sie werden dort
-auch und lackiert oder von mir weiterbearbeitet, z.B. mit Blattmetall vergoldet. Die Basis für die Motive bilden
+auf Acrylglas haben, hinzu gekommen.
+</p>
+<p>Die Rahmen werden von einer lokalen Schreinerei gefertigt. Sie werden dort
+auch und lackiert oder von mir weiterbearbeitet, z.B. mit Blattmetall vergoldet.
+</p>
+<p>Die Basis für die Motive bilden
 meine eigenen Fotografien, aus denen durch die Wahl des Ausschnitts, der Farben, der Kontraste etc. ein Bild
 geschaffen wird, das durch die Ausleuchtung einen speziellen Effekt erfährt. Das jeweilige Motiv, der Rahmen und
 das Licht (Lichtstärke - und Farbe) sind individuell aufeinander abgestimmt und werden mit viel Liebe zum Detail

@@ -5,16 +5,12 @@
     <v-flex
       xs12
       class="text-xs-center">
-      <h1>{{ $t('headline') }}</h1>
-    </v-flex>
-    <v-flex
-      xs12
-      class="text-xs-right">
+      <h1 style="position: absolute">{{ $t('headline') }}</h1>
       <pl-img
         :quality="85"
-        file-name="t1"
+        file-name="t0"
         img-type="jpg"
-        sizes="99vw"/>
+        sizes="100vw"/>
     </v-flex>
     <v-flex
       xs12

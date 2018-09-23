@@ -16,8 +16,11 @@ import {
   VForm,
   VGrid,
   VDialog,
-  VSubHeader
+  VSubHeader,
+  transitions
 } from 'vuetify'
+
+import 'vuetify/src/stylus/app.styl'
 
 Vue.use(Vuetify, {
   components: {
@@ -35,6 +38,7 @@ Vue.use(Vuetify, {
     VGrid,
     VDialog,
     VSubHeader,
-    VTextarea
+    VTextarea,
+    transitions
   }
 })

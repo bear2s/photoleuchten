@@ -1,8 +1,8 @@
 import webpack from 'webpack'
 import nodeExternals from 'webpack-node-externals'
-import { join } from 'path'
+// import { join } from 'path'
 
-const resolve = (dir) => join(__dirname, dir)
+// const resolve = (dir) => join(__dirname, dir)
 
 module.exports = {
   /*
@@ -59,7 +59,10 @@ module.exports = {
    ** Global CSS
    */
   css: [
-    '~/assets/style/app.styl'
+    {
+      src: '~/assets/style/app.styl',
+      lang: 'styl'
+    }
   ],
   /*
    ** Plugins
@@ -120,18 +123,18 @@ module.exports = {
           })
         ]
       }
-      config.module.rules.forEach(rule => {
-        if (rule.test.toString() === '/\\.styl(us)?$/') {
-          rule.oneOf.forEach(one => {
-            one.use && one.use.push({
-              loader: 'vuetify-loader',
-              options: {
-                theme: resolve('./assets/style/theme.styl')
-              }
-            })
-          })
-        }
-      })
+      // config.module.rules.forEach(rule => {
+      //   if (rule.test.toString() === '/\\.styl(us)?$/') {
+      //     rule.oneOf.forEach(one => {
+      //       one.use && one.use.push({
+      //         loader: 'vuetify-loader',
+      //         options: {
+      //           theme: resolve('./assets/style/theme.styl')
+      //         }
+      //       })
+      //     })
+      //   }
+      // })
     }
   }
 }

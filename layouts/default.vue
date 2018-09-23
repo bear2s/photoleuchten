@@ -35,7 +35,7 @@
     </v-navigation-drawer>
 
     <v-toolbar
-      scroll-toolbar-off-screen
+      scroll-off-screen
       fixed
       app>
       <v-toolbar-side-icon

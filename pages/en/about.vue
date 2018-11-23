@@ -6,27 +6,27 @@
   </v-layout>
 </template>
 <script>
-  import AboutContent from '../components/partials/AboutContent'
+  import AboutContent from '../../components/partials/AboutContent'
 
   export default {
-    name: 'Ueber',
+    name: 'About',
+    transition: 'slide-left',
+    components: {
+      AboutContent
+    },
+    asyncData ({ store }) {
+      return store.dispatch('setLanguageKey', 'en')
+    },
     head: {
-      title: 'Ueber | Photoleuchten.com  ▶',
+      title: 'About | Photoleuchten.com  ▶',
       htmlAttrs: {
-        lang: 'de'
+        lang: 'en'
       },
       meta: [],
       link: [
         { rel: 'alternate', hreflang: 'de', href: 'https://photoleuchten.com/ueber' },
         { rel: 'alternate', hreflang: 'en', href: 'https://photoleuchten.com/en/about' }
       ]
-    },
-    transition: 'slide-left',
-    asyncData ({ store }) {
-      return store.dispatch('setLanguageKey', 'de')
-    },
-    components: {
-      AboutContent
     }
   }
 </script>

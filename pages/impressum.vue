@@ -22,6 +22,17 @@
 
 <script>
   export default {
+    name: 'Impressum',
+    head: {
+      title: 'Impressum | Photoleuchten.com  ▶',
+      htmlAttrs: {
+        lang: 'de'
+      },
+      meta: []
+    },
+    asyncData ({ store, route }) {
+      return store.dispatch('setLanguageKey', 'de')
+    },
     transition: 'slide-left'
   }
 </script>

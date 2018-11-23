@@ -7,25 +7,25 @@
 </template>
 
 <script>
-  import ContactForm from '../components/partials/ContactForm'
+  import ContactForm from '../../components/partials/ContactForm'
 
   export default {
-    name: 'Kontakt',
+    name: 'Contact',
+    components: { ContactForm },
+    transition: 'slide-left',
+    asyncData ({ store, route }) {
+      return store.dispatch('setLanguageKey', 'en')
+    },
     head: {
-      title: 'Kontakt | Photoleuchten.com  ▶',
+      title: 'Contact | Photoleuchten.com  ▶',
       htmlAttrs: {
-        lang: 'de'
+        lang: 'en'
       },
       meta: [],
       link: [
         { rel: 'alternate', hreflang: 'de', href: 'https://photoleuchten.com/kontakt' },
         { rel: 'alternate', hreflang: 'en', href: 'https://photoleuchten.com/en/contact' }
       ]
-    },
-    components: { ContactForm },
-    transition: 'slide-left',
-    asyncData ({ store, route }) {
-      return store.dispatch('setLanguageKey', 'de')
     }
   }
 </script>

@@ -11,8 +11,8 @@
         xs12
         class="text-xs-right pb-1">
         <nuxt-link
-          :to="`/${$t('links.contact')}`"
-          v-text="$t('links.contact')"/>
+          :to="$store.state.locale === 'de' ? '/kontakt' : '/en/contact'"
+          v-text="$store.state.locale === 'de' ? 'Kontakt' : 'Contact'"/>
       </v-flex>
       <v-flex
         xs12
@@ -58,7 +58,7 @@
         en: {
           links: {
             privacyPolicy: {
-              to: '/privacy',
+              to: '/en/privacy',
               txt: 'Privacy Policy'
             }
           }

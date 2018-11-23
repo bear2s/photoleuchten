@@ -19,10 +19,16 @@
     asyncData ({ store, route }) {
       return store.dispatch('setLanguageKey', 'de')
     },
-    watch: {
-      '$store.state.locale' (val) {
-        if (val === 'en') this.$router.push({ name: 'products-framed-objects' })
-      }
+    head: {
+      title: 'Gerahmte Leuchten | Photoleuchten.com  ▶',
+      htmlAttrs: {
+        lang: 'de'
+      },
+      meta: [],
+      link: [
+        { rel: 'alternate', hreflang: 'de', href: 'https://photoleuchten.com/produkte/gerahmte-objekte' },
+        { rel: 'alternate', hreflang: 'en', href: 'https://photoleuchten.com/en/products/framed-objects' }
+      ]
     }
   }
 </script>

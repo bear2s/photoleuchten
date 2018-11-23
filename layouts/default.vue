@@ -1,6 +1,5 @@
 <template>
   <v-app dark>
-
     <v-navigation-drawer
       :permanent="false"
       v-model="drawer"
@@ -14,15 +13,16 @@
         app>
         <v-toolbar-title>
           <nuxt-link
-            to="/"
+            :to="isDe ? '/' : '/en'"
             class="logo-link">
             <pl-img
               file-name="logo"
+              alt="Logo photoleuchten.com"
               img-type="png"
               sizes="252px"
               height="40px"
               width="auto"
-              class="pt-1"/>
+              class="pt-1" />
           </nuxt-link>
         </v-toolbar-title>
       </v-toolbar>
@@ -30,7 +30,7 @@
       <sidebar-content
         ref="sidebar"
         :items="items"
-        :products="products"/>
+        :products="products" />
 
     </v-navigation-drawer>
 
@@ -47,37 +47,41 @@
       </v-toolbar-side-icon>
       <v-toolbar-title>
         <nuxt-link
-          to="/"
+          :to="isDe ? '/' : '/en'"
           class="logo-link">
           <pl-img
+            alt="photoleuchten.com Logo"
+            title="photoleuchten.com"
             file-name="logo"
             img-type="png"
             sizes="252px"
             height="40px"
             width="auto"
-            class="hidden-sm-and-down pt-1"/>
+            class="hidden-sm-and-down pt-1" />
           <img
+            alt="photoleuchten.com Logo"
+            title="photoleuchten.com"
             src="~/assets/img/logo_small.png"
             class="pt-2 hidden-md-and-up"
             height="40px"
             width="auto">
         </nuxt-link>
       </v-toolbar-title>
-      <v-spacer/>
+      <v-spacer />
 
-      <pl-top-toolbar-items :products="products"/>
+      <pl-top-toolbar-items :products="products" />
 
-      <language-select/>
+      <language-select />
 
     </v-toolbar>
 
     <v-content>
       <v-container fluid>
-        <nuxt/>
+        <nuxt />
       </v-container>
     </v-content>
 
-    <pl-footer/>
+    <pl-footer />
 
   </v-app>
 </template>
@@ -103,14 +107,8 @@
           hid: 'description',
           name: 'description',
           content: isDe
-            ? `Handgefertigte Lichtobjekte, illuminierte Rahmen, Fotos mit Hintergrundbeleuchtung, Papiere mit Hintergrundbeleuchtung, Rahmen in verschiedenen Formen und Größen erhältlich, LED-Beleuchtung, individuelle Kundenanfertigung möglich`
-            : `Handcrafted light objects, illuminated frames, photos with background lighting, papers with background lighting, frames available in various shapes and sizes, LED lighting, individual customer production possible`
-        }, {
-          hid: 'keywords',
-          name: 'keywords',
-          content: isDe
-            ? 'Sylvia Bär, kunst, künstler, künstlerin, lichtobjekte, karlsruhe, handgefertigt, innenarchitektur, lichtsystem, design'
-            : 'Sylvia Bär, art, artist, light objects, karlsruhe, handcrafted, interior design, light system, design'
+            ? `Handgefertigte Lichtobjekte, illuminierte Rahmen, Fotos mit Hintergrundbeleuchtung, Papiere mit Hintergrundbeleuchtung, Rahmen in verschiedenen Formen und Größen.`
+            : `Handcrafted light objects, illuminated frames, photos with background lighting, papers with background lighting, frames various shapes and sizes.`
         }]
       }
     },
@@ -131,8 +129,8 @@
       },
       items () {
         return [
-          { icon: 'info', title: this.$t('links.about'), to: this.isDe ? '/ueber' : '/about' },
-          { icon: 'mail', title: this.$t('links.contact'), to: this.isDe ? '/kontakt' : '/contact' }
+          { icon: 'info', title: this.$t('links.about'), to: this.isDe ? '/ueber' : '/en/about' },
+          { icon: 'mail', title: this.$t('links.contact'), to: this.isDe ? '/kontakt' : '/en/contact' }
         ]
       },
       products () {
@@ -141,19 +139,19 @@
             title: this.$t('products.quad.headline'),
             to: this.isDe
               ? '/produkte/quadratische-objekte'
-              : '/products/square-objects'
+              : '/en/products/square-objects'
           },
           {
             title: this.$t('products.round.headline'),
             to: this.isDe
               ? '/produkte/runde-objekte'
-              : '/products/round-objects'
+              : '/en/products/round-objects'
           },
           {
             title: this.$t('products.framed.headline'),
             to: this.isDe
               ? '/produkte/gerahmte-objekte'
-              : '/products/framed-objects'
+              : '/en/products/framed-objects'
           }
         ]
       }

@@ -1,5 +1,6 @@
 <template>
   <img
+    :alt="alt"
     :sizes="sizes"
     :srcset="srcsetComputed"
     :src="srcComputed"
@@ -18,6 +19,10 @@
       fileName: {
         type: String,
         required: true
+      },
+      alt: {
+        type: String,
+        default: ''
       },
       imgType: {
         type: String,

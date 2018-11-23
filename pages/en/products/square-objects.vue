@@ -3,19 +3,18 @@
 </template>
 
 <script>
-  import SquareObjects from '../../components/partials/SquareObjects'
+  import SquareObjects from '../../../components/partials/SquareObjects'
 
   export default {
-    name: 'QuadratischeObjekte',
     transition: 'slide-left',
     components: { SquareObjects },
-    asyncData ({ store }) {
-      return store.dispatch('setLanguageKey', 'de')
+    asyncData ({ store, route }) {
+      return store.dispatch('setLanguageKey', 'en')
     },
     head: {
-      title: 'Quadratische Leuchten | Photoleuchten.com  ▶',
+      title: 'Square light objects | Photoleuchten.com  ▶',
       htmlAttrs: {
-        lang: 'de'
+        lang: 'en'
       },
       meta: [],
       link: [

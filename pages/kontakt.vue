@@ -11,15 +11,21 @@
 
   export default {
     name: 'Kontakt',
+    head: {
+      title: 'Kontakt | Photoleuchten.com  ▶',
+      htmlAttrs: {
+        lang: 'de'
+      },
+      meta: [],
+      link: [
+        { rel: 'alternate', hreflang: 'de', href: 'https://photoleuchten.com/kontakt' },
+        { rel: 'alternate', hreflang: 'en', href: 'https://photoleuchten.com/en/contact' }
+      ]
+    },
     components: { ContactForm },
     transition: 'slide-left',
     asyncData ({ store, route }) {
       return store.dispatch('setLanguageKey', 'de')
-    },
-    watch: {
-      '$store.state.locale' (val) {
-        if (val === 'en') this.$router.push('contact')
-      }
     }
   }
 </script>

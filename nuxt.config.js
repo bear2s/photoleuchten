@@ -1,19 +1,19 @@
-import webpack from 'webpack'
 import nodeExternals from 'webpack-node-externals'
-// import { join } from 'path'
 
-// const resolve = (dir) => join(__dirname, dir)
+const VuetifyLoaderPlugin = require('vuetify-loader/lib/plugin')
 
 module.exports = {
-  /*
-   ** Headers of the page
-   */
   head: {
     title: 'photoleuchten.com',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: 'photoleuchten lichtobjekte' },
+      {
+        hid: 'robots',
+        name: 'robots',
+        content: process.env.NODE_ENV === 'production' ? 'index, follow' : 'noindex, nofollow'
+      },
       { name: 'msapplication-TileColor', content: '#ffffff' },
       { name: 'msapplication-TileImage', content: '/ms-icon-144x144.png' },
       { name: 'theme-color', content: '#ffffff' }
@@ -38,32 +38,29 @@ module.exports = {
   generate: {
     dir: 'docs'
   },
+  modern: process.env.NODE_ENV === 'production' ? 'client' : false,
   render: {
-    resourceHints: false
+    resourceHints: false,
+    static: {
+      maxAge: '7d'
+    }
   },
-  router: {
-    // not working with generate / static site
-    // middleware: ['lang']
-  },
-  modules: [
-    '@nuxtjs/sitemap'
-  ],
-  sitemap: {
-    path: '/sitemap.xml',
-    hostname: 'https://photoleuchten.com',
-    cacheTime: 1000 * 60 * 15,
-    generate: true, // Enable me when using nuxt generate
-    priority: 0.5
-  },
-  /*
-   ** Global CSS
-   */
   css: [
     {
       src: '~/assets/style/app.styl',
       lang: 'styl'
     }
   ],
+  modules: ['@nuxtjs/google-gtag', '@nuxtjs/sitemap'],
+  'google-gtag': {
+    id: 'UA-98426053-1'
+  },
+  sitemap: {
+    path: '/sitemap.xml',
+    hostname: 'https://photoleuchten.com',
+    cacheTime: 1000 * 60 * 15,
+    generate: true
+  },
   /*
    ** Plugins
    */
@@ -83,32 +80,36 @@ module.exports = {
    */
   build: {
     extractCSS: false,
-    babel: {
-      plugins: [
-        ['transform-imports', {
-          'vuetify': {
-            'transform': 'vuetify/es5/components/${member}', // eslint-disable-line
-            'preventFullImport': true
+    transpile: [/^vuetify/],
+    plugins: [new VuetifyLoaderPlugin()],
+    filenames: {
+      app: ({ isDev }) => isDev ? '[name].js' : '[name].[chunkhash].js',
+      chunk: ({ isDev }) => isDev ? '[name].js' : '[name].[chunkhash].js',
+      css: ({ isDev }) => isDev ? '[name].css' : '[name].[contenthash].css'
+    },
+    splitChunks: {
+      layouts: false,
+      pages: true,
+      commons: true
+    },
+    optimization: {
+      runtimeChunk: false,
+      splitChunks: {
+        cacheGroups: {
+          commons: {
+            test: /node_modules[\\/](vue|vue-loader|vue-router|vuex|vue-meta|core-js|@babel\/runtime|axios|webpack|setimmediate|timers-browserify|process|regenerator-runtime|cookie|js-cookie|is-buffer|dotprop|vue-i18n|accept-language-parser|slugify|vue-ls|eventemitter3|lodash.debounce|nuxt\.js)[\\/]/,
+            chunks: 'all',
+            priority: 10,
+            name: true
           }
-        }]
-      ]
+        }
+      }
     },
     /*
      ** Run eslint on save
      */
     extend (config, ctx) {
-      if (!ctx.dev) {
-        config.plugins.push(
-          new webpack.optimize.LimitChunkCountPlugin({
-            maxChunks: 15
-          }),
-          new webpack.optimize.MinChunkSizePlugin({
-            minChunkSize: 10000
-          })
-        )
-      }
-
-      if (ctx.isClient) {
+      if (process.client) {
         config.module.rules.push({
           enforce: 'pre',
           test: /\.(js|vue)$/,
@@ -116,25 +117,13 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
-      if (ctx.isServer) {
+      if (process.server) {
         config.externals = [
           nodeExternals({
             whitelist: [/^vuetify/]
           })
         ]
       }
-      // config.module.rules.forEach(rule => {
-      //   if (rule.test.toString() === '/\\.styl(us)?$/') {
-      //     rule.oneOf.forEach(one => {
-      //       one.use && one.use.push({
-      //         loader: 'vuetify-loader',
-      //         options: {
-      //           theme: resolve('./assets/style/theme.styl')
-      //         }
-      //       })
-      //     })
-      //   }
-      // })
     }
   }
 }

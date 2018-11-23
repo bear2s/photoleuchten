@@ -1,44 +1,69 @@
 import Vue from 'vue'
 
-import {
-  Vuetify,
+import Vuetify, {
   VApp,
+  VLayout,
+  VContainer,
+  VContent,
+  VFlex,
   VNavigationDrawer,
   VFooter,
   VList,
+  VListGroup,
+  VListTile,
+  VListTileAction,
+  VListTileActionText,
+  VListTileAvatar,
+  VListTileContent,
+  VListTileSubTitle,
+  VListTileTitle,
   VBtn,
   VIcon,
   VToolbar,
+  VToolbarTitle,
+  VToolbarSideIcon,
+  VToolbarItems,
   VMenu,
   VTooltip,
   VTextField,
   VTextarea,
   VForm,
-  VGrid,
   VDialog,
-  VSubHeader,
-  transitions
-} from 'vuetify'
+  VSpacer
+} from 'vuetify/lib'
 
 import 'vuetify/src/stylus/app.styl'
 
 Vue.use(Vuetify, {
   components: {
     VApp,
+    VLayout,
+    VContainer,
+    VContent,
+    VFlex,
     VNavigationDrawer,
     VFooter,
     VList,
+    VListGroup,
+    VListTile,
+    VListTileAction,
+    VListTileActionText,
+    VListTileAvatar,
+    VListTileContent,
+    VListTileSubTitle,
+    VListTileTitle,
     VBtn,
     VIcon,
     VToolbar,
+    VToolbarTitle,
+    VToolbarSideIcon,
+    VToolbarItems,
     VMenu,
     VTooltip,
     VTextField,
     VForm,
-    VGrid,
     VDialog,
-    VSubHeader,
     VTextarea,
-    transitions
+    VSpacer
   }
 })

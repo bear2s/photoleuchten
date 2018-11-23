@@ -6,15 +6,22 @@
   import SquareObjects from '../../components/partials/SquareObjects'
 
   export default {
+    name: 'QuadratischeObjekte',
     transition: 'slide-left',
     components: { SquareObjects },
     asyncData ({ store }) {
       return store.dispatch('setLanguageKey', 'de')
     },
-    watch: {
-      '$store.state.locale' (val) {
-        if (val === 'en') this.$router.push({ name: 'products-square-objects' })
-      }
+    head: {
+      title: 'Quadratische Leuchten | Photoleuchten.com  ▶',
+      htmlAttrs: {
+        lang: 'de'
+      },
+      meta: [],
+      link: [
+        { rel: 'alternate', hreflang: 'de', href: 'https://photoleuchten.com/produkte/quadratische-objekte' },
+        { rel: 'alternate', hreflang: 'en', href: 'https://photoleuchten.com/en/products/square-objects' }
+      ]
     }
   }
 </script>

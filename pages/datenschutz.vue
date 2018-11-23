@@ -110,10 +110,16 @@
     asyncData ({ store, route }) {
       if (store.state.locale === 'en') store.dispatch('setLanguageKey', 'de')
     },
-    watch: {
-      '$store.state.locale' (val) {
-        if (val === 'en') this.$router.push('privacy')
-      }
+    head: {
+      title: 'Datenschutz | Photoleuchten.com  ▶',
+      htmlAttrs: {
+        lang: 'de'
+      },
+      meta: [],
+      link: [
+        { rel: 'alternate', hreflang: 'de', href: 'https://photoleuchten.com/datenschutz' },
+        { rel: 'alternate', hreflang: 'en', href: 'https://photoleuchten.com/en/privacy' }
+      ]
     }
   }
 </script>

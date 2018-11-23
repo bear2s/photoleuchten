@@ -10,17 +10,23 @@
 
   export default {
     name: 'Ueber',
+    head: {
+      title: 'Ueber | Photoleuchten.com  ▶',
+      htmlAttrs: {
+        lang: 'de'
+      },
+      meta: [],
+      link: [
+        { rel: 'alternate', hreflang: 'de', href: 'https://photoleuchten.com/ueber' },
+        { rel: 'alternate', hreflang: 'en', href: 'https://photoleuchten.com/en/about' }
+      ]
+    },
     transition: 'slide-left',
     asyncData ({ store }) {
       return store.dispatch('setLanguageKey', 'de')
     },
     components: {
       AboutContent
-    },
-    watch: {
-      '$store.state.locale' (val) {
-        if (val === 'en') this.$router.push('about')
-      }
     }
   }
 </script>

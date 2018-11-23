@@ -105,6 +105,7 @@
           :file-name="`${item.file}${subItem.fileNameEnd}`"
           class="list-item"
           style=":hover { cursor: pointer }"
+          :alt="item.label"
           sizes="(max-width: 48em) 50vw, (min-width: 48em) 25vw, (min-width: 64em) 16vw, (max-width: 48em) 32vw"
           @click.native="motifClicked(item.file)"/>
         <div class="motive-label">{{ item.label }}</div>

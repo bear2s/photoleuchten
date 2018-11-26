@@ -51,7 +51,7 @@ module.exports = {
       lang: 'styl'
     }
   ],
-  modules: ['@nuxtjs/google-gtag', '@nuxtjs/sitemap'],
+  modules: ['@nuxtjs/google-gtag', 'nuxt-trailingslash-module', '@nuxtjs/sitemap'],
   'google-gtag': {
     id: 'UA-98426053-1'
   },
@@ -59,7 +59,16 @@ module.exports = {
     path: '/sitemap.xml',
     hostname: 'https://photoleuchten.com',
     cacheTime: 1000 * 60 * 15,
-    generate: true
+    generate: true,
+    exclude: [
+      '/'
+    ],
+    routes: [
+      {
+        url: 'https://photoleuchten.com',
+        priority: 1
+      }
+    ]
   },
   /*
    ** Plugins

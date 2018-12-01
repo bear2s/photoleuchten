@@ -110,16 +110,20 @@
     asyncData ({ store, route }) {
       if (store.state.locale === 'en') store.dispatch('setLanguageKey', 'de')
     },
-    head: {
-      title: 'Datenschutz | Photoleuchten.com  ▶',
-      htmlAttrs: {
-        lang: 'de'
-      },
-      meta: [],
-      link: [
-        { rel: 'alternate', hreflang: 'de', href: 'https://photoleuchten.com/datenschutz' },
-        { rel: 'alternate', hreflang: 'en', href: 'https://photoleuchten.com/en/privacy' }
-      ]
+    head () {
+      const path = this.$route.path.replace(/\/$/, '') // Remove trailing /
+      return {
+        title: 'Datenschutz | Photoleuchten.com  ▶',
+        htmlAttrs: {
+          lang: 'de'
+        },
+        meta: [],
+        link: [
+          { hid: 'canonical', rel: 'canonical', href: `https://photoleuchten.com${path}` },
+          { rel: 'alternate', hreflang: 'de', href: 'https://photoleuchten.com/datenschutz' },
+          { rel: 'alternate', hreflang: 'en', href: 'https://photoleuchten.com/en/privacy' }
+        ]
+      }
     }
   }
 </script>

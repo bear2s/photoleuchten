@@ -57,22 +57,26 @@
 
 <script>
   export default {
-    head: {
-      title: 'Photoleuchten.com  ▶ | Handgefertigte Lichtobjekte, beleuchtete Fotografien',
-      htmlAttrs: {
-        lang: 'de'
-      },
-      meta: [
-        {
-          hid: 'description',
-          name: 'description',
-          content: 'Mit Liebe hergestellte, handgemachte Wandleuchten, Lichtobjekte und Leuchtkästen mit Fotografien, die unbeleuchtet und beleuchtet toll aussehen.'
-        }
-      ],
-      link: [
-        { rel: 'alternate', hreflang: 'de', href: 'https://photoleuchten.com' },
-        { rel: 'alternate', hreflang: 'en', href: 'https://photoleuchten.com/en' }
-      ]
+    head () {
+      const path = this.$route.path.replace(/\/$/, '') // Remove trailing /
+      return {
+        title: 'Photoleuchten.com  ▶ | Handgefertigte Lichtobjekte, beleuchtete Fotografien',
+        htmlAttrs: {
+          lang: 'de'
+        },
+        meta: [
+          {
+            hid: 'description',
+            name: 'description',
+            content: 'Mit Liebe hergestellte, handgemachte Wandleuchten, Lichtobjekte und Leuchtkästen mit Fotografien, die unbeleuchtet und beleuchtet toll aussehen.'
+          }
+        ],
+        link: [
+          { hid: 'canonical', rel: 'canonical', href: `https://photoleuchten.com${path}` },
+          { rel: 'alternate', hreflang: 'de', href: 'https://photoleuchten.com' },
+          { rel: 'alternate', hreflang: 'en', href: 'https://photoleuchten.com/en' }
+        ]
+      }
     },
     transition: 'slide-left',
     name: 'App',

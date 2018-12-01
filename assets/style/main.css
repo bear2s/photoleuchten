@@ -23,3 +23,20 @@
 .no-transform{
   text-transform: none;
 }
+
+.headline-container {
+  position: relative;
+}
+
+.headline-container-inner {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  background-color: rgba(0,0,0,0.2)
+}
+
+@media screen and (max-width: 500px) {
+  .headline-container-inner .headline-1 {
+    font-size: 22px;
+  }
+}

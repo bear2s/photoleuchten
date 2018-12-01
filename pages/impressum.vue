@@ -23,12 +23,18 @@
 <script>
   export default {
     name: 'Impressum',
-    head: {
-      title: 'Impressum | Photoleuchten.com  ▶',
-      htmlAttrs: {
-        lang: 'de'
-      },
-      meta: []
+    head () {
+      const path = this.$route.path.replace(/\/$/, '') // Remove trailing /
+      return {
+        title: 'Impressum | Photoleuchten.com  ▶',
+        htmlAttrs: {
+          lang: 'de'
+        },
+        meta: [],
+        link: [
+          { hid: 'canonical', rel: 'canonical', href: `https://photoleuchten.com${path}` }
+        ]
+      }
     },
     asyncData ({ store, route }) {
       return store.dispatch('setLanguageKey', 'de')

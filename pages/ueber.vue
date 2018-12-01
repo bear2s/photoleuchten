@@ -10,16 +10,20 @@
 
   export default {
     name: 'Ueber',
-    head: {
-      title: 'Ueber | Photoleuchten.com  ▶',
-      htmlAttrs: {
-        lang: 'de'
-      },
-      meta: [],
-      link: [
-        { rel: 'alternate', hreflang: 'de', href: 'https://photoleuchten.com/ueber' },
-        { rel: 'alternate', hreflang: 'en', href: 'https://photoleuchten.com/en/about' }
-      ]
+    head () {
+      const path = this.$route.path.replace(/\/$/, '') // Remove trailing /
+      return {
+        title: 'Ueber | Photoleuchten.com  ▶',
+        htmlAttrs: {
+          lang: 'de'
+        },
+        meta: [],
+        link: [
+          { hid: 'canonical', rel: 'canonical', href: `https://photoleuchten.com${path}` },
+          { rel: 'alternate', hreflang: 'de', href: 'https://photoleuchten.com/ueber' },
+          { rel: 'alternate', hreflang: 'en', href: 'https://photoleuchten.com/en/about' }
+        ]
+      }
     },
     transition: 'slide-left',
     asyncData ({ store }) {

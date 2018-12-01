@@ -1,7 +1,7 @@
 <template>
   <v-layout row>
     <v-flex xs-12>
-      <contact-form/>
+      <contact-form />
     </v-flex>
   </v-layout>
 </template>
@@ -11,16 +11,20 @@
 
   export default {
     name: 'Kontakt',
-    head: {
-      title: 'Kontakt | Photoleuchten.com  ▶',
-      htmlAttrs: {
-        lang: 'de'
-      },
-      meta: [],
-      link: [
-        { rel: 'alternate', hreflang: 'de', href: 'https://photoleuchten.com/kontakt' },
-        { rel: 'alternate', hreflang: 'en', href: 'https://photoleuchten.com/en/contact' }
-      ]
+    head () {
+      const path = this.$route.path.replace(/\/$/, '') // Remove trailing /
+      return {
+        title: 'Kontakt | Photoleuchten.com  ▶',
+        htmlAttrs: {
+          lang: 'de'
+        },
+        meta: [],
+        link: [
+          { hid: 'canonical', rel: 'canonical', href: `https://photoleuchten.com${path}` },
+          { rel: 'alternate', hreflang: 'de', href: 'https://photoleuchten.com/kontakt' },
+          { rel: 'alternate', hreflang: 'en', href: 'https://photoleuchten.com/en/contact' }
+        ]
+      }
     },
     components: { ContactForm },
     transition: 'slide-left',

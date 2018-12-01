@@ -60,19 +60,3 @@
     }
   }
 </script>
-
-<style lang="stylus">
-  .headline-container {
-    position: relative;
-  }
-  .headline-container-inner {
-    width: 100%;
-    position: absolute;
-    left: 0;
-  }
-  @media screen and (max-width: 500px) {
-    .headline-1 {
-      font-size: 22px;
-    }
-  }
-</style>

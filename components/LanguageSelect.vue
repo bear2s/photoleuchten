@@ -34,7 +34,7 @@
       setLang (val) {
         this.$store.commit('SET_LANG', val)
         this.$i18n.locale = val
-        this.$router.push(val === 'en' ? '/en' : { name: 'index' })
+        this.$router.push(val === 'en' ? '/en' : '/')
       }
     }
   }

@@ -36,7 +36,8 @@ module.exports = {
     ]
   },
   generate: {
-    dir: 'docs'
+    dir: 'docs',
+    subFolders: false
   },
   modern: process.env.NODE_ENV === 'production' ? 'client' : false,
   render: {

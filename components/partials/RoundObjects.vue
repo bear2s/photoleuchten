@@ -266,7 +266,7 @@
         @click.stop="r32active = !r32active">
         <pl-img
           :max-img-size="960"
-          :file-name="r32active ? 'r33' : 'r32'"
+          :file-name="r32active ? 'r33_1' : 'r32'"
           img-type="png"
           sizes="(max-width: 48em) 99vw (min-width: 48em) 32vw"/>
         <toggle-button

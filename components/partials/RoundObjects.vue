@@ -7,6 +7,8 @@
         class="text-xs-center pb-3">
         <h2 class="no-transform">{{ $t('japanpaper_headline') }}</h2>
         <pl-img
+          alt="japanpaper luminaire"
+          title="japanpaper"
           file-name="r0"
           img-type="jpg"
           sizes="100vw"/>
@@ -158,6 +160,8 @@
         class="text-xs-center">
         <h2 class="no-transform pt-1 pb-1">{{ $t('water_headline') }}</h2>
         <pl-img
+          alt="water luminaire"
+          title="water style"
           file-name="r20"
           img-type="jpg"
           sizes="100vw"/>
@@ -226,16 +230,96 @@
         </ul>
       </v-flex>
     </v-layout>
+
+    <v-layout
+      row
+      class="mt-3 mb-3">
+      <v-flex
+        xs12
+        class="text-xs-center">
+        <h2 class="no-transform pt-1 pb-1">{{ $t('nyc_headline') }}</h2>
+        <pl-img
+          file-name="r30"
+          img-type="jpg"
+          sizes="100vw"/>
+      </v-flex>
+    </v-layout>
+
+    <v-layout
+      row
+      wrap
+      class="mt-3">
+      <v-flex
+        xs12
+        sm4
+        class="text-xs-center">
+        <pl-img
+          :max-img-size="960"
+          file-name="r31"
+          img-type="png"
+          sizes="(max-width: 48em) 99vw (min-width: 48em) 32vw"/>
+      </v-flex>
+      <v-flex
+        xs12
+        sm4
+        class="text-xs-center toggle-active pb-3"
+        @click.stop="r32active = !r32active">
+        <pl-img
+          :max-img-size="960"
+          :file-name="r32active ? 'r33' : 'r32'"
+          img-type="png"
+          sizes="(max-width: 48em) 99vw (min-width: 48em) 32vw"/>
+        <toggle-button
+          :value="r32active"
+          :sync="true"
+          :color="{checked: 'rgb(251, 176, 59)', unchecked: '#bfcbd9'}"
+          :labels="{checked: $t('lightoff'), unchecked: $t('lighton')}"
+          @change="r32active = !r32active"/>
+      </v-flex>
+      <v-flex
+        xs12
+        sm4
+        class="align-center"
+        style="display: flex">
+        <pl-img
+          :max-img-size="960"
+          file-name="r34"
+          img-type="jpg"
+          sizes="(max-width: 48em) 99vw (min-width: 48em) 32vw"/>
+      </v-flex>
+    </v-layout>
+    <round-skycrystal-desc-de v-if="$store.state.locale === 'de'" class="text-xs-center"/>
+    <round-skycrystal-desc-en v-else class="text-xs-center" />
+    <v-layout
+      row
+      wrap
+      class="text-xs-justify mt-3">
+      <v-flex xs12>
+        <ul class="card pl-3">
+          <p class="pt-3">{{ $t('nyc_specs_headline') }}</p>
+
+          <li
+            v-for="(point, i) in $t('water_specs')"
+            :key="i">
+            {{ point }}
+          </li>
+        </ul>
+      </v-flex>
+    </v-layout>
   </div>
 </template>
 
 <script>
+  import RoundSkycrystalDescDe from './RoundSkycrystalDescDe'
+  import RoundSkycrystalDescEn from './RoundSkycrystalDescEn'
   export default {
     name: 'RoundObjects',
+    components: { RoundSkycrystalDescEn, RoundSkycrystalDescDe },
     data () {
       return {
         r2active: false,
         r22active: false,
+        r32active: false,
         r2selectedIndex: 3
       }
     }

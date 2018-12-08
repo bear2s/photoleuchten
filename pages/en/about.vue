@@ -9,7 +9,7 @@
   import AboutContent from '../../components/partials/AboutContent'
 
   export default {
-    name: 'About',
+    name: 'AboutPage',
     transition: 'slide-left',
     components: {
       AboutContent

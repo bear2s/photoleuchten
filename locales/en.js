@@ -77,6 +77,7 @@ export default {
   japan_paper_img_desc: 'Shoji paper with PVC coating, natural white with hemp water droplet structure',
   water_headline: 'Round Light Object "Water"',
   japanpaper_headline: 'Round Light Object "Japanese Paper"',
+  nyc_headline: 'Round Light Object "Skycrystal NYC"',
   // @TODO
   japanpaper_desc: `The lamp "Japanpapier" is covered with an original Japanese soy paper. Sojipaptes are traditionally used in Japan for covering sliding doors and are also very well suited for luminaire construction because of their translucence. This soy paper is natural white and has a very nice hemp water droplet structure.
                     The interior is covered with over 500 individual RGB LEDs on tapes and is therefore very evenly illuminated, so that the individual water drops and hemp fibers are very effective. The light can be dimmed via a remote control and controlled via 16 different colors.
@@ -100,5 +101,14 @@ export default {
     'Cover: Japanese paper - shoji paper with PVC coating, natural white with hemp fiber water droplet structure',
     'Lighting: network powered RGB LEDs (16 colors, color changing function, dimmable), incl. remote control, power supply 12V, white cable',
     'Price: 480 €'
+  ],
+  nyc_specs_headline: 'Round Light Object "Skycrystal NYC":',
+  nyc_specs: [
+    'Handmade single piece',
+    'Frame: wooden frame with multi-layered white, iron and rust color, clear lacquer finish',
+    'Dimensions: diameter 88 cm, height 6 cm',
+    'Picture: Foil printing on acrylic glass',
+    'Lighting: mains operated white LED modules (dimmable), incl. Remote control power supply 12 V, white cable',
+    'Price: 580,00 EUR'
   ]
 }

@@ -4,13 +4,11 @@
     <div
       class="text-xs-center mb-5"
       v-html="$t('text')" />
-    <h3 class="text-xs-center">{{ $t('work_process') }}</h3>
-    <no-ssr>
-      <about-carousel />
-    </no-ssr>
-    <p class="mt-5 text-xs-center">
+    <p class="my-5 text-xs-center">
       <pl-img
         file-name="a2"
+        alt="profile image Sylvia Bär"
+        title="profile image"
         img-type="png"
         sizes="120px"
         height="auto"
@@ -19,6 +17,8 @@
         class="mb-2 ml-2"
         file-name="signature"
         img-type="png"
+        alt="signature Sylvia Bär"
+        title="signature"
         sizes="120px"
         height="auto"
         width="120" />
@@ -26,6 +26,10 @@
       Sylvia Bär <br>
       {{ $t('belowSignature') }}
     </p>
+    <h3 class="text-xs-center">{{ $t('work_process') }}</h3>
+    <no-ssr>
+      <about-carousel class="my-3"/>
+    </no-ssr>
   </div>
 </template>
 
@@ -38,7 +42,7 @@
       messages: {
         en: {
           title: 'ABOUT PHOTOLEUCHTEN',
-          work_process: 'WORK PROCESS',
+          work_process: 'Insights working process',
           text: `
 <p>
 Creating inspiring, unique, large-format photographs with backlight and a specially designed frame was the idea
@@ -71,7 +75,7 @@ are welcome at <a href="mailto:photoleuchten@yahoo.com">photoleuchten@yahoo.com<
         },
         de: {
           title: 'ÜBER PHOTOLEUCHTEN',
-          work_process: 'ARBEITSABLAUF',
+          work_process: 'Einblicke Arbeitsprozess',
           text: `
 <p>
 Inspirierende, großformatige Fotografien in einem eigens dafür geschaffenem Rahmen leuchten zu lassen, war die

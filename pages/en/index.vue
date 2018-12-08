@@ -5,11 +5,11 @@
     <v-flex
       xs12
       class="text-xs-center headline-container">
+      <h1>
+        WALL LIGHTS - LIGHT OBJECTS - LIGHT BOXES - ILLUMINATED PHOTOS & PAPERS
+      </h1>
       <div style="position: absolute" class="headline-container-inner">
-        <h1 class="headline-1 px-2">
-          WALL LIGHTS - LIGHT OBJECTS - LIGHT BOXES - ILLUMINATED PHOTOS & PAPERS
-        </h1>
-        <h2 class="white--text">
+        <h2 class="white--text px-3">
           Simple and beautiful design
         </h2>
       </div>

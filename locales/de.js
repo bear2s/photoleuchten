@@ -85,6 +85,7 @@ export default {
   japan_paper_img_desc: 'Shojipapier mit PVC-Beschichtung, naturweiss mit Hanffaser-Wassertropfen Struktur',
   water_headline: 'Leuchte Rund "Water"',
   japanpaper_headline: 'Leuchte Rund "Japanese Paper"',
+  nyc_headline: 'Leuchte Rund "Skycrystal NYC"',
   japanpaper_desc: `
             Die Leuchte" Japanpapier" ist mit einem original japanischen Sojipapier bespannt.
             Sojipapiere werden in Japan traditionell zur Bespannung von Schiebetüren verwendet und sind aufgrund
@@ -120,5 +121,15 @@ export default {
     'Bespannung: Japanpapier - Shojipapier mit PVC-Beschichtung, naturweiß mit Hanffaser-Wassertropfen-Struktur',
     'Beleuchtung: netzbetriebene RGB LEDs (16 Farben, Farbwechselfunktion, dimmbar), incl. Fernbedienung, Netzteil 12 V, weißes Kabel',
     'Preis: 480 €'
+  ],
+  nyc_specs_headline: 'Leuchte Rund "Skycrystal NYC":',
+  nyc_specs: [
+    'handgefertigtes Einzelstück',
+    'Rahmen: Holzrahmen mit Mehrschicht-Weiß, Eisen und Rostfarbe,',
+    'Klarlackversiegelung',
+    'Abmessungen: Durchmesser 88 cm, Höhe 6 cm',
+    'Bild: Foliendruck auf Acrylglas',
+    'Beleuchtung: netzbetriebene weiße LED-Module (dimmbar), incl. Fernbedienung, Netzteil 12 V, weißes Kabel',
+    'Preis: 580,00 EUR'
   ]
 }

@@ -62,7 +62,7 @@ module.exports = {
     cacheTime: 1000 * 60 * 15,
     generate: true,
     exclude: [
-      '/'
+      '/', 'https://photoleuchten.com/'
     ],
     routes: [
       {
@@ -89,7 +89,7 @@ module.exports = {
    ** Build configuration
    */
   build: {
-    extractCSS: false,
+    extractCSS: true,
     transpile: [/^vuetify/],
     plugins: [new VuetifyLoaderPlugin()],
     filenames: {

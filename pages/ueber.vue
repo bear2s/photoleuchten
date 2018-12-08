@@ -9,7 +9,7 @@
   import AboutContent from '../components/partials/AboutContent'
 
   export default {
-    name: 'Ueber',
+    name: 'UeberPage',
     head () {
       const path = this.$route.path.replace(/\/$/, '') // Remove trailing /
       return {

@@ -108,7 +108,7 @@ export default {
   water_specs: [
     'Handgefertigtes Einzelstück',
     'Rahmen: Holzrahmen mit Mehrschicht-Blattmetalveredelung in Kupfer, oxidiert, Klarlackversiegelung',
-    'Durchmesser: 90 cm, Höhe: 7 cm',
+    'Abmessungen: Durchmesser 90 cm, Höhe 7 cm',
     'Bild: Fotodruck auf Acrylglas',
     'Beleuchtung: netzbetriebene weiße LEDs (dimmbar), inkl. Fernbedienung, Netzteil 12V, weißes Kabel',
     'Preis: 580 €'
@@ -117,7 +117,7 @@ export default {
   japanpaper_specs: [
     'Handgefertigtes Einzelstück',
     'Rahmen: Holzrahmen mit Mehrschicht-Blattmetalveredelung in Kupfer, Klarlackversiegelung',
-    'Durchmesser: 90 cm, Höhe: 7 cm',
+    'Abmessungen: Durchmesser 90 cm, Höhe 7 cm',
     'Bespannung: Japanpapier - Shojipapier mit PVC-Beschichtung, naturweiß mit Hanffaser-Wassertropfen-Struktur',
     'Beleuchtung: netzbetriebene RGB LEDs (16 Farben, Farbwechselfunktion, dimmbar), incl. Fernbedienung, Netzteil 12 V, weißes Kabel',
     'Preis: 480 €'

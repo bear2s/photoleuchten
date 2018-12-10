@@ -8,7 +8,7 @@
   export default {
     transition: 'slide-left',
     components: { SquareObjects },
-    asyncData ({ store, route }) {
+    asyncData ({ store }) {
       return store.dispatch('setLanguageKey', 'en')
     },
     head () {

@@ -15,7 +15,7 @@
           blur-up
           file-name="q0"
           img-type="png"
-          sizes="99vw"/>
+          sizes="99vw" />
       </v-flex>
       <v-flex xs12>
         <h2 class="text-xs-center">{{ $t('battery_powered') }}</h2>
@@ -29,7 +29,7 @@
         class="text-xs-justify pa-1">
         <pl-img
           :file-name="item"
-          sizes="(max-width: 48em) 99vw (min-width: 48em) 32vw"/>
+          sizes="(max-width: 48em) 99vw (min-width: 48em) 32vw" />
         <div
           v-if="i === 1"
           class="text-xs-center"
@@ -73,7 +73,7 @@
         class="pa-1 pb-0">
         <pl-img
           file-name="q7"
-          sizes="(max-width: 48em) 99vw (min-width: 48em) 32vw"/>
+          sizes="(max-width: 48em) 99vw (min-width: 48em) 32vw" />
       </v-flex>
     </v-layout>
 
@@ -88,7 +88,7 @@
             :value="quadMotivesLightOn"
             :color="{checked: 'rgb(251, 176, 59)', unchecked: '#bfcbd9'}"
             :labels="{checked: $t('lightoff'), unchecked: $t('lighton')}"
-            @change="onQuadMotivesLightOnChanged"/>
+            @change="onQuadMotivesLightOnChanged" />
         </h2>
       </v-flex>
       <v-flex
@@ -107,7 +107,7 @@
           style=":hover { cursor: pointer }"
           :alt="item.label"
           sizes="(max-width: 48em) 50vw, (min-width: 48em) 25vw, (min-width: 64em) 16vw, (max-width: 48em) 32vw"
-          @click.native="motifClicked(item.file)"/>
+          @click.native="motifClicked(item.file)" />
         <div class="motive-label">{{ item.label }}</div>
       </v-flex>
     </v-layout>
@@ -122,13 +122,13 @@
           slot="body"
           :folder="'960'"
           :file-name="`${selectedMotif}a`"
-          sizes="70vw"/>
+          sizes="70vw" />
         <pl-img
           v-show="quadMotivesLightOn === true"
           slot="body"
           :folder="'960'"
           :file-name="`${selectedMotif}b`"
-          sizes="70vw"/>
+          sizes="70vw" />
       </div>
     </v-dialog>
 
@@ -148,7 +148,7 @@
         <pl-img
           :file-name="item"
           :quality="85"
-          sizes="(max-width: 48em) 99vw (min-width: 48em) 32vw"/>
+          sizes="(max-width: 48em) 99vw (min-width: 48em) 32vw" />
         <div
           v-if="i === 1"
           class="text-xs-center"
@@ -192,15 +192,12 @@
         <pl-img
           file-name="q14"
           img-type="png"
-          sizes="(max-width: 48em) 99vw (min-width: 48em) 32vw"/>
+          sizes="(max-width: 48em) 99vw (min-width: 48em) 32vw" />
       </v-flex>
     </v-layout>
-    <v-layout
-      row
-      wrap>
+    <v-layout row wrap>
       <v-flex
-        xs12
-        md8
+        xs12 md8
         class="mb-3">
         <ul
           class="card pl-3"
@@ -214,14 +211,12 @@
         </ul>
       </v-flex>
       <v-flex
-        xs12
-        sm6
-        md4
+        xs12 sm6 md4
         class="pa-1 pb-0">
         <pl-img
           file-name="q15"
           img-type="png"
-          sizes="(max-width: 48em) 99vw (min-width: 48em) 32vw"/>
+          sizes="(max-width: 48em) 99vw (min-width: 48em) 32vw" />
       </v-flex>
     </v-layout>
   </div>

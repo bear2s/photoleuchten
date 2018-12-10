@@ -103,6 +103,7 @@
 
 <script>
   export default {
+    name: 'Privacy',
     asyncData ({ store, route }) {
       return store.dispatch('setLanguageKey', 'en')
     },

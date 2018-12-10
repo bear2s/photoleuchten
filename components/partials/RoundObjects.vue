@@ -11,7 +11,7 @@
           title="japanpaper"
           file-name="r0"
           img-type="jpg"
-          sizes="100vw"/>
+          sizes="100vw" />
       </v-flex>
     </v-layout>
 
@@ -29,7 +29,7 @@
             :max-img-size="960"
             file-name="r1"
             img-type="png"
-            sizes="(max-width: 48em) 99vw (min-width: 48em) 32vw"/>
+            sizes="(max-width: 48em) 99vw (min-width: 48em) 32vw" />
         </v-flex>
         <v-flex
           xs12
@@ -40,7 +40,7 @@
             :max-img-size="960"
             file-name="r2"
             img-type="png"
-            sizes="(max-width: 48em) 99vw (min-width: 48em) 32vw"/>
+            sizes="(max-width: 48em) 99vw (min-width: 48em) 32vw" />
           <pl-img
             v-for="(val, i) in 6"
             v-if="r2active && (r2selectedIndex === (i+3))"
@@ -48,7 +48,7 @@
             :max-img-size="960"
             :file-name="'r'+ (i+3)"
             img-type="png"
-            sizes="(max-width: 48em) 99vw (min-width: 48em) 32vw"/>
+            sizes="(max-width: 48em) 99vw (min-width: 48em) 32vw" />
 
           <div class="block">
             <toggle-button
@@ -56,7 +56,7 @@
               :sync="true"
               :color="{checked: 'rgb(251, 176, 59)', unchecked: '#bfcbd9'}"
               :labels="{checked: $t('lightoff'), unchecked: $t('lighton')}"
-              @change="r2active = !r2active"/>
+              @change="r2active = !r2active" />
           </div>
           <div class="color-select d-inline-flex">
             <div
@@ -64,7 +64,7 @@
               :key="'hex' + i"
               :style="`background-color: ${val}; visibility: ${r2active ? 'visible' : 'hidden'};` "
               class="mr-1"
-              @click.stop="r2selectedIndex = (i+3);"/>
+              @click.stop="r2selectedIndex = (i+3);" />
           </div>
 
         </v-flex>
@@ -77,18 +77,13 @@
             :max-img-size="960"
             file-name="r9"
             img-type="png"
-            sizes="(max-width: 48em) 99vw (min-width: 48em) 32vw"/>
+            sizes="(max-width: 48em) 99vw (min-width: 48em) 32vw" />
         </v-flex>
       </v-layout>
     </v-container>
 
-    <v-layout row>
-      <v-flex
-        xs12
-        class="">
-        <p>{{ $t('japanpaper_desc') }}</p>
-      </v-flex>
-    </v-layout>
+    <round-japan-desc-de v-if="$store.state.locale === 'de'" class="text-xs-center" />
+    <round-japan-desc-en v-else class="text-xs-center" />
 
     <v-container
       fill-height
@@ -96,13 +91,7 @@
       <v-layout
         row
         wrap>
-
-        <v-flex
-          v-if="false"
-          xs12
-          sm6
-          lg8/>
-        <v-flex xs12>
+        <v-flex xs12 md8>
           <ul
             class="card mr-1 pl-3"
             style="height: 100%;">
@@ -115,40 +104,14 @@
             </li>
           </ul>
         </v-flex>
-
         <v-flex
-          v-if="false"
-          xs12
-          sm6
-          lg4>
-          <div style="position: relative;">
-            <pl-img
-              :max-img-size="960"
-              file-name="r10"
-              img-type="jpg"
-              sizes="(max-width: 48em) 66vw (min-width: 48em) 33vw"
-              style="width: 100%;"/>
-            <v-layout
-              row
-              style="width: 100%; position: absolute; top: 0; left: 0; height: auto;">
-              <v-flex
-                xs12
-                class="box">
-                <div style="padding: 0.25rem; margin: 0;">{{ $t('japan_paper_img') }}</div>
-              </v-flex>
-            </v-layout>
-            <v-layout
-              row
-              style="position: absolute; bottom: 0; left: 0; height: auto;">
-              <v-flex xs12>
-                <div style="background: rgba(0,0,0,0.4); margin: 0 0 5px 0; padding: 0.25rem;">
-                  {{ $t('japan_paper_img_desc') }}
-                </div>
-              </v-flex>
-            </v-layout>
-          </div>
+          xs12 sm6 md4
+          class="pa-1 pb-0">
+          <pl-img
+            file-name="r15"
+            img-type="png"
+            sizes="(max-width: 48em) 99vw (min-width: 48em) 32vw"/>
         </v-flex>
-
       </v-layout>
     </v-container>
 
@@ -164,7 +127,7 @@
           title="water style"
           file-name="r20"
           img-type="jpg"
-          sizes="100vw"/>
+          sizes="100vw" />
       </v-flex>
     </v-layout>
     <v-layout
@@ -179,7 +142,7 @@
           :max-img-size="960"
           file-name="r21"
           img-type="png"
-          sizes="(max-width: 48em) 99vw (min-width: 48em) 32vw"/>
+          sizes="(max-width: 48em) 99vw (min-width: 48em) 32vw" />
       </v-flex>
       <v-flex
         xs12
@@ -190,13 +153,13 @@
           :max-img-size="960"
           :file-name="r22active ? 'r23' : 'r22'"
           img-type="png"
-          sizes="(max-width: 48em) 99vw (min-width: 48em) 32vw"/>
+          sizes="(max-width: 48em) 99vw (min-width: 48em) 32vw" />
         <toggle-button
           :value="r22active"
           :sync="true"
           :color="{checked: 'rgb(251, 176, 59)', unchecked: '#bfcbd9'}"
           :labels="{checked: $t('lightoff'), unchecked: $t('lighton')}"
-          @change="r22active = !r22active"/>
+          @change="r22active = !r22active" />
       </v-flex>
       <v-flex
         xs12
@@ -207,27 +170,33 @@
           :max-img-size="960"
           file-name="r24"
           img-type="jpg"
-          sizes="(max-width: 48em) 99vw (min-width: 48em) 32vw"/>
+          sizes="(max-width: 48em) 99vw (min-width: 48em) 32vw" />
       </v-flex>
     </v-layout>
+
+    <round-water-desc-de v-if="$store.state.locale === 'de'" class="text-xs-center" />
+    <round-water-desc-en v-else class="text-xs-center" />
 
     <v-layout
       row
       wrap
       class="text-xs-justify mt-3">
-      <v-flex xs12>
-        <p>{{ $t('water_desc') }}</p>
-      </v-flex>
-      <v-flex xs12>
+      <v-flex xs12 md8>
         <ul class="card pl-3">
           <p class="pt-3">{{ $t('water_specs_headline') }}</p>
-
           <li
             v-for="(point, i) in $t('water_specs')"
             :key="i">
             {{ point }}
           </li>
         </ul>
+      </v-flex>
+      <v-flex
+        xs12 sm6 md4
+        class="pa-1 pb-0">
+        <pl-img
+          file-name="r25"
+          sizes="(max-width: 48em) 99vw (min-width: 48em) 32vw"/>
       </v-flex>
     </v-layout>
 
@@ -241,7 +210,7 @@
         <pl-img
           file-name="r30"
           img-type="jpg"
-          sizes="100vw"/>
+          sizes="100vw" />
       </v-flex>
     </v-layout>
 
@@ -257,7 +226,7 @@
           :max-img-size="960"
           file-name="r31"
           img-type="png"
-          sizes="(max-width: 48em) 99vw (min-width: 48em) 32vw"/>
+          sizes="(max-width: 48em) 99vw (min-width: 48em) 32vw" />
       </v-flex>
       <v-flex
         xs12
@@ -268,13 +237,13 @@
           :max-img-size="960"
           :file-name="r32active ? 'r33_1' : 'r32'"
           img-type="png"
-          sizes="(max-width: 48em) 99vw (min-width: 48em) 32vw"/>
+          sizes="(max-width: 48em) 99vw (min-width: 48em) 32vw" />
         <toggle-button
           :value="r32active"
           :sync="true"
           :color="{checked: 'rgb(251, 176, 59)', unchecked: '#bfcbd9'}"
           :labels="{checked: $t('lightoff'), unchecked: $t('lighton')}"
-          @change="r32active = !r32active"/>
+          @change="r32active = !r32active" />
       </v-flex>
       <v-flex
         xs12
@@ -285,10 +254,10 @@
           :max-img-size="960"
           file-name="r34"
           img-type="jpg"
-          sizes="(max-width: 48em) 99vw (min-width: 48em) 32vw"/>
+          sizes="(max-width: 48em) 99vw (min-width: 48em) 32vw" />
       </v-flex>
     </v-layout>
-    <round-skycrystal-desc-de v-if="$store.state.locale === 'de'" class="text-xs-center"/>
+    <round-skycrystal-desc-de v-if="$store.state.locale === 'de'" class="text-xs-center" />
     <round-skycrystal-desc-en v-else class="text-xs-center" />
     <v-layout
       row
@@ -297,13 +266,20 @@
       <v-flex xs12>
         <ul class="card pl-3">
           <p class="pt-3">{{ $t('nyc_specs_headline') }}</p>
-
           <li
-            v-for="(point, i) in $t('water_specs')"
+            v-for="(point, i) in $t('nyc_specs')"
             :key="i">
             {{ point }}
           </li>
         </ul>
+      </v-flex>
+      <v-flex
+        xs12 sm6 md4
+        class="pa-1 pb-0">
+        <pl-img
+          file-name="r35"
+          img-type="png"
+          sizes="(max-width: 48em) 99vw (min-width: 48em) 32vw"/>
       </v-flex>
     </v-layout>
   </div>
@@ -312,9 +288,21 @@
 <script>
   import RoundSkycrystalDescDe from './RoundSkycrystalDescDe'
   import RoundSkycrystalDescEn from './RoundSkycrystalDescEn'
+  import RoundJapanDescDe from './RoundJapanDescDe'
+  import RoundJapanDescEn from './RoundJapanDescEn'
+  import RoundWaterDescEn from './RoundWaterDescEn'
+  import RoundWaterDescDe from './RoundWaterDescDe'
+
   export default {
     name: 'RoundObjects',
-    components: { RoundSkycrystalDescEn, RoundSkycrystalDescDe },
+    components: {
+      RoundSkycrystalDescEn,
+      RoundSkycrystalDescDe,
+      RoundJapanDescDe,
+      RoundJapanDescEn,
+      RoundWaterDescDe,
+      RoundWaterDescEn
+    },
     data () {
       return {
         r2active: false,

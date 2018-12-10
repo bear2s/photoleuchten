@@ -22,11 +22,12 @@
     i18n: {
       messages: {
         en: {
-          h1: 'BESPANNTE RAHMEN IM GROSSFORMAT',
-          h2: 'Leuchte "Bow-Wave"'
+          h1: 'TAILORED FRAME IN BIG FORMAT',
+          h2: 'Luminaire "Bow-Wave"'
         },
         de: {
-          h1: ''
+          h1: 'BESPANNTE RAHMEN IM GROßFORMAT',
+          h2: 'Leuchte "Bow-Wave"'
         }
       }
     }

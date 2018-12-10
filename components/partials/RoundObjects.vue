@@ -106,7 +106,7 @@
         </v-flex>
         <v-flex
           xs12 sm6 md4
-          class="pa-1 pb-0">
+          class="pa-1 pb-0 text-xs-center">
           <pl-img
             file-name="r15"
             img-type="png"
@@ -135,8 +135,7 @@
       wrap
       class="mt-3">
       <v-flex
-        xs12
-        sm4
+        xs12 sm4
         class="text-xs-center">
         <pl-img
           :max-img-size="960"
@@ -193,7 +192,7 @@
       </v-flex>
       <v-flex
         xs12 sm6 md4
-        class="pa-1 pb-0">
+        class="pa-1 pb-0 text-xs-center">
         <pl-img
           file-name="r25"
           sizes="(max-width: 48em) 99vw (min-width: 48em) 32vw"/>
@@ -263,7 +262,7 @@
       row
       wrap
       class="text-xs-justify mt-3">
-      <v-flex xs12>
+      <v-flex xs12 md8>
         <ul class="card pl-3">
           <p class="pt-3">{{ $t('nyc_specs_headline') }}</p>
           <li
@@ -275,7 +274,7 @@
       </v-flex>
       <v-flex
         xs12 sm6 md4
-        class="pa-1 pb-0">
+        class="pa-1 pb-0 text-xs-center">
         <pl-img
           file-name="r35"
           img-type="png"

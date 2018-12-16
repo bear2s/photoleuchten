@@ -1,8 +1,8 @@
 <template>
   <v-app dark>
     <v-navigation-drawer
-      :permanent="false"
       v-model="drawer"
+      :permanent="false"
       persistent
       fixed
       temporary
@@ -76,7 +76,7 @@
     </v-toolbar>
 
     <v-content>
-      <v-container fluid>
+      <v-container fluid class="pa-0">
         <nuxt />
       </v-container>
     </v-content>
@@ -152,6 +152,12 @@
             to: this.isDe
               ? '/produkte/gerahmte-objekte'
               : '/en/products/framed-objects'
+          },
+          {
+            title: this.$t('products.wall_lights.headline'),
+            to: this.isDe
+              ? '/produkte/wandleuchten'
+              : '/en/products/wall-lights'
           }
         ]
       }

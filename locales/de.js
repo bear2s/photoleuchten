@@ -25,32 +25,27 @@ export default {
     'framed': {
       'headline': 'Bespannte Rahmen',
       'link': 'gerahmte-objekte'
+    },
+    'wall_lights': {
+      'headline': 'Wandleuchten',
+      'link': 'wandleuchten'
     }
   },
   // square page
-  square_headline: 'Quadratische Leuchten',
-  battery_powered: 'Quadratische Leuchten batteriebetrieben',
-  line_powered: 'Quadratische Leuchten netzbetrieben',
+  square_headline_1: 'Leuchtkästen',
+  square_headline: 'Photo-Leuchtkästen',
+  battery_powered: 'Photo-Leuchtkästen "Square" (batteriebetrieben):',
+  wall_lights: 'Wandleuchten',
+  line_powered: 'Photo-Wandleuchten "Square"',
   quad_desc:
-    `Die quadratischen Leuchtkästen sehr flexibel - 
+    `Die quadratischen Leuchtkästen sind sehr flexibel - 
     sie können an die Wand gehängt, auf den Boden oder auf ein Regal gestellt werden. Jeder Rahmen 
     ist ein schreinergefertigtes Einzelstück.
     Als Motive gibt es Detailfotografien, wie z.B. "Salt & Pepper" oder verschiedene Naturaufnahmen.
     Die Motive sind auf einer Acrylglasplatte gedruckt und von innen mit Bilderklemmen befestigt.
     Sie können jederzeit ausgetauscht werden. Auf Wunsch können auch kundeneigene Fotos im entsprechenden 
     Format gedruckt und in der Leuchte angebracht werden, so dass ein individuelles Einzelstück entsteht.`,
-  quad_linepower_desc: `
-   Die quadratischen netzbetriebenen Leuchtkästen sind etwas größer als die batteriebetriebenen und zur 
-   Wandaufhängung gedacht. 
-   Jeder Rahmen ist ein schreinergefertigtes Unikat aus Holz mit rundem oder quadratischem Bildausschnitt. 
-   Die Motive sind auf hinterleuchtbarer Folie gedruckt und auf einer Acrylglasplatte als Träger fixiert, 
-   so dass sich durch die Beleuchtung ein besonders schöner plastischer Effekt gibt. Die Leuchtkästen sind in 
-   Abstimmung mit dem jeweiligen Motiv mit warm - oder kaltweißen LEDs ausgestattet, die sie in Verbindung 
-   mit dem gedruckten Foto ein stimmungsvolles Licht ausstrahlen lässt, das nach Belieben heller oder dunkler 
-   per Fernbedienung eingestellt werden kann.
-   Auf Wunsch können auch hier kundeneigene Fotos im entsprechenden Format gedruckt und in der 
-   Leuchte angebracht werden, so dass ein individuelles Einzelstück entsteht.`,
-  battery_specs_headline: 'Quadratische Leuchten batteriebetrieben:',
+  battery_specs_headline: 'Photo-Leuchtkästen "Square" (batteriebetrieben):',
   battery_linepower_specs1_headline: 'Quadratische Leuchten netzbetrieben mit rundem Ausschnitt:',
   battery_linepower_specs2_headline: 'Quadratische Leuchten netzbetrieben mit quadratischem Ausschnitt:',
   battery_specs: [
@@ -130,6 +125,6 @@ export default {
     'Abmessungen: Durchmesser 88 cm, Höhe 6 cm',
     'Bild: Foliendruck auf Acrylglas',
     'Beleuchtung: netzbetriebene weiße LED-Module (dimmbar), incl. Fernbedienung, Netzteil 12 V, weißes Kabel',
-    'Preis: 580,00 EUR'
+    'Preis: 580 €'
   ]
 }

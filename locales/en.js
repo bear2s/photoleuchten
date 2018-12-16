@@ -25,26 +25,26 @@ export default {
     'framed': {
       'headline': 'Covered Frames',
       'link': 'framed-objects'
+    },
+    'wall_lights': {
+      'headline': 'Wall Lights',
+      'link': 'wall-lights'
     }
   },
   // square page --------------
-  square_headline: 'Square light boxes',
+  square_headline_1: 'Light boxes',
+  square_headline: 'PHOTO-LIGHT BOXES',
 
-  'battery_powered': 'Square light boxes battery-powered',
+  'battery_powered': 'Photo-Light boxes "Square" (battery-powered)',
+  'wall_lights': 'Wall-Lights',
   'line_powered': 'Square light boxes  line-powered',
   quad_desc: `The square light boxes are battery powered and very flexible - they can be hung on the wall, placed on the floor or on a shelf.
               As motifs, there are detailed photographs, e.g. "Salt & Pepper" or different nature photographs.
               The motif is printed on an acrylic glass plate and fixed from the inside with picture clips. It can be replaced easily. Each frame is a single piece of carpentry.
               `,
-  quad_linepower_desc: `
-    The square line-powered light boxes are slightly larger than the battery-powered and are designed for wall mounting.
-    Each frame is unique, made of wood by a joiner and has a round or square cutout.
-    The motifs are printed on backlit foil and fixed on an acrylic glass plate as a carrier, so that the lighting gives a particularly beautiful plastic effect. The light boxes are equipped with warm or cold - white LEDs, which, in conjunction with the printed photo, allow them to emit a powerful light, which can be adjusted by the remote control depending on the mood. 
-    On request, customer-specific photos can also be printed in the appropriate format and installed in the luminaire, so that an individual piece can be produced. 
-    `,
-  battery_specs_headline: 'Square light boxes battery-powered:',
-  battery_linepower_specs1_headline: 'Square light boxes line-powered with round cutout:',
-  battery_linepower_specs2_headline: 'Square light boxes line-powered with square cutout:',
+  battery_specs_headline: 'Photo-Light boxes "Square" (battery-powered):',
+  battery_linepower_specs1_headline: 'Photo - wall lights "Square" with round cutout (mains powered):',
+  battery_linepower_specs2_headline: 'Photo - wall lights "Square" with square cutout (mains powered):',
   battery_specs: [
     'Frame: Handmade individual item, white painted wood',
     'Dimensions: 42 cm x 42 cm x 8 cm',
@@ -55,20 +55,20 @@ export default {
   ],
 
   battery_linepower_specs1: [
-    'Frame: Handmade individual item, white painted wood',
+    'Frame: Handmade individual item, white lacquered wood',
     'Dimensions: 53 cm x 53 cm x 6 cm',
-    'round cutout in front: Durchmesser 45 cm',
+    'round cutout in front: diameter 45 cm',
     'Image: photographic film behind Plexiglas',
-    'Lighting: line-powered white LEDs',
+    'Lighting: mains powered white LEDs, white power supply 12V',
     'Control via remote control (light is dimmable)',
     'Price: 240 €'
   ],
   battery_linepower_specs2: [
-    'Frame: Handmade individual item, white painted wood',
+    'Frame: handmade individual item, white lacquered wood',
     'Dimensions: 53 cm x 53 cm x 6 cm',
     'square cutout in front: 44 cm x 44 cm',
-    'Image: photographic film behind Plexiglas',
-    'Lighting: line-powered white LEDs',
+    'Picture: foil print behind acrylic glass\n',
+    'Lighting: mains powered white LEDs, white power supply 12V',
     'Control via remote control (light is dimmable)',
     'Price: 240 €'
   ],
@@ -109,6 +109,6 @@ export default {
     'Dimensions: diameter 88 cm, height 6 cm',
     'Picture: Foil printing on acrylic glass',
     'Lighting: mains operated white LED modules (dimmable), incl. Remote control power supply 12 V, white cable',
-    'Price: 580,00 EUR'
+    'Price: 580 €'
   ]
 }

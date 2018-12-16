@@ -42,9 +42,8 @@
             img-type="png"
             sizes="(max-width: 48em) 99vw (min-width: 48em) 32vw" />
           <pl-img
-            v-for="(val, i) in 6"
+            v-for="(val, i) in 6" :key="'colored' + i"
             v-if="r2active && (r2selectedIndex === (i+3))"
-            :key="'colored' + i"
             :max-img-size="960"
             :file-name="'r'+ (i+3)"
             img-type="png"
@@ -82,7 +81,7 @@
       </v-layout>
     </v-container>
 
-    <round-japan-desc-de v-if="$store.state.locale === 'de'" class="text-xs-center" />
+    <round-japan-desc-de v-if="$store.state.locale === 'de'" class="text-xs-center mt-3" />
     <round-japan-desc-en v-else class="text-xs-center" />
 
     <v-container
@@ -173,7 +172,7 @@
       </v-flex>
     </v-layout>
 
-    <round-water-desc-de v-if="$store.state.locale === 'de'" class="text-xs-center" />
+    <round-water-desc-de v-if="$store.state.locale === 'de'" class="text-xs-center mt-3" />
     <round-water-desc-en v-else class="text-xs-center" />
 
     <v-layout
@@ -234,7 +233,7 @@
         @click.stop="r32active = !r32active">
         <pl-img
           :max-img-size="960"
-          :file-name="r32active ? 'r33_1' : 'r32'"
+          :file-name="r32active ? 'r33' : 'r32'"
           img-type="png"
           sizes="(max-width: 48em) 99vw (min-width: 48em) 32vw" />
         <toggle-button
@@ -256,7 +255,7 @@
           sizes="(max-width: 48em) 99vw (min-width: 48em) 32vw" />
       </v-flex>
     </v-layout>
-    <round-skycrystal-desc-de v-if="$store.state.locale === 'de'" class="text-xs-center" />
+    <round-skycrystal-desc-de v-if="$store.state.locale === 'de'" class="text-xs-center mt-3" />
     <round-skycrystal-desc-en v-else class="text-xs-center" />
     <v-layout
       row

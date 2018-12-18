@@ -1,12 +1,22 @@
 <template>
   <div class="products">
-    <v-layout
-      row
-      wrap>
+    <v-layout row wrap>
       <v-flex xs12>
         <h1 class="text-xs-center">{{ $t('wall_lights') }}</h1>
         <h2 class="text-xs-center">{{ $t('line_powered') }}</h2>
       </v-flex>
+      <v-flex
+        xs12
+        class="text-xs-center pb-3">
+        <pl-img
+          alt="wall light image big"
+          title="wall light"
+          file-name="w0"
+          img-type="jpg"
+          sizes="100vw" />
+      </v-flex>
+    </v-layout>
+    <v-layout row wrap>
       <v-flex
         v-for="(item, i) in ['q8', 'q9', 'q10', 'q11', 'q12', 'q13']"
         :key="item + '-' + i"
@@ -100,6 +110,18 @@
     name: 'WallLights',
     components: {
       WallLightsDescDe, WallLightsDescEn
+    },
+    i18n: {
+      messages: {
+        en: {
+          wall_lights: 'Wall lights',
+          line_powered: 'Photo wall lights "Square" (mains powered)'
+        },
+        de: {
+          wall_lights: 'Wandleuchten',
+          line_powered: 'Photo-Wandleuchten "Square" (netzbetrieben)'
+        }
+      }
     }
   }
 </script>

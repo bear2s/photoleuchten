@@ -17,6 +17,15 @@
       <v-flex
         xs12
         class="text-xs-right pb-1">
+        <a
+          target="_blank"
+          rel="noreferrer"
+          href="https://www.etsy.com/shop/photoleuchten"
+          v-text="'Shop'"/>
+      </v-flex>
+      <v-flex
+        xs12
+        class="text-xs-right pb-1">
         <nuxt-link
           v-if="$store.state.locale === 'de'"
           to="/impressum"

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p>The photo-wall lights "Square" have a format of 53 cm x 53 cm x 6 cm. They are mains powered with a subtle white cable running from below the frame.</p>
+    <p>The photo wall lights "Square" have a format of 53 cm x 53 cm x 6 cm. They are mains powered with a subtle white cable running from below the frame.</p>
 
     <p>Each wooden frame is unique piece of carpentry with a round or square cutout and painted white.</p>
 

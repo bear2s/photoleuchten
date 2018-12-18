@@ -14,7 +14,7 @@ export default {
     'selection': 'Product selection',
     'specs': 'Specifications',
     'quad': {
-      'headline': 'Lightboxes'
+      'headline': 'Light boxes'
     },
     'lightobjects': {
       'headline': 'Light objects',
@@ -28,17 +28,15 @@ export default {
   // square page --------------
   square_headline_1: 'Light boxes',
   square_headline: 'PHOTO-LIGHT BOXES',
-  'battery_powered': 'Photo lightboxes "Square" (battery-powered)',
-  'wall_lights': 'Wall lights',
-  'line_powered': 'Photo wall lights "Square" (mains powered)',
+  'battery_powered': 'Photo light boxes "Square" (battery-powered)',
   quad_desc: [
-    `The photo-light boxes "Square" have a format of 42 cm x 42 cm x 8 cm. They are powered by batteries that are hidden in the frame. This makes the light boxes very flexible - they can be hung on the wall, placed on the floor or on a shelf.`,
+    `The photo light boxes "Square" have a format of 42 cm x 42 cm x 8 cm. They are powered by batteries that are hidden in the frame. This makes the light boxes very flexible - they can be hung on the wall, placed on the floor or on a shelf.`,
     `Each wooden frame is unique piece of carpentry with a square cut and painted white.`,
     `As motifs, there are detailed photographs, e. g. "Salt & Pepper" or different nature photographs. In the "motif selection" a photo can be selected.`,
     `The photos are printed on a sheet of acrylic glass and illuminated from the inside with white LEDs.`,
     `Upon request, customer-specific photos can also be printed in the appropriate format and be attached in the luminaries so that an individual unique piece is created.`
   ],
-  battery_specs_headline: 'Photo-Light boxes "Square" (battery-powered):',
+  battery_specs_headline: 'Photo light boxes "Square" (battery-powered):',
   battery_linepower_specs1_headline: 'Photo wall lights "Square" with round cutout (mains powered):',
   battery_linepower_specs2_headline: 'Photo wall lights "Square" with square cutout (mains powered):',
   battery_specs: [

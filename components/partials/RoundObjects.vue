@@ -195,6 +195,7 @@
         class="pa-1 pb-0 text-xs-center">
         <pl-img
           file-name="r25"
+          img-type="png"
           sizes="(max-width: 48em) 99vw (min-width: 48em) 32vw"/>
       </v-flex>
     </v-layout>

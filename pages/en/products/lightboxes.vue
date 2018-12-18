@@ -15,7 +15,7 @@
     head () {
       const path = this.$route.path.replace(/\/$/, '') // Remove trailing /
       return {
-        title: 'Photo lightboxes | Photoleuchten.com  ▶',
+        title: 'Photo light boxes | Photoleuchten.com  ▶',
         htmlAttrs: {
           lang: 'en'
         },

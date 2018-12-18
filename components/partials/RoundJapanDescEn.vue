@@ -18,8 +18,7 @@
       drops of water and hemp fibers show up very well.
     </p>
     <p>
-      The light can be controlled and dimmed via a remote control. It can be selected over 16 different shades by
-      remote
+      The light can be controlled and dimmed via a remote control. It can be selected over 16 different shades by remote
       control.
     </p>
   </div>

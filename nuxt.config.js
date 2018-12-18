@@ -62,7 +62,13 @@ module.exports = {
     cacheTime: 1000 * 60 * 15,
     generate: true,
     exclude: [
-      '/', 'https://photoleuchten.com/'
+      '/', 'https://photoleuchten.com/',
+      '/quadratische-objekte',
+      '/runde-objekte',
+      '/gerahmte-objekte',
+      '/square-objects',
+      '/round-objects',
+      '/framed-objects'
     ],
     routes: [
       {

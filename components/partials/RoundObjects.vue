@@ -1,11 +1,12 @@
 <template>
   <div class="products">
-    <h1 class="text-xs-center">{{ $t('products.round.headline') }}</h1>
+    <h1 class="text-xs-center">{{ $t('products.lightobjects.headline') }}</h1>
+    <h2 class="text-xs-center">{{ $t('products.lightobjects.headline2') }}</h2>
     <v-layout row>
       <v-flex
         xs12
         class="text-xs-center pb-3">
-        <h2 class="no-transform">{{ $t('japanpaper_headline') }}</h2>
+        <h3 class="no-transform">{{ $t('japanpaper_headline') }}</h3>
         <pl-img
           alt="japanpaper luminaire"
           title="japanpaper"
@@ -81,8 +82,8 @@
       </v-layout>
     </v-container>
 
-    <round-japan-desc-de v-if="$store.state.locale === 'de'" class="text-xs-center mt-3" />
-    <round-japan-desc-en v-else class="text-xs-center" />
+    <round-japan-desc-de v-if="$store.state.locale === 'de'" class="text-xs-center my-5" />
+    <round-japan-desc-en v-else class="text-xs-center my-5" />
 
     <v-container
       fill-height
@@ -120,7 +121,7 @@
       <v-flex
         xs12
         class="text-xs-center">
-        <h2 class="no-transform pt-1 pb-1">{{ $t('water_headline') }}</h2>
+        <h3 class="no-transform pt-1 pb-1">{{ $t('water_headline') }}</h3>
         <pl-img
           alt="water luminaire"
           title="water style"
@@ -172,8 +173,8 @@
       </v-flex>
     </v-layout>
 
-    <round-water-desc-de v-if="$store.state.locale === 'de'" class="text-xs-center mt-3" />
-    <round-water-desc-en v-else class="text-xs-center" />
+    <round-water-desc-de v-if="$store.state.locale === 'de'" class="text-xs-center my-5" />
+    <round-water-desc-en v-else class="text-xs-center my-5" />
 
     <v-layout
       row
@@ -204,7 +205,7 @@
       <v-flex
         xs12
         class="text-xs-center">
-        <h2 class="no-transform pt-1 pb-1">{{ $t('nyc_headline') }}</h2>
+        <h3 class="no-transform pt-1 pb-1">{{ $t('nyc_headline') }}</h3>
         <pl-img
           file-name="r30"
           img-type="jpg"
@@ -255,8 +256,8 @@
           sizes="(max-width: 48em) 99vw (min-width: 48em) 32vw" />
       </v-flex>
     </v-layout>
-    <round-skycrystal-desc-de v-if="$store.state.locale === 'de'" class="text-xs-center mt-3" />
-    <round-skycrystal-desc-en v-else class="text-xs-center" />
+    <round-skycrystal-desc-de v-if="$store.state.locale === 'de'" class="text-xs-center my-5" />
+    <round-skycrystal-desc-en v-else class="text-xs-center my-5" />
     <v-layout
       row
       wrap
@@ -280,6 +281,7 @@
           sizes="(max-width: 48em) 99vw (min-width: 48em) 32vw"/>
       </v-flex>
     </v-layout>
+    <framed-objects class="mt-5"/>
   </div>
 </template>
 
@@ -290,10 +292,12 @@
   import RoundJapanDescEn from './RoundJapanDescEn'
   import RoundWaterDescEn from './RoundWaterDescEn'
   import RoundWaterDescDe from './RoundWaterDescDe'
+  import FramedObjects from './FramedObjects'
 
   export default {
     name: 'RoundObjects',
     components: {
+      FramedObjects,
       RoundSkycrystalDescEn,
       RoundSkycrystalDescDe,
       RoundJapanDescDe,

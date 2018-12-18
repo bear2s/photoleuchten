@@ -76,7 +76,7 @@
     </v-toolbar>
 
     <v-content>
-      <v-container fluid class="pa-0">
+      <v-container fluid>
         <nuxt />
       </v-container>
     </v-content>
@@ -138,20 +138,14 @@
           {
             title: this.$t('products.quad.headline'),
             to: this.isDe
-              ? '/produkte/quadratische-objekte'
-              : '/en/products/square-objects'
+              ? '/produkte/leuchtkaesten'
+              : '/en/products/lightboxes'
           },
           {
-            title: this.$t('products.round.headline'),
+            title: this.$t('products.lightobjects.headline'),
             to: this.isDe
-              ? '/produkte/runde-objekte'
-              : '/en/products/round-objects'
-          },
-          {
-            title: this.$t('products.framed.headline'),
-            to: this.isDe
-              ? '/produkte/gerahmte-objekte'
-              : '/en/products/framed-objects'
+              ? '/produkte/lichtobjekte'
+              : '/en/products/light-objects'
           },
           {
             title: this.$t('products.wall_lights.headline'),

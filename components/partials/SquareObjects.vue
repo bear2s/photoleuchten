@@ -42,8 +42,12 @@
           style="bottom: 10px; width: 100%; position: absolute;">Beach I
         </div>
       </v-flex>
-      <v-flex xs12>
-        <p>{{ $t('quad_desc') }}</p>
+      <v-flex xs12 class="my-5">
+        <p
+          v-for="(p, i) in $t(['quad_desc'])" :key="'quad_desc_' + i"
+          class="text-xs-center">
+          {{ p }}
+        </p>
       </v-flex>
     </v-layout>
 

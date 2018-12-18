@@ -32,8 +32,8 @@
     </v-layout>
     <v-layout row>
       <v-flex xs12 class="my-3 mx-3">
-        <wall-lights-desc-de v-if="$store.state.locale === 'de'" class="text-xs-center mt-3" />
-        <wall-lights-desc-en v-else class="text-xs-center" />
+        <wall-lights-desc-de v-if="$store.state.locale === 'de'" class="text-xs-center my-5" />
+        <wall-lights-desc-en v-else class="text-xs-center my-5" />
       </v-flex>
     </v-layout>
     <v-layout

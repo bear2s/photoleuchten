@@ -14,37 +14,33 @@ export default {
     'selection': 'Product selection',
     'specs': 'Specifications',
     'quad': {
-      'headline': 'Square Lightboxes',
-      'link': 'square-objects'
+      'headline': 'Lightboxes'
     },
-    'round': {
-      'headline': 'Round Light Objects',
-      'round_lamp': 'Round lamps',
-      'link': 'round-objects'
-    },
-    'framed': {
-      'headline': 'Covered Frames',
-      'link': 'framed-objects'
+    'lightobjects': {
+      'headline': 'Light objects',
+      'headline2': 'ROUND LIGHT OBJECTS IN LARGE FORMAT',
+      'round_lamp': 'Round lamps'
     },
     'wall_lights': {
-      'headline': 'Wall Lights',
-      'link': 'wall-lights'
+      'headline': 'Wall lights'
     }
   },
   // square page --------------
   square_headline_1: 'Light boxes',
   square_headline: 'PHOTO-LIGHT BOXES',
-
-  'battery_powered': 'Photo-Light boxes "Square" (battery-powered)',
-  'wall_lights': 'Wall-Lights',
-  'line_powered': 'Square light boxes  line-powered',
-  quad_desc: `The square light boxes are battery powered and very flexible - they can be hung on the wall, placed on the floor or on a shelf.
-              As motifs, there are detailed photographs, e.g. "Salt & Pepper" or different nature photographs.
-              The motif is printed on an acrylic glass plate and fixed from the inside with picture clips. It can be replaced easily. Each frame is a single piece of carpentry.
-              `,
+  'battery_powered': 'Photo lightboxes "Square" (battery-powered)',
+  'wall_lights': 'Wall lights',
+  'line_powered': 'Photo wall lights "Square" (mains powered)',
+  quad_desc: [
+    `The photo-light boxes "Square" have a format of 42 cm x 42 cm x 8 cm. They are powered by batteries that are hidden in the frame. This makes the light boxes very flexible - they can be hung on the wall, placed on the floor or on a shelf.`,
+    `Each wooden frame is unique piece of carpentry with a square cut and painted white.`,
+    `As motifs, there are detailed photographs, e. g. "Salt & Pepper" or different nature photographs. In the "motif selection" a photo can be selected.`,
+    `The photos are printed on a sheet of acrylic glass and illuminated from the inside with white LEDs.`,
+    `Upon request, customer-specific photos can also be printed in the appropriate format and be attached in the luminaries so that an individual unique piece is created.`
+  ],
   battery_specs_headline: 'Photo-Light boxes "Square" (battery-powered):',
-  battery_linepower_specs1_headline: 'Photo - wall lights "Square" with round cutout (mains powered):',
-  battery_linepower_specs2_headline: 'Photo - wall lights "Square" with square cutout (mains powered):',
+  battery_linepower_specs1_headline: 'Photo wall lights "Square" with round cutout (mains powered):',
+  battery_linepower_specs2_headline: 'Photo wall lights "Square" with square cutout (mains powered):',
   battery_specs: [
     'Frame: Handmade individual item, white painted wood',
     'Dimensions: 42 cm x 42 cm x 8 cm',
@@ -78,10 +74,6 @@ export default {
   water_headline: 'Round Light Object "Water"',
   japanpaper_headline: 'Round Light Object "Japanese Paper"',
   nyc_headline: 'Round Light Object "Skycrystal NYC"',
-  // @TODO
-  japanpaper_desc: `The lamp "Japanpapier" is covered with an original Japanese soy paper. Sojipaptes are traditionally used in Japan for covering sliding doors and are also very well suited for luminaire construction because of their translucence. This soy paper is natural white and has a very nice hemp water droplet structure.
-                    The interior is covered with over 500 individual RGB LEDs on tapes and is therefore very evenly illuminated, so that the individual water drops and hemp fibers are very effective. The light can be dimmed via a remote control and controlled via 16 different colors.
-                    The outer frame was worked ("gilded") with several layers of copper (impact metal) and connected to the soy paper by a small copper edge on the front side.`,
   water_desc: `The "water" light object has a water close-up motif with different shades of blue and single yellow tones. The motif is is applied with a foil to a round acrylic glass plate. The luminaire is internally lined with white LEDs on ribbons and is thereby illuminated very evenly so that the individual water drops and hemp fibers are very effective. The light can be controlled and dimmed via a remote control.
                 The outer frame was treated with several layers of copper (impact metal) ("gilded"). The copper was oxidized in several steps and worked with varnish so that a very beautiful turquoise on the copper was created, which connects nicely with the picture.`,
   water_specs_headline: 'Round Light Object "Water":',

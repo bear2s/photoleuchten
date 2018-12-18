@@ -4,8 +4,8 @@
       row
       wrap>
       <v-flex xs12>
-        <h1 class="text-xs-center">{{ $t('h1') }}</h1>
         <h2 class="text-xs-center">{{ $t('h2') }}</h2>
+        <h3 class="text-xs-center">{{ $t('h3') }}</h3>
         <pl-img
           blur-up
           file-name="b0"
@@ -22,12 +22,12 @@
     i18n: {
       messages: {
         en: {
-          h1: 'TAILORED FRAME IN BIG FORMAT',
-          h2: 'Luminaire "Bow-Wave"'
+          h2: 'COVERED FRAMES IN LARGE FORMAT',
+          h3: 'Light object "Bow-Wave"'
         },
         de: {
-          h1: 'BESPANNTE RAHMEN IM GROßFORMAT',
-          h2: 'Leuchte "Bow-Wave"'
+          h2: 'BESPANNTE RAHMEN IM GROßFORMAT',
+          h3: 'Leuchte "Bow-Wave"'
         }
       }
     }

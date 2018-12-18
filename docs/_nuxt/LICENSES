@@ -5,7 +5,7 @@ object-assign
 */
 
 /*!
- * Vue.js v2.5.20
+ * Vue.js v2.5.21
  * (c) 2014-2018 Evan You
  * Released under the MIT License.
  */
@@ -23,7 +23,7 @@ object-assign
   */
 
 /*!
- * vue-i18n v8.4.0 
+ * vue-i18n v8.5.0 
  * (c) 2018 kazuya kawaguchi
  * Released under the MIT License.
  */
@@ -41,7 +41,7 @@ object-assign
 	*/
 
 /*!
- * vue-no-ssr v1.1.0
+ * vue-no-ssr v1.1.1
  * (c) 2018-present egoist <0x142857@gmail.com>
  * Released under the MIT License.
  */

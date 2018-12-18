@@ -29,8 +29,6 @@ export default {
   square_headline_1: 'Leuchtkästen',
   square_headline: 'Photo-Leuchtkästen',
   battery_powered: 'Photo-Leuchtkästen "Square" (batteriebetrieben):',
-  wall_lights: 'Wandleuchten',
-  line_powered: '"Square" photo-light boxes (battery powered)',
   quad_desc: [
     `Die Photo-Leuchtkästen "Square" haben ein Format von 42 cm x 42 cm x 8 cm. Sie werden mit Batterien betrieben, die unsichtbar im Rahmen angebracht sind. Dadurch sind die Leuchtkästen sehr flexibel - sie können an die Wand gehängt, auf den Boden oder auf ein Regal gestellt werden.`,
     `Jeder Rahmen ist ein schreinergefertigtes Unikat aus Holz mit einem quadratischen Bildausschnitt und weiß lackiert.`,

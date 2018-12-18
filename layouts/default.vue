@@ -142,16 +142,16 @@
               : '/en/products/lightboxes'
           },
           {
-            title: this.$t('products.lightobjects.headline'),
-            to: this.isDe
-              ? '/produkte/lichtobjekte'
-              : '/en/products/light-objects'
-          },
-          {
             title: this.$t('products.wall_lights.headline'),
             to: this.isDe
               ? '/produkte/wandleuchten'
               : '/en/products/wall-lights'
+          },
+          {
+            title: this.$t('products.lightobjects.headline'),
+            to: this.isDe
+              ? '/produkte/lichtobjekte'
+              : '/en/products/light-objects'
           }
         ]
       }

@@ -62,7 +62,7 @@
           <ul
             class="card pl-3"
             style="height: 100%;">
-            <li class="pt-3">{{ $t('battery_specs_headline') }}</li>
+            <p class="pt-3">{{ $t('battery_specs_headline') }}</p>
             <li
               v-for="(point, i) in $t(['battery_specs'])"
               :key="'---' + i">

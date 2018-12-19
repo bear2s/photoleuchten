@@ -4,7 +4,6 @@
     wrap>
     <no-ssr>
       <v-flex
-        v-if="$vuetify.breakpoint.smAndDown"
         xs12 class="text-xs-center headline-container">
         <h1>
           WALL LIGHTS - LIGHT OBJECTS - LIGHT BOXES - ILLUMINATED PHOTOS & PAPERS

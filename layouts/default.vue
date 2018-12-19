@@ -94,19 +94,17 @@
 
   export default {
     head () {
-      const isDe = this.$store.state.locale === 'de'
-
       return {
-        title: isDe
+        title: this.isDe
           ? 'Lichtobjekte - Leuchtkästen - beleuchtete Fotos und Papiere'
-          : 'Light Objects - Light Boxes - illuminated Photos and Papers',
+          : 'Light objects - Light boxes - illuminated Photos and Papers',
         htmlAttrs: {
-          lang: this.$store.state.locale
+          lang: this.$store.state.locale || 'de'
         },
         meta: [{
           hid: 'description',
           name: 'description',
-          content: isDe
+          content: this.isDe
             ? `Handgefertigte Lichtobjekte, illuminierte Rahmen, Fotos mit Hintergrundbeleuchtung, Papiere mit Hintergrundbeleuchtung, Rahmen in verschiedenen Formen und Größen.`
             : `Handcrafted light objects, illuminated frames, photos with background lighting, papers with background lighting, frames various shapes and sizes.`
         }]
@@ -124,9 +122,6 @@
       }
     },
     computed: {
-      isDe () {
-        return this.$store.state.locale === 'de'
-      },
       items () {
         return [
           { icon: 'info', title: this.$t('links.about'), to: this.isDe ? '/ueber' : '/en/about' },

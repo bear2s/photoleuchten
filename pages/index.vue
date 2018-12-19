@@ -2,23 +2,26 @@
   <v-layout
     row
     wrap>
-    <v-flex
-      xs12
-      class="text-xs-center headline-container">
-      <h1>
-        WANDLEUCHTEN - LICHTOBJEKTE - LEUCHTKAESTEN - BELEUCHTETE PHOTOS & PAPIERE
-      </h1>
-      <div style="position: absolute" class="headline-container-inner">
-        <h2 class="white--text px-3">
-          handgefertigte Design-Leuchten, Unikate aus Fotografien & Licht
-        </h2>
-      </div>
-      <pl-img
-        :quality="85"
-        file-name="t0"
-        img-type="jpg"
-        sizes="100vw" />
-    </v-flex>
+    <no-ssr>
+      <v-flex
+        v-if="$vuetify.breakpoint.smAndDown"
+        xs12
+        class="text-xs-center headline-container">
+        <h1>
+          WANDLEUCHTEN - LICHTOBJEKTE - LEUCHTKAESTEN - BELEUCHTETE PHOTOS & PAPIERE
+        </h1>
+        <div style="position: absolute" class="headline-container-inner">
+          <h2 class="white--text px-3">
+            handgefertigte Design-Leuchten, Unikate aus Fotografien & Licht
+          </h2>
+        </div>
+        <pl-img
+          :quality="85"
+          file-name="t0"
+          img-type="jpg"
+          sizes="100vw" />
+      </v-flex>
+    </no-ssr>
     <v-flex
       xs12>
       <h3 class="text-xs-center">Willkommen bei Photoleuchten!</h3>
@@ -47,8 +50,9 @@
         </p>
       </div>
     </v-flex>
-    <v-flex xs12 class="text-xs-center">
-      <v-btn outline to="/kontakt">
+    <collection />
+    <v-flex xs12 class="text-xs-center py-5">
+      <v-btn large outline to="/kontakt">
         Kontakt
       </v-btn>
     </v-flex>
@@ -56,7 +60,11 @@
 </template>
 
 <script>
+  import Collection from '../components/partials/Collection'
+
   export default {
+    layout: 'home',
+    components: { Collection },
     head () {
       const path = this.$route.path.replace(/\/$/, '') // Remove trailing /
       return {

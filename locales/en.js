@@ -27,7 +27,7 @@ export default {
   },
   // square page --------------
   square_headline_1: 'Light boxes',
-  square_headline: 'PHOTO-LIGHT BOXES',
+  square_headline: 'Photo light boxes',
   'battery_powered': 'Photo light boxes "Square" (battery-powered)',
   quad_desc: [
     `The photo light boxes "Square" have a format of 42 cm x 42 cm x 8 cm. They are powered by batteries that are hidden in the frame. This makes the light boxes very flexible - they can be hung on the wall, placed on the floor or on a shelf.`,

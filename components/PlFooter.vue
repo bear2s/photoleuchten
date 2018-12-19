@@ -11,8 +11,8 @@
         xs12
         class="text-xs-right pb-1">
         <nuxt-link
-          :to="$store.state.locale === 'de' ? '/kontakt' : '/en/contact'"
-          v-text="$store.state.locale === 'de' ? 'Kontakt' : 'Contact'"/>
+          :to="isDe ? '/kontakt' : '/en/contact'"
+          v-text="isDe ? 'Kontakt' : 'Contact'"/>
       </v-flex>
       <v-flex
         xs12
@@ -27,7 +27,7 @@
         xs12
         class="text-xs-right pb-1">
         <nuxt-link
-          v-if="$store.state.locale === 'de'"
+          v-if="isDe"
           to="/impressum"
           v-text="$t('links.legal')"/>
       </v-flex>

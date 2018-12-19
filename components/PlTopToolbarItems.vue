@@ -1,7 +1,7 @@
 <template>
   <v-toolbar-items class="hidden-xs-only">
     <v-btn
-      :to="$store.state.locale === 'de' ? '/' : '/en'"
+      :to="isDe ? '/' : '/en'"
       flat
       exact>HOME</v-btn>
     <v-menu
@@ -29,10 +29,10 @@
       </v-list>
     </v-menu>
     <v-btn
-      :to="'/' + ($store.state.locale === 'de' ? 'ueber' : 'en/about')"
+      :to="'/' + (isDe ? 'ueber' : 'en/about')"
       flat>{{ $t('links.about') }}</v-btn>
     <v-btn
-      :to="'/' + ($store.state.locale === 'de' ? 'kontakt' : 'en/contact')"
+      :to="'/' + (isDe ? 'kontakt' : 'en/contact')"
       flat>{{ $t('links.contact') }}</v-btn>
   </v-toolbar-items>
 </template>

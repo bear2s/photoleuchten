@@ -9,6 +9,9 @@ Vue.mixin({
   computed: {
     imgBase () {
       return 'https://res.cloudinary.com/stbaer/image/upload'
+    },
+    isDe () {
+      return this.$store.state.locale === 'de'
     }
   }
 })

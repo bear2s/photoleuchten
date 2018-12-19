@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[15],{131:function(e,o,t){"use strict";t.r(o);var n={fetch:e=>(0,e.redirect)(301,"/en/products/lightboxes")},s=t(4),i=Object(s.a)(n,void 0,void 0,!1,null,null,null);i.options.__file="square-objects.vue";o.default=i.exports}}]);

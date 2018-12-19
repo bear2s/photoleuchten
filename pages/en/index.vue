@@ -59,7 +59,7 @@
   import Collection from '../../components/partials/Collection'
 
   export default {
-    layout: 'home',
+    // layout: 'home',
     components: { Collection },
     head () {
       const path = this.$route.path.replace(/\/$/, '') // Remove trailing /

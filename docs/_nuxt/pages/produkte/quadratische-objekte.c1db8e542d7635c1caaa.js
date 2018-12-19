@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[23],{135:function(e,t,o){"use strict";o.r(t);var n={fetch:e=>(0,e.redirect)(301,"/produkte/leuchtkaesten")},u=o(3),i=Object(u.a)(n,void 0,void 0,!1,null,null,null);i.options.__file="quadratische-objekte.vue";t.default=i.exports}}]);

@@ -29,7 +29,7 @@ object-assign
  */
 
 /**
- * vue-meta v1.5.6
+ * vue-meta v1.5.8
  * (c) 2018 Declan de Wet & Sébastien Chopin (@Atinux)
  * @license MIT
  */
@@ -39,6 +39,13 @@ object-assign
 	(c) Sindre Sorhus
 	@license MIT
 	*/
+
+/*!
+	 * The buffer module from node.js, for the browser.
+	 *
+	 * @author   Feross Aboukhadijeh <feross@feross.org> <http://feross.org>
+	 * @license  MIT
+	 */
 
 /*!
  * vue-no-ssr v1.1.1

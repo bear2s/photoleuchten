@@ -82,7 +82,7 @@
       </v-layout>
     </v-container>
 
-    <round-japan-desc-de v-if="$store.state.locale === 'de'" class="text-xs-center my-5" />
+    <round-japan-desc-de v-if="isDe" class="text-xs-center my-5" />
     <round-japan-desc-en v-else class="text-xs-center my-5" />
 
     <v-container
@@ -173,7 +173,7 @@
       </v-flex>
     </v-layout>
 
-    <round-water-desc-de v-if="$store.state.locale === 'de'" class="text-xs-center my-5" />
+    <round-water-desc-de v-if="isDe" class="text-xs-center my-5" />
     <round-water-desc-en v-else class="text-xs-center my-5" />
 
     <v-layout
@@ -257,7 +257,7 @@
           sizes="(max-width: 48em) 99vw (min-width: 48em) 32vw" />
       </v-flex>
     </v-layout>
-    <round-skycrystal-desc-de v-if="$store.state.locale === 'de'" class="text-xs-center my-5" />
+    <round-skycrystal-desc-de v-if="isDe" class="text-xs-center my-5" />
     <round-skycrystal-desc-en v-else class="text-xs-center my-5" />
     <v-layout
       row

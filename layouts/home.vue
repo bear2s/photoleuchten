@@ -76,6 +76,9 @@
     </v-toolbar>
 
     <v-content>
+      <no-ssr>
+        <home-parallax-section />
+      </no-ssr>
       <v-container fluid>
         <nuxt />
       </v-container>
@@ -91,8 +94,11 @@
   import PlTopToolbarItems from '../components/PlTopToolbarItems.vue'
   import LanguageSelect from '../components/LanguageSelect.vue'
   import SidebarContent from '../components/SidebarContent.vue'
+  import Parallax from 'vue-parallaxy'
+  import HomeParallaxSection from '../components/partials/HomeParallaxSection'
 
   export default {
+    name: 'Home',
     head () {
       return {
         title: this.isDe
@@ -111,6 +117,8 @@
       }
     },
     components: {
+      HomeParallaxSection,
+      Parallax,
       PlFooter,
       PlTopToolbarItems,
       SidebarContent,
@@ -153,3 +161,7 @@
     }
   }
 </script>
+
+<style scoped>
+
+</style>

@@ -3,7 +3,7 @@
     <v-layout row wrap>
       <v-flex xs12>
         <h1 class="text-xs-center">{{ $t('wall_lights') }}</h1>
-        <h2 class="text-xs-center">{{ $t('line_powered') }}</h2>
+        <h2 class="text-xs-center">{{ 'PHOTO' + (isDe ? '-WANDLEUCHTEN' : ' WALL LIGHTS') }}</h2>
       </v-flex>
       <v-flex
         xs12
@@ -17,12 +17,15 @@
       </v-flex>
     </v-layout>
     <v-layout row wrap>
+      <v-flex xs12>
+        <h3 class="block text-xs-center">{{$t('line_powered')}}</h3>
+      </v-flex>
       <v-flex
         v-for="(item, i) in ['q8', 'q9', 'q10', 'q11', 'q12', 'q13']"
         :key="item + '-' + i"
         xs12
         sm4
-        class="text-xs-justify pa-1"
+        class="text-xs-justify pt-1"
         style="position: relative;">
         <pl-img
           :file-name="item"

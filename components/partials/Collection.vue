@@ -23,6 +23,7 @@
         <pl-img
           class="pa-5"
           file-name="t13"
+          img-type="png"
           sizes="(max-width: 48em) 99vw (min-width: 48em) 32vw" />
       </v-flex>
       <v-flex xs12 sm4>

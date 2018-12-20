@@ -2,7 +2,7 @@
   <v-container fill-height>
     <v-layout row wrap align-center class="collection">
       <v-flex xs12 class="text-xs-center">
-        <h2>{{isDe ? 'Kollektion' : 'Collection'}}</h2>
+        <h3>{{isDe ? 'Kollektion' : 'Collection'}}</h3>
       </v-flex>
       <v-flex xs12 sm4 class="text-xs-center">
         <v-card
@@ -21,7 +21,6 @@
       </v-flex>
       <v-flex xs12 sm4>
         <pl-img
-          class="pa-5"
           file-name="t13"
           img-type="png"
           sizes="(max-width: 48em) 99vw (min-width: 48em) 32vw" />

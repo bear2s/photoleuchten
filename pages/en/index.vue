@@ -10,7 +10,7 @@
         </h1>
         <div style="position: absolute" class="headline-container-inner">
           <h2 class="white--text px-3">
-            Simple and beautiful design
+            Handmade design lights, unique pieces of photographs & light
           </h2>
         </div>
         <pl-img
@@ -23,7 +23,7 @@
     <v-flex
       xs12
       class="text-xs-center">
-      <h3>Welcome to Photoleuchten!</h3>
+      <h3 class="mb-3">Welcome to Photoleuchten!</h3>
       <div class="text-xs-center">
         <p>
           Here you will find handcrafted lights made with love: wall lights, light objects, light boxes with photographs

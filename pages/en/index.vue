@@ -23,8 +23,8 @@
     <v-flex
       xs12
       class="text-xs-center">
-      <h3 class="mb-3">Welcome to Photoleuchten!</h3>
-      <div class="text-xs-center">
+      <h3 class="text-xs-center">Welcome to Photoleuchten!</h3>
+      <div class="text-xs-center mt-3">
         <p>
           Here you will find handcrafted lights made with love: wall lights, light objects, light boxes with photographs
           that look great unlit and get a whole new look when illuminated.</p>

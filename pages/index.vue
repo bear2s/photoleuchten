@@ -22,9 +22,10 @@
       </v-flex>
     </no-ssr>
     <v-flex
+      class="text-xs-center"
       xs12>
-      <h3 class="text-xs-center mb-3">Willkommen bei Photoleuchten!</h3>
-      <div class="text-xs-center">
+      <h3 class="text-xs-center">Willkommen bei Photoleuchten!</h3>
+      <div class="text-xs-center mt-3">
         <p>
           Hier findet Ihr mit Liebe hergestellte, handgemachte Leuchten: Wandleuchten, Leuchtkästen, Lichtobjekte mit
           Fotografien, die unbeleuchtet toll aussehen und beleuchtet einen völlig neuen Look bekommen.

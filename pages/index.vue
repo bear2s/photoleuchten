@@ -63,6 +63,7 @@
   import Collection from '../components/partials/Collection'
 
   export default {
+    name: 'App',
     // layout: 'home',
     components: { Collection },
     head () {
@@ -87,7 +88,6 @@
       }
     },
     transition: 'slide-left',
-    name: 'App',
     asyncData ({ store, route }) {
       return store.dispatch('setLanguageKey', 'de')
     }

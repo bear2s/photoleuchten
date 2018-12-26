@@ -108,7 +108,7 @@
 <script>
   export default {
     asyncData ({ store, route }) {
-      if (!this.isDe) store.dispatch('setLanguageKey', 'de')
+      if (store.state.locale === 'en') store.dispatch('setLanguageKey', 'de')
     },
     head () {
       const path = this.$route.path.replace(/\/$/, '') // Remove trailing /

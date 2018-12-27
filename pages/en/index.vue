@@ -2,24 +2,6 @@
   <v-layout
     row
     wrap>
-    <no-ssr>
-      <v-flex
-        xs12 class="text-xs-center headline-container">
-        <h1>
-          WALL LIGHTS - LIGHT OBJECTS - LIGHT BOXES - ILLUMINATED PHOTOS & PAPERS
-        </h1>
-        <div style="position: absolute" class="headline-container-inner">
-          <h2 class="white--text px-3">
-            Handmade design lights, unique pieces of photographs & light
-          </h2>
-        </div>
-        <pl-img
-          :quality="85"
-          file-name="t0"
-          img-type="jpg"
-          sizes="100vw" />
-      </v-flex>
-    </no-ssr>
     <v-flex
       xs12
       class="text-xs-center">
@@ -58,7 +40,7 @@
   import Collection from '../../components/partials/Collection'
 
   export default {
-    // layout: 'home',
+    layout: 'home',
     components: { Collection },
     head () {
       const path = this.$route.path.replace(/\/$/, '') // Remove trailing /

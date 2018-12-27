@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[20],{141:function(e,t,o){"use strict";o.r(t);var i={fetch:e=>(0,e.redirect)(301,"/produkte/lichtobjekte")},n=o(4),l=Object(n.a)(i,void 0,void 0,!1,null,null,null);l.options.__file="gerahmte-objekte.vue";t.default=l.exports}}]);

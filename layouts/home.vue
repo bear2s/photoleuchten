@@ -94,8 +94,7 @@
   import PlTopToolbarItems from '../components/PlTopToolbarItems.vue'
   import LanguageSelect from '../components/LanguageSelect.vue'
   import SidebarContent from '../components/SidebarContent.vue'
-  import Parallax from 'vue-parallaxy'
-  import HomeParallaxSection from '../components/partials/HomeParallaxSection'
+  // import HomeParallaxSection from '../components/partials/HomeParallaxSection'
 
   export default {
     name: 'Home',
@@ -117,8 +116,7 @@
       }
     },
     components: {
-      HomeParallaxSection,
-      Parallax,
+      HomeParallaxSection: () => import('../components/partials/HomeParallaxSection'),
       PlFooter,
       PlTopToolbarItems,
       SidebarContent,

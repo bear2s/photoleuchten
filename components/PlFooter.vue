@@ -16,7 +16,7 @@
       </v-flex>
       <v-flex
         xs12
-        class="text-xs-right pb-1">
+        class="text-xs-right pb-3">
         <a
           target="_blank"
           rel="noreferrer"
@@ -25,7 +25,7 @@
       </v-flex>
       <v-flex
         xs12
-        class="text-xs-right pb-1">
+        class="text-xs-right pb-3">
         <nuxt-link
           v-if="isDe"
           to="/impressum"
@@ -33,7 +33,7 @@
       </v-flex>
       <v-flex
         xs12
-        class="text-xs-right pb-1">
+        class="text-xs-right pb-3">
         <nuxt-link
           :to="$t('links.privacyPolicy.to')"
           v-text="$t('links.privacyPolicy.txt')"/>

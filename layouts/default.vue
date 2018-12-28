@@ -20,8 +20,8 @@
               alt="Logo photoleuchten.com"
               img-type="png"
               sizes="252px"
-              height="40px"
-              width="auto"
+              height="45"
+              width="248"
               class="pt-1" />
           </nuxt-link>
         </v-toolbar-title>
@@ -55,16 +55,16 @@
             file-name="logo"
             img-type="png"
             sizes="252px"
-            height="40px"
-            width="auto"
+            height="45"
+            width="248"
             class="hidden-sm-and-down pt-1" />
           <img
             alt="photoleuchten.com Logo"
             title="photoleuchten.com"
             src="~/assets/img/logo_small.png"
             class="pt-2 hidden-md-and-up"
-            height="40px"
-            width="auto">
+            height="85"
+            width="85">
         </nuxt-link>
       </v-toolbar-title>
       <v-spacer />

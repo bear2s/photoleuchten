@@ -5,6 +5,7 @@
     method="POST"
     style="max-width: 800px; margin: auto">
     <v-layout row>
+      <h1>{{isDe ? 'Kontakt' : 'Contact'}}</h1>
       <v-flex xs12>
         <v-text-field
           :label="$t('first_name')"
@@ -25,8 +26,8 @@
     <v-layout row>
       <v-flex xs12>
         <v-text-field
-          :label="$t('email_address')"
           v-model="email"
+          :label="$t('email_address')"
           :rules="emailRules"
           required
           name="email"
@@ -37,8 +38,8 @@
     <v-layout row>
       <v-flex xs12>
         <v-textarea
-          :label="$t('message')"
           v-model="message"
+          :label="$t('message')"
           :rules="messageRules"
           name="body"
           required

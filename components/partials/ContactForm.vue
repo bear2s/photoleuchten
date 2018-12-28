@@ -5,7 +5,9 @@
     method="POST"
     style="max-width: 800px; margin: auto">
     <v-layout row>
-      <h1>{{isDe ? 'Kontakt' : 'Contact'}}</h1>
+      <v-flex class="xs12">
+        <h1>{{isDe ? 'Kontakt' : 'Contact'}}</h1>
+      </v-flex>
       <v-flex xs12>
         <v-text-field
           :label="$t('first_name')"

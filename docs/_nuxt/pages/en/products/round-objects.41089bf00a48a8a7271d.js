@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[14],{139:function(e,o,t){"use strict";t.r(o);var n={fetch:e=>(0,e.redirect)(301,"/en/products/light-objects")},c=t(4),i=Object(c.a)(n,void 0,void 0,!1,null,null,null);i.options.__file="round-objects.vue";o.default=i.exports}}]);

@@ -22,7 +22,7 @@
               sizes="252px"
               height="45"
               width="248"
-              class="pt-1" />
+              class="nav-logo pt-1" />
           </nuxt-link>
         </v-toolbar-title>
       </v-toolbar>
@@ -57,7 +57,7 @@
             sizes="252px"
             height="45"
             width="248"
-            class="hidden-sm-and-down pt-1" />
+            class="logo hidden-sm-and-down pt-1" />
           <img
             alt="photoleuchten.com Logo"
             title="photoleuchten.com"
@@ -153,3 +153,10 @@
     }
   }
 </script>
+
+<style scoped>
+  .nav-logo, .logo {
+    height: 45px;
+    width: auto;
+  }
+</style>

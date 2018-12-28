@@ -161,5 +161,8 @@
 </script>
 
 <style scoped>
-
+  .nav-logo, .logo {
+    height: 45px;
+    width: auto;
+  }
 </style>

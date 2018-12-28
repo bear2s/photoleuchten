@@ -57,12 +57,12 @@
             sizes="252px"
             height="45"
             width="248"
-            class="logo hidden-sm-and-down pt-1" />
+            class="nav-logo hidden-sm-and-down pt-1" />
           <img
             alt="photoleuchten.com Logo"
             title="photoleuchten.com"
             src="~/assets/img/logo_small.png"
-            class="pt-2 hidden-md-and-up"
+            class="pt-2 hidden-md-and-up logo"
             height="85"
             width="85">
         </nuxt-link>

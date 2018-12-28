@@ -4,7 +4,7 @@
     action="https://formspree.io/photoleuchten@yahoo.com"
     method="POST"
     style="max-width: 800px; margin: auto">
-    <v-layout row>
+    <v-layout row wrap>
       <v-flex class="xs12">
         <h1>{{isDe ? 'Kontakt' : 'Contact'}}</h1>
       </v-flex>
@@ -14,18 +14,12 @@
           name="firstname"
         />
       </v-flex>
-    </v-layout>
-
-    <v-layout row>
       <v-flex xs12>
         <v-text-field
           :label="$t('last_name')"
           name="lastname"
         />
       </v-flex>
-    </v-layout>
-
-    <v-layout row>
       <v-flex xs12>
         <v-text-field
           v-model="email"
@@ -35,9 +29,6 @@
           name="email"
         />
       </v-flex>
-    </v-layout>
-
-    <v-layout row>
       <v-flex xs12>
         <v-textarea
           v-model="message"
@@ -47,9 +38,6 @@
           required
         />
       </v-flex>
-    </v-layout>
-
-    <v-layout row>
       <v-flex
         xs12
         class="text-xs-right">

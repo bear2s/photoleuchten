@@ -4,26 +4,31 @@
       v-if="$vuetify.breakpoint.mdAndUp"
       dark
       :height="wh"
-      :src="`https://res.cloudinary.com/stbaer/image/upload/f_auto,q_95,dpr_auto,w_${ww}/t0.jpg?2.11.6`">
-      <home-intro-inner />
-    </v-parallax>
+      :src="`https://res.cloudinary.com/stbaer/image/upload/f_auto,q_auto,dpr_auto,w_${ww}/t0.jpg?${bust}`"/>
     <template v-else>
       <pl-img
         :quality="95"
         file-name="t0"
         img-type="jpg"
+        :height="wh"
+        :width="ww"
         sizes="100vw" />
-      <home-intro-inner />
     </template>
   </section>
 </template>
 
 <script>
-  import HomeIntroInner from './HomeIntroInner'
+  import pkg from '../../package.json'
+
+  const bust = pkg.version
 
   export default {
     name: 'HomeParallaxSection',
-    components: { HomeIntroInner },
+    data () {
+      return {
+        bust: bust
+      }
+    },
     computed: {
       ww () {
         if (process.server) return 10

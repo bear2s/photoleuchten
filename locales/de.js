@@ -6,7 +6,6 @@ export default {
   'links': {
     'products': 'Produkte',
     'contact': 'Kontakt',
-    'legal': 'Impressum',
     'about': 'Über pl'
   },
   'products': {

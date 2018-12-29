@@ -6,7 +6,6 @@ export default {
   'links': {
     'products': 'products',
     'contact': 'contact',
-    'legal': 'legal notice',
     'about': 'About'
   },
   'products': {

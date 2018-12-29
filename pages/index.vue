@@ -5,6 +5,10 @@
     <v-flex
       class="text-xs-center"
       xs12>
+      <home-intro-inner :is-absolute="false"/>
+      <no-ssr>
+        <home-parallax-section />
+      </no-ssr>
       <h3 class="text-xs-center">Willkommen bei Photoleuchten!</h3>
       <div class="text-xs-center mt-3">
         <p>
@@ -42,11 +46,16 @@
 
 <script>
   import Collection from '../components/partials/Collection'
+  import HomeIntroInner from '../components/partials/HomeIntroInner'
 
   export default {
     name: 'App',
-    layout: 'home',
-    components: { Collection },
+    // layout: 'home',
+    components: {
+      HomeIntroInner,
+      HomeParallaxSection: () => import('../components/partials/HomeParallaxSection'),
+      Collection
+    },
     head () {
       const path = this.$route.path.replace(/\/$/, '') // Remove trailing /
       return {

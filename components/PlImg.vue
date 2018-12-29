@@ -3,9 +3,7 @@
     :alt="alt"
     :sizes="sizes"
     :srcset="srcsetComputed"
-    :src="srcComputed"
-    width="100%"
-    height="auto">
+    :src="srcComputed">
 </template>
 
 <script>
@@ -69,5 +67,7 @@
 <style scoped>
   img {
     max-width: 100%;
+    width: 100%;
+    height: auto;
   }
 </style>

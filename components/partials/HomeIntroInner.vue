@@ -1,16 +1,9 @@
 <template>
-  <div style="position: absolute; top: 0"
-       class="headline-container-inner text-xs-center">
-    <h1 :class="{'headline mt-1': $vuetify.breakpoint.smAndDown}"
-        :style="$vuetify.breakpoint.smAndDown
-          ? 'font-size: 22px!important; margin-top: 8px!important; margin-bottom: 8px!important;'
-          : ''"
-        class="headline-1 primary--text">
+  <div class="text-xs-center">
+    <h1>
       {{h1Text}}
     </h1>
-    <h2 class="white--text px-3"
-        :style="$vuetify.breakpoint.smAndDown ? 'font-size: 20px!important' : ''"
-        :class="{'subheader': $vuetify.breakpoint.smAndDown}">{{h2Text}}</h2>
+    <h2 class="px-3">{{h2Text}}</h2>
   </div>
 </template>
 

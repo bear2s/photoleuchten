@@ -2,21 +2,21 @@
   <v-footer
     absolute
     height="auto"
-    class="pt-4 pb-1 px-2"
+    class="pt-4 pb-1 px-3"
     app>
     <v-layout
       row
       wrap>
       <v-flex
         xs12
-        class="text-xs-right pb-1">
+        class="text-xs-right pb-2">
         <nuxt-link
           :to="isDe ? '/kontakt' : '/en/contact'"
           v-text="isDe ? 'Kontakt' : 'Contact'"/>
       </v-flex>
       <v-flex
         xs12
-        class="text-xs-right pb-3">
+        class="text-xs-right pb-2">
         <a
           target="_blank"
           rel="noreferrer"
@@ -25,22 +25,21 @@
       </v-flex>
       <v-flex
         xs12
-        class="text-xs-right pb-3">
+        class="text-xs-right pb-2">
         <nuxt-link
-          v-if="isDe"
-          to="/impressum"
-          v-text="$t('links.legal')"/>
+          :to="$t('links.legal.to')"
+          v-text="$t('links.legal.txt')"/>
       </v-flex>
       <v-flex
         xs12
-        class="text-xs-right pb-3">
+        class="text-xs-right pb-2">
         <nuxt-link
           :to="$t('links.privacyPolicy.to')"
           v-text="$t('links.privacyPolicy.txt')"/>
       </v-flex>
       <v-flex
         xs12
-        class="text-xs-center"><span>&copy; {{ copyright }}</span></v-flex>
+        class="text-xs-center py-2"><span>&copy; {{ copyright }}</span></v-flex>
     </v-layout>
   </v-footer>
 </template>
@@ -69,6 +68,10 @@
             privacyPolicy: {
               to: '/en/privacy',
               txt: 'Privacy Policy'
+            },
+            legal: {
+              to: '/en/legal',
+              txt: 'Legal Notice'
             }
           }
         },
@@ -77,11 +80,14 @@
             privacyPolicy: {
               to: '/datenschutz',
               txt: 'Datenschutzerklärung'
+            },
+            legal: {
+              to: '/impressum',
+              txt: 'Impressum'
             }
           }
         }
       }
     }
-
   }
 </script>

@@ -11,8 +11,9 @@
         title="profile image"
         img-type="png"
         sizes="120px"
-        height="auto"
-        width="90" />
+        height="120"
+        width="120"
+        style="height: 120px; width: auto;"/>
       <pl-img
         class="mb-2 ml-2"
         file-name="signature"
@@ -20,15 +21,16 @@
         alt="signature Sylvia Bär"
         title="signature"
         sizes="120px"
-        height="auto"
-        width="120" />
+        height="110"
+        width="256"
+        style="height: 60px; width: auto;"/>
       <br>
       Sylvia Bär <br>
       {{ $t('belowSignature') }}
     </p>
-    <h3 class="text-xs-center">{{ $t('work_process') }}</h3>
+    <h3 class="text-xs- center">{{ $t('work_process') }}</h3>
     <no-ssr>
-      <about-carousel class="my-3"/>
+      <about-carousel class="my-3 carousel"/>
     </no-ssr>
   </div>
 </template>
@@ -116,3 +118,9 @@ Bestellungen gerne an <a href="mailto:photoleuchten@yahoo.com">photoleuchten@yah
     }
   }
 </script>
+
+<style scoped>
+  .carousel {
+    overflow: hidden;
+  }
+</style>

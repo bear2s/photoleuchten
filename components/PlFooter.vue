@@ -2,7 +2,7 @@
   <v-footer
     absolute
     height="auto"
-    class="pt-4 pb-1 px-3"
+    class="pb-1 px-3"
     app>
     <v-layout
       row

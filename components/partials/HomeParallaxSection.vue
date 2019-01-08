@@ -1,7 +1,7 @@
 <template>
   <section style="position: relative">
     <v-parallax
-      v-if="$vuetify.breakpoint.mdAndUp"
+      v-if="false"
       dark
       :height="wh"
       :src="`https://res.cloudinary.com/stbaer/image/upload/f_auto,q_auto,dpr_auto,w_${ww}/t0.jpg?${bust}`"/>

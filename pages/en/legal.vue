@@ -58,8 +58,8 @@
         ]
       }
     },
-    asyncData ({ store }) {
-      return store.dispatch('setLanguageKey', 'en')
+    async created () {
+    return this.$store.dispatch('setLanguageKey', 'en')
     },
     transition: 'slide-left'
   }

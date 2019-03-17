@@ -9,8 +9,8 @@
     name: 'Lightboxes',
     transition: 'slide-left',
     components: { SquareObjects },
-    asyncData ({ store }) {
-      return store.dispatch('setLanguageKey', 'en')
+    async created () {
+    return this.$store.dispatch('setLanguageKey', 'en')
     },
     head () {
       const path = this.$route.path.replace(/\/$/, '') // Remove trailing /

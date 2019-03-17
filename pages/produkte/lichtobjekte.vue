@@ -28,8 +28,8 @@
     },
     components: { RoundObjects },
     transition: 'slide-left',
-    asyncData ({ store }) {
-      return store.dispatch('setLanguageKey', 'de')
+    async created () {
+    return this.$store.dispatch('setLanguageKey', 'de')
     }
   }
 </script>

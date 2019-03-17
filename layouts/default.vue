@@ -13,7 +13,7 @@
         app>
         <v-toolbar-title>
           <nuxt-link
-            :to="isDe ? '/' : '/en'"
+            :to="$store.state.locale === 'de' ? '/' : '/en'"
             class="logo-link">
             <pl-img
               file-name="logo"
@@ -47,7 +47,7 @@
       </v-toolbar-side-icon>
       <v-toolbar-title>
         <nuxt-link
-          :to="isDe ? '/' : '/en'"
+          :to="$store.state.locale === 'de' ? '/' : '/en'"
           class="logo-link">
           <pl-img
             alt="photoleuchten.com Logo"

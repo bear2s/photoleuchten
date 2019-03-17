@@ -17,7 +17,13 @@
         htmlAttrs: {
           lang: 'de'
         },
-        meta: [],
+        meta: [
+          {
+            hid: 'description',
+            name: 'description',
+            content: 'Erfahre mehr über PHOTOLEUCHTEN. Werfe einen Blick in den Entwurfs- und Herstellungsprozess.'
+          }
+        ],
         link: [
           { hid: 'canonical', rel: 'canonical', href: `https://photoleuchten.com${path}` },
           { rel: 'alternate', hreflang: 'de', href: 'https://photoleuchten.com/ueber' },
@@ -26,11 +32,11 @@
       }
     },
     transition: 'slide-left',
-    asyncData ({ store }) {
-      return store.dispatch('setLanguageKey', 'de')
-    },
     components: {
       AboutContent
+    },
+    asyncData ({ store }) {
+      return store.dispatch('setLanguageKey', 'de')
     }
   }
 </script>

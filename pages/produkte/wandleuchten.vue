@@ -15,11 +15,17 @@
     head () {
       const path = this.$route.path.replace(/\/$/, '') // Remove trailing /
       return {
-        title: 'Quadratische Leuchten | Photoleuchten.com  ▶',
+        title: 'Wandleuchten | Photoleuchten.com  ▶',
         htmlAttrs: {
           lang: 'de'
         },
-        meta: [],
+        meta: [
+          {
+            hid: 'description',
+            name: 'description',
+            content: 'Finde Deine handgemachte  Wandleuchte in der Motivauswahl. Fotokunst in netzbetriebenen LED-Leuchtrahmen aus Holz für die Wand mit unterschiedlichen Fotografien.'
+          }
+        ],
         link: [
           { hid: 'canonical', rel: 'canonical', href: `https://photoleuchten.com${path}` },
           { rel: 'alternate', hreflang: 'de', href: 'https://photoleuchten.com/produkte/wandleuchten' },

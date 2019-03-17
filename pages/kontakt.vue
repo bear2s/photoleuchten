@@ -18,7 +18,11 @@
         htmlAttrs: {
           lang: 'de'
         },
-        meta: [],
+        meta: [{
+          hid: 'description',
+          name: 'description',
+          content: 'Tritt in Kontakt mit PHOTOLEUCHTEN.'
+        }],
         link: [
           { hid: 'canonical', rel: 'canonical', href: `https://photoleuchten.com${path}` },
           { rel: 'alternate', hreflang: 'de', href: 'https://photoleuchten.com/kontakt' },

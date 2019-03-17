@@ -19,7 +19,13 @@
         htmlAttrs: {
           lang: 'de'
         },
-        meta: [],
+        meta: [
+          {
+            hid: 'description',
+            name: 'description',
+            content: 'Finde deine handgemachte Leuchtbox in der Motivauswahl. Fotokunst in batteriebetriebenen LED-Leuchtkästen aus Holz mit unterschiedlichen Fotografien.'
+          }
+        ],
         link: [
           { hid: 'canonical', rel: 'canonical', href: `https://photoleuchten.com${path}` },
           { rel: 'alternate', hreflang: 'de', href: 'https://photoleuchten.com/produkte/leuchtkaesten' },

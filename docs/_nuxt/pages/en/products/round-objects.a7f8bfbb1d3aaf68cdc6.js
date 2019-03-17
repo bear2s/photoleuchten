@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[15],{262:function(n,t,e){"use strict";e.r(t);var o={fetch:function(n){return(0,n.redirect)(301,"/en/products/light-objects")}},c=e(7),component=Object(c.a)(o,void 0,void 0,!1,null,null,null);t.default=component.exports}}]);

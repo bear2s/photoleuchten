@@ -58,7 +58,11 @@
         htmlAttrs: {
           lang: 'en'
         },
-        meta: [],
+        meta: [{
+          hid: 'description',
+          name: 'description',
+          content: 'Here you will find handcrafted art lights made with love. With LED lighting. For living room, bedroom, dining room, kitchen, ..., office and business premises.'
+        }],
         link: [
           { hid: 'canonical', rel: 'canonical', href: `https://photoleuchten.com${path}` },
           { rel: 'alternate', hreflang: 'de', href: 'https://photoleuchten.com' },

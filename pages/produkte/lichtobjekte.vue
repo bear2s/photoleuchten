@@ -12,7 +12,13 @@
         htmlAttrs: {
           lang: 'de'
         },
-        meta: [],
+        meta: [
+          {
+            hid: 'description',
+            name: 'description',
+            content: 'Finde dein Lichtobjekt für die Wand. Großformatige handgemachte Kunst-Leuchten mit integrierter LED-Beleuchtung. Individuelle Rahmen.'
+          }
+        ],
         link: [
           { hid: 'canonical', rel: 'canonical', href: `https://photoleuchten.com${path}` },
           { rel: 'alternate', hreflang: 'de', href: 'https://photoleuchten.com/produkte/lichtobjekte' },

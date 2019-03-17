@@ -19,7 +19,11 @@
         htmlAttrs: {
           lang: 'en'
         },
-        meta: [],
+        meta: [{
+          hid: 'description',
+          name: 'description',
+          content: 'Find your handmade light box in the motif selection. Photo art in battery-powered wooden  LED light boxes with different photographs.'
+        }],
         link: [
           { hid: 'canonical', rel: 'canonical', href: `https://photoleuchten.com${path}` },
           { rel: 'alternate', hreflang: 'de', href: 'https://photoleuchten.com/produkte/leuchtkaesten' },

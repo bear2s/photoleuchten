@@ -17,7 +17,11 @@
         htmlAttrs: {
           lang: 'en'
         },
-        meta: [],
+        meta: [{
+          hid: 'description',
+          name: 'description',
+          content: 'Find your light object for the wall. Large sized handmade art lights with integrated LED lighting. Individual frame.'
+        }],
         link: [
           { hid: 'canonical', rel: 'canonical', href: `https://photoleuchten.com${path}` },
           { rel: 'alternate', hreflang: 'de', href: 'https://photoleuchten.com/produkte/lichtobjekte' },

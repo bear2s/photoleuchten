@@ -19,7 +19,11 @@
         htmlAttrs: {
           lang: 'en'
         },
-        meta: [],
+        meta: [{
+          hid: 'description',
+          name: 'description',
+          content: 'Find your handmade wall light in the motif selection. Photo art in power-driven wooden LED light frames for the wall with different photographs.'
+        }],
         link: [
           { hid: 'canonical', rel: 'canonical', href: `https://photoleuchten.com${path}` },
           { rel: 'alternate', hreflang: 'de', href: 'https://photoleuchten.com/produkte/wandleuchten' },

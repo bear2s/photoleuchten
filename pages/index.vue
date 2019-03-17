@@ -67,7 +67,7 @@
           {
             hid: 'description',
             name: 'description',
-            content: 'Mit Liebe hergestellte, handgemachte Wandleuchten, Lichtobjekte und Leuchtkästen mit Fotografien, die unbeleuchtet und beleuchtet toll aussehen.'
+            content: 'Mit Liebe hergestellte, handgemachte Leuchten. Mit LED-Beleuchtung. Für Wohnzimmer, Schlafzimmer, Esszimmer, Küche,..., Büro- und Geschäftsräume..'
           }
         ],
         link: [

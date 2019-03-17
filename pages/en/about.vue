@@ -24,7 +24,11 @@
         htmlAttrs: {
           lang: 'en'
         },
-        meta: [],
+        meta: [{
+          hid: 'description',
+          name: 'description',
+          content: 'Learn more about PHOTOLEUCHTEN. Take a look at the design and manufacturing process.'
+        }],
         link: [
           { hid: 'canonical', rel: 'canonical', href: `https://photoleuchten.com${path}` },
           { rel: 'alternate', hreflang: 'de', href: 'https://photoleuchten.com/ueber' },

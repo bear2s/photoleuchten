@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import PlImg from '~/components/PlImg.vue'
 import ToggleButton from '~/components/ToggleButton.vue'
+import { state } from '../store'
 
 Vue.mixin({
   components: {
@@ -11,7 +12,7 @@ Vue.mixin({
       return 'https://res.cloudinary.com/stbaer/image/upload'
     },
     isDe () {
-      return this.$store.state.locale === 'de'
+      return state.locale === 'de'
     }
   }
 })

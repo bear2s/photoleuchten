@@ -78,8 +78,8 @@
       }
     },
     transition: 'slide-left',
-    asyncData ({ store, route }) {
-      return store.dispatch('setLanguageKey', 'de')
+    async created () {
+      await this.$store.commit('SET_LANG', 'de')
     }
   }
 </script>

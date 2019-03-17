@@ -1,25 +1,25 @@
 <template>
   <div class="text-xs-center">
     <h1>
-      {{h1Text}}
+      {{$t('h1Text')}}
     </h1>
-    <h2 class="px-3">{{h2Text}}</h2>
+    <h2 class="px-3">{{$t('h2Text')}}</h2>
   </div>
 </template>
 
 <script>
   export default {
     name: 'HomeIntroInner',
-    computed: {
-      h1Text () {
-        return this.isDe
-          ? 'WANDLEUCHTEN - LICHTOBJEKTE - LEUCHTKAESTEN' + (this.$vuetify.breakpoint.smAndUp ? ' - BELEUCHTETE PHOTOS & PAPIERE' : '')
-          : 'WALL LIGHTS - LIGHTOBJECTS - LIGHT BOXES' + (this.$vuetify.breakpoint.smAndUp ? ' - ILLUMINATED PHOTOS & PAPERS' : '')
-      },
-      h2Text () {
-        return this.isDe
-          ? 'Handgefertigte Design-Leuchten' + (this.$vuetify.breakpoint.smAndUp ? ', Unikate aus Fotografien & Licht' : '')
-          : 'Simple and beautiful design'
+    i18n: {
+      messages: {
+        en: {
+          h1Text: 'WALL LIGHTS - LIGHTOBJECTS - LIGHT BOXES)',
+          h2Text: 'Simple and beautiful design'
+        },
+        de: {
+          h1Text: 'WANDLEUCHTEN - LICHTOBJEKTE - LEUCHTKAESTEN - BELEUCHTETE PHOTOS & PAPIERE',
+          h2Text: 'Handgefertigte Design-Leuchten, Unikate aus Fotografien & Licht'
+        }
       }
     }
   }

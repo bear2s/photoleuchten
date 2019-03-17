@@ -9,8 +9,8 @@
     name: 'WallLightsPageDe',
     transition: 'slide-left',
     components: { WallLights },
-    asyncData ({ store }) {
-      return store.dispatch('setLanguageKey', 'de')
+    async created () {
+    return this.$store.dispatch('setLanguageKey', 'de')
     },
     head () {
       const path = this.$route.path.replace(/\/$/, '') // Remove trailing /

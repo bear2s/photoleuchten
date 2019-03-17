@@ -34,8 +34,8 @@
 
     <v-list-tile
       v-for="(item, i) in items"
-      :to="item.to"
       :key="i"
+      :to="item.to"
       action="none"
       router>
       <v-list-tile-content>

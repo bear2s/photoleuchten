@@ -13,7 +13,7 @@
     i18n: {
       messages: {
         en: {
-          h1Text: 'WALL LIGHTS - LIGHTOBJECTS - LIGHT BOXES)',
+          h1Text: 'WALL LIGHTS - LIGHTOBJECTS - LIGHT BOXES',
           h2Text: 'Simple and beautiful design'
         },
         de: {

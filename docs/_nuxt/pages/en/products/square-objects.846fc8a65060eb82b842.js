@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[16],{215:function(e,n,o){"use strict";o.r(n);var t={fetch:e=>(0,e.redirect)(301,"/en/products/lightboxes")},c=o(6),component=Object(c.a)(t,void 0,void 0,!1,null,null,null);n.default=component.exports}}]);

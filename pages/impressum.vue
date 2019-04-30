@@ -10,7 +10,7 @@
       </p><p>Telefon: + 49 178 3164345<br>
       E-Mail: <a href="mailto:photoleuchten@yahoo.com">photoleuchten@yahoo.com</a><br>
       Internet Addresse: <a
-        href="www.photoleuchten.com" target="_blank">www.photoleuchten.com</a><br>
+        href="https://www.photoleuchten.com" target="_blank">www.photoleuchten.com</a><br>
       </p>
       <p><strong>Umsatzsteuer-ID: </strong><br >Umsatzsteuer-Identifikationsnummer nach §27a Umsatzsteuergesetz:<br >DE304325864
       </p>
@@ -21,7 +21,7 @@
       Online-Streitbeilegungs-Plattform hinzuweisen, die für die Beilegung von Streitigkeiten genutzt werden kann,
       ohne dass ein Gericht eingeschaltet werden muss. Für die Einrichtung der Plattform ist die Europäische
       Kommission zuständig. Die Europäische Online-Streitbeilegungs-Plattform ist hier zu finden: <a
-        href="http://ec.europa.eu/odr" target="_blank" rel="nofollow">http://ec.europa.eu/odr</a>. Unsere E-Mail
+        href="https://ec.europa.eu/odr" target="_blank" rel="nofollow">http://ec.europa.eu/odr</a>. Unsere E-Mail
       lautet: <a href="mailto:photoleuchten@yahoo.com">photoleuchten@yahoo.com</a></p>
       <p>Wir weisen aber darauf hin, dass wir nicht bereit sind, uns am Streitbeilegungsverfahren im Rahmen der
       Europäischen Online-Streitbeilegungs-Plattform zu beteiligen. Nutzen Sie zur Kontaktaufnahme bitte unsere obige

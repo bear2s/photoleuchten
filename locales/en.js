@@ -4,8 +4,8 @@ export default {
   'lighton': 'Light on',
   'lightoff': 'Light off',
   'links': {
-    'products': 'products',
-    'contact': 'contact',
+    'products': 'Products',
+    'contact': 'Contact',
     'about': 'About'
   },
   'products': {

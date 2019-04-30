@@ -8,7 +8,7 @@
       <p>Sylvia Bär<br >
       Photoleuchten<br>76137 Karlsruhe<br>
       </p><p>Telephone: + 49 178 3164345<br>
-      E-Mail: <a href="mailto:photoleuchten@ahoo.com">photoleuchten@ahoo.com</a><br>Internet address: <a href="www.photoleuchten.com" target="_blank">www.photoleuchten.com</a><br>
+      E-Mail: <a href="mailto:photoleuchten@ahoo.com">photoleuchten@ahoo.com</a><br>Internet address: <a href="https://www.photoleuchten.com" target="_blank">www.photoleuchten.com</a><br>
       </p><h2>VAT number</h2>
       VAT indentification number in accorance with Section 27a of the German VAT act<br><br>
       DE304325864<br>

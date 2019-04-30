@@ -61,7 +61,6 @@ module.exports = {
     path: '/sitemap.xml',
     hostname: 'https://photoleuchten.com',
     cacheTime: 1000 * 60 * 15,
-    generate: true,
     exclude: [
       '/',
       'https://photoleuchten.com/',
@@ -98,6 +97,11 @@ module.exports = {
    */
   build: {
     extractCSS: true,
+    postcss: {
+      preset: {
+        autoprefixer: {}
+      }
+    },
     transpile: [/^vuetify/],
     plugins: [new VuetifyLoaderPlugin()],
     filenames: {

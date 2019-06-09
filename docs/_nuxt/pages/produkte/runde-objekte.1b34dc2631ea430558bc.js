@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[25],{225:function(e,t,o){"use strict";o.r(t);var n={fetch:e=>(0,e.redirect)(301,"/produkte/lichtobjekte")},c=o(7),component=Object(c.a)(n,void 0,void 0,!1,null,null,null);t.default=component.exports}}]);

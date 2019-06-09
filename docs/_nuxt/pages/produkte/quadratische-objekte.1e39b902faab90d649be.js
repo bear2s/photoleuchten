@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[24],{264:function(e,n,t){"use strict";t.r(n);var o={fetch:function(e){return(0,e.redirect)(301,"/produkte/leuchtkaesten")}},c=t(8),component=Object(c.a)(o,void 0,void 0,!1,null,null,null);n.default=component.exports}}]);

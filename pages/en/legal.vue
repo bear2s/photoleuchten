@@ -6,9 +6,10 @@
       <h1>Legal Disclosure</h1>
       Information in accordance with Section 5 TMG
       <p>Sylvia Bär<br >
-      Photoleuchten<br>76137 Karlsruhe<br>
+        Photoleuchten<br>
+        76137 Karlsruhe<br>
       </p><p>Telephone: + 49 178 3164345<br>
-      E-Mail: <a href="mailto:photoleuchten@ahoo.com">photoleuchten@ahoo.com</a><br>Internet address: <a href="www.photoleuchten.com" target="_blank">www.photoleuchten.com</a><br>
+      E-Mail: <a href="mailto:photoleuchten@ahoo.com">photoleuchten@ahoo.com</a><br>Internet address: <a href="/">https://photoleuchten.com</a><br>
       </p><h2>VAT number</h2>
       VAT indentification number in accorance with Section 27a of the German VAT act<br><br>
       DE304325864<br>
@@ -59,7 +60,7 @@
       }
     },
     async created () {
-    return this.$store.dispatch('setLanguageKey', 'en')
+      return this.$store.dispatch('setLanguageKey', 'en')
     },
     transition: 'slide-left'
   }

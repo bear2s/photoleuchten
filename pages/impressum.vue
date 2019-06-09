@@ -9,8 +9,7 @@
       Photoleuchten<br>76137 Karlsruhe<br>
       </p><p>Telefon: + 49 178 3164345<br>
       E-Mail: <a href="mailto:photoleuchten@yahoo.com">photoleuchten@yahoo.com</a><br>
-      Internet Addresse: <a
-        href="https://www.photoleuchten.com" target="_blank">www.photoleuchten.com</a><br>
+      Internet Addresse: <a href="/">https://photoleuchten.com</a><br>
       </p>
       <p><strong>Umsatzsteuer-ID: </strong><br >Umsatzsteuer-Identifikationsnummer nach §27a Umsatzsteuergesetz:<br >DE304325864
       </p>

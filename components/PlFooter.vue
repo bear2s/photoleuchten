@@ -2,7 +2,7 @@
   <v-footer
     absolute
     height="auto"
-    class="pb-1 px-3"
+    class="py-2  px-3"
     app>
     <v-layout
       row
@@ -13,6 +13,15 @@
         <nuxt-link
           :to="isDe ? '/kontakt' : '/en/contact'"
           v-text="isDe ? 'Kontakt' : 'Contact'"/>
+      </v-flex>
+      <v-flex
+        xs12
+        class="text-xs-right pb-2">
+        <a
+          target="_blank"
+          rel="noreferrer"
+          href="https://instagram.com/Photoleuchten_"
+          v-text="'Instagram'"/>
       </v-flex>
       <v-flex
         xs12

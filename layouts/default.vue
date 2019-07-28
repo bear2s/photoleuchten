@@ -71,6 +71,23 @@
 
       <pl-top-toolbar-items :products="products" />
 
+      <v-btn
+        flat
+        href="https://www.etsy.com/shop/photoleuchten"
+        target="_blank"
+        icon
+        class="shop-link">
+        <pl-img
+          icon
+          file-name="shopping_cart"
+          :alt="$store.state.locale === 'de' ? 'Zum pl Shop bei Etsy' : 'Etsy pl shop'"
+          img-type="png"
+          sizes="24px"
+          height="24"
+          width="24"
+          class="shopping-cart-icon pt-1" />
+      </v-btn>
+
       <language-select />
 
     </v-toolbar>
@@ -154,9 +171,14 @@
   }
 </script>
 
-<style scoped>
+<style>
   .nav-logo, .logo {
-    height: 45px;
-    width: auto;
+    height: 45px!important;
+    width: auto!important;
+  }
+
+  .shopping-cart-icon {
+    height: 24px!important;
+    width: auto!important;
   }
 </style>

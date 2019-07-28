@@ -28,7 +28,7 @@
       Sylvia Bär <br>
       {{ $t('belowSignature') }}
     </p>
-    <h3 class="text-xs- center">{{ $t('work_process') }}</h3>
+    <h3 class="text-xs-center">{{ $t('work_process') }}</h3>
     <no-ssr>
       <about-carousel class="my-3 carousel"/>
     </no-ssr>

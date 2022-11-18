@@ -26,7 +26,7 @@
     "eslint-loader": "2.2.1",
     "eslint-plugin-vue": "5.2.3",
     "gf-release": "1.4.5",
-    "loader-utils": "1.2.3",
+    "loader-utils": "1.4.2",
     "nuxt": "2.8.1",
     "nuxt-trailingslash-module": "1.1.0",
     "shelljs": "0.8.3",

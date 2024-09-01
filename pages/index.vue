@@ -50,7 +50,6 @@
 
   export default {
     name: 'App',
-    // layout: 'home',
     components: {
       HomeIntroInner,
       HomeParallaxSection: () => import('../components/partials/HomeParallaxSection'),
@@ -74,7 +73,33 @@
           { hid: 'canonical', rel: 'canonical', href: `https://photoleuchten.com${path}` },
           { rel: 'alternate', hreflang: 'de', href: 'https://photoleuchten.com' },
           { rel: 'alternate', hreflang: 'en', href: 'https://photoleuchten.com/en' }
-        ]
+        ],
+        script: [
+          {
+            hid: 'gtm',
+            innerHTML: `
+              (function(w,d,s,l,i){
+                w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});
+                var f=d.getElementsByTagName(s)[0],
+                    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+                j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+                f.parentNode.insertBefore(j,f);
+              })(window,document,'script','dataLayer','GTM-P6GCHQFK');
+            `,
+            type: 'text/javascript',
+          }
+        ],
+        noscript: [
+          {
+            hid: 'noscript-gtm',
+            innerHTML: `
+              <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P6GCHQFK"
+              height="0" width="0" style="display:none;visibility:hidden"></iframe>
+            `,
+          }
+        ],
+        __dangerouslyDisableSanitizers: ['script', 'noscript']
       }
     },
     transition: 'slide-left',
